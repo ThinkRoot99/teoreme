@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
+<script>
+try {
+  if (window.localStorage.getItem('cookie-consent') !== 'granted') {
+    (window.adsbygoogle = window.adsbygoogle || []).requestNonPersonalizedAds = 1;
+  }
+} catch(e) {}
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+     crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Politica de confidențialitate ∑ Teoreme - ce date se colectează și cum sunt folosite.">
@@ -76,20 +85,31 @@
 
 <div class="legal-hero">
   <h1>Politica de confidențialitate</h1>
-  <p>Pe scurt: acest site nu colectează aproape nimic despre tine.</p>
+  <p>Pe scurt: nu-ți cer date personale, dar folosesc Google Analytics pentru statistici și afișez reclame Google AdSense.</p>
 </div>
 
 <div class="legal-wrap">
-  <p class="legal-updated">Ultima actualizare: 30 septembrie 2026</p>
+  <p class="legal-updated">Ultima actualizare: 3 octombrie 2026</p>
 
   <div class="legal-card">
     <h2>Ce nu colectez</h2>
     <ul>
       <li>Nu ai cont, nu te loghezi, nu-ți cer nicio dată personală ca să folosești site-ul.</li>
-      <li>Nu folosesc cookie-uri proprii și nu urmăresc vizitatorii între vizite.</li>
-      <li>Nu folosesc servicii de analiză/statistică a traficului (ex. Google Analytics).</li>
+      <li>Nu folosesc cookie-uri proprii ale site-ului.</li>
       <li>Căutarea și filtrarea teoremelor se întâmplă complet în browser-ul tău - nimic din ce cauți nu ajunge la mine sau la altcineva.</li>
     </ul>
+  </div>
+
+  <div class="legal-card">
+    <h2>Google Analytics</h2>
+    <p>Folosesc Google Analytics ca să înțeleg, în linii mari, câți oameni vizitează site-ul și ce teoreme sunt mai citite - nu ca să te identific personal. Google Analytics setează cookie-uri în browser-ul tău și colectează informații precum adresa IP, tipul de dispozitiv și browser, și paginile vizitate.</p>
+    <p>Poți citi politica de confidențialitate a Google la <a href="https://policies.google.com/privacy">policies.google.com/privacy</a> sau te poți opri din urmărire instalând <a href="https://tools.google.com/dlpage/gaoptout">add-on-ul oficial de opt-out Google Analytics</a>.</p>
+  </div>
+
+  <div class="legal-card">
+    <h2>Reclame (Google AdSense)</h2>
+    <p>Afișez reclame prin Google AdSense, ca sursă de venit pentru întreținerea site-ului. Până accepți cookie-urile din bannerul de mai jos, reclamele sunt nepersonalizate - se pot baza pe conținutul paginii, dar nu pe profilul tău de navigare. Dacă accepți, Google poate folosi și cookie-uri de personalizare, ca să îți arate reclame mai relevante pentru tine.</p>
+    <p>Poți vedea și controla reclamele personalizate din <a href="https://adssettings.google.com/">setările de publicitate Google</a>, sau poți citi politica de confidențialitate a Google la <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</p>
   </div>
 
   <div class="legal-card">
@@ -116,5 +136,6 @@
 
 <style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
 
+<script src="consent.js"></script>
 </body>
 </html>

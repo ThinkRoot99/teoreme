@@ -207,6 +207,15 @@ let stats = { teoreme: 0, index: false, arhiva: false, sitemap: false };
     }
 
     const page = '<!DOCTYPE html>\n<html lang="ro">\n<head>\n' +
+      '<script>\n' +
+      'try {\n' +
+      "  if (window.localStorage.getItem('cookie-consent') !== 'granted') {\n" +
+      '    (window.adsbygoogle = window.adsbygoogle || []).requestNonPersonalizedAds = 1;\n' +
+      '  }\n' +
+      '} catch(e) {}\n' +
+      '</script>\n' +
+      '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"\n' +
+      '     crossorigin="anonymous"></script>\n' +
       '<meta charset="UTF-8">\n' +
       '<meta name="viewport" content="width=device-width, initial-scale=1.0">\n' +
       '<meta name="robots" content="index, follow">\n' +
@@ -270,6 +279,7 @@ let stats = { teoreme: 0, index: false, arhiva: false, sitemap: false };
       '  document.getElementById(panelId).classList.add("active");\n' +
       '}\n' +
       '</script>\n' +
+      '<script src="../consent.js"></script>\n' +
       '</body>\n</html>\n';
 
     fs.writeFileSync(path.join(OUT_DIR, m.id + '.html'), page);

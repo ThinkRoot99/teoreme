@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
+<script>
+try {
+  if (window.localStorage.getItem('cookie-consent') !== 'granted') {
+    (window.adsbygoogle = window.adsbygoogle || []).requestNonPersonalizedAds = 1;
+  }
+} catch(e) {}
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+     crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index, follow">
@@ -75,5 +84,6 @@ function showTab(btn, panelId){
   document.getElementById(panelId).classList.add("active");
 }
 </script>
+<script src="../consent.js"></script>
 </body>
 </html>
