@@ -208,12 +208,29 @@ let stats = { teoreme: 0, index: false, arhiva: false, sitemap: false };
 
     const page = '<!DOCTYPE html>\n<html lang="ro">\n<head>\n' +
       '<script>\n' +
+      'window.dataLayer = window.dataLayer || [];\n' +
+      'function gtag(){window.dataLayer.push(arguments);}\n' +
+      'window.gtag = gtag;\n' +
+      "gtag('consent', 'default', {\n" +
+      "  'ad_storage': 'denied',\n" +
+      "  'ad_user_data': 'denied',\n" +
+      "  'ad_personalization': 'denied',\n" +
+      "  'analytics_storage': 'denied'\n" +
+      '});\n' +
       'try {\n' +
-      "  if (window.localStorage.getItem('cookie-consent') !== 'granted') {\n" +
-      '    (window.adsbygoogle = window.adsbygoogle || []).requestNonPersonalizedAds = 1;\n' +
+      "  if (window.localStorage.getItem('cookie-consent') === 'granted') {\n" +
+      "    gtag('consent', 'update', {\n" +
+      "      'ad_storage': 'granted',\n" +
+      "      'ad_user_data': 'granted',\n" +
+      "      'ad_personalization': 'granted',\n" +
+      "      'analytics_storage': 'granted'\n" +
+      '    });\n' +
       '  }\n' +
       '} catch(e) {}\n' +
+      "gtag('js', new Date());\n" +
+      "gtag('config', 'G-XXXXXXXXXX');\n" +
       '</script>\n' +
+      '<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>\n' +
       '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"\n' +
       '     crossorigin="anonymous"></script>\n' +
       '<meta charset="UTF-8">\n' +
@@ -257,7 +274,7 @@ let stats = { teoreme: 0, index: false, arhiva: false, sitemap: false };
       '  </div>\n</nav>\n\n' +
       '<div class="page-wrap" id="pageWrap">\n' + bodyHtml + '\n</div>\n\n' +
       '<footer>\n  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://github.com/ThinkRoot99/teoreme">Cod sursă</a></p>\n' +
-      '  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>\n</footer>\n\n' +
+      '  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a> · <a href="#" onclick="event.preventDefault();window.openCookieSettings&amp;&amp;window.openCookieSettings()">Setări cookie-uri</a></p>\n</footer>\n\n' +
       '<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>\n\n' +
       '<script>\n' +
       'if (window.NodeList && !NodeList.prototype.forEach) {\n' +

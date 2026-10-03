@@ -2,12 +2,29 @@
 <html lang="ro">
 <head>
 <script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){window.dataLayer.push(arguments);}
+window.gtag = gtag;
+gtag('consent', 'default', {
+  'ad_storage': 'denied',
+  'ad_user_data': 'denied',
+  'ad_personalization': 'denied',
+  'analytics_storage': 'denied'
+});
 try {
-  if (window.localStorage.getItem('cookie-consent') !== 'granted') {
-    (window.adsbygoogle = window.adsbygoogle || []).requestNonPersonalizedAds = 1;
+  if (window.localStorage.getItem('cookie-consent') === 'granted') {
+    gtag('consent', 'update', {
+      'ad_storage': 'granted',
+      'ad_user_data': 'granted',
+      'ad_personalization': 'granted',
+      'analytics_storage': 'granted'
+    });
   }
 } catch(e) {}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXXXXX');
 </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
      crossorigin="anonymous"></script>
 <meta charset="UTF-8">
@@ -102,13 +119,13 @@ try {
 
   <div class="legal-card">
     <h2>Google Analytics</h2>
-    <p>Folosesc Google Analytics ca să înțeleg, în linii mari, câți oameni vizitează site-ul și ce teoreme sunt mai citite - nu ca să te identific personal. Google Analytics setează cookie-uri în browser-ul tău și colectează informații precum adresa IP, tipul de dispozitiv și browser, și paginile vizitate.</p>
+    <p>Folosesc Google Analytics ca să înțeleg, în linii mari, câți oameni vizitează site-ul și ce teoreme sunt mai citite - nu ca să te identific personal. Până nu apeși „Accept” în bannerul de cookie-uri, Google Analytics nu salvează cookie-uri în browser-ul tău - colectarea pornește abia după ce accepți, conform semnalelor de consimțământ trimise către Google (Google Consent Mode). Odată acceptată, Analytics poate colecta informații precum adresa IP, tipul de dispozitiv și browser, și paginile vizitate.</p>
     <p>Poți citi politica de confidențialitate a Google la <a href="https://policies.google.com/privacy">policies.google.com/privacy</a> sau te poți opri din urmărire instalând <a href="https://tools.google.com/dlpage/gaoptout">add-on-ul oficial de opt-out Google Analytics</a>.</p>
   </div>
 
   <div class="legal-card">
     <h2>Reclame (Google AdSense)</h2>
-    <p>Afișez reclame prin Google AdSense, ca sursă de venit pentru întreținerea site-ului. Până accepți cookie-urile din bannerul de mai jos, reclamele sunt nepersonalizate - se pot baza pe conținutul paginii, dar nu pe profilul tău de navigare. Dacă accepți, Google poate folosi și cookie-uri de personalizare, ca să îți arate reclame mai relevante pentru tine.</p>
+    <p>Afișez reclame prin Google AdSense, ca sursă de venit pentru întreținerea site-ului. Până apeși „Accept” în bannerul de cookie-uri, reclamele sunt nepersonalizate și Google nu salvează cookie-uri de personalizare în browser-ul tău. Dacă accepți, Google poate folosi și cookie-uri de personalizare, ca să îți arate reclame mai relevante pentru tine.</p>
     <p>Poți vedea și controla reclamele personalizate din <a href="https://adssettings.google.com/">setările de publicitate Google</a>, sau poți citi politica de confidențialitate a Google la <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</p>
   </div>
 
@@ -116,6 +133,25 @@ try {
     <h2>Ce se întâmplă totuși automat</h2>
     <p>Fonturile site-ului (Playfair Display, Source Serif 4, JetBrains Mono) se încarcă de la Google Fonts. Când browser-ul tău descarcă un font, Google primește adresa ta IP și informații tehnice de bază despre cerere - asta ține de modul în care funcționează internetul, nu e ceva ce controlez eu. Poți citi politica Google la <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</p>
     <p>Ca orice server web, hostingul care găzduiește acest site poate păstra jurnale tehnice standard (adresă IP, pagină accesată, dată/oră) pentru securitate și funcționare - nu le folosesc pentru a te identifica sau urmări.</p>
+  </div>
+
+  <div class="legal-card">
+    <h2>Drepturile tale</h2>
+    <p>Conform Regulamentului (UE) 2016/679 (GDPR), ai dreptul să:</p>
+    <ul>
+      <li>afli ce date am despre tine (drept de acces)</li>
+      <li>ceri corectarea datelor greșite (drept de rectificare)</li>
+      <li>ceri ștergerea datelor (drept de ștergere)</li>
+      <li>te opui prelucrării sau să ceri restrângerea ei</li>
+      <li>îți retragi oricând consimțământul pentru cookie-uri, din <a href="#" onclick="event.preventDefault();window.openCookieSettings&amp;&amp;window.openCookieSettings()">Setări cookie-uri</a> (disponibil și în footer, pe orice pagină)</li>
+      <li>depui o plângere la <a href="https://www.dataprotection.ro/">Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP)</a>, dacă consideri că ți-au fost încălcate drepturile</li>
+    </ul>
+    <p>Pentru orice cerere legată de aceste drepturi, scrie-mi la <a href="mailto:contact@teoreme.ro">contact@teoreme.ro</a>.</p>
+  </div>
+
+  <div class="legal-card">
+    <h2>Dacă ești minor</h2>
+    <p>Site-ul e gândit pentru toată lumea, inclusiv elevi de gimnaziu și liceu. Dacă ai sub 16 ani, te rog să ceri acordul unui părinte sau tutore înainte să apeși „Accept” la cookie-uri - în România, legea (nr. 190/2018, care pune în aplicare GDPR) cere acordul unui adult pentru consimțământul la prelucrarea datelor persoanelor sub 16 ani. Conținutul matematic al site-ului rămâne accesibil integral indiferent de alegerea ta la cookie-uri.</p>
   </div>
 
   <div class="legal-card">
@@ -131,7 +167,7 @@ try {
 
 <footer>
   <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://github.com/ThinkRoot99/teoreme">Cod sursă</a></p>
-  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="confidentialitate.html">Confidențialitate</a> · <a href="termeni.html">Termeni</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="confidentialitate.html">Confidențialitate</a> · <a href="termeni.html">Termeni</a> · <a href="#" onclick="event.preventDefault();window.openCookieSettings&amp;&amp;window.openCookieSettings()">Setări cookie-uri</a></p>
 </footer>
 
 <style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>

@@ -2,21 +2,38 @@
 <html lang="ro">
 <head>
 <script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){window.dataLayer.push(arguments);}
+window.gtag = gtag;
+gtag('consent', 'default', {
+  'ad_storage': 'denied',
+  'ad_user_data': 'denied',
+  'ad_personalization': 'denied',
+  'analytics_storage': 'denied'
+});
 try {
-  if (window.localStorage.getItem('cookie-consent') !== 'granted') {
-    (window.adsbygoogle = window.adsbygoogle || []).requestNonPersonalizedAds = 1;
+  if (window.localStorage.getItem('cookie-consent') === 'granted') {
+    gtag('consent', 'update', {
+      'ad_storage': 'granted',
+      'ad_user_data': 'granted',
+      'ad_personalization': 'granted',
+      'analytics_storage': 'granted'
+    });
   }
 } catch(e) {}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXXXXX');
 </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
      crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index, follow">
 <title>Numerele Carmichael - ∑ Teoreme</title>
-<meta name="description" content="Numere compuse n care satisfac aⁿ⁻¹≡1 (mod n) pentru orice a prim cu n - „mincinoși&quot; pentru testul Fermat de primalitate.">
+<meta name="description" content="Numere compuse n care satisfac aⁿ⁻¹≡1 (mod n) pentru orice a prim cu n - „mincinoși” pentru testul Fermat de primalitate.">
 <meta property="og:title" content="Numerele Carmichael - ∑ Teoreme">
-<meta property="og:description" content="Numere compuse n care satisfac aⁿ⁻¹≡1 (mod n) pentru orice a prim cu n - „mincinoși&quot; pentru testul Fermat de primalitate.">
+<meta property="og:description" content="Numere compuse n care satisfac aⁿ⁻¹≡1 (mod n) pentru orice a prim cu n - „mincinoși” pentru testul Fermat de primalitate.">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ro_RO">
 <meta property="og:site_name" content="∑ Teoreme">
@@ -31,7 +48,7 @@ try {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../style.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Numerele Carmichael","description":"Numere compuse n care satisfac aⁿ⁻¹≡1 (mod n) pentru orice a prim cu n - „mincinoși\" pentru testul Fermat de primalitate.","author":{"@type":"Person","name":"Robert Carmichael, 1910"},"inLanguage":"ro","educationalLevel":"Avansat","url":"https://teoreme.ro/teoreme/numere-carmichael.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Numerele Carmichael","description":"Numere compuse n care satisfac aⁿ⁻¹≡1 (mod n) pentru orice a prim cu n - „mincinoși” pentru testul Fermat de primalitate.","author":{"@type":"Person","name":"Robert Carmichael, 1910"},"inLanguage":"ro","educationalLevel":"Avansat","url":"https://teoreme.ro/teoreme/numere-carmichael.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
 </head>
 <body>
 <nav class="site-nav">
@@ -59,7 +76,7 @@ try {
 
 <footer>
   <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://github.com/ThinkRoot99/teoreme">Cod sursă</a></p>
-  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a> · <a href="#" onclick="event.preventDefault();window.openCookieSettings&amp;&amp;window.openCookieSettings()">Setări cookie-uri</a></p>
 </footer>
 
 <style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
