@@ -247,7 +247,7 @@ let stats = { teoreme: 0, index: false, arhiva: false, sitemap: false };
       '    </div>\n' +
       '  </div>\n</nav>\n\n' +
       '<div class="page-wrap" id="pageWrap">\n' + bodyHtml + '\n</div>\n\n' +
-      '<footer>\n  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>\n' +
+      '<footer>\n  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://github.com/ThinkRoot99/teoreme">Cod sursă</a></p>\n' +
       '  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>\n</footer>\n\n' +
       '<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>\n\n' +
       '<script>\n' +
