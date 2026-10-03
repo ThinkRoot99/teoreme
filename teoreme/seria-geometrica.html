@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Seria geometrică - ∑ Teoreme</title>
+<meta name="description" content="Suma unei serii geometrice infinite cu rație |r|&amp;lt;1 are o valoare finită exactă.">
+<meta property="og:title" content="Seria geometrică - ∑ Teoreme">
+<meta property="og:description" content="Suma unei serii geometrice infinite cu rație |r|&amp;lt;1 are o valoare finită exactă.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/seria-geometrica.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Seria geometrică","description":"Suma unei serii geometrice infinite cu rație |r|&lt;1 are o valoare finită exactă.","author":{"@type":"Person","name":"Euclid & Arhimede"},"inLanguage":"ro","educationalLevel":"Fundamental","url":"https://teoreme.ro/teoreme/seria-geometrica.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Analiză</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Seria geometrică</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-fund">Fundamental</span></div><h1 itemprop="name">Seria geometrică</h1><p class="author" itemprop="author">Euclid & Arhimede · nr. 079</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Enunț:</strong> Seria geometrică cu primul termen a și rație r converge dacă |r|&lt;1, cu suma S=a/(1-r).</div><div class="formula-block"><span class="formula-label">Formulă</span>∑_{n=0}^∞ arⁿ = a/(1−r), |r|&lt;1</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" width="300"><rect x="20" y="80" width="280" height="40" fill="none" stroke="#4a1a7a" stroke-width="1.5"/><rect x="20" y="80" width="140" height="40" fill="#4a1a7a" fill-opacity="0.65"/><rect x="160" y="80" width="70" height="40" fill="#4a1a7a" fill-opacity="0.5"/><rect x="230" y="80" width="35" height="40" fill="#4a1a7a" fill-opacity="0.35"/><rect x="265" y="80" width="17" height="40" fill="#4a1a7a" fill-opacity="0.22"/><rect x="282" y="80" width="9" height="40" fill="#c8922a" fill-opacity="0.6"/><text x="90" y="105" text-anchor="middle" font-size="13" fill="#fff" font-weight="600">1</text><text x="195" y="105" text-anchor="middle" font-size="11" fill="#fff">1/2</text><text x="247" y="103" text-anchor="middle" font-size="9" fill="#333">1/4</text><text x="150" y="140" text-anchor="middle" font-size="11" fill="#555">1+1/2+1/4+1/8+... → suma totală = 2</text><text x="150" y="60" text-anchor="middle" font-size="10" fill="#c8922a" font-weight="600">infinit de termeni, sumă finită</text></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story"><span class="hl">Dacă ai 1 bomboană, apoi jumătate de bomboană, apoi un sfert, și tot așa la nesfârșit</span>, ai aduna în total exact 2 bomboane - deși faci infinit de multe adăugări, din ce în ce mai mici. Paradoxul lui Zenon se rezolvă exact prin această idee.</div><div class="intuitive-note">Formula apare în finanțe (valoarea prezentă a unor plăți repetate), probabilitate și fizică (oscilații amortizate, distanța parcursă de o minge care sare).</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">Calculează suma seriei ∑(1/2)ⁿ pentru n de la 0 la infinit.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Identificăm a=1 (primul termen, la n=0) și r=1/2 (rația).</p></div><div class="step"><div class="dot"></div><p>Verificăm condiția de convergență: |r|=1/2&lt;1, deci seria converge.</p></div><div class="step"><div class="dot"></div><p>Aplicăm formula: S=a/(1-r)=1/(1-1/2)=1/(1/2)=2.</p></div><div class="result">✓ S=<strong>2</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">O serie geometrică cu primul termen a=3 are suma S=12. Care este rația r?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Pornim de la formula S=a/(1-r) și înlocuim valorile cunoscute: 12=3/(1-r).</p></div><div class="step"><div class="dot"></div><p>Rezolvăm pentru (1-r): 1-r=3/12=1/4.</p></div><div class="step"><div class="dot"></div><p>Deci r=1-1/4=3/4.</p></div><div class="result">✓ r=<strong>3/4</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">Calculează suma seriei ∑a·0ⁿ pentru n de la 0 la infinit (rația r=0).</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Cu r=0, toți termenii de la n=1 încolo sunt 0 (0¹=0, 0²=0, etc.), deci rămâne doar primul termen, a.</p></div><div class="step"><div class="dot"></div><p>Verificare cu formula: S=a/(1-0)=a - același rezultat.</p></div><div class="result">✓ S=<strong>a</strong> (doar primul termen contează)</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Se aplică formula S=a/(1-r) pentru seria ∑3ⁿ (a=1, r=3)? Ce se întâmplă dacă o aplicăm mecanic?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Verificăm condiția: |r|=3, care nu este &lt;1, deci seria diverge (termenii cresc la infinit) - formula NU se aplică.</p></div><div class="step"><div class="dot"></div><p>Dacă am aplica-o mecanic am obține S=1/(1-3)=1/(-2)=-1/2 - o „sumă” negativă pentru o serie cu toți termenii pozitivi, ceea ce e absurd.</p></div><div class="step"><div class="dot"></div><p>Acest rezultat fals arată de ce condiția |r|&lt;1 este obligatorie, nu opțională.</p></div><div class="result">✓ <strong>Nu se aplică</strong> - seria diverge, iar formula ar da un rezultat absurd</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">O minge cade de la 2m înălțime și, de fiecare dată când atinge solul, sare înapoi la 3/4 din înălțimea precedentă. Ce distanță totală parcurge mingea până se oprește?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Înălțimile succesive ale săriturilor formează o serie geometrică: h₁=2·(3/4)=1.5, h₂=1.5·(3/4)=1.125, cu a=1.5 și r=3/4.</p></div><div class="step"><div class="dot"></div><p>Fiecare săritură parcurge distanța în sus și înapoi în jos, deci contribuie cu 2·hₙ la distanța totală. Suma înălțimilor este S=1.5/(1-0.75)=6.</p></div><div class="step"><div class="dot"></div><p>Distanța totală = căderea inițială (2m) + de două ori suma săriturilor (2·6=12m) = 2+12=14m.</p></div><div class="result">✓ Distanța totală este <strong>14 metri</strong></div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Analiză</h3><div class="related-links"><a href="teorema-valorii-intermediare.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema valorii intermediare</a><a href="teorema-lui-rolle.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema lui Rolle</a><a href="teorema-valorii-medii-lagrange.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema valorii medii (Lagrange)</a><a href="teorema-lui-lhopital.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema lui L'Hôpital</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="integrarea-prin-parti.html" class="tn-link prev">Integrarea prin părți</a><a href="criteriul-dalembert.html" class="tn-link next">Criteriul D'Alembert</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Numerele Carmichael - ∑ Teoreme</title>
+<meta name="description" content="Numere compuse n care satisfac aⁿ⁻¹≡1 (mod n) pentru orice a prim cu n - „mincinoși&quot; pentru testul Fermat de primalitate.">
+<meta property="og:title" content="Numerele Carmichael - ∑ Teoreme">
+<meta property="og:description" content="Numere compuse n care satisfac aⁿ⁻¹≡1 (mod n) pentru orice a prim cu n - „mincinoși&quot; pentru testul Fermat de primalitate.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/numere-carmichael.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Numerele Carmichael","description":"Numere compuse n care satisfac aⁿ⁻¹≡1 (mod n) pentru orice a prim cu n - „mincinoși\" pentru testul Fermat de primalitate.","author":{"@type":"Person","name":"Robert Carmichael, 1910"},"inLanguage":"ro","educationalLevel":"Avansat","url":"https://teoreme.ro/teoreme/numere-carmichael.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Aritmetică</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Numerele Carmichael</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-arit">Aritmetică</span><span class="badge-level bl-adv">Avansat</span></div><h1 itemprop="name">Numerele Carmichael</h1><p class="author" itemprop="author">Robert Carmichael, 1910 · nr. 147</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Definiție:</strong> Un număr natural compus n se numește Carmichael dacă aⁿ⁻¹≡1 (mod n) pentru orice întreg a prim cu n. Aceste numere „trec” testul de primalitate Fermat pentru toate bazele, fiind „mincinoși” perfecți. Criteriul lui Korselt le caracterizează: n liber de pătrate, iar (p−1) divide (n−1) pentru fiecare factor prim p al lui n.</div><div class="formula-block"><span class="formula-label">Formulă</span>n compus, aⁿ⁻¹≡1 (mod n) pentru orice gcd(a,n)=1</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 280 205" width="280" xmlns="http://www.w3.org/2000/svg"><text x="140" y="14" text-anchor="middle" font-size="11" fill="#999" font-style="italic">561 = 3×11×17: criteriul lui Korselt</text><text x="140" y="30" text-anchor="middle" font-size="10" font-family="'JetBrains Mono',monospace" fill="#1a1510">n−1 = 560</text><text x="40" y="46" font-size="9" fill="#999" font-style="italic">p</text><text x="105" y="46" font-size="9" fill="#999" font-style="italic">p−1</text><text x="195" y="46" font-size="9" fill="#999" font-style="italic">(p−1) divide 560?</text><rect x="20" y="52" width="240" height="24" rx="3" fill="rgba(200,146,42,0.22)" stroke="#c8922a" stroke-width="1"/><text x="40" y="68" text-anchor="middle" font-size="13" font-family="'JetBrains Mono',monospace" fill="#8b1a1a" font-weight="700">3</text><text x="105" y="68" text-anchor="middle" font-size="13" font-family="'JetBrains Mono',monospace" fill="#1a1510">2</text><text x="200" y="68" text-anchor="middle" font-size="12" font-family="'JetBrains Mono',monospace" fill="#8a5f10" font-weight="700">560/2=280 ✓</text><rect x="20" y="84" width="240" height="24" rx="3" fill="rgba(200,146,42,0.22)" stroke="#c8922a" stroke-width="1"/><text x="40" y="100" text-anchor="middle" font-size="13" font-family="'JetBrains Mono',monospace" fill="#8b1a1a" font-weight="700">11</text><text x="105" y="100" text-anchor="middle" font-size="13" font-family="'JetBrains Mono',monospace" fill="#1a1510">10</text><text x="200" y="100" text-anchor="middle" font-size="12" font-family="'JetBrains Mono',monospace" fill="#8a5f10" font-weight="700">560/10=56 ✓</text><rect x="20" y="116" width="240" height="24" rx="3" fill="rgba(200,146,42,0.22)" stroke="#c8922a" stroke-width="1"/><text x="40" y="132" text-anchor="middle" font-size="13" font-family="'JetBrains Mono',monospace" fill="#8b1a1a" font-weight="700">17</text><text x="105" y="132" text-anchor="middle" font-size="13" font-family="'JetBrains Mono',monospace" fill="#1a1510">16</text><text x="200" y="132" text-anchor="middle" font-size="12" font-family="'JetBrains Mono',monospace" fill="#8a5f10" font-weight="700">560/16=35 ✓</text><text x="140" y="180" text-anchor="middle" font-size="12" font-family="'JetBrains Mono',monospace" fill="#1a1510">toate condițiile ✓ → <tspan fill="#c8922a" font-weight="700">561 este Carmichael</tspan></text><text x="140" y="202" text-anchor="middle" font-size="10" fill="#999" font-style="italic">„trece” testul Fermat pentru orice bază a, deși e compus</text></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story">Gândește-te la testul Fermat ca la o parolă secretă pe care doar numerele prime ar trebui să o știe. <span class="hl">Un număr Carmichael este un „impostor” perfect: deși e compus, nu chiar prim, reușește să ghicească parola corectă pentru absolut orice prieten pe care îl întrebi</span> - de aceea a păcălit multă vreme testele simple de primalitate, deghizat perfect în număr prim.</div><div class="intuitive-note">Cel mai mic număr Carmichael este 561=3×11×17, descoperit de Carmichael în 1910. În 1994, Alford, Granville și Pomerance au demonstrat că există infinit de multe astfel de numere.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">Verifică, prin criteriul lui Korselt, că 561=3×11×17 este număr Carmichael.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>561 este liber de pătrate, pentru că 3, 11 și 17 sunt factori primi distincți, niciunul repetat.</p></div><div class="step"><div class="dot"></div><p>Calculăm n−1=560 și verificăm fiecare factor: (3−1)=2 divide 560? 560/2=280, da.</p></div><div class="step"><div class="dot"></div><p>(11−1)=10 divide 560? 560/10=56, da.</p></div><div class="step"><div class="dot"></div><p>(17−1)=16 divide 560? 560/16=35, da.</p></div><div class="result">✓ Toate condițiile sunt îndeplinite → <strong>561 este Carmichael</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">Un număr Carmichael cu trei factori primi are forma 7×13×q, cu q număr prim diferit de 7 și 13. Verifică dacă q=19 funcționează, folosind criteriul lui Korselt.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Calculăm n=7×13×19=1729, deci n−1=1728.</p></div><div class="step"><div class="dot"></div><p>Verificăm (7−1)=6: 1728/6=288, condiția e îndeplinită.</p></div><div class="step"><div class="dot"></div><p>Verificăm (13−1)=12: 1728/12=144, condiția e îndeplinită.</p></div><div class="step"><div class="dot"></div><p>Verificăm (19−1)=18: 1728/18=96, condiția e îndeplinită.</p></div><div class="step"><div class="dot"></div><p>Toate cele trei condiții fiind îndeplinite, q=19 chiar funcționează.</p></div><div class="result">✓ q=19 funcționează - 1729 (numărul „taxi” al lui Ramanujan) este Carmichael.</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">De ce nu poate exista un număr Carmichael cu doar 2 factori primi distincți? Verifică pe exemplul 15=3×5.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Pentru 15, n−1=14. Verificăm (3−1)=2: 14/2=7, condiția e îndeplinită.</p></div><div class="step"><div class="dot"></div><p>Verificăm (5−1)=4: 14/4=3.5, care nu este număr întreg, deci condiția eșuează.</p></div><div class="step"><div class="dot"></div><p>Cum una din condiții nu se îndeplinește, 15 nu este Carmichael - și, de fapt, se poate arăta că niciun produs a doar doi factori primi distincți nu poate satisface simultan toate condițiile lui Korselt.</p></div><div class="result">✓ 15 <strong>nu este Carmichael</strong>; orice număr Carmichael are nevoie de cel puțin 3 factori primi.</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Adevărat sau fals: dacă un număr n trece testul Fermat pentru o singură bază a (adică aⁿ⁻¹≡1 mod n), atunci n este automat un număr Carmichael.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>341=11×31 trece testul Fermat pentru baza a=2 (este un pseudoprim Fermat cunoscut în această bază).</p></div><div class="step"><div class="dot"></div><p>Verificăm însă criteriul lui Korselt complet: n−1=340, iar (31−1)=30 ar trebui să dividă 340.</p></div><div class="step"><div class="dot"></div><p>Calculăm 340/30≈11.33, care nu este număr întreg, deci condiția eșuează.</p></div><div class="step"><div class="dot"></div><p>Cum 341 nu satisface Korselt pentru toți factorii, nu este Carmichael, deși a trecut testul pentru baza 2 - un Carmichael adevărat trebuie să treacă testul pentru absolut toate bazele prime cu n.</p></div><div class="result">✓ <strong>Fals</strong> - a trece testul pentru o singură bază nu garantează statutul de Carmichael.</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">Un profesor folosește doar testul Fermat pentru a verifica rapid dacă un număr este prim. Dacă testează n=1105=5×13×17, va fi păcălit pentru orice bază aleasă?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Verificăm criteriul lui Korselt: 1105 este liber de pătrate (5, 13, 17 sunt distincte), iar n−1=1104.</p></div><div class="step"><div class="dot"></div><p>(5−1)=4 divide 1104? 1104/4=276, da.</p></div><div class="step"><div class="dot"></div><p>(13−1)=12 divide 1104? 1104/12=92, da.</p></div><div class="step"><div class="dot"></div><p>(17−1)=16 divide 1104? 1104/16=69, da.</p></div><div class="step"><div class="dot"></div><p>Toate condițiile fiind îndeplinite, 1105 este un număr Carmichael.</p></div><div class="result">✓ <strong>Da</strong>, profesorul va fi păcălit - 1105 este Carmichael și „trece” testul pentru orice bază.</div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Aritmetică</h3><div class="related-links"><a href="infinitatea-numerelor-prime.html" class="related-link"><span class="card-tag tag-arit">Aritmetică</span> Infinitatea numerelor prime</a><a href="teorema-fundamentala-a-aritmeticii.html" class="related-link"><span class="card-tag tag-arit">Aritmetică</span> Teorema fundamentală a aritmeticii</a><a href="teorema-mica-a-lui-fermat.html" class="related-link"><span class="card-tag tag-arit">Aritmetică</span> Teorema mică a lui Fermat</a><a href="teorema-lui-euler-phi.html" class="related-link"><span class="card-tag tag-arit">Aritmetică</span> Teorema lui Euler (φ)</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="formula-inversiunii-mobius.html" class="tn-link prev">Formula de inversiune Möbius</a><a href="teorema-lui-lame.html" class="tn-link next">Teorema lui Lamé</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

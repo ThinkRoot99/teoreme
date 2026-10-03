@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Compacitatea secvențială - ∑ Teoreme</title>
+<meta name="description" content="Un spațiu este secvențial compact dacă orice șir are un subșir convergent - echivalentă cu compacitatea în spații metrice.">
+<meta property="og:title" content="Compacitatea secvențială - ∑ Teoreme">
+<meta property="og:description" content="Un spațiu este secvențial compact dacă orice șir are un subșir convergent - echivalentă cu compacitatea în spații metrice.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/compactitate-secventiala.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Compacitatea secvențială","description":"Un spațiu este secvențial compact dacă orice șir are un subșir convergent - echivalentă cu compacitatea în spații metrice.","author":{"@type":"Person","name":"Concept clasic de topologie generală"},"inLanguage":"ro","educationalLevel":"Intermediar","url":"https://teoreme.ro/teoreme/compactitate-secventiala.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Topologie</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Compacitatea secvențială</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-topo">Topologie</span><span class="badge-level bl-med">Intermediar</span></div><h1 itemprop="name">Compacitatea secvențială</h1><p class="author" itemprop="author">Concept clasic de topologie generală · nr. 174</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Enunț:</strong> Un spațiu topologic X este secvențial compact dacă orice șir (xₙ) de puncte din X are un subșir convergent către un punct din X. Într-un spațiu metric, compacitatea secvențială este echivalentă cu compacitatea topologică.</div><div class="formula-block"><span class="formula-label">Formulă</span>∀(xₙ)⊂X ∃subșir (x_{n_k}) convergent în X</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 300 170" xmlns="http://www.w3.org/2000/svg"><rect x="20" y="20" width="260" height="120" rx="10" fill="none" stroke="#1a6040" stroke-width="2" stroke-dasharray="6 4"/><circle cx="50" cy="40" r="3" fill="#1a6040"/><circle cx="90" cy="120" r="3" fill="#1a6040"/><circle cx="200" cy="35" r="3" fill="#1a6040"/><circle cx="60" cy="90" r="3" fill="#1a6040"/><circle cx="230" cy="110" r="3" fill="#1a6040"/><circle cx="170" cy="95" r="3" fill="#c8922a"/><circle cx="180" cy="85" r="3" fill="#c8922a"/><circle cx="187" cy="80" r="3" fill="#c8922a"/><circle cx="191" cy="77" r="3" fill="#c8922a"/><circle cx="194" cy="75" r="5" fill="#c8922a"/><text x="194" y="60" font-size="10" fill="#c8922a" text-anchor="middle">subșir care se adună</text></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story"><span class="hl">Un roi de albine care nu poate zbura oriunde la nesfârșit - oricât de haotic ar zbura roiul, mereu se poate găsi un grup din ele care se adună tot mai aproape într-un colț al grădinii</span>.</div><div class="intuitive-note">Concept clasic de topologie generală. În spații metrice coincide cu compacitatea, prin teorema Bolzano-Weierstrass generalizată, dar în spații topologice generale cele două noțiuni pot diferi.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">Șirul xₙ=(-1)ⁿ în [-1,1]. Are subșir convergent?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Subșirul termenilor pari x_{2k}=1 este constant egal cu 1.</p></div><div class="step"><div class="dot"></div><p>Un subșir constant converge la 1.</p></div><div class="result">✓ <strong>Da</strong>, subșirul termenilor pari converge la 1</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">[0,1] este secvențial compact?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>[0,1] este compact prin Heine-Borel și e totodată spațiu metric.</p></div><div class="step"><div class="dot"></div><p>Compact și metric implică secvențial compact.</p></div><div class="step"><div class="dot"></div><p>Orice șir din [0,1] are un subșir convergent, conform Bolzano-Weierstrass.</p></div><div class="result">✓ <strong>Da</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">Șirul xₙ=n în ℝ. Are subșir convergent în ℝ?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Orice subșir al lui xₙ=n tinde tot la +∞.</p></div><div class="step"><div class="dot"></div><p>Niciun subșir nu converge la un număr real, deci ℝ nu este secvențial compact.</p></div><div class="result">✓ <strong>Nu</strong> - ℝ nu e secvențial compact</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Șirul de funcții fₙ(x)=xⁿ în C([0,1]) cu norma sup - are subșir uniform convergent?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>fₙ converge punctual la funcția discontinuă egală cu 0 pe [0,1) și cu 1 în x=1, dar nu uniform.</p></div><div class="step"><div class="dot"></div><p>Orice subșir converge punctual la aceeași limită discontinuă, deci niciun subșir nu poate converge uniform la o funcție continuă.</p></div><div class="result">✓ <strong>Nu</strong> - ilustrează diferența dintre convergența punctuală și cea uniformă</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">În spații metrice, de ce sunt echivalente compacitatea și compacitatea secvențială?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Compact ⇒ secvențial compact: dacă un șir n-ar avea subșir convergent, fiecare punct ar avea o vecinătate ce conține doar un număr finit de termeni, ceea ce ar da o acoperire deschisă fără subacoperire finită.</p></div><div class="step"><div class="dot"></div><p>Secvențial compact ⇒ compact: folosind totala mărginire și completitudinea, echivalente cu compacitatea secvențială în spații metrice, se construiește o subacoperire finită din orice acoperire deschisă.</p></div><div class="result">✓ <strong>Echivalente</strong> datorită structurii metrice</div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Topologie</h3><div class="related-links"><a href="teorema-heine-borel.html" class="related-link"><span class="card-tag tag-topo">Topologie</span> Teorema Heine–Borel</a><a href="teorema-punctului-fix-brouwer.html" class="related-link"><span class="card-tag tag-topo">Topologie</span> Teorema punctului fix Brouwer</a><a href="teorema-lui-jordan.html" class="related-link"><span class="card-tag tag-topo">Topologie</span> Teorema lui Jordan</a><a href="teorema-borsuk-ulam.html" class="related-link"><span class="card-tag tag-topo">Topologie</span> Teorema Borsuk–Ulam</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="teorema-lui-stone-weierstrass.html" class="tn-link prev">Teorema Stone–Weierstrass</a><a href="teorema-lui-tietze.html" class="tn-link next">Teorema de extensie Tietze</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

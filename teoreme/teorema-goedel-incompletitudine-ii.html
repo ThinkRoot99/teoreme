@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Teorema incompletitudinii (Gödel II) - ∑ Teoreme</title>
+<meta name="description" content="Niciun sistem formal consistent suficient de puternic nu poate demonstra propria sa consistență.">
+<meta property="og:title" content="Teorema incompletitudinii (Gödel II) - ∑ Teoreme">
+<meta property="og:description" content="Niciun sistem formal consistent suficient de puternic nu poate demonstra propria sa consistență.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/teorema-goedel-incompletitudine-ii.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Teorema incompletitudinii (Gödel II)","description":"Niciun sistem formal consistent suficient de puternic nu poate demonstra propria sa consistență.","author":{"@type":"Person","name":"Kurt Gödel, 1931"},"inLanguage":"ro","educationalLevel":"Avansat","url":"https://teoreme.ro/teoreme/teorema-goedel-incompletitudine-ii.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Logică</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Teorema incompletitudinii (Gödel II)</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-log">Logică</span><span class="badge-level bl-adv">Avansat</span></div><h1 itemprop="name">Teorema incompletitudinii (Gödel II)</h1><p class="author" itemprop="author">Kurt Gödel, 1931 · nr. 127</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Enunț:</strong> Niciun sistem formal consistent care satisface condițiile teoremei I nu poate demonstra propria sa consistență.</div><div class="formula-block"><span class="formula-label">Formulă</span>Consistent(T) ⊬ Consistent(T) (din T)</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg"><rect x="90" y="60" width="120" height="70" rx="8" fill="none" stroke="#8a3010" stroke-width="2"/><text x="150" y="100" text-anchor="middle" font-size="16" fill="#8a3010">T</text><path d="M210 75 C 270 40, 270 150, 210 115" fill="none" stroke="#c8922a" stroke-width="2"/><text x="255" y="95" text-anchor="middle" font-size="11" fill="#c8922a">„Sunt consistent?”</text><line x1="235" y1="75" x2="255" y2="115" stroke="#8a3010" stroke-width="3"/><line x1="255" y1="75" x2="235" y2="115" stroke="#8a3010" stroke-width="3"/><text x="150" y="155" text-anchor="middle" font-size="11" fill="#8a3010">T nu-și poate dovedi singur consistența</text></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story">Un sistem de reguli nu poate spune singur despre el însuși <span class="hl">„eu sunt sigur, nu greșesc niciodată”</span>. E ca un copil care își verifică singur tema doar cu regulile pe care le-a folosit deja ca să facă tema - nu e o dovadă în care să te poți încrede complet. Ca să fii sigur că regulile tale nu au greșeli, ai nevoie de reguli din afara sistemului, nu doar de el însuși.</div><div class="intuitive-note">E o consecință directă a primei teoreme și a distrus speranța lui Hilbert într-un fundament absolut sigur al matematicii. Bertrand Russell a rezumat-o simplu: „Logica e mai complicată decât am crezut.”</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">Presupune că un sistem T demonstrează chiar el propria propoziție Consistent(T). Ce spune a doua teoremă a lui Gödel despre această situație?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>A doua teoremă a lui Gödel spune că orice sistem consistent, care satisface condițiile primei teoreme, nu poate demonstra Consistent(T) despre el însuși</p></div><div class="step"><div class="dot"></div><p>Dacă totuși T demonstrează Consistent(T), înseamnă că ipoteza de consistență a lui T este falsă, adică T este de fapt inconsistent</p></div><div class="step"><div class="dot"></div><p>Un sistem inconsistent poate demonstra orice propoziție, inclusiv una falsă precum Consistent(T) despre un sistem contradictoriu</p></div><div class="result">✓ Dacă T se demonstrează consistent pe sine, T este de fapt inconsistent</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">Ce s-ar întâmpla dacă am folosi un sistem T2 mai puternic, în care demonstrăm Consistent(T1) pentru un sistem T1 mai slab?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Acest lucru este posibil și se întâmplă des - de exemplu ZFC demonstrează Consistent(PA)</p></div><div class="step"><div class="dot"></div><p>Dar teorema a doua se aplică din nou lui T2: T2 nu-și poate demonstra propria consistență, Consistent(T2)</p></div><div class="step"><div class="dot"></div><p>Rămânem cu un lanț fără sfârșit: fiecare sistem are nevoie de unul și mai puternic pentru a-i valida consistența</p></div><div class="result">✓ Se obține un regres infinit de sisteme, fiecare validat doar din afara lui</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">Există sisteme formale care își pot demonstra propria consistență fără contradicție?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Da - dar numai sisteme prea slabe pentru a reprezenta aritmetica elementară, deci care nu satisfac ipotezele teoremei</p></div><div class="step"><div class="dot"></div><p>Un asemenea sistem slab nu poate exprima suficient de bine noțiunea de demonstrație pentru ca autoreferința lui Gödel să funcționeze</p></div><div class="step"><div class="dot"></div><p>Prețul plătit este, ca și la prima teoremă, o putere de exprimare mult redusă</p></div><div class="result">✓ Doar sisteme prea slabe pentru aritmetică pot demonstra propria consistență</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Adevărat sau fals: a doua teoremă a lui Gödel arată că nu putem ști niciodată dacă matematica este consistentă.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Parțial adevărat, dar formulat prea tare - teorema arată doar că nu putem ști asta din interiorul aceluiași sistem</p></div><div class="step"><div class="dot"></div><p>Putem avea încredere indirectă, din alte surse: consistență relativă față de un sistem mai puternic, sau argumente informale puternice</p></div><div class="step"><div class="dot"></div><p>Teorema nu spune că matematica e inconsistentă, ci doar că certitudinea absolută, auto-demonstrată, este imposibilă</p></div><div class="result">✓ Fals ca enunț absolut - există certitudine relativă, doar nu una auto-demonstrată din interior</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">De ce un program de verificare a demonstrațiilor nu se poate auto-certifica drept complet sigur?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Un asemenea program se bazează pe un sistem formal de reguli pentru a verifica demonstrații matematice, la fel ca T în teoremă</p></div><div class="step"><div class="dot"></div><p>Dacă acest sistem este suficient de puternic pentru aritmetică, el nu-și poate demonstra propria consistență folosind doar propriile reguli</p></div><div class="step"><div class="dot"></div><p>Practic, încrederea în astfel de programe vine din verificare externă, testare îndelungată și argumente meta-matematice, nu dintr-o auto-certificare formală</p></div><div class="result">✓ Pentru că orice astfel de sistem suficient de puternic nu-și poate valida singur consistența</div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Logică</h3><div class="related-links"><a href="teorema-goedel-incompletitudine-i.html" class="related-link"><span class="card-tag tag-log">Logică</span> Teorema incompletitudinii (Gödel I)</a><a href="teorema-lui-cantor-cardinale.html" class="related-link"><span class="card-tag tag-log">Logică</span> Teorema lui Cantor</a><a href="problema-halting.html" class="related-link"><span class="card-tag tag-log">Logică</span> Problema opririi (Halting Problem)</a><a href="axioma-alegerii.html" class="related-link"><span class="card-tag tag-log">Logică</span> Axioma alegerii</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="teorema-goedel-incompletitudine-i.html" class="tn-link prev">Teorema incompletitudinii (Gödel I)</a><a href="teorema-lui-cantor-cardinale.html" class="tn-link next">Teorema lui Cantor</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

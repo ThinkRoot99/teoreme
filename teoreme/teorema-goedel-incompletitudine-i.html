@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Teorema incompletitudinii (Gödel I) - ∑ Teoreme</title>
+<meta name="description" content="În orice sistem formal consistent suficient de puternic există propoziții adevărate care nu pot fi demonstrate.">
+<meta property="og:title" content="Teorema incompletitudinii (Gödel I) - ∑ Teoreme">
+<meta property="og:description" content="În orice sistem formal consistent suficient de puternic există propoziții adevărate care nu pot fi demonstrate.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/teorema-goedel-incompletitudine-i.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Teorema incompletitudinii (Gödel I)","description":"În orice sistem formal consistent suficient de puternic există propoziții adevărate care nu pot fi demonstrate.","author":{"@type":"Person","name":"Kurt Gödel, 1931"},"inLanguage":"ro","educationalLevel":"Avansat","url":"https://teoreme.ro/teoreme/teorema-goedel-incompletitudine-i.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Logică</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Teorema incompletitudinii (Gödel I)</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-log">Logică</span><span class="badge-level bl-adv">Avansat</span></div><h1 itemprop="name">Teorema incompletitudinii (Gödel I)</h1><p class="author" itemprop="author">Kurt Gödel, 1931 · nr. 126</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Enunț:</strong> Orice sistem formal consistent, recursiv axiomatizabil și capabil să reprezinte aritmetica elementară conține propoziții adevărate care nu pot fi demonstrate în sistem.</div><div class="formula-block"><span class="formula-label">Formulă</span>∃P: P adevărată, dar ⊬P și ⊬¬P (în sistem consistent)</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg"><rect x="30" y="30" width="180" height="130" rx="10" fill="none" stroke="#8a3010" stroke-width="2"/><text x="120" y="20" text-anchor="middle" font-size="13" fill="#8a3010">Sistem formal T</text><circle cx="70" cy="70" r="14" fill="none" stroke="#8a3010"/><text x="70" y="75" text-anchor="middle" font-size="12" fill="#8a3010">A</text><circle cx="120" cy="100" r="14" fill="none" stroke="#8a3010"/><text x="120" y="105" text-anchor="middle" font-size="12" fill="#8a3010">B</text><circle cx="80" cy="130" r="14" fill="none" stroke="#8a3010"/><text x="80" y="135" text-anchor="middle" font-size="12" fill="#8a3010">C</text><text x="120" y="185" text-anchor="middle" font-size="11" fill="#8a3010">propoziții demonstrabile</text><circle cx="230" cy="95" r="20" fill="none" stroke="#c8922a" stroke-width="3" stroke-dasharray="4 3"/><text x="230" y="90" text-anchor="middle" font-size="11" fill="#c8922a">G</text><text x="230" y="103" text-anchor="middle" font-size="9" fill="#c8922a">adevărată</text><line x1="160" y1="95" x2="210" y2="95" stroke="#c8922a" stroke-width="1.5" stroke-dasharray="3 3"/><text x="230" y="135" text-anchor="middle" font-size="10" fill="#8a3010">nedemonstrabilă în T</text></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story">Imaginează o cutie de reguli care hotărăște ce este adevărat. Scriem un bilet special: <span class="hl">„Acest bilet nu poate fi dovedit de cutie.”</span> Dacă cutia reușește să-l dovedească, atunci cutia a dovedit ceva fals - e stricată. Dacă nu-l poate dovedi, biletul are dreptate și e adevărat, dar cutia nu poate demonstra asta niciodată. Așa arată Gödel că orice cutie de reguli suficient de puternică are un bilet pe care nu-l poate rezolva.</div><div class="intuitive-note">Kurt Gödel a publicat rezultatul în 1931, la doar 25 de ani, zdrobind programul lui Hilbert, care voia să fundamenteze toată matematica complet și consistent. E considerată una dintre cele mai importante realizări intelectuale ale secolului XX.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">Într-un sistem formal T, construim propoziția G care spune „G nu este demonstrabilă în T”. Explică pas cu pas ce înseamnă asta pentru T.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>G este o propoziție despre ea însăși, construită prin numerotare Gödel, exact ca o frază care vorbește despre propriul ei statut</p></div><div class="step"><div class="dot"></div><p>Dacă T ar demonstra G, atunci T ar demonstra o propoziție care spune despre sine că nu poate fi demonstrată - contradicție internă</p></div><div class="step"><div class="dot"></div><p>Dacă T nu demonstrează G, atunci ce spune G este adevărat (G chiar nu e demonstrabilă), deci G e un adevăr pe care T nu-l poate atinge</p></div><div class="result">✓ G este adevărată, dar T (dacă e consistent) nu o poate demonstra</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">Ce s-ar întâmpla dacă am adăuga G ca axiomă nouă la T, obținând un sistem nou T2=T+G?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>T2 poate acum demonstra G direct, pentru că G a devenit axiomă</p></div><div class="step"><div class="dot"></div><p>Dar teorema lui Gödel se aplică din nou lui T2, care e tot un sistem consistent, recursiv axiomatizabil, capabil de aritmetică</p></div><div class="step"><div class="dot"></div><p>T2 are propria sa propoziție G2, „G2 nu e demonstrabilă în T2”, la fel de nedemonstrabilă ca înainte</p></div><div class="result">✓ Problema reapare mereu - nu poți repara incompletitudinea adăugând o singură axiomă</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">Există sisteme formale care nu suferă de incompletitudinea lui Gödel?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Da - sistemele prea slabe pentru a reprezenta aritmetica elementară (adunare, înmulțire, cuantificatori) scapă de teoremă</p></div><div class="step"><div class="dot"></div><p>Exemplu: calculul propozițional simplu, fără cuantificatori peste numere, este complet și decidabil</p></div><div class="step"><div class="dot"></div><p>Puterea de exprimare a aritmeticii este exact ce face incompletitudinea inevitabilă</p></div><div class="result">✓ Da, sisteme suficient de slabe pot fi complete - prețul e puterea de exprimare</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Adevărat sau fals: teorema lui Gödel arată că matematica are contradicții.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Fals - Gödel presupune consistența sistemului, nu arată contradicții</p></div><div class="step"><div class="dot"></div><p>Teorema arată doar că, dacă sistemul e consistent, atunci e și incomplet - există adevăruri nedemonstrabile</p></div><div class="step"><div class="dot"></div><p>Confuzia dintre incomplet și inconsistent este cea mai frecventă neînțelegere a teoremei</p></div><div class="result">✓ Fals - Gödel arată incompletitudine, nu inconsistență</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">De ce nu poate exista un program de calculator care verifică automat orice teoremă matematică adevărată?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Un asemenea program ar corespunde unui sistem formal complet și decidabil pentru toată matematica</p></div><div class="step"><div class="dot"></div><p>Gödel arată că orice sistem suficient de puternic pentru aritmetică are propoziții adevărate nedemonstrabile în el</p></div><div class="step"><div class="dot"></div><p>Deci orice program de verificare automată va rata mereu unele adevăruri matematice, oricât de bine ar fi construit</p></div><div class="result">✓ Pentru că orice sistem suficient de puternic e incomplet - există adevăruri pe care niciun program nu le poate demonstra</div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Logică</h3><div class="related-links"><a href="teorema-goedel-incompletitudine-ii.html" class="related-link"><span class="card-tag tag-log">Logică</span> Teorema incompletitudinii (Gödel II)</a><a href="teorema-lui-cantor-cardinale.html" class="related-link"><span class="card-tag tag-log">Logică</span> Teorema lui Cantor</a><a href="problema-halting.html" class="related-link"><span class="card-tag tag-log">Logică</span> Problema opririi (Halting Problem)</a><a href="axioma-alegerii.html" class="related-link"><span class="card-tag tag-log">Logică</span> Axioma alegerii</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="recurente-liniare.html" class="tn-link prev">Recurențe liniare cu coeficienți constanți</a><a href="teorema-goedel-incompletitudine-ii.html" class="tn-link next">Teorema incompletitudinii (Gödel II)</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

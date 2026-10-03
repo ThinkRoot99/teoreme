@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Teorema de extensie Tietze - ∑ Teoreme</title>
+<meta name="description" content="Orice funcție continuă și mărginită definită pe o submulțime închisă a unui spațiu normal se poate extinde continuu la tot spațiul.">
+<meta property="og:title" content="Teorema de extensie Tietze - ∑ Teoreme">
+<meta property="og:description" content="Orice funcție continuă și mărginită definită pe o submulțime închisă a unui spațiu normal se poate extinde continuu la tot spațiul.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/teorema-lui-tietze.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Teorema de extensie Tietze","description":"Orice funcție continuă și mărginită definită pe o submulțime închisă a unui spațiu normal se poate extinde continuu la tot spațiul.","author":{"@type":"Person","name":"Heinrich Tietze, 1915"},"inLanguage":"ro","educationalLevel":"Avansat","url":"https://teoreme.ro/teoreme/teorema-lui-tietze.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Topologie</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Teorema de extensie Tietze</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-topo">Topologie</span><span class="badge-level bl-adv">Avansat</span></div><h1 itemprop="name">Teorema de extensie Tietze</h1><p class="author" itemprop="author">Heinrich Tietze, 1915 · nr. 175</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Enunț:</strong> Fie X un spațiu topologic normal, A⊂X o submulțime închisă și f:A→ℝ o funcție continuă și mărginită. Atunci există o extensie continuă F:X→ℝ cu F restricționată la A egală cu f, iar F poate fi aleasă cu aceleași margini ca f.</div><div class="formula-block"><span class="formula-label">Formulă</span>X normal, A închisă, f:A→ℝ continuă mărginită → ∃F:X→ℝ continuă, F|_A=f</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 300 170" xmlns="http://www.w3.org/2000/svg"><rect x="20" y="20" width="260" height="120" rx="8" fill="none" stroke="#c8922a" stroke-width="2" stroke-dasharray="6 4"/><ellipse cx="90" cy="80" rx="45" ry="30" fill="#1a604022" stroke="#1a6040" stroke-width="3"/><text x="90" y="85" font-size="11" fill="#1a6040" text-anchor="middle">A (f definită)</text><path d="M135 80 C170 60 210 100 260 70" fill="none" stroke="#c8922a" stroke-width="2.5" stroke-dasharray="5 3"/><text x="220" y="130" font-size="11" fill="#c8922a" text-anchor="middle">extensie continuă F pe tot X</text></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story"><span class="hl">Dacă ai desenat ceva pe o insulă (o bucată închisă din hartă), poți continua desenul pe toată harta din jur, fără rupturi, păstrând aceleași culori-limită</span>. Este generalizarea lemei lui Urysohn.</div><div class="intuitive-note">Heinrich Tietze a demonstrat rezultatul în 1915, printr-o succesiune de aplicări ale lemei lui Urysohn care construiesc extensia prin aproximări succesive. Teorema rămâne esențială în topologia algebrică și în teoria fibrărilor.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">f:{0,1}→ℝ, f(0)=0, f(1)=1, definită pe submulțimea închisă A={0,1}⊂X=[0,2]. Găsiți o extensie continuă F:[0,2]→ℝ.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>A={0,1} este închisă în X=[0,2].</p></div><div class="step"><div class="dot"></div><p>O extensie posibilă: F(x)=x pentru x∈[0,1] și F(x)=1 pentru x∈[1,2].</p></div><div class="step"><div class="dot"></div><p>F este continuă, iar restricția ei la A coincide cu f.</p></div><div class="result">✓ F(x)=min(x,1) - <strong>una din extensiile posibile</strong> (nu e unică)</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">De ce trebuie ca A să fie închisă în X?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Dacă A nu ar fi închisă, ar exista puncte de acumulare ale lui A în afara lui A, unde valoarea extensiei ar deveni ambiguă.</p></div><div class="step"><div class="dot"></div><p>Fără închiderea lui A, continuitatea extensiei F pe frontiera ei nu ar mai putea fi garantată.</p></div><div class="result">✓ Închiderea lui A este <strong>ipoteză esențială</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">f:A→ℝ este mărginită de M (|f|≤M) pe A închisă. Extensia F poate fi aleasă cu |F|≤M pe tot X?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Da, enunțul complet al teoremei lui Tietze garantează că extensia poate fi aleasă păstrând marginile lui f.</p></div><div class="step"><div class="dot"></div><p>Construcția standard, printr-o serie de funcții Urysohn cu factor 2/3, păstrează explicit această margine.</p></div><div class="result">✓ <strong>Da</strong>, extensia păstrează marginile</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Cum se leagă teorema lui Tietze de lema lui Urysohn?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Lema lui Urysohn, care dă funcții cu valori între 0 și 1 pe mulțimi închise disjuncte, este instrumentul folosit la construcția extensiei generale a lui Tietze.</p></div><div class="step"><div class="dot"></div><p>Demonstrația standard a lui Tietze aplică succesiv lema lui Urysohn în aproximări cu factor 1/3.</p></div><div class="result">✓ Lema lui Urysohn este <strong>ingredientul de bază</strong> al demonstrației</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">f:A→ℝ continuă dar nemărginită pe A închisă din X normal. Se poate extinde continuu?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Da, teorema lui Tietze se extinde și la funcții nemărginite, folosind un homeomorfism între ℝ și intervalul (-1,1) pentru a reduce la cazul mărginit.</p></div><div class="step"><div class="dot"></div><p>Se extinde funcția mărginită obținută, apoi se verifică că extensia nu atinge valorile ±1, ceea ce permite revenirea la ℝ.</p></div><div class="result">✓ <strong>Da</strong>, teorema se extinde și la cazul nemărginit</div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Topologie</h3><div class="related-links"><a href="teorema-heine-borel.html" class="related-link"><span class="card-tag tag-topo">Topologie</span> Teorema Heine–Borel</a><a href="teorema-punctului-fix-brouwer.html" class="related-link"><span class="card-tag tag-topo">Topologie</span> Teorema punctului fix Brouwer</a><a href="teorema-lui-jordan.html" class="related-link"><span class="card-tag tag-topo">Topologie</span> Teorema lui Jordan</a><a href="teorema-borsuk-ulam.html" class="related-link"><span class="card-tag tag-topo">Topologie</span> Teorema Borsuk–Ulam</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="compactitate-secventiala.html" class="tn-link prev">Compacitatea secvențială</a><a href="numerele-catalan.html" class="tn-link next">Numerele Catalan</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

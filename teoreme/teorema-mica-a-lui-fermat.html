@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Teorema mică a lui Fermat - ∑ Teoreme</title>
+<meta name="description" content="Dacă p este număr prim și p nu divide a, atunci a^(p-1) ≡ 1 (mod p).">
+<meta property="og:title" content="Teorema mică a lui Fermat - ∑ Teoreme">
+<meta property="og:description" content="Dacă p este număr prim și p nu divide a, atunci a^(p-1) ≡ 1 (mod p).">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/teorema-mica-a-lui-fermat.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Teorema mică a lui Fermat","description":"Dacă p este număr prim și p nu divide a, atunci a^(p-1) ≡ 1 (mod p).","author":{"@type":"Person","name":"Pierre de Fermat, 1640"},"inLanguage":"ro","educationalLevel":"Intermediar","url":"https://teoreme.ro/teoreme/teorema-mica-a-lui-fermat.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Aritmetică</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Teorema mică a lui Fermat</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-arit">Aritmetică</span><span class="badge-level bl-med">Intermediar</span></div><h1 itemprop="name">Teorema mică a lui Fermat</h1><p class="author" itemprop="author">Pierre de Fermat, 1640 · nr. 053</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Enunț:</strong> Dacă p este număr prim și gcd(a,p)=1 (p nu divide a), atunci a^(p−1) ≡ 1 (mod p). Echivalent: aᵖ ≡ a (mod p) pentru orice a.</div><div class="formula-block"><span class="formula-label">Formulă</span>aᵖ⁻¹ ≡ 1 (mod p)</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 340 120" width="340" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c8922a"/></marker></defs><text x="170" y="14" text-anchor="middle" font-size="11" fill="#999" font-style="italic">puterile lui 3, modulo 7</text><text x="42" y="30" text-anchor="middle" font-size="11" font-family="'JetBrains Mono',monospace" fill="#8b1a1a">3¹</text><rect x="20" y="36" width="44" height="32" rx="4" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1.5"/><text x="42" y="57" text-anchor="middle" font-size="15" font-family="'JetBrains Mono',monospace" fill="#8b1a1a" font-weight="700">3</text><line x1="64" y1="52" x2="72" y2="52" stroke="#c8922a" stroke-width="1.5" marker-end="url(#arrow)"/><text x="96" y="30" text-anchor="middle" font-size="11" font-family="'JetBrains Mono',monospace" fill="#8b1a1a">3²</text><rect x="74" y="36" width="44" height="32" rx="4" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1.5"/><text x="96" y="57" text-anchor="middle" font-size="15" font-family="'JetBrains Mono',monospace" fill="#8b1a1a" font-weight="700">2</text><line x1="118" y1="52" x2="126" y2="52" stroke="#c8922a" stroke-width="1.5" marker-end="url(#arrow)"/><text x="150" y="30" text-anchor="middle" font-size="11" font-family="'JetBrains Mono',monospace" fill="#8b1a1a">3³</text><rect x="128" y="36" width="44" height="32" rx="4" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1.5"/><text x="150" y="57" text-anchor="middle" font-size="15" font-family="'JetBrains Mono',monospace" fill="#8b1a1a" font-weight="700">6</text><line x1="172" y1="52" x2="180" y2="52" stroke="#c8922a" stroke-width="1.5" marker-end="url(#arrow)"/><text x="204" y="30" text-anchor="middle" font-size="11" font-family="'JetBrains Mono',monospace" fill="#8b1a1a">3⁴</text><rect x="182" y="36" width="44" height="32" rx="4" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1.5"/><text x="204" y="57" text-anchor="middle" font-size="15" font-family="'JetBrains Mono',monospace" fill="#8b1a1a" font-weight="700">4</text><line x1="226" y1="52" x2="234" y2="52" stroke="#c8922a" stroke-width="1.5" marker-end="url(#arrow)"/><text x="258" y="30" text-anchor="middle" font-size="11" font-family="'JetBrains Mono',monospace" fill="#8b1a1a">3⁵</text><rect x="236" y="36" width="44" height="32" rx="4" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1.5"/><text x="258" y="57" text-anchor="middle" font-size="15" font-family="'JetBrains Mono',monospace" fill="#8b1a1a" font-weight="700">5</text><line x1="280" y1="52" x2="288" y2="52" stroke="#c8922a" stroke-width="1.5" marker-end="url(#arrow)"/><text x="312" y="30" text-anchor="middle" font-size="11" font-family="'JetBrains Mono',monospace" fill="#8b1a1a">3⁶</text><rect x="290" y="36" width="44" height="32" rx="4" fill="rgba(200,146,42,0.22)" stroke="#c8922a" stroke-width="1.5"/><text x="312" y="57" text-anchor="middle" font-size="15" font-family="'JetBrains Mono',monospace" fill="#8a5f10" font-weight="700">1</text><text x="170" y="98" text-anchor="middle" font-size="12" font-family="'JetBrains Mono',monospace" fill="#1a1510">3⁶ ≡ <tspan fill="#c8922a" font-weight="700">1</tspan> (mod 7) → se „resetează”</text><text x="170" y="114" text-anchor="middle" font-size="10" fill="#999" font-style="italic">după p−1=6 pași, revine mereu la 1</text></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story">Joacă-te așa: alegi un număr, de exemplu 3, și îl înmulțești mereu cu el însuși, dar păstrezi de fiecare dată doar restul împărțirii la un număr prim p - ca și cum ai număra orele pe un ceas cu p poziții. <span class="hl">Dacă p este prim și numărul ales nu e multiplu de p, după exact p−1 înmulțiri ajungi mereu înapoi la 1</span>, ca un ceas care face un tur complet și revine la ora de start.</div><div class="intuitive-note">Fermat a enunțat teorema în 1640 fără demonstrație, iar abia în 1736 a venit și demonstrația lui Euler. Astăzi stă la baza criptografiei RSA și a testului de primalitate Miller-Rabin.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">Calculează 3⁶ mod 7, pas cu pas.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Ridicăm 3 la puterea 6: 3⁶=729.</p></div><div class="step"><div class="dot"></div><p>Împărțim 729 la 7: 7×104=728, deci restul este 729−728=1.</p></div><div class="step"><div class="dot"></div><p>Confirmăm astfel teorema: 3^(7−1)≡1 (mod 7).</p></div><div class="result">✓ 3⁶ mod 7 = <strong>1</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">Se știe că pentru un anumit număr prim p, exponentul din teorema lui Fermat este p−1=12. Care este p, și cât este 2¹² mod p?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Dacă p−1=12, atunci p=13.</p></div><div class="step"><div class="dot"></div><p>Calculăm 2¹²=4096.</p></div><div class="step"><div class="dot"></div><p>Împărțim 4096 la 13: 13×315=4095, deci restul este 4096−4095=1.</p></div><div class="result">✓ p = <strong>13</strong> și 2¹² mod 13 = <strong>1</strong>, confirmând teorema.</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">Ce spune teorema lui Fermat pentru cel mai mic număr prim, p=2, și a=3 (impar)?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Aici p−1=1, deci formula devine a¹≡1 (mod 2).</p></div><div class="step"><div class="dot"></div><p>Cum a=3 este impar, 3 mod 2 = 1.</p></div><div class="step"><div class="dot"></div><p>Formula se verifică, dar în acest caz este aproape evidentă: orice număr impar este congruent cu 1 modulo 2.</p></div><div class="result">✓ 3¹ mod 2 = <strong>1</strong> - cazul p=2 este cel mai simplu posibil.</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Adevărat sau fals: dacă a=14 și p=7, atunci 14⁶≡1 (mod 7).</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Teorema lui Fermat cere ca p să nu dividă a, adică gcd(a,p)=1.</p></div><div class="step"><div class="dot"></div><p>Aici 7 divide 14 exact (14=2×7), deci condiția nu este îndeplinită.</p></div><div class="step"><div class="dot"></div><p>De fapt 14 este congruent cu 0 modulo 7, deci orice putere a lui 14 rămâne 0 modulo 7, nu 1.</p></div><div class="result">✓ <strong>Fals</strong> - teorema nu se aplică atunci când p divide a.</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">Un elev vrea să afle restul lui 3¹⁰⁰⁰ la împărțirea cu 7, fără să calculeze puterea uriașă direct. Cum poate folosi teorema lui Fermat?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Teorema spune că 3⁶≡1 (mod 7), deci puterile lui 3 se repetă în cicluri de 6.</p></div><div class="step"><div class="dot"></div><p>Împărțim exponentul la 6: 1000=6×166+4, deci restul acestei împărțiri este 4.</p></div><div class="step"><div class="dot"></div><p>Rezultă 3¹⁰⁰⁰=(3⁶)¹⁶⁶×3⁴≡1¹⁶⁶×3⁴≡3⁴ (mod 7).</p></div><div class="step"><div class="dot"></div><p>Calculăm 3⁴=81, iar 81 împărțit la 7 dă câtul 11 și restul 81−77=4.</p></div><div class="result">✓ 3¹⁰⁰⁰ mod 7 = <strong>4</strong>, găsit fără să calculăm puterea uriașă direct.</div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Aritmetică</h3><div class="related-links"><a href="infinitatea-numerelor-prime.html" class="related-link"><span class="card-tag tag-arit">Aritmetică</span> Infinitatea numerelor prime</a><a href="teorema-fundamentala-a-aritmeticii.html" class="related-link"><span class="card-tag tag-arit">Aritmetică</span> Teorema fundamentală a aritmeticii</a><a href="teorema-lui-euler-phi.html" class="related-link"><span class="card-tag tag-arit">Aritmetică</span> Teorema lui Euler (φ)</a><a href="teorema-lui-wilson.html" class="related-link"><span class="card-tag tag-arit">Aritmetică</span> Teorema lui Wilson</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="teorema-fundamentala-a-aritmeticii.html" class="tn-link prev">Teorema fundamentală a aritmeticii</a><a href="teorema-lui-euler-phi.html" class="tn-link next">Teorema lui Euler (φ)</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

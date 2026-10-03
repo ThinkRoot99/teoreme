@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Regula lanțului - ∑ Teoreme</title>
+<meta name="description" content="Derivata funcției compuse este produsul derivatei funcției exterioare cu derivata funcției interioare.">
+<meta property="og:title" content="Regula lanțului - ∑ Teoreme">
+<meta property="og:description" content="Derivata funcției compuse este produsul derivatei funcției exterioare cu derivata funcției interioare.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/regula-lantului-derivate.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Regula lanțului","description":"Derivata funcției compuse este produsul derivatei funcției exterioare cu derivata funcției interioare.","author":{"@type":"Person","name":"Leibniz, ~1675"},"inLanguage":"ro","educationalLevel":"Intermediar","url":"https://teoreme.ro/teoreme/regula-lantului-derivate.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Analiză</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Regula lanțului</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-med">Intermediar</span></div><h1 itemprop="name">Regula lanțului</h1><p class="author" itemprop="author">Leibniz, ~1675 · nr. 077</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Enunț:</strong> Dacă g e derivabilă în x și f e derivabilă în g(x), derivata compusei f∘g este produsul derivatelor.</div><div class="formula-block"><span class="formula-label">Formulă</span>(f∘g)'(x) = f'(g(x)) · g'(x)</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" width="300"><line x1="60" y1="170" x2="60" y2="30" stroke="#4a1a7a" stroke-width="1.5"/><line x1="170" y1="170" x2="170" y2="30" stroke="#4a1a7a" stroke-width="1.5"/><line x1="280" y1="170" x2="280" y2="30" stroke="#4a1a7a" stroke-width="1.5"/><circle cx="60" cy="110" r="4.5" fill="#c8922a"/><circle cx="170" cy="80" r="4.5" fill="#c8922a"/><circle cx="280" cy="55" r="4.5" fill="#c8922a"/><path d="M 68,108 Q 115,70 162,81" fill="none" stroke="#4a1a7a" stroke-width="2"/><polygon points="162,81 152,77 155,86" fill="#4a1a7a"/><path d="M 178,79 Q 225,50 272,56" fill="none" stroke="#4a1a7a" stroke-width="2"/><polygon points="272,56 262,53 264,62" fill="#4a1a7a"/><text x="60" y="188" text-anchor="middle" font-size="12" fill="#555" font-style="italic">x</text><text x="170" y="188" text-anchor="middle" font-size="12" fill="#555" font-style="italic">u=g(x)</text><text x="280" y="188" text-anchor="middle" font-size="12" fill="#555" font-style="italic">y=f(u)</text><text x="110" y="65" text-anchor="middle" font-size="11" fill="#4a1a7a" font-weight="600">g'(x)</text><text x="220" y="40" text-anchor="middle" font-size="11" fill="#4a1a7a" font-weight="600">f'(u)</text><text x="170" y="18" text-anchor="middle" font-size="10" fill="#c8922a" font-weight="600">(f∘g)'(x)=f'(u)·g'(x)</text></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story"><span class="hl">Dacă o roată dințată se rotește de 2 ori mai repede decât motorul, iar o a doua roată legată de prima se rotește de 3 ori mai repede decât ea, roata finală se rotește de 2×3=6 ori mai repede decât motorul</span>. Așa se înmulțesc „vitezele de schimbare” când o funcție e legată în lanț de alta.</div><div class="intuitive-note">Poate cea mai folosită regulă de derivare - apare în aproape orice calcul real. Backpropagation din rețelele neuronale este aplicarea repetată a regulii lanțului, de multe ori la rând.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">Calculează derivata funcției h(x)=sin(x²).</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Identificăm compunerea: h=f∘g, unde f(u)=sin(u) (exterior) și g(x)=x² (interior).</p></div><div class="step"><div class="dot"></div><p>Derivăm exteriorul, păstrând interiorul neschimbat: f'(u)=cos(u), deci f'(g(x))=cos(x²).</p></div><div class="step"><div class="dot"></div><p>Înmulțim cu derivata interiorului: g'(x)=2x. Rezultat: h'(x)=2x·cos(x²).</p></div><div class="result">✓ <strong>2x·cos(x²)</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">O funcție compusă h(x)=f(3x+1) are h'(x)=6(3x+1). Ce este f'(t)?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Prin regula lanțului, h'(x)=f'(3x+1)·(3x+1)'=f'(3x+1)·3.</p></div><div class="step"><div class="dot"></div><p>Comparăm cu h'(x)=6(3x+1): rezultă f'(3x+1)·3=6(3x+1), deci f'(3x+1)=2(3x+1).</p></div><div class="step"><div class="dot"></div><p>Notând t=3x+1, obținem f'(t)=2t pentru orice t.</p></div><div class="result">✓ <strong>f'(t)=2t</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">Fie g(x)=5 (funcție constantă) și f o funcție oarecare derivabilă. Cât este (f∘g)'(x)?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Compunerea este h(x)=f(g(x))=f(5), care e o constantă, indiferent de x.</p></div><div class="step"><div class="dot"></div><p>Derivata unei constante este 0.</p></div><div class="step"><div class="dot"></div><p>Verificare cu formula: g'(x)=0 (derivata unei constante), deci f'(g(x))·g'(x)=f'(5)·0=0 - același rezultat.</p></div><div class="result">✓ <strong>0</strong> - compunerea cu o funcție constantă are derivată nulă</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Adevărat sau fals: (f∘g)'(x) = f'(x)·g'(x), adică derivatele se înmulțesc direct, fără compunere.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Fals - este o greșeală frecventă. Formula corectă este f'(g(x))·g'(x): derivata lui f se evaluează în g(x), nu în x.</p></div><div class="step"><div class="dot"></div><p>Exemplu concret: pentru h(x)=sin(x²), formula greșită ar da cos(x)·2x, complet diferit de rezultatul corect 2x·cos(x²).</p></div><div class="result">✓ <strong>Fals</strong> - f' trebuie evaluată în g(x), nu în x</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">Temperatura scade cu altitudinea după T(h)=15-0.0065h (°C, h în metri), iar un balon urcă cu viteza h(t)=50t (metri, t în minute). Cât de repede scade temperatura resimțită de balon, în funcție de timp?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Temperatura resimțită depinde de timp prin altitudine: T(h(t)) este o compunere de funcții.</p></div><div class="step"><div class="dot"></div><p>Regula lanțului: dT/dt = dT/dh · dh/dt.</p></div><div class="step"><div class="dot"></div><p>dT/dh=-0.0065 (rata de scădere cu altitudinea) și dh/dt=50 (viteza balonului), deci dT/dt=-0.0065·50=-0.325°C/minut.</p></div><div class="result">✓ Temperatura scade cu <strong>0.325°C în fiecare minut</strong></div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Analiză</h3><div class="related-links"><a href="teorema-valorii-intermediare.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema valorii intermediare</a><a href="teorema-lui-rolle.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema lui Rolle</a><a href="teorema-valorii-medii-lagrange.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema valorii medii (Lagrange)</a><a href="teorema-lui-lhopital.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema lui L'Hôpital</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="teorema-fundamentala-a-calculului.html" class="tn-link prev">Teorema fundamentală a calculului</a><a href="integrarea-prin-parti.html" class="tn-link next">Integrarea prin părți</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

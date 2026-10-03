@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Numerele Bell - ∑ Teoreme</title>
+<meta name="description" content="Numără toate partițiile posibile ale unei mulțimi de n elemente în submulțimi nevide, indiferent de numărul de părți.">
+<meta property="og:title" content="Numerele Bell - ∑ Teoreme">
+<meta property="og:description" content="Numără toate partițiile posibile ale unei mulțimi de n elemente în submulțimi nevide, indiferent de numărul de părți.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/numerele-bell.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Numerele Bell","description":"Numără toate partițiile posibile ale unei mulțimi de n elemente în submulțimi nevide, indiferent de numărul de părți.","author":{"@type":"Person","name":"Eric Temple Bell, 1934"},"inLanguage":"ro","educationalLevel":"Intermediar","url":"https://teoreme.ro/teoreme/numerele-bell.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Combinatorică</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Numerele Bell</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-comb">Combinatorică</span><span class="badge-level bl-med">Intermediar</span></div><h1 itemprop="name">Numerele Bell</h1><p class="author" itemprop="author">Eric Temple Bell, 1934 · nr. 179</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Enunț:</strong> Numărul lui Bell Bₙ numără toate partițiile posibile ale unei mulțimi cu n elemente în submulțimi nevide, indiferent de numărul de părți: Bₙ=∑ₖ S(n,k).</div><div class="formula-block"><span class="formula-label">Formulă</span>Bₙ = ∑_{k=0}^{n} S(n,k)</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 320 140" xmlns="http://www.w3.org/2000/svg"><text x="160" y="14" text-anchor="middle" font-size="10.5" fill="#5a1a8a">B₃=5: toate partițiile posibile ale mulțimii {1,2,3}</text><circle cx="40" cy="45" r="7" fill="#5a1a8a"/><circle cx="40" cy="72" r="7" fill="#5a1a8a"/><circle cx="40" cy="99" r="7" fill="#5a1a8a"/><text x="40" y="122" text-anchor="middle" font-size="9" fill="#5a1a8a">{1}{2}{3}</text><line x1="100" y1="45" x2="100" y2="72" stroke="#c8922a" stroke-width="2.5"/><circle cx="100" cy="45" r="7" fill="#5a1a8a"/><circle cx="100" cy="72" r="7" fill="#5a1a8a"/><circle cx="100" cy="99" r="7" fill="#5a1a8a"/><text x="100" y="122" text-anchor="middle" font-size="9" fill="#5a1a8a">{1,2}{3}</text><line x1="160" y1="45" x2="160" y2="99" stroke="#c8922a" stroke-width="2.5"/><circle cx="160" cy="45" r="7" fill="#5a1a8a"/><circle cx="160" cy="72" r="7" fill="#5a1a8a"/><circle cx="160" cy="99" r="7" fill="#5a1a8a"/><text x="160" y="122" text-anchor="middle" font-size="9" fill="#5a1a8a">{1,3}{2}</text><line x1="220" y1="72" x2="220" y2="99" stroke="#c8922a" stroke-width="2.5"/><circle cx="220" cy="45" r="7" fill="#5a1a8a"/><circle cx="220" cy="72" r="7" fill="#5a1a8a"/><circle cx="220" cy="99" r="7" fill="#5a1a8a"/><text x="220" y="122" text-anchor="middle" font-size="9" fill="#5a1a8a">{2,3}{1}</text><line x1="280" y1="45" x2="280" y2="72" stroke="#c8922a" stroke-width="2.5"/><line x1="280" y1="72" x2="280" y2="99" stroke="#c8922a" stroke-width="2.5"/><circle cx="280" cy="45" r="7" fill="#c8922a"/><circle cx="280" cy="72" r="7" fill="#c8922a"/><circle cx="280" cy="99" r="7" fill="#c8922a"/><text x="280" y="122" text-anchor="middle" font-size="9" fill="#c8922a">{1,2,3}</text></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story">Ai 3 jucării și vrei să le grupezi în „echipe”, dar poți alege orice număr de echipe - una mare cu toate jucăriile, sau mai multe echipe mici, cum vrei tu, doar ca nicio echipă să nu rămână goală. Numărul lui Bell, Bₙ, numără <span class="hl">în câte moduri diferite poți face toate aceste grupări posibile, indiferent câte echipe ies</span>. Pentru 3 jucării există exact 5 moduri: toate separate, grupate câte 2 în trei feluri diferite, sau toate împreună.</div><div class="intuitive-note">Numite după Eric Temple Bell (1934), deși au fost studiate anterior de Dobiński. Satisfac formula lui Dobiński (o sumă infinită cu e⁻¹) și recurența triunghiului lui Bell.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">Calculează B₄ folosind ∑ₖS(4,k), cu S(4,0..4)=0,1,7,6,1.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Bell adună toate numerele Stirling de speța a doua pentru n=4: B₄=S(4,0)+S(4,1)+S(4,2)+S(4,3)+S(4,4).</p></div><div class="step"><div class="dot"></div><p>Înlocuind valorile cunoscute: B₄=0+1+7+6+1.</p></div><div class="step"><div class="dot"></div><p>0+1+7+6+1=15.</p></div><div class="result">✓ B₄=<strong>15</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">Se știe că numărul de moduri de a grupa o mulțime de jucării (indiferent de câte grupuri ies) este 15. Câte jucării sunt în mulțime?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Căutăm n astfel încât Bₙ=15.</p></div><div class="step"><div class="dot"></div><p>Din șirul cunoscut B₀=1, B₁=1, B₂=2, B₃=5, B₄=15, observăm că valoarea 15 apare exact la n=4.</p></div><div class="step"><div class="dot"></div><p>Deci mulțimea are 4 jucării.</p></div><div class="result">✓ n=<strong>4</strong> jucării</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">Câte partiții are o mulțime cu 0 elemente (mulțimea vidă) și câte are o mulțime cu 1 element?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>O mulțime vidă are o singură partiție posibilă: partiția vidă, pentru că nu există niciun element de grupat; deci B₀=1.</p></div><div class="step"><div class="dot"></div><p>O mulțime cu un singur element are, de asemenea, o singură partiție posibilă: acel element formează singur un grup; deci B₁=1.</p></div><div class="step"><div class="dot"></div><p>Aceste două cazuri extreme sunt punctele de plecare ale întregului șir al lui Bell.</p></div><div class="result">✓ B₀=<strong>1</strong> și B₁=<strong>1</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Adevărat sau fals: Bₙ este întotdeauna egal cu cea mai mare valoare S(n,k) dintre toate valorile posibile ale lui k.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Bₙ este SUMA tuturor numerelor S(n,k) pentru k de la 0 la n, nu doar cea mai mare valoare dintre ele.</p></div><div class="step"><div class="dot"></div><p>De exemplu, pentru n=4: S(4,1)=1, S(4,2)=7, S(4,3)=6, S(4,4)=1, iar cea mai mare valoare individuală este 7 (nu 15).</p></div><div class="step"><div class="dot"></div><p>Suma tuturor acestor valori este B₄=1+7+6+1=15, diferită de cea mai mare valoare individuală.</p></div><div class="result">✓ <strong>Fals</strong> - Bₙ este suma tuturor valorilor S(n,k), nu doar maximul</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">La o petrecere cu 3 copii, gazda vrea să îi împartă în echipe pentru diverse jocuri, fără nicio restricție asupra numărului de echipe, doar ca nicio echipă să nu rămână fără copii. Câte moduri diferite de împărțire există în total?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Această situație este exact B₃, numărul total de partiții ale unei mulțimi cu 3 elemente, indiferent de câte grupuri rezultă.</p></div><div class="step"><div class="dot"></div><p>Enumerăm toate posibilitățile: {1}{2}{3}, {1,2}{3}, {1,3}{2}, {2,3}{1}, {1,2,3} - în total 5 moduri diferite.</p></div><div class="step"><div class="dot"></div><p>Aceasta confirmă B₃=5.</p></div><div class="result">✓ Există <strong>5</strong> moduri diferite de a împărți cei 3 copii</div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Combinatorică</h3><div class="related-links"><a href="principiul-cutiei.html" class="related-link"><span class="card-tag tag-comb">Combinatorică</span> Principiul cutiei (Pigeonhole)</a><a href="binomul-lui-newton.html" class="related-link"><span class="card-tag tag-comb">Combinatorică</span> Binomul lui Newton</a><a href="principiul-excluderii-includerii.html" class="related-link"><span class="card-tag tag-comb">Combinatorică</span> Principiul excluderii–includerii</a><a href="formula-lui-cayley-arbori.html" class="related-link"><span class="card-tag tag-comb">Combinatorică</span> Formula lui Cayley (arbori marcați)</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="teorema-lui-erdos-szekeres.html" class="tn-link prev">Teorema Erdős–Szekeres</a><a href="teorema-lui-konig-cuplaje.html" class="tn-link next">Teorema lui Kőnig</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Criteriul integral de convergență - ∑ Teoreme</title>
+<meta name="description" content="Pentru o funcție pozitivă și descrescătoare, seria ∑f(n) converge dacă și numai dacă integrala improprie ∫f(x)dx converge.">
+<meta property="og:title" content="Criteriul integral de convergență - ∑ Teoreme">
+<meta property="og:description" content="Pentru o funcție pozitivă și descrescătoare, seria ∑f(n) converge dacă și numai dacă integrala improprie ∫f(x)dx converge.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/criteriul-integral-convergenta.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Criteriul integral de convergență","description":"Pentru o funcție pozitivă și descrescătoare, seria ∑f(n) converge dacă și numai dacă integrala improprie ∫f(x)dx converge.","author":{"@type":"Person","name":"Colin Maclaurin / Augustin-Louis Cauchy"},"inLanguage":"ro","educationalLevel":"Intermediar","url":"https://teoreme.ro/teoreme/criteriul-integral-convergenta.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Analiză</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Criteriul integral de convergență</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-med">Intermediar</span></div><h1 itemprop="name">Criteriul integral de convergență</h1><p class="author" itemprop="author">Colin Maclaurin / Augustin-Louis Cauchy · nr. 160</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Enunț:</strong> Fie f:[1,∞)→[0,∞) continuă și descrescătoare. Atunci seria ∑f(n) converge dacă și numai dacă integrala improprie ∫₁^∞f(x)dx converge (este finită).</div><div class="formula-block"><span class="formula-label">Formulă</span>∑f(n) converge ↔ ∫₁^∞f(x)dx converge</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" width="300"><line x1="40" y1="170" x2="40" y2="20" stroke="#4a1a7a" stroke-width="1.5"/><line x1="30" y1="170" x2="300" y2="170" stroke="#4a1a7a" stroke-width="1.5"/><path d="M 50,40 C 90,70 150,120 280,155" fill="none" stroke="#4a1a7a" stroke-width="2.5"/><rect x="50" y="40" width="35" height="130" fill="#c8922a" fill-opacity="0.45" stroke="#c8922a" stroke-width="1"/><rect x="85" y="65" width="35" height="105" fill="#c8922a" fill-opacity="0.4" stroke="#c8922a" stroke-width="1"/><rect x="120" y="85" width="35" height="85" fill="#c8922a" fill-opacity="0.35" stroke="#c8922a" stroke-width="1"/><rect x="155" y="100" width="35" height="70" fill="#c8922a" fill-opacity="0.3" stroke="#c8922a" stroke-width="1"/><text x="67" y="185" text-anchor="middle" font-size="10" fill="#555">f(1)</text><text x="102" y="185" text-anchor="middle" font-size="10" fill="#555">f(2)</text><text x="137" y="185" text-anchor="middle" font-size="10" fill="#555">f(3)</text><text x="172" y="185" text-anchor="middle" font-size="10" fill="#555">f(4)</text><text x="235" y="60" font-size="11" fill="#4a1a7a" font-style="italic">f(x)</text><text x="150" y="18" text-anchor="middle" font-size="10" fill="#555">∑f(n) și ∫f(x)dx au aceeași natură</text></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story"><span class="hl">Dacă înălțimea unui gard de scânduri, tot mai mici, urmărește îndeaproape o curbă lină</span>, aria de sub scânduri e aproape aceeași cu aria de sub curbă. De aceea, suma tuturor scândurilor (seria) și aria de sub curbă (integrala) „se comportă la fel”: ori sunt amândouă finite, ori amândouă infinite.</div><div class="intuitive-note">Colin Maclaurin a intuit ideea, iar Cauchy a formalizat-o riguros. Criteriul oferă și o estimare a erorii de trunchiere: restul seriei este încadrat de valorile integralei.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">∑1/n² - aplică criteriul integral.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Funcția f(x)=1/x² este pozitivă, continuă și descrescătoare pe [1,∞).</p></div><div class="step"><div class="dot"></div><p>Calculăm integrala improprie: ∫₁^∞1/x²dx=[−1/x]₁^∞=(0)−(−1)=1.</p></div><div class="step"><div class="dot"></div><p>Integrala este finită (1), deci prin criteriu, seria ∑1/n² converge.</p></div><div class="result">✓ <strong>Convergentă</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">∑1/n (seria armonică) - cazul-limită dintre convergență și divergență printre seriile ∑1/nᵖ.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Funcția f(x)=1/x este pozitivă, continuă și descrescătoare pe [1,∞).</p></div><div class="step"><div class="dot"></div><p>Calculăm integrala: ∫₁^∞1/x dx=[ln x]₁^∞=∞−0=∞.</p></div><div class="step"><div class="dot"></div><p>Integrala este infinită, deci și seria armonică diverge - exact cazul-limită p=1 dintre seriile ∑1/nᵖ convergente (p&gt;1) și divergente (p≤1).</p></div><div class="result">✓ <strong>Divergentă</strong> - cazul-limită p=1</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">Se știe (fără a cunoaște formula lui f) că seria ∑f(n), cu f continuă, pozitivă și descrescătoare pe [1,∞), diverge. Ce spune criteriul integral despre ∫₁^∞f(x)dx?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Criteriul afirmă echivalența: ∑f(n) converge dacă și numai dacă ∫₁^∞f(x)dx converge.</p></div><div class="step"><div class="dot"></div><p>Deoarece ∑f(n) diverge (nu converge), prin echivalență și integrala trebuie să diverge (adică ∫₁^∞f(x)dx=∞).</p></div><div class="step"><div class="dot"></div><p>Concluzia se obține direct din echivalență, fără să cunoaștem formula exactă a lui f.</p></div><div class="result">✓ Integrala trebuie să fie <strong>divergentă</strong> (∞)</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Adevărat sau fals: criteriul integral se poate aplica oricărei funcții pozitive f, indiferent dacă este descrescătoare sau nu.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Fals - ipoteza de monotonie (f descrescătoare) este esențială pentru comparația dintre dreptunghiuri și aria de sub curbă.</p></div><div class="step"><div class="dot"></div><p>Fără monotonie, f poate oscila puternic între valorile întregi, iar suma ∑f(n) (care „vede” doar valorile din puncte întregi) se poate comporta complet diferit de aria totală ∫f(x)dx.</p></div><div class="step"><div class="dot"></div><p>Fără această ipoteză, seria și integrala pot avea naturi diferite, deci criteriul nu se mai poate aplica.</p></div><div class="result">✓ <strong>Fals</strong> - monotonia lui f este o ipoteză obligatorie</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">Cantitatea de medicament rămasă în sânge la ora întreagă n este f(n)=1/(n+1)² mg, o funcție descrescătoare. Se acumulează, însumând dozele rămase în fiecare oră, o cantitate infinită de-a lungul timpului?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Funcția f(x)=1/(x+1)² este pozitivă, continuă și descrescătoare pe [1,∞), deci putem aplica criteriul integral.</p></div><div class="step"><div class="dot"></div><p>Calculăm integrala: ∫₁^∞dx/(x+1)²=[−1/(x+1)]₁^∞=0−(−1/2)=1/2, o valoare finită.</p></div><div class="step"><div class="dot"></div><p>Deoarece integrala este finită, seria ∑f(n) converge - cantitatea totală acumulată rămâne finită, nu crește nemărginit.</p></div><div class="result">✓ <strong>Nu</strong> - suma totală rămâne finită (converge)</div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Analiză</h3><div class="related-links"><a href="teorema-valorii-intermediare.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema valorii intermediare</a><a href="teorema-lui-rolle.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema lui Rolle</a><a href="teorema-valorii-medii-lagrange.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema valorii medii (Lagrange)</a><a href="teorema-lui-lhopital.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema lui L'Hôpital</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="teorema-lui-abel-serii.html" class="tn-link prev">Teorema lui Abel</a><a href="teorema-lui-darboux.html" class="tn-link next">Teorema lui Darboux</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

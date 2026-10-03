@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Algoritmul lui Euclid - ∑ Teoreme</title>
+<meta name="description" content="Cel mai eficient algoritm pentru calculul celui mai mare divizor comun prin împărțiri succesive.">
+<meta property="og:title" content="Algoritmul lui Euclid - ∑ Teoreme">
+<meta property="og:description" content="Cel mai eficient algoritm pentru calculul celui mai mare divizor comun prin împărțiri succesive.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/algoritmul-lui-euclid.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Algoritmul lui Euclid","description":"Cel mai eficient algoritm pentru calculul celui mai mare divizor comun prin împărțiri succesive.","author":{"@type":"Person","name":"Euclid, ~300 î.Hr."},"inLanguage":"ro","educationalLevel":"Fundamental","url":"https://teoreme.ro/teoreme/algoritmul-lui-euclid.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Aritmetică</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Algoritmul lui Euclid</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-arit">Aritmetică</span><span class="badge-level bl-fund">Fundamental</span></div><h1 itemprop="name">Algoritmul lui Euclid</h1><p class="author" itemprop="author">Euclid, ~300 î.Hr. · nr. 056</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Algoritm:</strong> Cel mai mare divizor comun al lui a și b (a&gt;b&gt;0) se calculează prin împărțiri succesive: gcd(a,b)=gcd(b, a mod b), repetat până când restul devine 0.</div><div class="formula-block"><span class="formula-label">Formulă</span>gcd(a,b) = gcd(b, a mod b)</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 300 150" width="300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrow2" viewBox="0 0 10 10" refX="5" refY="8" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,0 L5,10 z" fill="#c8922a"/></marker></defs><text x="150" y="16" text-anchor="middle" font-size="11" fill="#999" font-style="italic">algoritmul lui Euclid: gcd(48,18)</text><text x="150" y="42" text-anchor="middle" font-size="14" font-family="'JetBrains Mono',monospace" fill="#1a1510">48 = 2×18 + <tspan fill="#8b1a1a" font-weight="700">12</tspan></text><text x="150" y="66" text-anchor="middle" font-size="14" font-family="'JetBrains Mono',monospace" fill="#1a1510">18 = 1×12 + <tspan fill="#8b1a1a" font-weight="700">6</tspan></text><text x="150" y="90" text-anchor="middle" font-size="14" font-family="'JetBrains Mono',monospace" fill="#1a1510">12 = 2×6 + <tspan fill="#999" font-weight="700">0</tspan></text><line x1="150" y1="98" x2="150" y2="112" stroke="#c8922a" stroke-width="1.5" marker-end="url(#arrow2)"/><rect x="105" y="116" width="90" height="26" rx="4" fill="rgba(200,146,42,0.22)" stroke="#c8922a" stroke-width="1.5"/><text x="150" y="134" text-anchor="middle" font-size="13" font-family="'JetBrains Mono',monospace" fill="#8a5f10" font-weight="700">gcd = 6</text></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story">Imaginează-ți două sfori, una de 48 cm și una de 18 cm, și vrei cea mai lungă riglă care să măsoare exact pe amândouă, fără bucăți rămase. <span class="hl">Tot ce faci este să împarți mereu sfoara mai lungă la cea mai scurtă și reții doar ce rămâne, până când nu mai rămâne nimic</span> - ultima bucată nezero este exact rigla căutată.</div><div class="intuitive-note">Complexitatea algoritmului este O(log(min(a,b))) și stă la baza criptografiei moderne (calculul inversului modular, RSA), precum și a algoritmilor de simplificare a fracțiilor.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">Calculează gcd(48,18) folosind algoritmul lui Euclid.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Împărțim 48 la 18: 48=2×18+12, deci restul este 12.</p></div><div class="step"><div class="dot"></div><p>Împărțim 18 la 12: 18=1×12+6, restul este 6.</p></div><div class="step"><div class="dot"></div><p>Împărțim 12 la 6: 12=2×6+0, restul devine 0.</p></div><div class="step"><div class="dot"></div><p>Ultimul rest nenul a fost 6, deci acesta este cel mai mare divizor comun.</p></div><div class="result">✓ gcd(48,18) = <strong>6</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">Se știe că cel mai mare divizor comun al lui 20 și al unui număr b este 4, iar b are o singură cifră și este mai mare decât 4. Care este b?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Căutăm un număr b, cu o singură cifră și mai mare decât 4, care să fie multiplu de 4 (altfel gcd nu ar putea fi 4).</p></div><div class="step"><div class="dot"></div><p>Singurul astfel de număr este 8.</p></div><div class="step"><div class="dot"></div><p>Verificăm cu algoritmul lui Euclid: 20=2×8+4, apoi 8=2×4+0, deci gcd(20,8)=4.</p></div><div class="result">✓ b = <strong>8</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">Cât este gcd(100,0)?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Când unul dintre numere este 0, nu mai avem ce împărți - algoritmul se oprește imediat.</p></div><div class="step"><div class="dot"></div><p>Prin convenție, gcd(a,0)=a, pentru că orice număr divide 0.</p></div><div class="result">✓ gcd(100,0) = <strong>100</strong> (convenție)</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Adevărat sau fals: dacă cel mai mare divizor comun al lui a și b este 1, atunci a și b trebuie să fie numere prime.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Calculăm gcd(8,9) cu algoritmul lui Euclid: 9=1×8+1, apoi 8=8×1+0, deci gcd(8,9)=1.</p></div><div class="step"><div class="dot"></div><p>Totuși, nici 8, nici 9 nu sunt numere prime (8=2×2×2, iar 9=3×3).</p></div><div class="step"><div class="dot"></div><p>Deci gcd(a,b)=1 înseamnă doar că a și b „nu au niciun factor comun”, nu că sunt neapărat prime.</p></div><div class="result">✓ <strong>Fals</strong> - de exemplu gcd(8,9)=1, deși nici 8, nici 9 nu este prim.</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">O croitoreasă are o bandă de 30 cm și una de 12 cm și vrea să le taie în bucăți egale, cât mai lungi posibil, fără resturi. Ce lungime trebuie să aibă fiecare bucată?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Aplicăm algoritmul lui Euclid pentru 30 și 12: 30=2×12+6.</p></div><div class="step"><div class="dot"></div><p>Continuăm cu 12 și 6: 12=2×6+0.</p></div><div class="step"><div class="dot"></div><p>Restul a devenit 0, deci ultimul rest nenul, 6, este cel mai mare divizor comun.</p></div><div class="result">✓ Fiecare bucată trebuie să aibă <strong>6 cm</strong>.</div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Aritmetică</h3><div class="related-links"><a href="infinitatea-numerelor-prime.html" class="related-link"><span class="card-tag tag-arit">Aritmetică</span> Infinitatea numerelor prime</a><a href="teorema-fundamentala-a-aritmeticii.html" class="related-link"><span class="card-tag tag-arit">Aritmetică</span> Teorema fundamentală a aritmeticii</a><a href="teorema-mica-a-lui-fermat.html" class="related-link"><span class="card-tag tag-arit">Aritmetică</span> Teorema mică a lui Fermat</a><a href="teorema-lui-euler-phi.html" class="related-link"><span class="card-tag tag-arit">Aritmetică</span> Teorema lui Euler (φ)</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="teorema-lui-wilson.html" class="tn-link prev">Teorema lui Wilson</a><a href="identitatea-lui-bezout.html" class="tn-link next">Identitatea lui Bézout</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

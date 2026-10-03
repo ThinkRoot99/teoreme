@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Teorema lui Abel - ∑ Teoreme</title>
+<meta name="description" content="Dacă o serie de puteri converge la marginea intervalului de convergență, suma ei este limita funcției din interior spre acel punct.">
+<meta property="og:title" content="Teorema lui Abel - ∑ Teoreme">
+<meta property="og:description" content="Dacă o serie de puteri converge la marginea intervalului de convergență, suma ei este limita funcției din interior spre acel punct.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/teorema-lui-abel-serii.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Teorema lui Abel","description":"Dacă o serie de puteri converge la marginea intervalului de convergență, suma ei este limita funcției din interior spre acel punct.","author":{"@type":"Person","name":"Niels Henrik Abel, 1826"},"inLanguage":"ro","educationalLevel":"Avansat","url":"https://teoreme.ro/teoreme/teorema-lui-abel-serii.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Analiză</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Teorema lui Abel</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-adv">Avansat</span></div><h1 itemprop="name">Teorema lui Abel</h1><p class="author" itemprop="author">Niels Henrik Abel, 1826 · nr. 159</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Enunț:</strong> Fie f(x)=∑aₙxⁿ o serie de puteri cu raza de convergență R=1. Dacă seria numerică ∑aₙ converge, atunci f este continuă la stânga în x=1, adică lim_{x→1⁻}f(x)=∑aₙ.</div><div class="formula-block"><span class="formula-label">Formulă</span>lim_{x→1⁻} ∑aₙxⁿ = ∑aₙ (dacă ∑aₙ converge)</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" width="300"><line x1="40" y1="170" x2="40" y2="20" stroke="#4a1a7a" stroke-width="1.5"/><line x1="30" y1="170" x2="300" y2="170" stroke="#4a1a7a" stroke-width="1.5"/><path d="M 60,150 C 120,130 180,90 260,55" fill="none" stroke="#4a1a7a" stroke-width="2.5"/><line x1="260" y1="170" x2="260" y2="20" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/><circle cx="260" cy="55" r="5" fill="#c8922a" stroke="#fff" stroke-width="1.5"/><text x="260" y="188" text-anchor="middle" font-size="11" fill="#c8922a" font-weight="600">x=1</text><text x="60" y="188" text-anchor="middle" font-size="11" fill="#555" font-style="italic">x=0</text><text x="270" y="50" font-size="11" fill="#c8922a" font-weight="600">S=∑aₙ</text><text x="150" y="105" text-anchor="middle" font-size="11" fill="#4a1a7a" font-style="italic">f(x)=∑aₙxⁿ</text><text x="150" y="188" text-anchor="middle" font-size="10" fill="#999">dacă ∑aₙ converge, f ajunge continuu până la x=1</text></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story"><span class="hl">Dacă mergi pe un drum care se apropie tot mai mult de marginea unei hărți, iar drumul chiar ajunge acolo, fără să se rupă brusc</span>, punctul de sosire de pe margine e exact acolo unde te-ai aștepta, continuând drumul din priviri. Așa e și cu seria de puteri: dacă suma numerelor de la capătul intervalului chiar există, funcția „ajunge” acolo lin, fără sărituri.</div><div class="intuitive-note">Abel a folosit teorema pentru a justifica riguros sume precum 1−1/2+1/3−1/4+...=ln2, obținute anterior prin manipulări formale ale seriilor de puteri. Teorema NU se poate inversa: existența limitei lui f nu implică faptul că seria numerică converge.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">Calculează ∑(−1)ⁿ⁺¹/n folosind f(x)=∑(−1)ⁿ⁺¹xⁿ/n=ln(1+x).</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Verificăm ipoteza: seria ∑(−1)ⁿ⁺¹/n converge, prin criteriul lui Leibniz (termeni pozitivi, descrescători, spre 0).</p></div><div class="step"><div class="dot"></div><p>Pentru |x|&lt;1, suma seriei de puteri este cunoscută: f(x)=ln(1+x).</p></div><div class="step"><div class="dot"></div><p>Prin Abel, putem trece la limită și în x=1: lim_{x→1⁻}ln(1+x)=ln2, deci exact aceasta e suma seriei numerice.</p></div><div class="result">✓ <strong>ln2</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">Coeficienții unei serii de puteri sunt aₙ=1/(n(n+1)). Fără să calculezi formula explicită a lui f(x)=∑aₙxⁿ, află lim_{x→1⁻}f(x) folosind Abel.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Mai întâi calculăm ∑aₙ direct, ca sumă numerică: 1/(n(n+1))=1/n−1/(n+1) (descompunere telescopică).</p></div><div class="step"><div class="dot"></div><p>Suma parțială telescopează: (1−1/2)+(1/2−1/3)+...+(1/N−1/(N+1))=1−1/(N+1)→1 când N→∞, deci ∑aₙ=1.</p></div><div class="step"><div class="dot"></div><p>Fiindcă ∑aₙ converge la 1, Abel garantează direct lim_{x→1⁻}f(x)=1, fără să fi avut nevoie de formula explicită a lui f.</p></div><div class="result">✓ <strong>1</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">Se poate aplica Abel lui f(x)=∑xⁿ=1/(1−x) în x=1?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Aici aₙ=1 pentru orice n, deci aₙ nu tinde la 0, iar ∑1 diverge - ipoteza teoremei (convergența lui ∑aₙ) nu este satisfăcută.</p></div><div class="step"><div class="dot"></div><p>Abel nu se aplică, deci teorema nu garantează nimic despre limita la stânga în x=1.</p></div><div class="step"><div class="dot"></div><p>Consecvent, calculând direct: lim_{x→1⁻}1/(1−x)=+∞, deci nici concluzia (o limită finită) nu este adevărată aici.</p></div><div class="result">✓ <strong>Nu se aplică</strong>; și, într-adevăr, limita este +∞</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Fie aₙ=(−1)ⁿ și f(x)=∑(−1)ⁿxⁿ=1/(1+x). Ce arată cazul x→1⁻ despre reciproca teoremei lui Abel?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Calculăm limita la stânga: lim_{x→1⁻}1/(1+x)=1/2, care există și este finită.</p></div><div class="step"><div class="dot"></div><p>Dar seria numerică ∑(−1)ⁿ oscilează între −1 și 0 (sumele parțiale nu se stabilizează), deci nu converge.</p></div><div class="step"><div class="dot"></div><p>Așadar limita lui f poate exista chiar și atunci când seria numerică ∑aₙ nu converge - reciproca teoremei lui Abel este falsă.</p></div><div class="result">✓ <strong>Reciproca e falsă</strong> - limita lui f poate exista fără ca ∑aₙ să conveargă</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">Un program de calculator estimează ln2 folosind seria alternantă f(x)=∑(−1)ⁿ⁺¹xⁿ/n, dar din motive numerice se oprește la x=0.99 în loc de x=1 exact. Cât de aproape e această estimare de valoarea reală ln2?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Calculăm f(0.99)=ln(1+0.99)=ln(1.99)≈0.688.</p></div><div class="step"><div class="dot"></div><p>Comparăm cu valoarea exactă la limită: ln2≈0.693.</p></div><div class="step"><div class="dot"></div><p>Diferența este mică, de ordinul 0.005, exact pentru că teorema lui Abel garantează că f(x) se apropie continuu de ln2 pe măsură ce x→1⁻ - programul obține o aproximare bună, deși nu evaluează exact la x=1.</p></div><div class="result">✓ f(0.99)≈<strong>0.688</strong>, foarte aproape de ln2≈0.693</div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Analiză</h3><div class="related-links"><a href="teorema-valorii-intermediare.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema valorii intermediare</a><a href="teorema-lui-rolle.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema lui Rolle</a><a href="teorema-valorii-medii-lagrange.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema valorii medii (Lagrange)</a><a href="teorema-lui-lhopital.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema lui L'Hôpital</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="teorema-stolz-cesaro.html" class="tn-link prev">Teorema Stolz–Cesàro</a><a href="criteriul-integral-convergenta.html" class="tn-link next">Criteriul integral de convergență</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Teorema Cayley–Hamilton - ∑ Teoreme</title>
+<meta name="description" content="Orice matrice pătratică satisface propria sa ecuație caracteristică.">
+<meta property="og:title" content="Teorema Cayley–Hamilton - ∑ Teoreme">
+<meta property="og:description" content="Orice matrice pătratică satisface propria sa ecuație caracteristică.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/teorema-cayley-hamilton.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Teorema Cayley–Hamilton","description":"Orice matrice pătratică satisface propria sa ecuație caracteristică.","author":{"@type":"Person","name":"Cayley & Hamilton, 1858"},"inLanguage":"ro","educationalLevel":"Avansat","url":"https://teoreme.ro/teoreme/teorema-cayley-hamilton.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Algebră</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Teorema Cayley–Hamilton</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-alg">Algebră</span><span class="badge-level bl-adv">Avansat</span></div><h1 itemprop="name">Teorema Cayley–Hamilton</h1><p class="author" itemprop="author">Cayley & Hamilton, 1858 · nr. 096</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Enunț:</strong> Orice matrice pătratică A satisface propria sa ecuație caracteristică: dacă p(λ)=det(A-λI) este polinomul caracteristic, atunci p(A)=0.</div><div class="formula-block"><span class="formula-label">Formulă</span>p(A) = 0 unde p(λ)=det(A-λI)</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg"><rect x="30" y="60" width="80" height="60" fill="none" stroke="#2d5a3d" stroke-width="2"/><text x="70" y="95" text-anchor="middle" font-size="16" fill="#2d5a3d">A</text><path d="M 115 75 Q 200 40 210 90" fill="none" stroke="#c8922a" stroke-width="2" marker-end="url(#chArr)"/><text x="150" y="45" text-anchor="middle" font-size="12" fill="#2d5a3d">p(λ)=det(A-λI)</text><path d="M 210 100 Q 200 150 115 115" fill="none" stroke="#c8922a" stroke-width="2" marker-end="url(#chArr)"/><text x="140" y="155" font-size="15" fill="#2d5a3d" font-weight="bold">p(A) = 0</text><defs><marker id="chArr" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#c8922a"/></marker></defs></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story"><span class="hl">Fiecare matrice „își respectă” propria rețetă construită din ea însăși</span> - ca și cum ai scrie regulile unui joc special pentru un jucător, iar acel jucător ar respecta întotdeauna exact acele reguli, fără nicio excepție.</div><div class="intuitive-note">Cayley (1858) și Hamilton au demonstrat-o fiecare separat, iar rezultatul stă la baza calculului matricial și a analizei sistemelor dinamice liniare.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">A=[[2,0],[0,3]]. Găsește p(λ) și verifică p(A)=0.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Calculăm polinomul caracteristic: p(λ)=det(A-λI)=(2-λ)(3-λ)=λ²-5λ+6.</p></div><div class="step"><div class="dot"></div><p>Calculăm A²=[[4,0],[0,9]], apoi 5A=[[10,0],[0,15]] și 6I=[[6,0],[0,6]].</p></div><div class="step"><div class="dot"></div><p>Adunăm: A²-5A+6I=[[4-10+6,0],[0,9-15+6]]=[[0,0],[0,0]], deci p(A)=0, exact cum prevede teorema.</p></div><div class="result">✓ p(A)=<strong>0</strong>, confirmat</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">Se știe că o matrice 2×2 are valorile proprii λ₁=2 și λ₂=3. Care este polinomul ei caracteristic?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Polinomul caracteristic al unei matrice 2×2 cu valori proprii λ₁ și λ₂ este p(λ)=(λ-λ₁)(λ-λ₂).</p></div><div class="step"><div class="dot"></div><p>Înlocuim λ₁=2, λ₂=3: p(λ)=(λ-2)(λ-3)=λ²-5λ+6.</p></div><div class="result">✓ p(λ)=<strong>λ²-5λ+6</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">A=[[0,1],[0,0]] (matrice nilpotentă). Verifică A²=0 folosind Cayley-Hamilton.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Polinomul caracteristic este p(λ)=det(A-λI)=(0-λ)(0-λ)-1×0=λ².</p></div><div class="step"><div class="dot"></div><p>Conform teoremei, matricea trebuie să satisfacă p(A)=A²=0.</p></div><div class="step"><div class="dot"></div><p>Calculăm direct: A²=[[0,1],[0,0]]×[[0,1],[0,0]]=[[0,0],[0,0]], confirmând teorema chiar în acest caz special.</p></div><div class="result">✓ A²=<strong>0</strong>, confirmat</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Adevărat sau fals: din faptul că p(λ)=0 pentru fiecare valoare proprie λ, rezultă automat, fără nicio demonstrație, că p(A)=0 pentru toată matricea.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Faptul că p(λ)=0 pentru fiecare valoare proprie arată doar că polinomul se anulează pe acele numere, nu spune nimic direct despre matrice.</p></div><div class="step"><div class="dot"></div><p>A înlocui A în locul lui λ înseamnă cu totul altceva (A² este produsul A×A, iar 6 devine 6I) - e nevoie de un argument separat din algebra matricelor pentru a arăta că egalitatea rămâne adevărată; afirmația e falsă.</p></div><div class="result">✓ <strong>Fals</strong> - necesită o demonstrație separată</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">Un inginer vrea A⁻¹ pentru A=[[1,2],[3,4]] fără să folosească formula directă a inversei. Ajută-l cu Cayley-Hamilton.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Calculăm det(A)=1×4-2×3=-2 și trace(A)=1+4=5, deci p(λ)=λ²-5λ-2.</p></div><div class="step"><div class="dot"></div><p>Cayley-Hamilton spune A²-5A-2I=0, deci A(A-5I)=2I, de unde A⁻¹=(A-5I)/2.</p></div><div class="step"><div class="dot"></div><p>Calculăm A-5I=[[-4,2],[3,-1]], apoi împărțim la 2: A⁻¹=[[-2,1],[1.5,-0.5]] - același rezultat ca prin formula directă.</p></div><div class="result">✓ A⁻¹=<strong>[[-2,1],[1.5,-0.5]]</strong></div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Algebră</h3><div class="related-links"><a href="teorema-lui-lagrange-grupuri.html" class="related-link"><span class="card-tag tag-alg">Algebră</span> Teorema lui Lagrange (grupuri)</a><a href="teorema-fundamentala-a-algebrei.html" class="related-link"><span class="card-tag tag-alg">Algebră</span> Teorema fundamentală a algebrei</a><a href="relatiile-lui-viete.html" class="related-link"><span class="card-tag tag-alg">Algebră</span> Relațiile lui Viète</a><a href="teorema-rouche-capelli.html" class="related-link"><span class="card-tag tag-alg">Algebră</span> Teorema Rouché–Capelli</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="regula-cramer.html" class="tn-link prev">Regula lui Cramer</a><a href="teorema-abel-ruffini.html" class="tn-link next">Teorema Abel–Ruffini</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

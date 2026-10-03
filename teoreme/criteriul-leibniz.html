@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Criteriul Leibniz - ∑ Teoreme</title>
+<meta name="description" content="O serie alternantă ale cărei termeni descresc monoton la zero este convergentă.">
+<meta property="og:title" content="Criteriul Leibniz - ∑ Teoreme">
+<meta property="og:description" content="O serie alternantă ale cărei termeni descresc monoton la zero este convergentă.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/criteriul-leibniz.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Criteriul Leibniz","description":"O serie alternantă ale cărei termeni descresc monoton la zero este convergentă.","author":{"@type":"Person","name":"Gottfried Wilhelm Leibniz, 1682"},"inLanguage":"ro","educationalLevel":"Intermediar","url":"https://teoreme.ro/teoreme/criteriul-leibniz.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Analiză</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Criteriul Leibniz</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-med">Intermediar</span></div><h1 itemprop="name">Criteriul Leibniz</h1><p class="author" itemprop="author">Gottfried Wilhelm Leibniz, 1682 · nr. 081</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Enunț:</strong> O serie alternantă ∑(-1)ⁿaₙ cu aₙ&gt;0 descrescătoare monoton la zero este convergentă.</div><div class="formula-block"><span class="formula-label">Formulă</span>aₙ↘0 → ∑(-1)ⁿaₙ convergentă</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" width="300"><line x1="40" y1="170" x2="40" y2="20" stroke="#4a1a7a" stroke-width="1.5"/><line x1="30" y1="100" x2="300" y2="100" stroke="#999" stroke-width="1" stroke-dasharray="3,3"/><polyline points="50,150 90,60 120,120 145,80 165,110 180,90 192,102 200,95" fill="none" stroke="#4a1a7a" stroke-width="2.5" stroke-linejoin="round"/><circle cx="50" cy="150" r="3.5" fill="#4a1a7a"/><circle cx="90" cy="60" r="3.5" fill="#4a1a7a"/><circle cx="120" cy="120" r="3.5" fill="#4a1a7a"/><circle cx="145" cy="80" r="3.5" fill="#4a1a7a"/><circle cx="165" cy="110" r="3.5" fill="#4a1a7a"/><circle cx="180" cy="90" r="3.5" fill="#4a1a7a"/><circle cx="192" cy="102" r="3.5" fill="#4a1a7a"/><circle cx="200" cy="95" r="4.5" fill="#c8922a"/><line x1="200" y1="100" x2="280" y2="100" stroke="#c8922a" stroke-width="1.5" stroke-dasharray="4,3"/><text x="285" y="104" font-size="11" fill="#c8922a" font-weight="600">L</text><text x="50" y="185" text-anchor="middle" font-size="10" fill="#555">S₁</text><text x="90" y="185" text-anchor="middle" font-size="10" fill="#555">S₂</text><text x="145" y="185" text-anchor="middle" font-size="10" fill="#555">S₄</text></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story"><span class="hl">Dacă faci un pas mare înainte, apoi unul mai mic înapoi, apoi unul și mai mic înainte, alternând direcția și micșorând mereu pașii, te apropii tot mai mult de un punct fix</span>, fără să-l depășești vreodată cu mult. Sumele parțiale „se strâng” în jurul limitei ca un arc.</div><div class="intuitive-note">Leibniz a demonstrat convergența pentru ∑(-1)ⁿ⁺¹/n=ln(2), numită seria armonică alternantă. Criteriul dă și o estimare a erorii de trunchiere: eroarea făcută oprindu-te după N termeni este cel mult aₙ₊₁.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">Arată că seria ∑(-1)ⁿ⁺¹/n converge.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Notăm aₙ=1/n. Verificăm: aₙ&gt;0 pentru orice n≥1.</p></div><div class="step"><div class="dot"></div><p>Verificăm monotonia: aₙ₊₁=1/(n+1)&lt;1/n=aₙ, deci șirul e strict descrescător.</p></div><div class="step"><div class="dot"></div><p>Verificăm limita: aₙ=1/n→0. Toate ipotezele Leibniz sunt satisfăcute, deci seria converge (suma este ln2).</p></div><div class="result">✓ <strong>Convergentă</strong>, suma=ln(2)≈0.693</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">Câți termeni trebuie adunați din seria ∑(-1)ⁿ⁺¹/n pentru ca eroarea de aproximare a sumei să fie mai mică de 0.01?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Criteriul Leibniz garantează că eroarea după N termeni este cel mult egală cu primul termen neglijat, aₙ₊₁=1/(N+1).</p></div><div class="step"><div class="dot"></div><p>Punem condiția 1/(N+1)&lt;0.01, adică N+1&gt;100.</p></div><div class="step"><div class="dot"></div><p>Rezultă N≥100, deci sunt necesari cel puțin 100 de termeni.</p></div><div class="result">✓ Sunt necesari cel puțin <strong>100</strong> de termeni</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">Fie aₙ=1/n pentru n≤4 și aₙ=0 pentru n≥5. Converge seria ∑(-1)ⁿ⁺¹aₙ?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>După n=4 toți termenii sunt 0, deci suma seriei este de fapt o sumă finită: a₁-a₂+a₃-a₄.</p></div><div class="step"><div class="dot"></div><p>O sumă finită converge întotdeauna (nu există „coadă infinită” care să pună probleme).</p></div><div class="step"><div class="dot"></div><p>Verificare cu Leibniz: aₙ este descrescător și tinde la 0 (fiind constant 0 de la un rang încolo), deci ipotezele sunt satisfăcute trivial.</p></div><div class="result">✓ <strong>Convergentă</strong> - este de fapt o sumă finită</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Converge seria ∑(-1)ⁿ·n?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Aici aₙ=n, care nu tinde la 0 - dimpotrivă, aₙ→∞.</p></div><div class="step"><div class="dot"></div><p>Condiția esențială a criteriului Leibniz (aₙ↘0) nu este satisfăcută, deci criteriul nu garantează nimic.</p></div><div class="step"><div class="dot"></div><p>De fapt seria diverge: termenii nu tind la 0, deci nici măcar condiția necesară de convergență (aₙ→0 pentru orice serie) nu e satisfăcută.</p></div><div class="result">✓ <strong>Divergentă</strong> - aₙ nu tinde la 0</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">Temperatura unei camere pornește de la 20°C și variază în fiecare oră succesivă cu vₙ=(-1)ⁿ⁺¹·4/n °C (variații tot mai mici, alternând sensul). Se stabilizează temperatura la o valoare limită?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Seria variațiilor este ∑(-1)ⁿ⁺¹·4/n = 4·∑(-1)ⁿ⁺¹/n; termenii aₙ=4/n sunt pozitivi, descrescători și tind la 0.</p></div><div class="step"><div class="dot"></div><p>Prin criteriul Leibniz, seria converge, deci temperatura totală se stabilizează la o valoare limită finită.</p></div><div class="step"><div class="dot"></div><p>Folosind ∑(-1)ⁿ⁺¹/n=ln2, limita este 20+4·ln2 ≈ 20+2.77 ≈ 22.77°C.</p></div><div class="result">✓ Temperatura se stabilizează la <strong>≈22.77°C</strong></div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Analiză</h3><div class="related-links"><a href="teorema-valorii-intermediare.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema valorii intermediare</a><a href="teorema-lui-rolle.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema lui Rolle</a><a href="teorema-valorii-medii-lagrange.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema valorii medii (Lagrange)</a><a href="teorema-lui-lhopital.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema lui L'Hôpital</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="criteriul-dalembert.html" class="tn-link prev">Criteriul D'Alembert</a><a href="teorema-lui-weierstrass-functii-continue.html" class="tn-link next">Teorema lui Weierstrass</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

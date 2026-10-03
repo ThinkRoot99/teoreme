@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Divergența seriei armonice - ∑ Teoreme</title>
+<meta name="description" content="Seria armonică 1+1/2+1/3+… diverge la infinit, deși termenii tind la zero.">
+<meta property="og:title" content="Divergența seriei armonice - ∑ Teoreme">
+<meta property="og:description" content="Seria armonică 1+1/2+1/3+… diverge la infinit, deși termenii tind la zero.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/seria-armonica.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Divergența seriei armonice","description":"Seria armonică 1+1/2+1/3+… diverge la infinit, deși termenii tind la zero.","author":{"@type":"Person","name":"Nicole Oresme, ~1350"},"inLanguage":"ro","educationalLevel":"Intermediar","url":"https://teoreme.ro/teoreme/seria-armonica.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Analiză</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Divergența seriei armonice</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-med">Intermediar</span></div><h1 itemprop="name">Divergența seriei armonice</h1><p class="author" itemprop="author">Nicole Oresme, ~1350 · nr. 086</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Enunț:</strong> Seria armonică ∑1/n diverge (suma crește nemărginit) deși termenii individuali tind la zero.</div><div class="formula-block"><span class="formula-label">Formulă</span>∑_{n=1}^∞ 1/n = 1+1/2+1/3+… → ∞</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" width="300"><line x1="40" y1="170" x2="40" y2="20" stroke="#4a1a7a" stroke-width="1.5"/><line x1="30" y1="170" x2="300" y2="170" stroke="#4a1a7a" stroke-width="1.5"/><rect x="50" y="50" width="28" height="120" fill="#4a1a7a" fill-opacity="0.7"/><rect x="83" y="110" width="28" height="60" fill="#4a1a7a" fill-opacity="0.6"/><rect x="116" y="130" width="28" height="40" fill="#4a1a7a" fill-opacity="0.5"/><rect x="149" y="140" width="28" height="30" fill="#4a1a7a" fill-opacity="0.45"/><rect x="182" y="146" width="28" height="24" fill="#4a1a7a" fill-opacity="0.4"/><text x="64" y="185" text-anchor="middle" font-size="10" fill="#555">1</text><text x="97" y="185" text-anchor="middle" font-size="10" fill="#555">1/2</text><text x="130" y="185" text-anchor="middle" font-size="10" fill="#555">1/3</text><text x="163" y="185" text-anchor="middle" font-size="10" fill="#555">1/4</text><text x="196" y="185" text-anchor="middle" font-size="10" fill="#555">1/5</text><text x="228" y="163" font-size="16" fill="#999">...</text><path d="M 250,163 C 270,150 285,110 290,55" fill="none" stroke="#c8922a" stroke-width="2" stroke-dasharray="5,3"/><polygon points="290,55 282,66 296,65" fill="#c8922a"/><text x="292" y="42" text-anchor="middle" font-size="12" fill="#c8922a" font-weight="600">∞</text><text x="165" y="30" text-anchor="middle" font-size="10" fill="#555">termenii→0, dar suma crește la infinit</text></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story"><span class="hl">Fiecare pas e mai mic decât cel dinainte, dar dacă faci infinit de mulți pași, tot ajungi oricât de departe</span>. E ca și cum ai merge 1 metru, apoi jumătate de metru, apoi o treime de metru, tot mai puțin de fiecare dată - dar dacă nu te oprești niciodată din mers, ajungi oriunde vrei, doar că îți ia din ce în ce mai mult timp.</div><div class="intuitive-note">Nicole Oresme (~1350) a demonstrat divergența grupând termenii: (1/3+1/4)&gt;1/2, (1/5+...+1/8)&gt;1/2, și tot așa - un număr infinit de grupuri, fiecare mai mare decât 1/2. Seria crește extrem de lent: suma primilor 10⁴³ termeni depășește abia 100.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">Calculează suma primilor 4 termeni ai seriei armonice.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Adunăm: 1+1/2+1/3+1/4.</p></div><div class="step"><div class="dot"></div><p>Aducem la același numitor, 12: 12/12+6/12+4/12+3/12=25/12.</p></div><div class="step"><div class="dot"></div><p>Rezultatul este 25/12≈2.083.</p></div><div class="result">✓ ≈<strong>2.083</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">Care este cel mai mic număr de termeni N pentru care suma parțială H_N depășește 2?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Calculăm H₃=1+1/2+1/3=11/6≈1.833, care este sub 2.</p></div><div class="step"><div class="dot"></div><p>Calculăm H₄=1+1/2+1/3+1/4=25/12≈2.083, care depășește deja 2.</p></div><div class="step"><div class="dot"></div><p>Deci N=4 este primul număr de termeni la care suma trece de 2.</p></div><div class="result">✓ N=<strong>4</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">Suma primilor 1000 de termeni ai seriei armonice este o valoare finită sau infinită?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Orice sumă cu un număr finit de termeni este automat finită, oricât de mulți termeni am aduna - aici valoarea e aproximativ 7.49.</p></div><div class="step"><div class="dot"></div><p>Doar suma tuturor termenilor, la limită, cu n→∞, este cea care devine infinită.</p></div><div class="step"><div class="dot"></div><p>Divergența seriei armonice e un fenomen „la infinit”, nu se vede la niciun pas finit, oricât de mare.</p></div><div class="result">✓ <strong>Finită</strong> (≈7.49) - infinitul apare doar la limită, nu la un pas finit</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Adevărat sau fals: din moment ce termenii 1/n tind la 0 când n→∞, seria armonică trebuie să conveargă.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Fals. Tendința termenilor spre 0 este o condiție necesară pentru convergență, dar nu este suficientă.</p></div><div class="step"><div class="dot"></div><p>Seria armonică este exact contraexemplul clasic: termenii tind la 0, dar suma tot diverge.</p></div><div class="step"><div class="dot"></div><p>Gruparea lui Oresme arată exact de ce: chiar dacă termenii scad, grupurile de termeni consecutivi nu scad sub 1/2, deci suma crește la nesfârșit.</p></div><div class="result">✓ <strong>Fals</strong> - termenii→0 e necesar, dar nu suficient pentru convergență</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">O bibliotecă adaugă cărți în fiecare lună: în luna n adaugă exact 1/n mii de cărți (luna 1: 1000, luna 2: 500, tot mai puține). Se va opri vreodată numărul total de cărți din creștere?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Numărul total de cărți după n luni (în mii) este exact suma parțială a seriei armonice, H_n.</p></div><div class="step"><div class="dot"></div><p>Chiar dacă adaosurile lunare devin oricât de mici, seria armonică diverge, deci H_n crește fără limită pe măsură ce trec lunile.</p></div><div class="step"><div class="dot"></div><p>Așadar colecția bibliotecii crește nemărginit în timp, deși din ce în ce mai încet în fiecare lună.</p></div><div class="result">✓ <strong>Nu</strong> - colecția crește nemărginit, doar din ce în ce mai încet</div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Analiză</h3><div class="related-links"><a href="teorema-valorii-intermediare.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema valorii intermediare</a><a href="teorema-lui-rolle.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema lui Rolle</a><a href="teorema-valorii-medii-lagrange.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema valorii medii (Lagrange)</a><a href="teorema-lui-lhopital.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema lui L'Hôpital</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="formula-lui-euler-eipi.html" class="tn-link prev">Identitatea lui Euler</a><a href="seria-lui-euler-pi-la-doi.html" class="tn-link next">Problema Basel - suma lui Euler</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

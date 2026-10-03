@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Formula lui Stirling - ∑ Teoreme</title>
+<meta name="description" content="Aproximare asimptotică remarcabil de precisă a factorialului pentru numere mari, esențială în combinatorică și statistică.">
+<meta property="og:title" content="Formula lui Stirling - ∑ Teoreme">
+<meta property="og:description" content="Aproximare asimptotică remarcabil de precisă a factorialului pentru numere mari, esențială în combinatorică și statistică.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/formula-lui-stirling.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Formula lui Stirling","description":"Aproximare asimptotică remarcabil de precisă a factorialului pentru numere mari, esențială în combinatorică și statistică.","author":{"@type":"Person","name":"James Stirling, 1730"},"inLanguage":"ro","educationalLevel":"Avansat","url":"https://teoreme.ro/teoreme/formula-lui-stirling.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Analiză</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Formula lui Stirling</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-adv">Avansat</span></div><h1 itemprop="name">Formula lui Stirling</h1><p class="author" itemprop="author">James Stirling, 1730 · nr. 162</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Enunț:</strong> Pentru n→∞, n! este asimptotic egal cu √(2πn)·(n/e)ⁿ, în sensul că raportul celor două expresii tinde la 1.</div><div class="formula-block"><span class="formula-label">Formulă</span>n! ~ √(2πn)·(n/e)ⁿ, lim_{n→∞} n!/[√(2πn)·(n/e)ⁿ] = 1</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" width="300"><line x1="40" y1="170" x2="40" y2="20" stroke="#4a1a7a" stroke-width="1.5"/><line x1="30" y1="170" x2="300" y2="170" stroke="#4a1a7a" stroke-width="1.5"/><path d="M 55,155 C 100,120 160,70 280,25" fill="none" stroke="#4a1a7a" stroke-width="2.5"/><path d="M 55,160 C 100,122 160,72 280,27" fill="none" stroke="#c8922a" stroke-width="2" stroke-dasharray="5,3"/><circle cx="55" cy="155" r="3.5" fill="#4a1a7a"/><circle cx="120" cy="100" r="3.5" fill="#4a1a7a"/><circle cx="200" cy="55" r="3.5" fill="#4a1a7a"/><circle cx="280" cy="25" r="3.5" fill="#4a1a7a"/><text x="55" y="185" text-anchor="middle" font-size="10" fill="#555">n=1</text><text x="200" y="185" text-anchor="middle" font-size="10" fill="#555">n=10</text><text x="215" y="45" font-size="10" fill="#4a1a7a">ln(n!) exact</text><text x="215" y="90" font-size="10" fill="#c8922a">aproximarea Stirling</text><text x="150" y="15" text-anchor="middle" font-size="10" fill="#999">curbele se apropie pe măsură ce n crește</text></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story"><span class="hl">Dacă tot înmulțești numere tot mai mari - 1×2×3×4×...×n - rezultatul crește amețitor de repede</span>. Stirling a găsit o formulă simplă care „ghicește” cât de mare va fi acest produs uriaș, fără să-l calculezi efectiv - și cu cât n e mai mare, cu atât ghicitul e mai exact procentual.</div><div class="intuitive-note">James Stirling a publicat formula în 1730. E esențială în combinatorică (aproximarea coeficienților binomiali), mecanica statistică (entropia Boltzmann) și teoria probabilităților (aproximarea distribuției binomiale).</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">Aproximează 10! cu formula lui Stirling și compară cu valoarea exactă, 3628800.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Calculăm factorul de corecție: √(2π·10)=√(62.83)≈7.927.</p></div><div class="step"><div class="dot"></div><p>Calculăm partea dominantă: (10/e)¹⁰=10¹⁰/e¹⁰≈10000000000/22026.47≈453999.3.</p></div><div class="step"><div class="dot"></div><p>Înmulțim cele două părți: 7.927×453999.3≈3598700, foarte aproape de valoarea exactă 3628800 (eroare relativă sub 1%).</p></div><div class="result">✓ ≈<strong>3.5987×10⁶</strong>, eroare relativă ≈<strong>0.84%</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">Care este cel mai mic n natural pentru care partea dominantă a lui Stirling, (n/e)ⁿ, depășește 10⁶?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Partea dominantă a aproximării Stirling este (n/e)ⁿ; factorul √(2πn) e doar o corecție mai mică.</p></div><div class="step"><div class="dot"></div><p>Pentru n=10: (10/e)¹⁰≈453999, sub 10⁶.</p></div><div class="step"><div class="dot"></div><p>Pentru n=11: (11/e)¹¹≈4.77 milioane, peste 10⁶. Deci cel mai mic n cu (n/e)ⁿ&gt;10⁶ este n=11.</p></div><div class="result">✓ n=<strong>11</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">Aplică formula lui Stirling la cel mai mic caz posibil, n=1, și compară cu valoarea exactă 1!=1.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Calculăm aproximarea: √(2π·1)·(1/e)¹=√(2π)·(1/e)≈2.5066×0.3679≈0.922.</p></div><div class="step"><div class="dot"></div><p>Comparăm cu valoarea exactă: 1!=1.</p></div><div class="step"><div class="dot"></div><p>Eroarea relativă este (1−0.922)/1≈7.8% - mult mai mare decât eroarea de sub 1% obținută la n=10, ceea ce arată că formula devine din ce în ce mai precisă abia pentru n mare, nu pentru n mic.</p></div><div class="result">✓ Aproximare ≈<strong>0.922</strong>, eroare ≈<strong>7.8%</strong> - mult mai slabă decât la n mare</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Adevărat sau fals: pe măsură ce n crește, precizia relativă (procentuală) a aproximării lui Stirling se îmbunătățește, deși diferența absolută dintre n! și aproximare poate crește foarte mult.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Adevărat. Definiția asimptotică spune că raportul n!/aproximare tinde la 1, adică eroarea relativă (procentuală) tinde la 0.</p></div><div class="step"><div class="dot"></div><p>Totuși, n! crește atât de repede încât chiar și o eroare relativă minusculă, aplicată unui număr uriaș, poate însemna o diferență absolută enormă.</p></div><div class="step"><div class="dot"></div><p>Cele două lucruri nu se contrazic: eroarea absolută poate crește nemărginit, în timp ce eroarea relativă scade constant spre 0.</p></div><div class="result">✓ <strong>Adevărat</strong> - eroarea relativă scade, deși eroarea absolută poate crește</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">Estimează probabilitatea de a obține exact 50 steme din 100 aruncări ale unei monede corecte, P=C(100,50)/2¹⁰⁰, folosind Stirling.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Aplicăm Stirling la (2n)! și (n!)², cu n=50: (2n)!~√(4πn)·(2n/e)²ⁿ și (n!)²~2πn·(n/e)²ⁿ, deci C(2n,n)=(2n)!/(n!)²~4ⁿ/√(πn).</p></div><div class="step"><div class="dot"></div><p>Pentru n=50: C(100,50)/2¹⁰⁰~1/√(50π)=1/√157.08≈1/12.53.</p></div><div class="step"><div class="dot"></div><p>Calculăm: 1/12.53≈0.0798, adică aproximativ 7.98%.</p></div><div class="result">✓ P≈<strong>0.0798</strong> (≈7.98%)</div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Analiză</h3><div class="related-links"><a href="teorema-valorii-intermediare.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema valorii intermediare</a><a href="teorema-lui-rolle.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema lui Rolle</a><a href="teorema-valorii-medii-lagrange.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema valorii medii (Lagrange)</a><a href="teorema-lui-lhopital.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema lui L'Hôpital</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="teorema-lui-darboux.html" class="tn-link prev">Teorema lui Darboux</a><a href="teorema-lui-dini.html" class="tn-link next">Teorema lui Dini</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

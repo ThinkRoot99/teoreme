@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Funcția sigma (suma divizorilor) - ∑ Teoreme</title>
+<meta name="description" content="Funcția σ(n) însumează toți divizorii pozitivi ai lui n, inclusiv 1 și n; este multiplicativă și stă la baza numerelor perfecte.">
+<meta property="og:title" content="Funcția sigma (suma divizorilor) - ∑ Teoreme">
+<meta property="og:description" content="Funcția σ(n) însumează toți divizorii pozitivi ai lui n, inclusiv 1 și n; este multiplicativă și stă la baza numerelor perfecte.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/suma-divizorilor-functia-sigma.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Funcția sigma (suma divizorilor)","description":"Funcția σ(n) însumează toți divizorii pozitivi ai lui n, inclusiv 1 și n; este multiplicativă și stă la baza numerelor perfecte.","author":{"@type":"Person","name":"Euclid & Euler"},"inLanguage":"ro","educationalLevel":"Fundamental","url":"https://teoreme.ro/teoreme/suma-divizorilor-functia-sigma.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Aritmetică</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Funcția sigma (suma divizorilor)</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-arit">Aritmetică</span><span class="badge-level bl-fund">Fundamental</span></div><h1 itemprop="name">Funcția sigma (suma divizorilor)</h1><p class="author" itemprop="author">Euclid & Euler · nr. 149</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Definiție:</strong> Funcția sigma σ(n) este suma tuturor divizorilor pozitivi ai lui n, inclusiv 1 și n însuși: σ(n)=∑_{d|n} d. Este o funcție multiplicativă: dacă gcd(m,n)=1, atunci σ(mn)=σ(m)σ(n).</div><div class="formula-block"><span class="formula-label">Formulă</span>σ(n) = ∑_{d|n} d</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 300 160" width="300" xmlns="http://www.w3.org/2000/svg"><text x="150" y="14" text-anchor="middle" font-size="11" fill="#999" font-style="italic">σ(12): suma divizorilor vs 2×12</text><text x="20" y="46" font-size="9" font-family="'JetBrains Mono',monospace" fill="#8b1a1a">divizori: 1+2+3+4+6+12</text><rect x="20" y="50" width="6" height="22" fill="rgba(139,26,26,0.10)" stroke="#8b1a1a" stroke-width="1"/><rect x="26" y="50" width="12" height="22" fill="rgba(139,26,26,0.10)" stroke="#8b1a1a" stroke-width="1"/><rect x="38" y="50" width="18" height="22" fill="rgba(139,26,26,0.10)" stroke="#8b1a1a" stroke-width="1"/><text x="47" y="65" text-anchor="middle" font-size="10" font-family="'JetBrains Mono',monospace" fill="#8b1a1a" font-weight="700">3</text><rect x="56" y="50" width="24" height="22" fill="rgba(139,26,26,0.10)" stroke="#8b1a1a" stroke-width="1"/><text x="68" y="65" text-anchor="middle" font-size="10" font-family="'JetBrains Mono',monospace" fill="#8b1a1a" font-weight="700">4</text><rect x="80" y="50" width="36" height="22" fill="rgba(139,26,26,0.10)" stroke="#8b1a1a" stroke-width="1"/><text x="98" y="65" text-anchor="middle" font-size="10" font-family="'JetBrains Mono',monospace" fill="#8b1a1a" font-weight="700">6</text><rect x="116" y="50" width="72" height="22" fill="rgba(139,26,26,0.10)" stroke="#8b1a1a" stroke-width="1"/><text x="152" y="65" text-anchor="middle" font-size="10" font-family="'JetBrains Mono',monospace" fill="#8b1a1a" font-weight="700">12</text><text x="196" y="65" font-size="11" font-family="'JetBrains Mono',monospace" fill="#8b1a1a" font-weight="700">= 28</text><text x="20" y="90" font-size="9" fill="#8a5f10">2×12</text><rect x="20" y="94" width="144" height="22" rx="3" fill="rgba(200,146,42,0.22)" stroke="#c8922a" stroke-width="1.5"/><text x="92" y="109" text-anchor="middle" font-size="11" font-family="'JetBrains Mono',monospace" fill="#8a5f10" font-weight="700">24</text><text x="170" y="109" font-size="11" font-family="'JetBrains Mono',monospace" fill="#8a5f10" font-weight="700">= 24</text><text x="150" y="138" text-anchor="middle" font-size="12" font-family="'JetBrains Mono',monospace" fill="#1a1510">σ(12)=28 &gt; 2×12=24 → 12 este abundent</text></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story">Gândește-te la σ(n) ca la o listă cu toate „cutiile” de mărimi diferite în care poți împărți exact n obiecte, fără resturi - apoi aduni mărimile tuturor acestor cutii. <span class="hl">Pentru numărul 12, cutiile posibile sunt de 1, 2, 3, 4, 6 și 12, iar suma lor este σ(12)=28</span> - pentru un număr prim, în schimb, ai doar două cutii posibile: cutia de 1 și cutia cât numărul însuși.</div><div class="intuitive-note">Funcția σ stă la baza definiției numerelor perfecte (σ(n)=2n), abundente (σ(n)&gt;2n) și deficiente (σ(n)&lt;2n). Euclid și Euler au folosit-o pentru a caracteriza complet numerele perfecte pare.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">Calculează σ(12).</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Găsim toți divizorii lui 12: 1, 2, 3, 4, 6, 12.</p></div><div class="step"><div class="dot"></div><p>Îi adunăm: σ(12)=1+2+3+4+6+12.</p></div><div class="step"><div class="dot"></div><p>Calculăm suma pas cu pas: 1+2=3, 3+3=6, 6+4=10, 10+6=16, 16+12=28.</p></div><div class="result">✓ σ(12) = <strong>28</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">Se știe că σ(n)=31 și că n este o putere a lui 2 (n=2ᵏ). Care este n?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Pentru n=2ᵏ, divizorii sunt 1,2,4,…,2ᵏ, iar suma lor este σ(n)=2^(k+1)−1 (o sumă geometrică).</p></div><div class="step"><div class="dot"></div><p>Punem 2^(k+1)−1=31, deci 2^(k+1)=32.</p></div><div class="step"><div class="dot"></div><p>Cum 32=2⁵, obținem k+1=5, adică k=4, deci n=2⁴=16.</p></div><div class="result">✓ n = <strong>16</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">Cât este σ(1), cazul cel mai mic posibil?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Singurul divizor pozitiv al lui 1 este 1 însuși.</p></div><div class="step"><div class="dot"></div><p>Suma tuturor divizorilor este așadar doar 1.</p></div><div class="result">✓ σ(1) = <strong>1</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Adevărat sau fals: σ(n) este întotdeauna un număr par, pentru orice n&gt;1.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Luăm exemplul n=2, cel mai mic număr prim.</p></div><div class="step"><div class="dot"></div><p>Divizorii lui 2 sunt 1 și 2, deci σ(2)=1+2=3.</p></div><div class="step"><div class="dot"></div><p>3 este un număr impar, deci afirmația este falsă - există cel puțin un contraexemplu, chiar cel mai mic număr prim.</p></div><div class="result">✓ <strong>Fals</strong> - σ(2)=3, care este impar.</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">Un elev vrea să verifice, folosind funcția σ, dacă 28 este un număr perfect. Calculează σ(28) și trage concluzia.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Divizorii lui 28 sunt 1, 2, 4, 7, 14 și 28.</p></div><div class="step"><div class="dot"></div><p>Adunăm toți divizorii: σ(28)=1+2+4+7+14+28=56.</p></div><div class="step"><div class="dot"></div><p>Comparăm cu 2×28=56: cele două valori sunt egale, deci 28 este un număr perfect, conform definiției σ(n)=2n.</p></div><div class="result">✓ σ(28) = <strong>56</strong> = 2×28, deci 28 este perfect.</div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Aritmetică</h3><div class="related-links"><a href="infinitatea-numerelor-prime.html" class="related-link"><span class="card-tag tag-arit">Aritmetică</span> Infinitatea numerelor prime</a><a href="teorema-fundamentala-a-aritmeticii.html" class="related-link"><span class="card-tag tag-arit">Aritmetică</span> Teorema fundamentală a aritmeticii</a><a href="teorema-mica-a-lui-fermat.html" class="related-link"><span class="card-tag tag-arit">Aritmetică</span> Teorema mică a lui Fermat</a><a href="teorema-lui-euler-phi.html" class="related-link"><span class="card-tag tag-arit">Aritmetică</span> Teorema lui Euler (φ)</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="teorema-lui-lame.html" class="tn-link prev">Teorema lui Lamé</a><a href="teorema-lui-sylow.html" class="tn-link next">Teoremele lui Sylow</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

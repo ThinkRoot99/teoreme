@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Teorema lui Jordan - ∑ Teoreme</title>
+<meta name="description" content="Orice curbă Jordan (simplă, închisă) din plan îl împarte în exact două componente conexe.">
+<meta property="og:title" content="Teorema lui Jordan - ∑ Teoreme">
+<meta property="og:description" content="Orice curbă Jordan (simplă, închisă) din plan îl împarte în exact două componente conexe.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/teorema-lui-jordan.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Teorema lui Jordan","description":"Orice curbă Jordan (simplă, închisă) din plan îl împarte în exact două componente conexe.","author":{"@type":"Person","name":"Camille Jordan, 1887"},"inLanguage":"ro","educationalLevel":"Avansat","url":"https://teoreme.ro/teoreme/teorema-lui-jordan.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Topologie</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Teorema lui Jordan</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-topo">Topologie</span><span class="badge-level bl-adv">Avansat</span></div><h1 itemprop="name">Teorema lui Jordan</h1><p class="author" itemprop="author">Camille Jordan, 1887 · nr. 113</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Enunț:</strong> Orice curbă Jordan (simplă, închisă, continuă) din planul ℝ² împarte planul în exact două componente conexe: un interior mărginit și un exterior nemărginit.</div><div class="formula-block"><span class="formula-label">Formulă</span>Curbă Jordan → ℝ²\ Γ = Interior ∪ Exterior</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg"><path d="M150 30 C210 30 230 70 220 100 C210 140 170 150 130 140 C90 130 70 90 90 60 C100 40 120 30 150 30 Z" fill="#1a604022" stroke="#1a6040" stroke-width="3"/><circle cx="150" cy="90" r="5" fill="#c8922a"/><text x="150" y="113" font-size="11" fill="#c8922a" text-anchor="middle">interior</text><circle cx="270" cy="30" r="5" fill="#1a6040"/><text x="270" y="48" font-size="11" fill="#1a6040" text-anchor="middle">exterior</text></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story"><span class="hl">O sfoară așezată pe masă, cu capetele legate între ele fără să se încrucișeze, împarte mereu masa în două: înăuntrul sforii și afara ei</span>. Nu poți trece de la interior la exterior fără să calci pe sfoară.</div><div class="intuitive-note">Camille Jordan (1887) a enunțat teorema; demonstrația riguroasă a venit abia cu Veblen (1905). Este non-trivială din cauza curbelor patologice.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">Un cerc C în plan. În câte regiuni împarte planul, conform teoremei lui Jordan?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Cercul este o curbă simplă, care nu se auto-intersectează, și închisă, deci e o curbă Jordan.</p></div><div class="step"><div class="dot"></div><p>Teorema garantează exact două componente conexe: interiorul (discul) și exteriorul (restul planului).</p></div><div class="step"><div class="dot"></div><p>Orice punct din plan e fie strict înăuntrul cercului, fie strict în afara lui, niciodată „pe ambele”.</p></div><div class="result">✓ <strong>2 regiuni</strong>: interior și exterior</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">Figura 8 (∞), care se auto-intersectează într-un punct. Este curbă Jordan? Câte regiuni delimitează?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Nu este curbă Jordan, pentru că se auto-intersectează în punctul central - condiția de „simplă” nu e îndeplinită.</p></div><div class="step"><div class="dot"></div><p>Teorema lui Jordan nu se aplică direct aici.</p></div><div class="step"><div class="dot"></div><p>De fapt, figura 8 împarte planul în 3 regiuni (cele două bucle plus exteriorul), nu în 2 ca o curbă Jordan.</p></div><div class="result">✓ <strong>Nu e Jordan</strong> - dă 3 regiuni, nu 2</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">O elipsă foarte turtită, aproape ca un segment de dreaptă. Mai are interior și exterior distincte?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Oricât de turtită, elipsa rămâne o curbă simplă și închisă, deci tot o curbă Jordan.</p></div><div class="step"><div class="dot"></div><p>Interiorul devine o fâșie foarte subțire, dar tot există ca regiune separată de exterior.</p></div><div class="step"><div class="dot"></div><p>Cele 2 componente rămân garantate de teoremă indiferent de cât de „subțire” arată interiorul.</p></div><div class="result">✓ <strong>Da</strong>, tot 2 regiuni, chiar dacă interiorul e foarte îngust</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Adevărat sau fals: orice curbă închisă simplă din plan împarte planul în exact 3 regiuni.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Fals - teorema lui Jordan garantează exact 2 regiuni: interior și exterior, nu 3.</p></div><div class="step"><div class="dot"></div><p>Confuzia poate veni de la curbe care se auto-intersectează, ca figura 8, care NU sunt curbe Jordan și pot da mai multe regiuni.</p></div><div class="step"><div class="dot"></div><p>Pentru orice curbă Jordan adevărată, răspunsul corect e mereu 2.</p></div><div class="result">✓ <strong>Fals</strong> - sunt exact 2 regiuni</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">Un gard închis, fără porți, în jurul unei curți. Poate un câine din curte să ajungă în stradă fără să sară gardul?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Gardul închis, fără auto-intersecții, formează o curbă Jordan în planul curții.</p></div><div class="step"><div class="dot"></div><p>Teorema garantează că interiorul (curtea) și exteriorul (strada) sunt regiuni complet separate.</p></div><div class="step"><div class="dot"></div><p>Câinele nu poate trece continuu de la interior la exterior fără să traverseze gardul.</p></div><div class="result">✓ <strong>Nu</strong>, fără să treacă prin gard</div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Topologie</h3><div class="related-links"><a href="teorema-heine-borel.html" class="related-link"><span class="card-tag tag-topo">Topologie</span> Teorema Heine–Borel</a><a href="teorema-punctului-fix-brouwer.html" class="related-link"><span class="card-tag tag-topo">Topologie</span> Teorema punctului fix Brouwer</a><a href="teorema-borsuk-ulam.html" class="related-link"><span class="card-tag tag-topo">Topologie</span> Teorema Borsuk–Ulam</a><a href="caracteristica-euler-topologie.html" class="related-link"><span class="card-tag tag-topo">Topologie</span> Caracteristica Euler</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="teorema-punctului-fix-brouwer.html" class="tn-link prev">Teorema punctului fix Brouwer</a><a href="teorema-borsuk-ulam.html" class="tn-link next">Teorema Borsuk–Ulam</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

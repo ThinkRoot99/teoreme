@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Teorema lui Pappus - ∑ Teoreme</title>
+<meta name="description" content="Volumul unui solid de revoluție egal cu aria secțiunii înmulțite cu calea parcursă de centroida sa.">
+<meta property="og:title" content="Teorema lui Pappus - ∑ Teoreme">
+<meta property="og:description" content="Volumul unui solid de revoluție egal cu aria secțiunii înmulțite cu calea parcursă de centroida sa.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/teorema-lui-pappus.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Teorema lui Pappus","description":"Volumul unui solid de revoluție egal cu aria secțiunii înmulțite cu calea parcursă de centroida sa.","author":{"@type":"Person","name":"Pappus din Alexandria, ~320 d.Hr."},"inLanguage":"ro","educationalLevel":"Avansat","url":"https://teoreme.ro/teoreme/teorema-lui-pappus.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Geometrie</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Teorema lui Pappus</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-adv">Avansat</span></div><h1 itemprop="name">Teorema lui Pappus</h1><p class="author" itemprop="author">Pappus din Alexandria, ~320 d.Hr. · nr. 043</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Enunț:</strong> Volumul solidului generat prin rotația unei figuri plane în jurul unei axe externe egal cu aria figurii înmulțită cu lungimea drumului parcurs de centroida sa.</div><div class="formula-block"><span class="formula-label">Formulă</span>V = 2π · ȳ · A</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 340 220" xmlns="http://www.w3.org/2000/svg" width="310"><line x1="60" y1="15" x2="60" y2="205" stroke="#1e3a5f" stroke-width="2"/><rect x="150" y="90" width="70" height="55" fill="rgba(30,58,95,0.1)" stroke="#1e3a5f" stroke-width="2"/><circle cx="185" cy="117.5" r="3.5" fill="#c8922a"/><line x1="60" y1="117.5" x2="185" y2="117.5" stroke="#c8922a" stroke-width="1.6" stroke-dasharray="4,3"/><ellipse cx="60" cy="117.5" rx="10" ry="30" fill="none" stroke="#c8922a" stroke-width="1.2" stroke-dasharray="3,3"/><text x="40" y="20" font-size="12" fill="#1e3a5f">axă</text><text x="120" y="112" text-anchor="middle" font-size="12" fill="#c8922a">ȳ</text><text x="188" y="112" font-size="13" font-weight="600" fill="#1e3a5f">A</text><text x="185" y="165" text-anchor="middle" font-size="11" fill="#999">figura plană</text><text x="170" y="216" text-anchor="middle" font-size="11" fill="#999" font-style="italic" font-family="monospace">V = 2π · ȳ · A</text></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story">Imaginează-ți că ai o bucată mică de hârtie colorată (o formă plată) și o rotești foarte repede în jurul unui băț, ca o morișcă învârtită la viteză mare - forma plată „desenează” în aer un corp plin, rotund. <span class="hl">Volumul acelui corp depinde doar de cât de mare este bucata de hârtie (aria ei) și cât de departe este centrul ei de băț</span> - dacă centrul e mai departe de băț, corpul obținut iese mai mare, ca un colac mai gros.</div><div class="intuitive-note">Pappus din Alexandria (~320 d.Hr.) a demonstrat această teoremă care a rămas necunoscută în Europa până în Renaștere.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">Un dreptunghi cu laturile 3 și 4 se rotește în jurul unei axe exterioare, la distanța ȳ=5 față de centrul dreptunghiului. Calculează volumul solidului obținut.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Calculăm mai întâi aria figurii: A = 3×4 = 12.</p></div><div class="step"><div class="dot"></div><p>Aplicăm formula lui Pappus: V = 2π × ȳ × A = 2π × 5 × 12 = 120π.</p></div><div class="step"><div class="dot"></div><p>Aproximăm numeric: 120π ≈ 376,99.</p></div><div class="result">✓ V = <strong>120π ≈ 376,99</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">Un disc cu raza r=3 (deci aria A=9π) generează, prin rotație în jurul unei axe exterioare, un solid în formă de covrig (tor) cu volumul V=180π². La ce distanță ȳ se află centrul discului față de axă?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Calculăm aria discului: A = π×r² = π×3² = 9π.</p></div><div class="step"><div class="dot"></div><p>Pornim de la formula lui Pappus și izolăm ȳ: ȳ = V / (2π×A).</p></div><div class="step"><div class="dot"></div><p>Înlocuim: ȳ = 180π² / (2π×9π) = 180π² / 18π² = 10.</p></div><div class="result">✓ ȳ = <strong>10</strong>. Aceasta este distanța de la centrul discului la axă, pentru covrigul (torul) obținut.</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">Un semicerc cu raza r=6 are centrul de greutate la distanța ȳ=4r/(3π) de axa care trece prin diametru. Dacă rotești semicercul în jurul acestei axe, ce corp obții și ce volum are?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Aria semicercului este A = πr²/2 = π×36/2 = 18π.</p></div><div class="step"><div class="dot"></div><p>Distanța centroidei este ȳ = 4×6/(3π) = 24/(3π) = 8/π.</p></div><div class="step"><div class="dot"></div><p>Aplicăm formula lui Pappus: V = 2π × (8/π) × 18π = 288π.</p></div><div class="result">✓ Se obține o <strong>sferă</strong>, cu V = <strong>288π</strong> (verificare: (4/3)π×6³ = 288π ✔)</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Adevărat sau fals: dacă dublezi distanța ȳ de la centroidă la axă, păstrând aceeași figură (deci aceeași arie A), volumul solidului obținut se dublează și el.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Formula lui Pappus este V = 2π×ȳ×A, în care ȳ apare la puterea întâi, înmulțind restul expresiei.</p></div><div class="step"><div class="dot"></div><p>Dacă dublăm ȳ și păstrăm A neschimbat, întregul produs 2π×ȳ×A se dublează, deci și volumul V se dublează.</p></div><div class="result">✓ <strong>Adevărat</strong>.</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">Un artizan modelează la strung o piesă de lemn: secțiunea transversală are aria A=8 cm², iar centrul ei de greutate se află la 3 cm de axul de rotație al strungului. Ce volum are piesa finită?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Aplicăm direct formula lui Pappus: V = 2π × ȳ × A.</p></div><div class="step"><div class="dot"></div><p>Înlocuim: V = 2π × 3 × 8 = 48π.</p></div><div class="step"><div class="dot"></div><p>Aproximăm numeric: 48π ≈ 150,8 cm³.</p></div><div class="result">✓ Piesa are volumul <strong>48π ≈ 150,8 cm³</strong>.</div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Geometrie</h3><div class="related-links"><a href="suma-unghiurilor-unui-triunghi.html" class="related-link"><span class="card-tag tag-geo">Geometrie</span> Suma unghiurilor unui triunghi</a><a href="teorema-lui-pitagora.html" class="related-link"><span class="card-tag tag-geo">Geometrie</span> Teorema lui Pitagora</a><a href="teorema-lui-thales.html" class="related-link"><span class="card-tag tag-geo">Geometrie</span> Teorema lui Thales</a><a href="teorema-bisectoarei.html" class="related-link"><span class="card-tag tag-geo">Geometrie</span> Teorema bisectoarei</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="concurenta-bisectoarelor.html" class="tn-link prev">Concurența bisectoarelor</a><a href="teorema-lui-pick.html" class="tn-link next">Teorema lui Pick</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

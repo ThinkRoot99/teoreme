@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Suma cuburilor primelor n numere - ∑ Teoreme</title>
+<meta name="description" content="Suma cuburilor numerelor de la 1 la n este egală cu pătratul sumei Gauss.">
+<meta property="og:title" content="Suma cuburilor primelor n numere - ∑ Teoreme">
+<meta property="og:description" content="Suma cuburilor numerelor de la 1 la n este egală cu pătratul sumei Gauss.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/suma-cuburilor-primelor-n-numere.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Suma cuburilor primelor n numere","description":"Suma cuburilor numerelor de la 1 la n este egală cu pătratul sumei Gauss.","author":{"@type":"Person","name":"Nicomachus, ~100 d.Hr."},"inLanguage":"ro","educationalLevel":"Intermediar","url":"https://teoreme.ro/teoreme/suma-cuburilor-primelor-n-numere.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Aritmetică</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Suma cuburilor primelor n numere</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-arit">Aritmetică</span><span class="badge-level bl-med">Intermediar</span></div><h1 itemprop="name">Suma cuburilor primelor n numere</h1><p class="author" itemprop="author">Nicomachus, ~100 d.Hr. · nr. 062</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Enunț remarcabil:</strong> Suma cuburilor primelor n numere naturale egal pătratul sumei Gauss.</div><div class="formula-block"><span class="formula-label">Formulă</span>1³ + 2³ + … + n³ = [n(n+1)/2]²</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 320 170" width="320" xmlns="http://www.w3.org/2000/svg"><text x="160" y="16" text-anchor="middle" font-size="11" fill="#999" font-style="italic">identitatea lui Nicomachus</text><text x="25" y="114" text-anchor="middle" font-size="9" font-family="'JetBrains Mono',monospace" fill="#8b1a1a">1³</text><rect x="20" y="120" width="10" height="10" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1.5"/><text x="25" y="128" text-anchor="middle" font-size="6" font-family="'JetBrains Mono',monospace" fill="#8b1a1a" font-weight="700">1</text><text x="35" y="129" text-anchor="middle" font-size="14" fill="#1a1510">+</text><text x="50" y="104" text-anchor="middle" font-size="9" font-family="'JetBrains Mono',monospace" fill="#8b1a1a">2³</text><rect x="40" y="110" width="20" height="20" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1.5"/><text x="50" y="124" text-anchor="middle" font-size="9" font-family="'JetBrains Mono',monospace" fill="#8b1a1a" font-weight="700">8</text><text x="65" y="123" text-anchor="middle" font-size="14" fill="#1a1510">+</text><text x="85" y="94" text-anchor="middle" font-size="9" font-family="'JetBrains Mono',monospace" fill="#8b1a1a">3³</text><rect x="70" y="100" width="30" height="30" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1.5"/><text x="85" y="120" text-anchor="middle" font-size="11" font-family="'JetBrains Mono',monospace" fill="#8b1a1a" font-weight="700">27</text><text x="112" y="123" text-anchor="middle" font-size="16" fill="#1a1510">=</text><text x="155" y="64" text-anchor="middle" font-size="10" font-family="'JetBrains Mono',monospace" fill="#8a5f10">6² = (1+2+3)²</text><rect x="125" y="70" width="60" height="60" fill="rgba(200,146,42,0.18)" stroke="#c8922a" stroke-width="1.5"/><text x="155" y="106" text-anchor="middle" font-size="16" font-family="'JetBrains Mono',monospace" fill="#8a5f10" font-weight="700">36</text><text x="160" y="152" text-anchor="middle" font-size="12" font-family="'JetBrains Mono',monospace" fill="#1a1510">1+8+27 = <tspan fill="#c8922a" font-weight="700">36</tspan></text></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story">Ia cuburi de jucărie și fă trei grămezi: prima grămadă e doar 1 cub (1³=1), a doua e un cub mare făcut din 2×2×2=8 cuburi mici, iar a treia e un cub și mai mare, din 3×3×3=27 cuburi mici. <span class="hl">Dacă numeri toate cuburile mici din toate cele trei grămezi, găsești exact 36 - și, surprinzător, 36 este și 6×6, adică pătratul sumei 1+2+3=6</span>. Cuburile și pătratele „se potrivesc” perfect, deși pare o coincidență.</div><div class="intuitive-note">Nicomachus din Gerasa (~100 d.Hr.) a observat că 1³+2³+…+n³=(1+2+…+n)², iar proprietatea generalizează mai departe în teoria formelor algebrice.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">Calculează 1³+2³+3³+4³+5³+6³ folosind identitatea lui Nicomachus.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Calculăm mai întâi suma simplă 1+2+…+6=6×7/2=21.</p></div><div class="step"><div class="dot"></div><p>Ridicăm această sumă la pătrat: 21²=441.</p></div><div class="result">✓ S = <strong>441</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">Suma cuburilor primelor n numere naturale este 100. Găsește n.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Din identitate, suma este pătratul sumei simple: [n(n+1)/2]²=100.</p></div><div class="step"><div class="dot"></div><p>Extragem rădăcina pătrată din 100: n(n+1)/2=10, pentru că 10²=100.</p></div><div class="step"><div class="dot"></div><p>Căutăm n pentru care suma simplă 1+2+…+n este 10: n=4, pentru că 4×5/2=10.</p></div><div class="result">✓ n = <strong>4</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">Verifică identitatea lui Nicomachus pentru cel mai simplu caz, n=1.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Suma cuburilor este doar 1³=1.</p></div><div class="step"><div class="dot"></div><p>Suma simplă 1+…+1 este tot 1, iar pătratul ei este 1²=1.</p></div><div class="step"><div class="dot"></div><p>Cele două rezultate coincid, exact cum spune identitatea, chiar și în acest caz minim.</p></div><div class="result">✓ S = <strong>1</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Adevărat sau fals: suma cuburilor primelor n numere naturale este întotdeauna un pătrat perfect.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Identitatea lui Nicomachus spune că suma cuburilor este exact [n(n+1)/2]², adică pătratul unui număr întreg.</p></div><div class="step"><div class="dot"></div><p>De exemplu, pentru n=5: 1+8+27+64+125=225, iar 225=15², cu 15=5×6/2.</p></div><div class="step"><div class="dot"></div><p>Cum orice sumă de cuburi de la 1 la n se scrie ca un pătrat, afirmația este adevărată pentru orice n.</p></div><div class="result">✓ <strong>Adevărat</strong> - suma cuburilor este mereu un pătrat perfect, [n(n+1)/2]².</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">Un copil construiește 7 cuburi Lego din ce în ce mai mari: primul e un singur cubuleț (1×1×1), al doilea e 2×2×2, al treilea 3×3×3, și tot așa până la al șaptelea, care este 7×7×7. Câte cuburi Lego mici a folosit în total?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Numărul de piese din cubul al k-lea este k³, deci trebuie să adunăm 1³+2³+…+7³.</p></div><div class="step"><div class="dot"></div><p>Calculăm mai întâi suma simplă 1+2+…+7=7×8/2=28.</p></div><div class="step"><div class="dot"></div><p>Ridicăm această sumă la pătrat: 28²=784.</p></div><div class="result">✓ Copilul a folosit <strong>784</strong> de cuburi Lego mici în total.</div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Aritmetică</h3><div class="related-links"><a href="infinitatea-numerelor-prime.html" class="related-link"><span class="card-tag tag-arit">Aritmetică</span> Infinitatea numerelor prime</a><a href="teorema-fundamentala-a-aritmeticii.html" class="related-link"><span class="card-tag tag-arit">Aritmetică</span> Teorema fundamentală a aritmeticii</a><a href="teorema-mica-a-lui-fermat.html" class="related-link"><span class="card-tag tag-arit">Aritmetică</span> Teorema mică a lui Fermat</a><a href="teorema-lui-euler-phi.html" class="related-link"><span class="card-tag tag-arit">Aritmetică</span> Teorema lui Euler (φ)</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="suma-patratelor-primelor-n-numere.html" class="tn-link prev">Suma pătratelor primelor n numere</a><a href="numerele-fibonacci.html" class="tn-link next">Numerele Fibonacci</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

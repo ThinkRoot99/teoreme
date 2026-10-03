@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Valori proprii și polinom caracteristic - ∑ Teoreme</title>
+<meta name="description" content="Valorile proprii ale unei matrice pătratice sunt exact rădăcinile polinomului său caracteristic det(A−λI).">
+<meta property="og:title" content="Valori proprii și polinom caracteristic - ∑ Teoreme">
+<meta property="og:description" content="Valorile proprii ale unei matrice pătratice sunt exact rădăcinile polinomului său caracteristic det(A−λI).">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/polinomul-caracteristic-valori-proprii.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Valori proprii și polinom caracteristic","description":"Valorile proprii ale unei matrice pătratice sunt exact rădăcinile polinomului său caracteristic det(A−λI).","author":{"@type":"Person","name":"Augustin-Louis Cauchy, sec. XIX"},"inLanguage":"ro","educationalLevel":"Intermediar","url":"https://teoreme.ro/teoreme/polinomul-caracteristic-valori-proprii.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Algebră</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Valori proprii și polinom caracteristic</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-alg">Algebră</span><span class="badge-level bl-med">Intermediar</span></div><h1 itemprop="name">Valori proprii și polinom caracteristic</h1><p class="author" itemprop="author">Augustin-Louis Cauchy, sec. XIX · nr. 153</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Enunț:</strong> Fie A o matrice pătratică de ordin n. Un scalar λ este valoare proprie a lui A dacă și numai dacă este rădăcină a polinomului caracteristic p(λ)=det(A−λI), adică det(A−λI)=0.</div><div class="formula-block"><span class="formula-label">Formulă</span>det(A − λI) = 0</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg"><line x1="30" y1="150" x2="270" y2="150" stroke="#ccc"/><line x1="30" y1="150" x2="120" y2="60" stroke="#2d5a3d" stroke-width="3" marker-end="url(#vpA)"/><text x="80" y="70" font-size="12" fill="#2d5a3d">v</text><line x1="30" y1="150" x2="240" y2="45" stroke="#c8922a" stroke-width="3" marker-end="url(#vpB)"/><text x="200" y="45" font-size="12" fill="#c8922a">Av=λv</text><text x="150" y="20" text-anchor="middle" font-size="12" fill="#2d5a3d">Av rămâne pe aceeași dreaptă ca v</text><text x="150" y="170" text-anchor="middle" font-size="11" fill="#555">det(A-λI)=0 → direcțiile „stabile” ale matricei</text><defs><marker id="vpA" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#2d5a3d"/></marker><marker id="vpB" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#c8922a"/></marker></defs></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story"><span class="hl">O matrice poate „întinde” sau „roti” vectorii în orice direcție, dar există câteva direcții speciale pe care ea doar le întinde sau le strânge, fără să le rotească deloc</span> - ca o pânză elastică ce se întinde doar de-a lungul anumitor linii. Acele direcții speciale sunt vectorii proprii, iar cât de mult se întind se numește valoare proprie.</div><div class="intuitive-note">Ideea de valoare proprie apare la Euler și Lagrange în studiul sistemelor de ecuații diferențiale, dar formalizarea prin polinomul caracteristic det(A−λI) se datorează în mare parte lui Cauchy, în secolul al XIX-lea.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">A=[[2,1],[1,2]]. Găsește polinomul caracteristic și valorile proprii.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Calculăm polinomul caracteristic: det(A-λI)=(2-λ)²-1×1=(2-λ)²-1.</p></div><div class="step"><div class="dot"></div><p>Dezvoltăm: (2-λ)²-1=λ²-4λ+4-1=λ²-4λ+3.</p></div><div class="step"><div class="dot"></div><p>Rezolvăm λ²-4λ+3=0, care se factorizează (λ-1)(λ-3)=0, deci λ=1 sau λ=3.</p></div><div class="result">✓ Valori proprii: <strong>λ=1</strong> și <strong>λ=3</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">Se știe doar că trace(A)=5 și det(A)=6 pentru o matrice 2×2. Găsește valorile proprii fără a cunoaște matricea exactă.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Pentru o matrice 2×2, polinomul caracteristic are mereu forma λ²-trace(A)·λ+det(A)=0.</p></div><div class="step"><div class="dot"></div><p>Înlocuim: λ²-5λ+6=0, care se factorizează (λ-2)(λ-3)=0, deci λ=2 sau λ=3.</p></div><div class="result">✓ Valori proprii: <strong>λ=2</strong> și <strong>λ=3</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">A=[[3,0],[0,5]] (matrice diagonală). Care sunt valorile proprii?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Pentru o matrice diagonală, det(A-λI)=(3-λ)(5-λ), deoarece toate elementele nediagonale sunt deja 0.</p></div><div class="step"><div class="dot"></div><p>Rădăcinile sunt evident λ=3 și λ=5 - în acest caz special, valorile proprii coincid exact cu elementele de pe diagonală.</p></div><div class="result">✓ Valori proprii: <strong>λ=3</strong> și <strong>λ=5</strong> (caz special)</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Adevărat sau fals: o matrice cu elemente reale are întotdeauna valori proprii reale.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Este fals: matricea de rotație cu 90°, A=[[0,-1],[1,0]], are elemente reale, dar polinomul caracteristic este det(A-λI)=λ²+1.</p></div><div class="step"><div class="dot"></div><p>Rezolvăm λ²+1=0, adică λ²=-1, deci λ=i sau λ=-i - valori proprii complexe, deși matricea are doar numere reale.</p></div><div class="result">✓ <strong>Fals</strong> - există matrice reale cu valori proprii complexe</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">A=[[1,2,3],[0,4,5],[0,0,6]] (triunghiulară superior). Găsește valorile proprii fără a calcula tot determinantul.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Pentru matrice triunghiulare, det(A-λI)=(1-λ)(4-λ)(6-λ), deoarece structura triunghiulară face ca determinantul să fie produsul elementelor de pe diagonala principală.</p></div><div class="step"><div class="dot"></div><p>Rădăcinile acestui produs sunt evident λ=1, λ=4 și λ=6 - se pot citi direct, fără niciun calcul laborios.</p></div><div class="result">✓ Valori proprii: <strong>λ=1, 4, 6</strong></div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Algebră</h3><div class="related-links"><a href="teorema-lui-lagrange-grupuri.html" class="related-link"><span class="card-tag tag-alg">Algebră</span> Teorema lui Lagrange (grupuri)</a><a href="teorema-fundamentala-a-algebrei.html" class="related-link"><span class="card-tag tag-alg">Algebră</span> Teorema fundamentală a algebrei</a><a href="relatiile-lui-viete.html" class="related-link"><span class="card-tag tag-alg">Algebră</span> Relațiile lui Viète</a><a href="teorema-rouche-capelli.html" class="related-link"><span class="card-tag tag-alg">Algebră</span> Teorema Rouché–Capelli</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="inegalitatea-mediilor-am-gm.html" class="tn-link prev">Inegalitatea mediilor (AM–GM)</a><a href="descompunerea-in-fractii-simple.html" class="tn-link next">Descompunerea în fracții simple</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

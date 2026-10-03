@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Identitatea lui Lagrange - ∑ Teoreme</title>
+<meta name="description" content="Relează pătratul normei produsului scalar și vectorial a doi vectori de pătratele normelor lor, generalizând Pitagora.">
+<meta property="og:title" content="Identitatea lui Lagrange - ∑ Teoreme">
+<meta property="og:description" content="Relează pătratul normei produsului scalar și vectorial a doi vectori de pătratele normelor lor, generalizând Pitagora.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/identitate-lagrange.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Identitatea lui Lagrange","description":"Relează pătratul normei produsului scalar și vectorial a doi vectori de pătratele normelor lor, generalizând Pitagora.","author":{"@type":"Person","name":"Joseph-Louis Lagrange"},"inLanguage":"ro","educationalLevel":"Intermediar","url":"https://teoreme.ro/teoreme/identitate-lagrange.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Algebră</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Identitatea lui Lagrange</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-alg">Algebră</span><span class="badge-level bl-med">Intermediar</span></div><h1 itemprop="name">Identitatea lui Lagrange</h1><p class="author" itemprop="author">Joseph-Louis Lagrange · nr. 156</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Enunț:</strong> Pentru orice vectori u,v∈ℝ³ are loc identitatea ‖u‖²‖v‖² = ⟨u,v⟩² + ‖u×v‖², care leagă produsul scalar, produsul vectorial și normele vectorilor, generalizând teorema lui Pitagora.</div><div class="formula-block"><span class="formula-label">Formulă</span>‖u‖²‖v‖² = ⟨u,v⟩² + ‖u×v‖²</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg"><line x1="30" y1="140" x2="250" y2="140" stroke="#ccc"/><line x1="30" y1="140" x2="200" y2="140" stroke="#2d5a3d" stroke-width="3" marker-end="url(#ilA)"/><text x="120" y="130" font-size="12" fill="#2d5a3d">⟨u,v⟩</text><line x1="200" y1="140" x2="200" y2="60" stroke="#c8922a" stroke-width="3" marker-end="url(#ilB)"/><text x="205" y="100" font-size="12" fill="#c8922a">‖u×v‖</text><line x1="30" y1="140" x2="200" y2="60" stroke="#555" stroke-width="1" stroke-dasharray="3"/><text x="90" y="90" font-size="11" fill="#555">‖u‖‖v‖</text><text x="150" y="20" text-anchor="middle" font-size="12" fill="#2d5a3d">‖u‖²‖v‖² = ⟨u,v⟩² + ‖u×v‖²</text><defs><marker id="ilA" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#2d5a3d"/></marker><marker id="ilB" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#c8922a"/></marker></defs></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story"><span class="hl">Produsul a două lungimi se împarte exact, ca o prăjitură tăiată în două: o bucată „paralelă” (produsul scalar) și o bucată „perpendiculară” (produsul vectorial)</span>. Este exact ideea din teorema lui Pitagora, aplicată de data asta unor vectori în loc de laturile unui triunghi dreptunghic.</div><div class="intuitive-note">Identitatea poartă numele lui Joseph-Louis Lagrange și are o formă algebrică mai generală, valabilă pentru orice numere reale (descoperită de Cauchy), din care rezultă direct inegalitatea Cauchy-Schwarz.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">u=(1,0,0), v=(0,1,0) (perpendiculari). Verifică identitatea lui Lagrange.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Calculăm ‖u‖²=1 și ‖v‖²=1, iar produsul scalar ⟨u,v⟩=1×0+0×1+0×0=0.</p></div><div class="step"><div class="dot"></div><p>Calculăm produsul vectorial u×v=(0,0,1), deci ‖u×v‖²=1.</p></div><div class="step"><div class="dot"></div><p>Verificăm: LHS=‖u‖²‖v‖²=1×1=1, iar RHS=⟨u,v⟩²+‖u×v‖²=0+1=1 - identitatea se confirmă.</p></div><div class="result">✓ <strong>1 = 1</strong>, confirmat (vectori perpendiculari)</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">Se știe că ‖u‖²‖v‖²=50 și ⟨u,v⟩²=25 pentru doi vectori din ℝ³. Fără să calculezi produsul vectorial direct, află ‖u×v‖².</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Rearanjăm identitatea lui Lagrange: ‖u×v‖²=‖u‖²‖v‖²-⟨u,v⟩².</p></div><div class="step"><div class="dot"></div><p>Înlocuim valorile cunoscute: ‖u×v‖²=50-25=25.</p></div><div class="result">✓ ‖u×v‖²=<strong>25</strong> (deci ‖u×v‖=5)</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">u=(1,1,1), v=(2,2,2) (v este multiplu al lui u, vectori paraleli). Ce se întâmplă cu identitatea în acest caz limită?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Calculăm ‖u‖²=3, ‖v‖²=12, iar ⟨u,v⟩=1×2+1×2+1×2=6.</p></div><div class="step"><div class="dot"></div><p>Deoarece v este exact 2×u, produsul vectorial u×v este vectorul nul, deci ‖u×v‖²=0.</p></div><div class="step"><div class="dot"></div><p>Verificăm: LHS=3×12=36, RHS=6²+0=36 - identitatea se reduce la cazul de egalitate din Cauchy-Schwarz, fiindcă vectorii sunt paraleli.</p></div><div class="result">✓ <strong>36 = 36</strong>, caz limită (‖u×v‖=0, vectori paraleli)</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Adevărat sau fals: identitatea lui Lagrange arată că ‖u×v‖ este întotdeauna mai mic sau egal cu ‖u‖‖v‖.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Din identitate, ‖u×v‖²=‖u‖²‖v‖²-⟨u,v⟩², iar cum ⟨u,v⟩²≥0, rezultă ‖u×v‖²≤‖u‖²‖v‖².</p></div><div class="step"><div class="dot"></div><p>Extrăgând radical, obținem ‖u×v‖≤‖u‖‖v‖, deci afirmația este adevărată - aceasta redă chiar inegalitatea Cauchy-Schwarz „pe dos”.</p></div><div class="result">✓ <strong>Adevărat</strong> - rezultă direct din identitate</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">Un designer calculează aria unui paralelogram cu laturile u=(3,0,0) și v=(0,4,0), folosind identitatea lui Lagrange în loc de formula directă.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Calculăm ‖u‖²=9, ‖v‖²=16, iar ⟨u,v⟩=3×0+0×4+0×0=0 (laturile sunt perpendiculare, ca într-un dreptunghi).</p></div><div class="step"><div class="dot"></div><p>Din identitate: ‖u×v‖²=‖u‖²‖v‖²-⟨u,v⟩²=9×16-0=144, deci ‖u×v‖=12.</p></div><div class="step"><div class="dot"></div><p>Aria paralelogramului (aici un dreptunghi) este exact ‖u×v‖=12, ceea ce coincide cu formula clasică 3×4=12.</p></div><div class="result">✓ Aria = <strong>12</strong> (confirmată și prin formula clasică)</div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Algebră</h3><div class="related-links"><a href="teorema-lui-lagrange-grupuri.html" class="related-link"><span class="card-tag tag-alg">Algebră</span> Teorema lui Lagrange (grupuri)</a><a href="teorema-fundamentala-a-algebrei.html" class="related-link"><span class="card-tag tag-alg">Algebră</span> Teorema fundamentală a algebrei</a><a href="relatiile-lui-viete.html" class="related-link"><span class="card-tag tag-alg">Algebră</span> Relațiile lui Viète</a><a href="teorema-rouche-capelli.html" class="related-link"><span class="card-tag tag-alg">Algebră</span> Teorema Rouché–Capelli</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="formula-lui-gerschgorin.html" class="tn-link prev">Teorema discurilor Gerschgorin</a><a href="criteriul-lui-cauchy-condensare.html" class="tn-link next">Criteriul de condensare Cauchy</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

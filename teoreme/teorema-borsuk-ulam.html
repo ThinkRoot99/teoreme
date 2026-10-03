@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Teorema Borsuk–Ulam - ∑ Teoreme</title>
+<meta name="description" content="Pentru orice funcție continuă de pe sfera n-dimensională în ℝⁿ, există un punct antipodal cu aceleași valori.">
+<meta property="og:title" content="Teorema Borsuk–Ulam - ∑ Teoreme">
+<meta property="og:description" content="Pentru orice funcție continuă de pe sfera n-dimensională în ℝⁿ, există un punct antipodal cu aceleași valori.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/teorema-borsuk-ulam.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Teorema Borsuk–Ulam","description":"Pentru orice funcție continuă de pe sfera n-dimensională în ℝⁿ, există un punct antipodal cu aceleași valori.","author":{"@type":"Person","name":"Borsuk & Ulam, 1933"},"inLanguage":"ro","educationalLevel":"Avansat","url":"https://teoreme.ro/teoreme/teorema-borsuk-ulam.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Topologie</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Teorema Borsuk–Ulam</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-topo">Topologie</span><span class="badge-level bl-adv">Avansat</span></div><h1 itemprop="name">Teorema Borsuk–Ulam</h1><p class="author" itemprop="author">Borsuk & Ulam, 1933 · nr. 114</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Enunț:</strong> Pentru orice funcție continuă f:Sⁿ→ℝⁿ de la sfera n-dimensională în ℝⁿ, există un punct x cu f(x)=f(-x) (puncte antipodale cu aceleași valori).</div><div class="formula-block"><span class="formula-label">Formulă</span>∀f:Sⁿ→ℝⁿ continuă: ∃x∈Sⁿ cu f(x)=f(-x)</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 300 190" xmlns="http://www.w3.org/2000/svg"><circle cx="110" cy="95" r="70" fill="none" stroke="#1a6040" stroke-width="3"/><line x1="60" y1="55" x2="160" y2="135" stroke="#c8922a" stroke-width="2" stroke-dasharray="5 4"/><circle cx="60" cy="55" r="6" fill="#c8922a"/><circle cx="160" cy="135" r="6" fill="#c8922a"/><text x="110" y="180" font-size="11" fill="#1a6040" text-anchor="middle">puncte antipodale pe sferă</text><rect x="230" y="40" width="30" height="110" rx="6" fill="none" stroke="#1a6040" stroke-width="2"/><line x1="230" y1="95" x2="260" y2="95" stroke="#c8922a" stroke-width="3"/><text x="245" y="30" font-size="10" fill="#1a6040" text-anchor="middle">aceeași valoare</text></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story"><span class="hl">Pe glob există mereu două puncte exact opuse (antipodale) cu aceeași temperatură în același moment</span>. Oriunde ai roti globul, undeva cele două „capete” opuse se potrivesc mereu.</div><div class="intuitive-note">Borsuk și Ulam au publicat rezultatul în 1933, cu o demonstrație bazată pe omologie. Din el decurge teorema ham sandwich, care spune că orice n mulțimi pot fi bisectate simultan de un hiperplan.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">f:S¹→ℝ dată de f(x,y)=x (proiecția pe axa Ox) pe cercul unitate. Găsiți punctele antipodale cu aceeași valoare.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Căutăm (x,y) pe cerc cu f(x,y)=f(-x,-y), adică x=-x.</p></div><div class="step"><div class="dot"></div><p>Din x=-x rezultă x=0.</p></div><div class="step"><div class="dot"></div><p>Pe cerc, x=0 dă punctele (0,1) și (0,-1) - exact perechea antipodală căutată.</p></div><div class="result">✓ punctele <strong>(0,1) și (0,-1)</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">De ce nu e „interesant” exemplul f(x,y)=x²+y² pe S¹ pentru teoremă?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Pe cercul unitate, x²+y²=1 pentru toate punctele - funcția e constantă.</p></div><div class="step"><div class="dot"></div><p>O funcție constantă satisface trivial f(x)=f(-x) pentru orice pereche de puncte, nu doar pentru una specială.</p></div><div class="step"><div class="dot"></div><p>Exemplul nu ilustrează forța teoremei, care garantează o pereche specifică chiar și pentru funcții neconstante.</p></div><div class="result">✓ Exemplu <strong>trivial</strong> - nu ilustrează teorema</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">Cazul cel mai simplu: f:S⁰→ℝ, unde S⁰={-1,1}. Ce spune teorema aici?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>S⁰ are doar două puncte, -1 și 1, care sunt deja antipodale.</p></div><div class="step"><div class="dot"></div><p>Teorema ar cere ∃x cu f(x)=f(-x), adică f(-1)=f(1), lucru ce NU e adevărat pentru orice f.</p></div><div class="step"><div class="dot"></div><p>Enunțul standard al Borsuk-Ulam cere n≥1; cazul n=0 arată de ce dimensiunea contează în ipoteze.</p></div><div class="result">✓ Cazul degenerat arată <strong>de ce e nevoie de n≥1</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Adevărat sau fals: teorema Borsuk-Ulam se aplică oricărei funcții continue f:Sⁿ→ℝᵐ, indiferent de m.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Fals - enunțul cere ca dimensiunea codomeniului să fie exact n (f:Sⁿ→ℝⁿ), nu mai mare.</p></div><div class="step"><div class="dot"></div><p>Dacă m&gt;n, în general nu mai există garanția unei perechi antipodale cu aceeași valoare.</p></div><div class="step"><div class="dot"></div><p>Dimensiunea codomeniului trebuie să fie „la fel de mică” precum a domeniului minus 1.</p></div><div class="result">✓ <strong>Fals</strong> - trebuie codomeniu de dimensiune exact n</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">Teorema ham sandwich: un sandviș cu pâine, șuncă și brânză poate fi tăiat cu o singură tăietură plană astfel încât fiecare ingredient să fie împărțit exact în jumătate?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Fiecare ingredient e o mulțime în spațiul 3D, iar căutăm un plan care bisectează simultan toate cele 3.</p></div><div class="step"><div class="dot"></div><p>Aceasta e o consecință directă a teoremei Borsuk-Ulam aplicată pe S³.</p></div><div class="step"><div class="dot"></div><p>Răspunsul e garantat afirmativ - de aici și numele „teorema sandvișului cu șuncă”.</p></div><div class="result">✓ <strong>Da</strong>, întotdeauna există o astfel de tăietură</div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Topologie</h3><div class="related-links"><a href="teorema-heine-borel.html" class="related-link"><span class="card-tag tag-topo">Topologie</span> Teorema Heine–Borel</a><a href="teorema-punctului-fix-brouwer.html" class="related-link"><span class="card-tag tag-topo">Topologie</span> Teorema punctului fix Brouwer</a><a href="teorema-lui-jordan.html" class="related-link"><span class="card-tag tag-topo">Topologie</span> Teorema lui Jordan</a><a href="caracteristica-euler-topologie.html" class="related-link"><span class="card-tag tag-topo">Topologie</span> Caracteristica Euler</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="teorema-lui-jordan.html" class="tn-link prev">Teorema lui Jordan</a><a href="caracteristica-euler-topologie.html" class="tn-link next">Caracteristica Euler</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

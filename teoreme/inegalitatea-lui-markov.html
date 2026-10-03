@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Inegalitatea lui Markov - ∑ Teoreme</title>
+<meta name="description" content="Limita superioară pentru probabilitatea că o variabilă aleatoare nenegativă depășește o valoare dată.">
+<meta property="og:title" content="Inegalitatea lui Markov - ∑ Teoreme">
+<meta property="og:description" content="Limita superioară pentru probabilitatea că o variabilă aleatoare nenegativă depășește o valoare dată.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/inegalitatea-lui-markov.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Inegalitatea lui Markov","description":"Limita superioară pentru probabilitatea că o variabilă aleatoare nenegativă depășește o valoare dată.","author":{"@type":"Person","name":"Andrei Markov, 1884"},"inLanguage":"ro","educationalLevel":"Intermediar","url":"https://teoreme.ro/teoreme/inegalitatea-lui-markov.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Probabilitate</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Inegalitatea lui Markov</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-prob">Probabilitate</span><span class="badge-level bl-med">Intermediar</span></div><h1 itemprop="name">Inegalitatea lui Markov</h1><p class="author" itemprop="author">Andrei Markov, 1884 · nr. 110</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Enunț:</strong> Dacă X≥0 v.a. cu E[X] finit, atunci probabilitatea că X depășește un prag a este mărginită superior de E[X]/a.</div><div class="formula-block"><span class="formula-label">Formulă</span>P(X ≥ a) ≤ E[X] / a pentru orice a&gt;0</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg" width="320"><line x1="25" y1="150" x2="300" y2="150" stroke="#1a1510" stroke-width="1.5"/><path d="M28,150 C45,150 40,38 65,32 C95,25 105,95 135,115 C175,138 225,146 265,149 C280,150 292,150 298,150" fill="rgba(176,96,0,0.12)" stroke="#b06000" stroke-width="2"/><line x1="185" y1="25" x2="185" y2="150" stroke="#c8922a" stroke-width="1.5" stroke-dasharray="4,4"/><text x="185" y="18" text-anchor="middle" font-size="12" fill="#a87418">a</text><text x="245" y="132" font-size="11" fill="#7a4400" font-style="italic">coadă</text><text x="162" y="168" text-anchor="middle" font-size="12" fill="#555" font-style="italic">P(X≥a) ≤ E[X]/a</text></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story">Dacă majoritatea copiilor dintr-o clasă au puține bomboane, dar câțiva au foarte multe, media bomboanelor pe copil rămâne totuși mică. <span class="hl">Dacă media este mică, nu prea mulți copii pot avea foarte multe bomboane</span> - altfel media ar fi mult mai mare. Inegalitatea lui Markov transformă exact această idee simplă într-o formulă.</div><div class="intuitive-note">Andrei Markov a formulat-o în 1884. E cea mai simplă inegalitate probabilistică și, aplicată variabilei (X-μ)², dă chiar inegalitatea lui Cebîșev.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">O variabilă aleatoare X≥0 are media E[X]=4. Calculează un majorant pentru P(X≥20) folosind inegalitatea lui Markov.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Formula lui Markov: P(X≥a) ≤ E[X]/a, valabilă pentru orice a&gt;0.</p></div><div class="step"><div class="dot"></div><p>Înlocuim a=20 și E[X]=4: P(X≥20) ≤ 4/20.</p></div><div class="step"><div class="dot"></div><p>Calculăm: 4/20=1/5=0.2.</p></div><div class="result">✓ ≤<strong>20%</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">Se știe E[X]=5 și se dorește P(X≥a)≤0.1. Care e cea mai mică valoare a lui a care garantează acest lucru?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Pornim de la Markov: P(X≥a) ≤ E[X]/a = 5/a.</p></div><div class="step"><div class="dot"></div><p>Punem condiția 5/a ≤ 0.1.</p></div><div class="step"><div class="dot"></div><p>Rezolvăm: a ≥ 5/0.1 = 50.</p></div><div class="result">✓ a ≥ <strong>50</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">E[X]=10. Ce spune inegalitatea lui Markov despre P(X≥5), adică atunci când pragul a e mai mic decât media?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Aplicăm formula: P(X≥5) ≤ E[X]/5=10/5=2.</p></div><div class="step"><div class="dot"></div><p>Dar orice probabilitate e oricum ≤1, deci majorantul „2” nu adaugă nicio informație utilă.</p></div><div class="step"><div class="dot"></div><p>Acesta e cazul-limită în care Markov devine banală: e informativă doar când a&gt;E[X].</p></div><div class="result">✓ Majorant <strong>2 (inutil)</strong> - inegalitatea e banală când a≤E[X]</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Cum se poate deduce inegalitatea lui Cebîșev din inegalitatea lui Markov?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Aplicăm Markov nu lui X, ci variabilei nenegative Y=(X-μ)², cu pragul a=(kσ)².</p></div><div class="step"><div class="dot"></div><p>Markov dă P(Y≥(kσ)²) ≤ E[Y]/(kσ)² = σ²/(k²σ²) = 1/k².</p></div><div class="step"><div class="dot"></div><p>Dar P(Y≥(kσ)²) este exact P(|X-μ|≥kσ) - deci am obținut exact inegalitatea lui Cebîșev.</p></div><div class="result">✓ <strong>Cebîșev se deduce din Markov</strong>, aplicat lui (X-μ)²</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">Venitul mediu lunar într-un oraș e de 3000 RON. Folosind Markov, estimează un majorant pentru procentul de locuitori care câștigă peste 15000 RON pe lună.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Notăm X=venitul lunar, cu E[X]=3000 RON, iar pragul a=15000 RON.</p></div><div class="step"><div class="dot"></div><p>Aplicăm Markov: P(X≥15000) ≤ E[X]/a = 3000/15000.</p></div><div class="step"><div class="dot"></div><p>Calculăm: 3000/15000=1/5=0.2.</p></div><div class="result">✓ ≤<strong>20%</strong> din locuitori</div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Probabilitate</h3><div class="related-links"><a href="teorema-lui-bayes.html" class="related-link"><span class="card-tag tag-prob">Probabilitate</span> Teorema lui Bayes</a><a href="teorema-centrala-limita.html" class="related-link"><span class="card-tag tag-prob">Probabilitate</span> Teorema centrală limită</a><a href="legea-numerelor-mari.html" class="related-link"><span class="card-tag tag-prob">Probabilitate</span> Legea numerelor mari</a><a href="inegalitatea-lui-chebyshev.html" class="related-link"><span class="card-tag tag-prob">Probabilitate</span> Inegalitatea lui Cebîșev</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="entropia-shannon.html" class="tn-link prev">Entropia Shannon</a><a href="teorema-heine-borel.html" class="tn-link next">Teorema Heine–Borel</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

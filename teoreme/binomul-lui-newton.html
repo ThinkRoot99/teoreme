@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Binomul lui Newton - ∑ Teoreme</title>
+<meta name="description" content="Formula pentru expansiunea puterii sumei a doi termeni, cu coeficienți binomiali.">
+<meta property="og:title" content="Binomul lui Newton - ∑ Teoreme">
+<meta property="og:description" content="Formula pentru expansiunea puterii sumei a doi termeni, cu coeficienți binomiali.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/binomul-lui-newton.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Binomul lui Newton","description":"Formula pentru expansiunea puterii sumei a doi termeni, cu coeficienți binomiali.","author":{"@type":"Person","name":"Isaac Newton, 1665"},"inLanguage":"ro","educationalLevel":"Fundamental","url":"https://teoreme.ro/teoreme/binomul-lui-newton.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Combinatorică</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Binomul lui Newton</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-comb">Combinatorică</span><span class="badge-level bl-fund">Fundamental</span></div><h1 itemprop="name">Binomul lui Newton</h1><p class="author" itemprop="author">Isaac Newton, 1665 · nr. 120</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Enunț:</strong> Expansiunea puterii a n-a a unui binom, cu coeficienți binomiali C(n,k)=n!/(k!(n-k)!).</div><div class="formula-block"><span class="formula-label">Formulă</span>(a+b)ⁿ = ∑_{k=0}^n C(n,k)·aⁿ⁻ᵏ·bᵏ</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 300 190" xmlns="http://www.w3.org/2000/svg"><text x="150" y="14" text-anchor="middle" font-size="11" fill="#5a1a8a">Triunghiul lui Pascal</text><g font-size="11" text-anchor="middle" font-family="sans-serif"><circle cx="150" cy="30" r="13" fill="none" stroke="#5a1a8a" stroke-width="2"/><text x="150" y="34" fill="#5a1a8a">1</text><circle cx="130" cy="62" r="13" fill="none" stroke="#5a1a8a" stroke-width="2"/><text x="130" y="66" fill="#5a1a8a">1</text><circle cx="170" cy="62" r="13" fill="none" stroke="#5a1a8a" stroke-width="2"/><text x="170" y="66" fill="#5a1a8a">1</text><circle cx="110" cy="94" r="13" fill="none" stroke="#5a1a8a" stroke-width="2"/><text x="110" y="98" fill="#5a1a8a">1</text><circle cx="150" cy="94" r="13" fill="none" stroke="#5a1a8a" stroke-width="2"/><text x="150" y="98" fill="#5a1a8a">2</text><circle cx="190" cy="94" r="13" fill="none" stroke="#5a1a8a" stroke-width="2"/><text x="190" y="98" fill="#5a1a8a">1</text><circle cx="90" cy="126" r="13" fill="none" stroke="#5a1a8a" stroke-width="2"/><text x="90" y="130" fill="#5a1a8a">1</text><circle cx="130" cy="126" r="13" fill="none" stroke="#5a1a8a" stroke-width="2"/><text x="130" y="130" fill="#5a1a8a">3</text><circle cx="170" cy="126" r="13" fill="none" stroke="#5a1a8a" stroke-width="2"/><text x="170" y="130" fill="#5a1a8a">3</text><circle cx="210" cy="126" r="13" fill="none" stroke="#5a1a8a" stroke-width="2"/><text x="210" y="130" fill="#5a1a8a">1</text><circle cx="70" cy="158" r="13" fill="none" stroke="#5a1a8a" stroke-width="2"/><text x="70" y="162" fill="#5a1a8a">1</text><circle cx="110" cy="158" r="13" fill="none" stroke="#5a1a8a" stroke-width="2"/><text x="110" y="162" fill="#5a1a8a">4</text><circle cx="150" cy="158" r="14" fill="#c8922a" stroke="#c8922a" stroke-width="2"/><text x="150" y="162" fill="#ffffff">6</text><circle cx="190" cy="158" r="13" fill="none" stroke="#5a1a8a" stroke-width="2"/><text x="190" y="162" fill="#5a1a8a">4</text><circle cx="230" cy="158" r="13" fill="none" stroke="#5a1a8a" stroke-width="2"/><text x="230" y="162" fill="#5a1a8a">1</text></g><text x="150" y="182" text-anchor="middle" font-size="10" fill="#c8922a">C(4,2)=6</text></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story">Când desfaci (a+b) înmulțit cu el însuși de mai multe ori, apar tot felul de combinații de a-uri și b-uri. <span class="hl">C(n,k) numără în câte moduri poți alege exact k litere „b” din cele n paranteze</span>, restul rămânând „a”. Aceste numere formează chiar triunghiul lui Pascal: fiecare număr este suma celor două de deasupra lui.</div><div class="intuitive-note">Newton a descoperit formula la 22 de ani (1665), extinzând-o la puteri fracționare. Apare în probabilitate (distribuția binomială), combinatorică și analiză.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">Dezvoltă complet (a+b)³.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Fiecare termen are forma C(3,k)·a³⁻ᵏ·bᵏ, pentru k=0,1,2,3.</p></div><div class="step"><div class="dot"></div><p>Coeficienții sunt C(3,0)=1, C(3,1)=3, C(3,2)=3, C(3,3)=1 (rândul 3 din triunghiul lui Pascal).</p></div><div class="step"><div class="dot"></div><p>Adunând termenii obținem a³+3a²b+3ab²+b³.</p></div><div class="result">✓ <strong>a³+3a²b+3ab²+b³</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">Un termen din dezvoltarea lui (a+b)⁵ este C(5,k)·a²·b³. Ce valoare are k și cât este coeficientul?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Exponentul lui b în termenul general C(5,k)aⁿ⁻ᵏbᵏ este chiar k.</p></div><div class="step"><div class="dot"></div><p>Cum exponentul lui b este 3, rezultă direct k=3 (și verificăm: exponentul lui a este 5−3=2, exact cât cere enunțul).</p></div><div class="step"><div class="dot"></div><p>Coeficientul este C(5,3)=5!/(3!·2!)=10.</p></div><div class="result">✓ k=<strong>3</strong>, coeficient=<strong>10</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">Cât este (a+b)⁰ și ce spune formula pentru n=0?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Orice sumă a+b ridicată la puterea 0 este, prin convenție, egală cu 1.</p></div><div class="step"><div class="dot"></div><p>Formula dă suma unui singur termen, cel cu k=0: C(0,0)·a⁰·b⁰=1·1·1=1.</p></div><div class="step"><div class="dot"></div><p>Cazul n=0 confirmă deci convenția: (a+b)⁰=1.</p></div><div class="result">✓ <strong>1</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Adevărat sau fals: coeficienții C(n,k) sunt mereu simetrici, adică C(n,k)=C(n,n−k).</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Simetria vine din faptul că a alege k litere „b” este totuna cu a lăsa n−k litere „a” pe locurile rămase.</p></div><div class="step"><div class="dot"></div><p>De exemplu, la n=4: C(4,1)=4 și C(4,3)=4, deci sunt egale.</p></div><div class="step"><div class="dot"></div><p>În triunghiul lui Pascal, această simetrie se vede direct: fiecare rând citit de la stânga la dreapta este identic cu cel citit de la dreapta la stânga.</p></div><div class="result">✓ <strong>Adevărat</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">La o petrecere cu 4 copii, gazda vrea să știe în total în câte grupuri diferite (de la 0 la 4 copii) îi poate aduna pe rând pe copii, pentru un joc. Câte grupuri diferite există în total, inclusiv grupul gol și grupul cu toți 4?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Numărul de grupuri cu exact k copii este C(4,k); trebuie adunate toate, de la k=0 la k=4.</p></div><div class="step"><div class="dot"></div><p>Suma ∑C(4,k) este exact valoarea (1+1)⁴, obținută punând a=b=1 în binomul lui Newton.</p></div><div class="step"><div class="dot"></div><p>(1+1)⁴=2⁴=16.</p></div><div class="result">✓ În total <strong>16</strong> grupuri diferite</div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Combinatorică</h3><div class="related-links"><a href="principiul-cutiei.html" class="related-link"><span class="card-tag tag-comb">Combinatorică</span> Principiul cutiei (Pigeonhole)</a><a href="principiul-excluderii-includerii.html" class="related-link"><span class="card-tag tag-comb">Combinatorică</span> Principiul excluderii–includerii</a><a href="formula-lui-cayley-arbori.html" class="related-link"><span class="card-tag tag-comb">Combinatorică</span> Formula lui Cayley (arbori marcați)</a><a href="teorema-lui-ramsey.html" class="related-link"><span class="card-tag tag-comb">Combinatorică</span> Teorema lui Ramsey</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="principiul-cutiei.html" class="tn-link prev">Principiul cutiei (Pigeonhole)</a><a href="principiul-excluderii-includerii.html" class="tn-link next">Principiul excluderii–includerii</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

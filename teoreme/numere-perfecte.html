@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Numerele perfecte - ∑ Teoreme</title>
+<meta name="description" content="Un număr perfect este egal cu suma tuturor divizorilor săi proprii. Cele pare sunt legate de primele Mersenne.">
+<meta property="og:title" content="Numerele perfecte - ∑ Teoreme">
+<meta property="og:description" content="Un număr perfect este egal cu suma tuturor divizorilor săi proprii. Cele pare sunt legate de primele Mersenne.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/numere-perfecte.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Numerele perfecte","description":"Un număr perfect este egal cu suma tuturor divizorilor săi proprii. Cele pare sunt legate de primele Mersenne.","author":{"@type":"Person","name":"Euclid & Euler"},"inLanguage":"ro","educationalLevel":"Intermediar","url":"https://teoreme.ro/teoreme/numere-perfecte.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Aritmetică</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Numerele perfecte</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-arit">Aritmetică</span><span class="badge-level bl-med">Intermediar</span></div><h1 itemprop="name">Numerele perfecte</h1><p class="author" itemprop="author">Euclid & Euler · nr. 067</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Definiție:</strong> Un număr natural n este perfect dacă σ(n)=2n, adică suma tuturor divizorilor săi (inclusiv 1 și n) egal dublu n. Echivalent: suma divizorilor proprii egal n.</div><div class="formula-block"><span class="formula-label">Formulă</span>σ(n) = 2n ⟺ n perfect</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 300 175" width="300" xmlns="http://www.w3.org/2000/svg"><text x="150" y="14" text-anchor="middle" font-size="11" fill="#999" font-style="italic">6 este perfect: divizorii proprii se adună exact la 6</text><text x="100" y="42" text-anchor="middle" font-size="10" font-family="'JetBrains Mono',monospace" fill="#8b1a1a">divizori proprii: 1+2+3</text><rect x="40" y="48" width="20" height="22" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1.5"/><text x="50" y="63" text-anchor="middle" font-size="11" font-family="'JetBrains Mono',monospace" fill="#8b1a1a" font-weight="700">1</text><rect x="60" y="48" width="40" height="22" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1.5"/><text x="80" y="63" text-anchor="middle" font-size="11" font-family="'JetBrains Mono',monospace" fill="#8b1a1a" font-weight="700">2</text><rect x="100" y="48" width="60" height="22" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1.5"/><text x="130" y="63" text-anchor="middle" font-size="11" font-family="'JetBrains Mono',monospace" fill="#8b1a1a" font-weight="700">3</text><text x="20" y="106" font-size="16" fill="#1a1510">=</text><text x="100" y="84" text-anchor="middle" font-size="10" font-family="'JetBrains Mono',monospace" fill="#8a5f10">n = 6</text><rect x="40" y="90" width="120" height="22" rx="3" fill="rgba(200,146,42,0.22)" stroke="#c8922a" stroke-width="1.5"/><text x="100" y="105" text-anchor="middle" font-size="13" font-family="'JetBrains Mono',monospace" fill="#8a5f10" font-weight="700">6</text><text x="150" y="135" text-anchor="middle" font-size="12" font-family="'JetBrains Mono',monospace" fill="#1a1510">σ(6) = 1+2+3+6 = 12 = 2×6</text><text x="150" y="158" text-anchor="middle" font-size="10" fill="#999" font-style="italic">8: deficient (1+2+4=7&lt;8) · 12: abundent (1+2+3+4+6=16&gt;12)</text></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story">6 este un număr special: dacă îi aduni toți „prietenii mai mici” care îl împart exact - 1, 2 și 3 - obții exact 6 înapoi. <span class="hl">Un număr perfect este un număr care este mereu exact suma bucăților în care se poate împărți</span>, ca și cum ai rupe un baton de ciocolată în bucăți mai mici (fără bucata întreagă) și, puse din nou cap la cap, ar reface exact batonul original.</div><div class="intuitive-note">Euclid a arătat că 2^(p-1)(2^p-1) este perfect atunci când 2^p-1 este prim, iar mult mai târziu Euler a demonstrat că orice număr perfect par are exact această formă. Primele patru numere perfecte sunt 6, 28, 496 și 8128.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">Verifică dacă 28 este un număr perfect.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Găsim toți divizorii proprii ai lui 28 (fără 28 însuși): 1, 2, 4, 7, 14.</p></div><div class="step"><div class="dot"></div><p>Îi adunăm: 1+2+4+7+14=28.</p></div><div class="step"><div class="dot"></div><p>Suma este exact 28, deci 28 este un număr perfect.</p></div><div class="result">✓ <strong>28 este perfect</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">Un număr perfect par se scrie n=2^(p−1)×(2^p−1), cu 2^p−1 prim. Știind că n=6, află p.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Încercăm p=2: 2^(2−1)×(2²−1)=2¹×3=2×3=6.</p></div><div class="step"><div class="dot"></div><p>Rezultatul obținut, 6, se potrivește exact cu numărul dat.</p></div><div class="step"><div class="dot"></div><p>Verificăm și condiția din formulă: 2²−1=3 este într-adevăr prim.</p></div><div class="result">✓ p = <strong>2</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">Este 1 un număr perfect?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Căutăm divizorii proprii ai lui 1 (mai mici decât 1, care îl împart exact) - nu există niciunul.</p></div><div class="step"><div class="dot"></div><p>Suma unei liste goale de divizori este 0.</p></div><div class="step"><div class="dot"></div><p>Cum 0 este diferit de 1, numărul 1 nu îndeplinește condiția și nu este perfect.</p></div><div class="result">✓ <strong>Nu</strong>, 1 nu este un număr perfect.</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Adevărat sau fals: orice număr par este fie perfect, fie abundent, niciodată deficient.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Luăm exemplul lui 8, care este par.</p></div><div class="step"><div class="dot"></div><p>Divizorii proprii ai lui 8 sunt 1, 2 și 4, cu suma 1+2+4=7.</p></div><div class="step"><div class="dot"></div><p>7 este mai mic decât 8, deci 8 este deficient, nu perfect și nici abundent.</p></div><div class="step"><div class="dot"></div><p>Acest exemplu arată clar că nu toate numerele pare sunt perfecte sau abundente.</p></div><div class="result">✓ <strong>Fals</strong> - 8 este un exemplu de număr par deficient.</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">Un magazin de dulciuri vrea să știe dacă numărul 12 este „darnic” (abundent): adună toți divizorii proprii ai lui 12 și compară suma cu 12. Ce constată?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Divizorii proprii ai lui 12 sunt 1, 2, 3, 4 și 6.</p></div><div class="step"><div class="dot"></div><p>Îi adunăm: 1+2+3+4+6=16.</p></div><div class="step"><div class="dot"></div><p>16 este mai mare decât 12, deci 12 este un număr abundent, nu perfect.</p></div><div class="result">✓ 12 este <strong>abundent</strong> (suma divizorilor proprii, 16, depășește 12).</div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Aritmetică</h3><div class="related-links"><a href="infinitatea-numerelor-prime.html" class="related-link"><span class="card-tag tag-arit">Aritmetică</span> Infinitatea numerelor prime</a><a href="teorema-fundamentala-a-aritmeticii.html" class="related-link"><span class="card-tag tag-arit">Aritmetică</span> Teorema fundamentală a aritmeticii</a><a href="teorema-mica-a-lui-fermat.html" class="related-link"><span class="card-tag tag-arit">Aritmetică</span> Teorema mică a lui Fermat</a><a href="teorema-lui-euler-phi.html" class="related-link"><span class="card-tag tag-arit">Aritmetică</span> Teorema lui Euler (φ)</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="functia-euler-totient.html" class="tn-link prev">Funcția Euler totient φ(n)</a><a href="teorema-numerelor-prime.html" class="tn-link next">Teorema numerelor prime</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

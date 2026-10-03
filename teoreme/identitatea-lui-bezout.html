@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Identitatea lui Bézout - ∑ Teoreme</title>
+<meta name="description" content="Există numerele întregi x, y astfel încât ax + by = gcd(a,b).">
+<meta property="og:title" content="Identitatea lui Bézout - ∑ Teoreme">
+<meta property="og:description" content="Există numerele întregi x, y astfel încât ax + by = gcd(a,b).">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/identitatea-lui-bezout.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Identitatea lui Bézout","description":"Există numerele întregi x, y astfel încât ax + by = gcd(a,b).","author":{"@type":"Person","name":"Étienne Bézout, 1779"},"inLanguage":"ro","educationalLevel":"Intermediar","url":"https://teoreme.ro/teoreme/identitatea-lui-bezout.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Aritmetică</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Identitatea lui Bézout</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-arit">Aritmetică</span><span class="badge-level bl-med">Intermediar</span></div><h1 itemprop="name">Identitatea lui Bézout</h1><p class="author" itemprop="author">Étienne Bézout, 1779 · nr. 057</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Enunț:</strong> Pentru orice numere întregi a și b, există numerele întregi x și y astfel încât ax + by = gcd(a,b).</div><div class="formula-block"><span class="formula-label">Formulă</span>∃x,y∈ℤ: ax + by = gcd(a,b)</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 300 170" width="300" xmlns="http://www.w3.org/2000/svg"><text x="150" y="14" text-anchor="middle" font-size="11" fill="#999" font-style="italic">48x + 18y = gcd(48,18)</text><rect x="15" y="25" width="75" height="36" rx="4" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1.5"/><text x="52" y="48" text-anchor="middle" font-size="15" font-family="'JetBrains Mono',monospace" fill="#8b1a1a" font-weight="700">48</text><rect x="15" y="95" width="75" height="36" rx="4" fill="rgba(139,26,26,0.08)" stroke="#8b1a1a" stroke-width="1.5"/><text x="52" y="118" text-anchor="middle" font-size="15" font-family="'JetBrains Mono',monospace" fill="#8b1a1a" font-weight="700">18</text><rect x="210" y="60" width="75" height="36" rx="4" fill="rgba(200,146,42,0.22)" stroke="#c8922a" stroke-width="1.5"/><text x="247" y="83" text-anchor="middle" font-size="15" font-family="'JetBrains Mono',monospace" fill="#8a5f10" font-weight="700">6</text><line x1="90" y1="43" x2="210" y2="70" stroke="#8b1a1a" stroke-width="1.5"/><line x1="90" y1="113" x2="210" y2="86" stroke="#2d5a3d" stroke-width="1.5"/><text x="148" y="48" text-anchor="middle" font-size="12" font-family="'JetBrains Mono',monospace" fill="#8b1a1a">×(−1)</text><text x="152" y="106" text-anchor="middle" font-size="12" font-family="'JetBrains Mono',monospace" fill="#2d5a3d">×3</text><text x="150" y="152" text-anchor="middle" font-size="12" font-family="'JetBrains Mono',monospace" fill="#1a1510">48×(−1) + 18×3 = −48+54 = <tspan fill="#c8922a" font-weight="700">6</tspan></text></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story">Imaginează-ți că ai voie să folosești doar bucăți de 48 și bucăți de 18 - le poți aduna oricâte vrei, dar și să le „iei înapoi”, adică să le scazi. <span class="hl">Combinând astfel bucățile de 48 și de 18, cel mai mic număr pozitiv la care poți ajunge vreodată este exact cel mai mare divizor comun al lor, 6</span>: 48×(−1)+18×3=6.</div><div class="intuitive-note">Identitatea Bézout stă la baza algoritmului Euclid extins, a inverșilor modulari și a rezolvării ecuațiilor diofantice liniare.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">Găsește x,y întregi cu 48x+18y=gcd(48,18)=6.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Din algoritmul lui Euclid știm: 6=18−1×12 și 12=48−2×18.</p></div><div class="step"><div class="dot"></div><p>Înlocuim: 6=18−1×(48−2×18)=18−48+2×18=3×18−48.</p></div><div class="step"><div class="dot"></div><p>Deci x=−1 și y=3: 48×(−1)+18×3=−48+54=6.</p></div><div class="result">✓ x=<strong>−1</strong>, y=<strong>3</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">O soluție a ecuației 48x+18y=6 este (x,y)=(−1,3). Găsește o altă pereche întreagă (x,y) care verifică aceeași ecuație.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Soluțiile identității Bézout nu sunt unice: putem aduna 18/6=3 la x și scădea 48/6=8 din y, pentru orice pas întreg.</p></div><div class="step"><div class="dot"></div><p>Pornind de la (−1,3), adunăm 3 la x și scădem 8 din y: x=−1+3=2, y=3−8=−5.</p></div><div class="step"><div class="dot"></div><p>Verificăm: 48×2+18×(−5)=96−90=6.</p></div><div class="result">✓ O altă soluție: (x,y)=<strong>(2,−5)</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">Găsește x,y pentru identitatea Bézout aplicată la a=7 și b=7 (a=b).</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Când a și b sunt egale, gcd(a,b)=a=7.</p></div><div class="step"><div class="dot"></div><p>O soluție simplă este x=1, y=0: 7×1+7×0=7.</p></div><div class="step"><div class="dot"></div><p>La fel de bine funcționează x=0, y=1: 7×0+7×1=7.</p></div><div class="result">✓ (x,y)=<strong>(1,0)</strong> (sau (0,1)) - există mai multe perechi simple posibile</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Adevărat sau fals: pentru orice a,b, perechea (x,y) din identitatea Bézout este unică.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>La exercițiul 2 am găsit că (−1,3) și (2,−5) sunt ambele soluții valide pentru 48x+18y=6.</p></div><div class="step"><div class="dot"></div><p>Deci există infinit de multe perechi (x,y) care funcționează, nu doar una singură.</p></div><div class="result">✓ <strong>Fals</strong> - identitatea Bézout are infinit de multe soluții întregi, nu una singură.</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">Un cifru simplu are nevoie de inversul lui 5 modulo 11, adică un număr x cu 5x≡1 (mod 11). Găsește-l folosind identitatea Bézout.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Căutăm x,y întregi cu 5x+11y=1, ceea ce este posibil pentru că gcd(5,11)=1.</p></div><div class="step"><div class="dot"></div><p>Testăm x=9: 5×9=45, iar 45=4×11+1, deci 5×9−4×11=1.</p></div><div class="step"><div class="dot"></div><p>Așadar x=9 este soluția căutată: 5×9≡1 (mod 11).</p></div><div class="result">✓ Inversul lui 5 modulo 11 este <strong>9</strong>.</div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Aritmetică</h3><div class="related-links"><a href="infinitatea-numerelor-prime.html" class="related-link"><span class="card-tag tag-arit">Aritmetică</span> Infinitatea numerelor prime</a><a href="teorema-fundamentala-a-aritmeticii.html" class="related-link"><span class="card-tag tag-arit">Aritmetică</span> Teorema fundamentală a aritmeticii</a><a href="teorema-mica-a-lui-fermat.html" class="related-link"><span class="card-tag tag-arit">Aritmetică</span> Teorema mică a lui Fermat</a><a href="teorema-lui-euler-phi.html" class="related-link"><span class="card-tag tag-arit">Aritmetică</span> Teorema lui Euler (φ)</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="algoritmul-lui-euclid.html" class="tn-link prev">Algoritmul lui Euclid</a><a href="lema-lui-euclid.html" class="tn-link next">Lema lui Euclid</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

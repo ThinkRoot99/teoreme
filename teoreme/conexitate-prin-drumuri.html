@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Conexitatea prin drumuri - ∑ Teoreme</title>
+<meta name="description" content="Un spațiu este conex prin drumuri dacă orice două puncte pot fi unite printr-un drum continuu - o formă mai puternică de conexitate.">
+<meta property="og:title" content="Conexitatea prin drumuri - ∑ Teoreme">
+<meta property="og:description" content="Un spațiu este conex prin drumuri dacă orice două puncte pot fi unite printr-un drum continuu - o formă mai puternică de conexitate.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/conexitate-prin-drumuri.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Conexitatea prin drumuri","description":"Un spațiu este conex prin drumuri dacă orice două puncte pot fi unite printr-un drum continuu - o formă mai puternică de conexitate.","author":{"@type":"Person","name":"Concept clasic de topologie generală"},"inLanguage":"ro","educationalLevel":"Fundamental","url":"https://teoreme.ro/teoreme/conexitate-prin-drumuri.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Topologie</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Conexitatea prin drumuri</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-topo">Topologie</span><span class="badge-level bl-fund">Fundamental</span></div><h1 itemprop="name">Conexitatea prin drumuri</h1><p class="author" itemprop="author">Concept clasic de topologie generală · nr. 172</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Enunț:</strong> Un spațiu topologic X este conex prin drumuri dacă pentru orice două puncte x,y∈X există o funcție continuă γ:[0,1]→X (un drum) cu γ(0)=x și γ(1)=y. Orice spațiu conex prin drumuri este conex, dar reciproca nu este adevărată în general.</div><div class="formula-block"><span class="formula-label">Formulă</span>∀x,y∈X ∃γ:[0,1]→X continuă, γ(0)=x, γ(1)=y</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 300 170" xmlns="http://www.w3.org/2000/svg"><path d="M60 100 C50 60 100 40 150 60 C200 40 250 60 240 100 C250 130 190 150 150 130 C100 150 50 140 60 100 Z" fill="#1a604022" stroke="#1a6040" stroke-width="3"/><circle cx="90" cy="90" r="6" fill="#c8922a"/><circle cx="210" cy="90" r="6" fill="#c8922a"/><path d="M90 90 Q150 130 210 90" fill="none" stroke="#c8922a" stroke-width="2.5" stroke-dasharray="4 3"/><text x="150" y="20" font-size="12" fill="#1a6040" text-anchor="middle">drum continuu între orice două puncte</text></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story"><span class="hl">Poți merge cu creionul pe hârtie de la orice punct la oricare altul fără să ridici creionul, rămânând tot timpul în interiorul desenului</span>. Dacă desenul are două bucăți separate, nu poți trece de la una la alta fără să sari.</div><div class="intuitive-note">Concept clasic al topologiei generale, folosit intens în topologia algebrică (grupul fundamental se definește pe componentele conexe prin drumuri). Contraexemplul clasic pentru „conex dar nu prin drumuri” este curba sinusului topologului.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">Discul unitate D={(x,y):x²+y²≤1} este conex prin drumuri?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Pentru orice două puncte P,Q∈D, segmentul de dreaptă [P,Q] rămâne în D, deoarece D este convex.</p></div><div class="step"><div class="dot"></div><p>Segmentul este un drum continuu, deci D este conex prin drumuri.</p></div><div class="result">✓ <strong>Da</strong>, D e convex deci conex prin drumuri</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">Mulțimea X=[0,1]∪[2,3]⊂ℝ este conexă prin drumuri?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Luăm x=0,5∈[0,1] și y=2,5∈[2,3].</p></div><div class="step"><div class="dot"></div><p>Orice drum continuu γ cu γ(0)=0,5 și γ(1)=2,5 ar trebui, prin teorema valorii intermediare, să treacă prin punctul 1,5∉X.</p></div><div class="step"><div class="dot"></div><p>Un astfel de drum nu poate exista în X.</p></div><div class="result">✓ <strong>Nu</strong> - cele două intervale sunt componente separate</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">Cercul S¹={(x,y):x²+y²=1} este conex prin drumuri?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Pentru orice două puncte de pe cerc, arcul dintre ele, parametrizat prin unghi, este un drum continuu.</p></div><div class="step"><div class="dot"></div><p>S¹ este conex prin drumuri.</p></div><div class="result">✓ <strong>Da</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Conexitatea prin drumuri implică conexitatea topologică?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Dacă X ar fi neconex, X=A∪B cu A,B deschise, disjuncte, nevide.</p></div><div class="step"><div class="dot"></div><p>Imaginea unui drum γ:[0,1]→X este conexă, fiind imaginea continuă a intervalului [0,1], care e conex.</p></div><div class="step"><div class="dot"></div><p>Un drum ce unește un punct din A cu unul din B ar avea deci imaginea neconexă în raport cu A,B - contradicție.</p></div><div class="result">✓ <strong>Da</strong>, implicația e adevărată (reciproca nu, în general)</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">Curba sinusului topologului: graficul lui sin(1/x) pentru x∈(0,1], reunit cu segmentul {0}×[-1,1]. Este conexă prin drumuri?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Mulțimea este conexă topologic, nu poate fi separată în două deschise disjuncte.</p></div><div class="step"><div class="dot"></div><p>Dar nu există drum continuu de la un punct al graficului la un punct al segmentului {0}×[-1,1], pentru că oscilațiile infinite ale sin(1/x) lângă x=0 ar face orice astfel de drum discontinuu.</p></div><div class="step"><div class="dot"></div><p>Mulțimea e conexă, dar nu conexă prin drumuri.</p></div><div class="result">✓ <strong>Nu</strong> - conexă, dar nu conexă prin drumuri</div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Topologie</h3><div class="related-links"><a href="teorema-heine-borel.html" class="related-link"><span class="card-tag tag-topo">Topologie</span> Teorema Heine–Borel</a><a href="teorema-punctului-fix-brouwer.html" class="related-link"><span class="card-tag tag-topo">Topologie</span> Teorema punctului fix Brouwer</a><a href="teorema-lui-jordan.html" class="related-link"><span class="card-tag tag-topo">Topologie</span> Teorema lui Jordan</a><a href="teorema-borsuk-ulam.html" class="related-link"><span class="card-tag tag-topo">Topologie</span> Teorema Borsuk–Ulam</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="teorema-lui-arzela-ascoli.html" class="tn-link prev">Teorema Arzelà–Ascoli</a><a href="teorema-lui-stone-weierstrass.html" class="tn-link next">Teorema Stone–Weierstrass</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

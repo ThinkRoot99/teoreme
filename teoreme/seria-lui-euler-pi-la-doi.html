@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Problema Basel - suma lui Euler - ∑ Teoreme</title>
+<meta name="description" content="Suma seriei pătratelor reciproce ale numerelor naturale este π²/6, rezultat remarcabil al lui Euler.">
+<meta property="og:title" content="Problema Basel - suma lui Euler - ∑ Teoreme">
+<meta property="og:description" content="Suma seriei pătratelor reciproce ale numerelor naturale este π²/6, rezultat remarcabil al lui Euler.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/seria-lui-euler-pi-la-doi.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Problema Basel - suma lui Euler","description":"Suma seriei pătratelor reciproce ale numerelor naturale este π²/6, rezultat remarcabil al lui Euler.","author":{"@type":"Person","name":"Leonhard Euler, 1734"},"inLanguage":"ro","educationalLevel":"Avansat","url":"https://teoreme.ro/teoreme/seria-lui-euler-pi-la-doi.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Analiză</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Problema Basel - suma lui Euler</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-adv">Avansat</span></div><h1 itemprop="name">Problema Basel - suma lui Euler</h1><p class="author" itemprop="author">Leonhard Euler, 1734 · nr. 087</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Enunț (Problema Basel):</strong> Suma seriei pătratelor reciproce ale numerelor naturale este exact π²/6.</div><div class="formula-block"><span class="formula-label">Formulă</span>∑_{n=1}^∞ 1/n² = π²/6 ≈ 1.6449</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" width="300"><rect x="20" y="80" width="280" height="40" fill="none" stroke="#4a1a7a" stroke-width="1.5"/><rect x="20" y="80" width="170" height="40" fill="#4a1a7a" fill-opacity="0.65"/><rect x="190" y="80" width="43" height="40" fill="#4a1a7a" fill-opacity="0.5"/><rect x="233" y="80" width="19" height="40" fill="#4a1a7a" fill-opacity="0.38"/><rect x="252" y="80" width="11" height="40" fill="#4a1a7a" fill-opacity="0.28"/><rect x="263" y="80" width="37" height="40" fill="#c8922a" fill-opacity="0.5"/><text x="105" y="105" text-anchor="middle" font-size="12" fill="#fff" font-weight="600">1</text><text x="211" y="105" text-anchor="middle" font-size="10" fill="#fff">1/4</text><text x="242" y="103" text-anchor="middle" font-size="9" fill="#333">1/9</text><text x="150" y="140" text-anchor="middle" font-size="11" fill="#555">1+1/4+1/9+1/16+... → π²/6 ≈ 1.6449</text><text x="150" y="60" text-anchor="middle" font-size="10" fill="#c8922a" font-weight="600">infinit de termeni, sumă finită</text></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story"><span class="hl">Dacă aduni tot mai multe fracții tot mai mici - 1, apoi un sfert, apoi o noime, și tot așa la nesfârșit</span>, suma nu crește oricât de mult, ci se oprește exact la un număr legat de cercuri: π²/6≈1.6449. E surprinzător că π, numărul care apare la cercuri, apare și aici, unde nu se vede niciun cerc.</div><div class="intuitive-note">Pietro Mengoli a pus problema în 1650; nimeni nu a reușit să o rezolve timp de 90 de ani, până când Euler a comparat două expansiuni ale funcției sinus în 1734. Suma se notează ζ(2), un caz particular al funcției zeta Riemann.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">Calculează suma primilor 3 termeni ai seriei: 1+1/4+1/9.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Aducem la același numitor, 36: 36/36+9/36+4/36.</p></div><div class="step"><div class="dot"></div><p>Adunăm numărătorii: 36+9+4=49, deci suma este 49/36.</p></div><div class="step"><div class="dot"></div><p>Rezultatul este 49/36≈1.361, încă vizibil sub limita π²/6≈1.6449 - mai rămân termeni de adăugat.</p></div><div class="result">✓ ≈<strong>1.361</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">Știind că suma totală este π²/6≈1.6449 și suma primilor 3 termeni este ≈1.361, cât valorează suma tuturor termenilor rămași, de la n=4 până la infinit?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Restul seriei este diferența dintre suma totală și suma parțială calculată: 1.6449−1.361.</p></div><div class="step"><div class="dot"></div><p>Calculăm: 1.6449−1.361≈0.284.</p></div><div class="step"><div class="dot"></div><p>Această valoare mică reprezintă exact ∑ (de la n=4 la infinit) 1/n², care converge repede pentru că termenii scad rapid.</p></div><div class="result">✓ ≈<strong>0.284</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">Cât este suma ∑1/(2n)², adică doar termenii cu indice par din seria originală (1/4+1/16+1/36+...)?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Scriem 1/(2n)²=1/(4n²)=(1/4)·(1/n²) - fiecare termen e a patra parte din termenul corespunzător al seriei originale.</p></div><div class="step"><div class="dot"></div><p>Factorul 1/4 e comun tuturor termenilor, deci ∑1/(2n)²=(1/4)·∑1/n²=(1/4)·(π²/6).</p></div><div class="step"><div class="dot"></div><p>Simplificăm: (1/4)·(π²/6)=π²/24.</p></div><div class="result">✓ <strong>π²/24</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Adevărat sau fals: seria alternantă ∑(−1)ⁿ⁺¹/n² (adică 1−1/4+1/9−1/16+...) are aceeași sumă ca seria cu toți termenii pozitivi, ∑1/n².</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Fals. Suma seriei alternante este π²/12, obținută scăzând de două ori suma termenilor pari din suma totală.</p></div><div class="step"><div class="dot"></div><p>Suma seriei cu termeni pozitivi este π²/6, exact dublul valorii π²/12.</p></div><div class="step"><div class="dot"></div><p>Cele două sume sunt legate, dar nu sunt egale - alternarea semnelor înjumătățește rezultatul.</p></div><div class="result">✓ <strong>Fals</strong> - suma alternantă e π²/12, jumătate din π²/6</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">Probabilitatea ca două numere întregi alese la întâmplare să fie prime între ele (fără niciun factor comun) este exact 6/π². Ce legătură are acest fapt cu seria lui Euler?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Numărul 6/π² este chiar inversul sumei seriei lui Euler, pentru că π²/6=∑1/n², deci 6/π²=1/∑(1/n²).</p></div><div class="step"><div class="dot"></div><p>Teoria numerelor arată că această probabilitate se calculează dintr-un produs peste toate numerele prime, care se dovedește egal exact cu inversul acestei sume.</p></div><div class="step"><div class="dot"></div><p>Așa apare, surprinzător, seria lui Euler într-o problemă de teoria numerelor, complet diferită de contextul ei inițial.</p></div><div class="result">✓ Probabilitatea este <strong>6/π²≈0.608</strong>, legată direct de seria lui Euler</div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Analiză</h3><div class="related-links"><a href="teorema-valorii-intermediare.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema valorii intermediare</a><a href="teorema-lui-rolle.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema lui Rolle</a><a href="teorema-valorii-medii-lagrange.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema valorii medii (Lagrange)</a><a href="teorema-lui-lhopital.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema lui L'Hôpital</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="seria-armonica.html" class="tn-link prev">Divergența seriei armonice</a><a href="teorema-lui-fubini.html" class="tn-link next">Teorema lui Fubini</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Despre ∑ Teoreme - o enciclopedie matematică gratuită în limba română, întreținută de o singură persoană.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Despre - ∑ Teoreme">
+<meta property="og:description" content="Despre ∑ Teoreme - o enciclopedie matematică gratuită în limba română, întreținută de o singură persoană.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://teoreme.ro/despre.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1a1510">
+<title>Despre - ∑ Teoreme</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.despre-hero {
+  background: #1a1510;
+  padding: 42px 24px 40px;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+  text-align: center;
+}
+.despre-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.9rem;
+  font-weight: 900; color: #fff; line-height: 1.15;
+}
+@media (min-width:640px){ .despre-hero h1{ font-size: 2.4rem; } }
+.despre-hero h1 span { color: #c8922a }
+.despre-hero p { color: rgba(255,255,255,.55); font-size: .95rem; margin-top: 10px }
+
+.despre-wrap { max-width: 680px; margin: 0 auto; padding: 48px 24px 80px }
+.despre-card {
+  background: #fff; border: 1.5px solid #e0d5c0; border-radius: 8px;
+  padding: 32px 28px;
+  box-shadow: 0 2px 14px rgba(26,21,16,.09);
+  margin-bottom: 20px;
+}
+.despre-card h2 {
+  font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700;
+  color: #1a1510; margin-bottom: 14px;
+}
+.despre-card p { color: #4a3f2f; line-height: 1.75; margin-bottom: 14px }
+.despre-card p:last-child { margin-bottom: 0 }
+
+.despre-stats {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  margin: 24px 0;
+}
+.despre-stats > * { margin: 0 12px; }
+@supports (gap:1px) { .despre-stats{ gap:24px } .despre-stats > *{ margin:0 } }
+.despre-stat { text-align: center }
+.despre-stat b {
+  display: block; font-family: 'Playfair Display', serif; font-size: 1.8rem;
+  font-weight: 900; color: #c8922a;
+}
+.despre-stat span { font-size: .78rem; color: #4a3f2f; opacity: .75 }
+
+.despre-cta {
+  text-align: center; margin-top: 8px;
+}
+.despre-cta a {
+  color: #c8922a; font-weight: 600; border-bottom: 1.5px solid rgba(200,146,42,.4);
+}
+.despre-cta a:hover { border-bottom-color: #c8922a }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Acasă</a>
+      <a href="arhiva.html">Arhivă</a>
+      <a href="despre.html" class="active">Despre</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="despre-hero">
+  <h1>Despre <span>∑ Teoreme</span></h1>
+  <p>De ce există acest site și cine îl întreține.</p>
+</div>
+
+<div class="despre-wrap">
+  <div class="despre-card">
+    <h2>De ce există</h2>
+    <p>∑ Teoreme a pornit de la o observație simplă: în limba română nu exista un loc unde teoremele matematice să fie explicate complet - definiție formală, diagramă, explicație intuitivă și exerciții rezolvate - toate într-un singur loc, gratuit.</p>
+    <p>Așa că am construit unul.</p>
+  </div>
+
+  <div class="despre-card">
+    <h2>Ce conține</h2>
+    <p>Site-ul acoperă 188 de teoreme din 8 domenii ale matematicii, de la geometrie și aritmetică până la topologie și logică matematică. Fiecare teoremă are aceeași structură: enunț, formulă, o explicație pe înțelesul oricui și cinci exerciții rezolvate pas cu pas.</p>
+    <div class="despre-stats">
+      <div class="despre-stat"><b>188</b><span>teoreme</span></div>
+      <div class="despre-stat"><b>8</b><span>domenii</span></div>
+      <div class="despre-stat"><b>940</b><span>exerciții</span></div>
+    </div>
+  </div>
+
+  <div class="despre-card">
+    <h2>Cine îl întreține</h2>
+    <p>∑ Teoreme e întreținut de o singură persoană, în timpul liber. Conținutul e gratuit și va rămâne gratuit.</p>
+    <p class="despre-cta">Ai o sugestie sau ai găsit o greșeală? <a href="contact.html">Scrie-mi</a>.</p>
+  </div>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="confidentialitate.html">Confidențialitate</a> · <a href="termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+</body>
+</html>

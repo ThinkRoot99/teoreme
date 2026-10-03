@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Formula lui Taylor - ∑ Teoreme</title>
+<meta name="description" content="Orice funcție de suficient de multe ori derivabilă poate fi aproximată printr-un polinom cu coeficienți dați de derivatele sale.">
+<meta property="og:title" content="Formula lui Taylor - ∑ Teoreme">
+<meta property="og:description" content="Orice funcție de suficient de multe ori derivabilă poate fi aproximată printr-un polinom cu coeficienți dați de derivatele sale.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/formula-lui-taylor.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Formula lui Taylor","description":"Orice funcție de suficient de multe ori derivabilă poate fi aproximată printr-un polinom cu coeficienți dați de derivatele sale.","author":{"@type":"Person","name":"Brook Taylor, 1715"},"inLanguage":"ro","educationalLevel":"Avansat","url":"https://teoreme.ro/teoreme/formula-lui-taylor.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Analiză</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Formula lui Taylor</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-adv">Avansat</span></div><h1 itemprop="name">Formula lui Taylor</h1><p class="author" itemprop="author">Brook Taylor, 1715 · nr. 075</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Enunț:</strong> Orice funcție suficient de derivabilă se aproximează printr-un polinom cu coeficienți dați de derivatele sale în punctul a.</div><div class="formula-block"><span class="formula-label">Formulă</span>f(x) = ∑_{k=0}^n f⁽ᵏ⁾(a)/k!·(x-a)ᵏ + Rₙ</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" width="300"><line x1="40" y1="170" x2="40" y2="20" stroke="#4a1a7a" stroke-width="1.5"/><line x1="30" y1="170" x2="300" y2="170" stroke="#4a1a7a" stroke-width="1.5"/><path d="M 60,150 C 110,120 150,60 180,55 C 220,48 250,70 280,40" fill="none" stroke="#4a1a7a" stroke-width="2.5"/><path d="M 110,135 Q 180,50 250,95" fill="none" stroke="#c8922a" stroke-width="2.5" stroke-dasharray="6,4"/><line x1="180" y1="170" x2="180" y2="55" stroke="#999" stroke-width="1" stroke-dasharray="3,3"/><circle cx="180" cy="55" r="4.5" fill="#1a1510" stroke="#fff" stroke-width="1.5"/><text x="180" y="188" text-anchor="middle" font-size="12" fill="#555" font-style="italic">a</text><text x="240" y="32" font-size="11" fill="#4a1a7a" font-style="italic">f(x)</text><text x="235" y="108" font-size="11" fill="#c8922a" font-style="italic">polinom Taylor</text></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story"><span class="hl">Dacă știi exact unde ești, cât de repede te miști și cum se schimbă viteza ta chiar acum, poți ghici destul de bine unde vei fi peste o clipă</span> - fără să cunoști tot drumul dinainte. Polinomul Taylor face exact asta: folosește valoarea, viteza (derivata) și accelerația (derivata a doua) dintr-un punct pentru a ghici funcția în apropiere.</div><div class="intuitive-note">Brook Taylor a publicat formula în 1715. Restul Lagrange permite estimarea erorii aproximării - esențial în analiza numerică și în calculatoarele care evaluează sin, cos, eˣ prin polinoame.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">Scrie polinomul Taylor de grad 3 pentru eˣ în jurul lui x=0.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Toate derivatele lui eˣ sunt eˣ, deci în x=0 fiecare derivată valorează e⁰=1.</p></div><div class="step"><div class="dot"></div><p>Coeficienții sunt f⁽ᵏ⁾(0)/k! = 1/k!, adică 1, 1, 1/2, 1/6 pentru k=0,1,2,3.</p></div><div class="step"><div class="dot"></div><p>Polinomul este 1+x+x²/2+x³/6.</p></div><div class="result">✓ <strong>1+x+x²/2+x³/6</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">Ce grad minim n garantează o eroare mai mică de 0.001 la aproximarea sin(0.5) cu polinomul Taylor în jurul lui 0?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Termenii seriei sin(x)=x-x³/6+x⁵/120-... au eroarea mărginită de valoarea absolută a următorului termen neglijat.</p></div><div class="step"><div class="dot"></div><p>Cu n=1 (doar x), eroarea e cel mult 0.5³/6≈0.021 - prea mare.</p></div><div class="step"><div class="dot"></div><p>Cu n=3 (x-x³/6), următorul termen neglijat e x⁵/120, deci eroarea e cel mult 0.5⁵/120≈0.00026&lt;0.001 - suficient.</p></div><div class="result">✓ Gradul minim necesar este <strong>n=3</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">Scrie polinomul Taylor de grad 2 pentru f(x)=x²-3x+2 în jurul lui a=1. Ce observi?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>f(1)=0, f'(x)=2x-3 deci f'(1)=-1, f''(x)=2 deci f''(1)=2.</p></div><div class="step"><div class="dot"></div><p>Polinomul Taylor: 0+(-1)(x-1)+2/2·(x-1)²=-(x-1)+(x-1)².</p></div><div class="step"><div class="dot"></div><p>Dezvoltând, acesta este exact x²-3x+2 - identic cu f, fără nicio eroare (restul e 0).</p></div><div class="result">✓ Pentru un <strong>polinom</strong>, seria Taylor de grad suficient de mare reproduce exact funcția, cu rest 0</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Adevărat sau fals: cu cât gradul polinomului Taylor crește, aproximarea devine mereu mai bună pe tot domeniul funcției, oricât de departe de a.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Fals în general - aproximarea e garantat bună doar în interiorul razei de convergență a seriei.</p></div><div class="step"><div class="dot"></div><p>Exemplu: seria Taylor a lui ln(1+x) în jurul lui 0 are raza de convergență 1, deci pentru x&gt;1 sau x≤-1 seria nu mai converge către funcție, indiferent de gradul folosit.</p></div><div class="result">✓ <strong>Fals</strong> - aproximarea e de încredere doar în raza de convergență</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">La ora 12:00 termometrul arată 20°C, temperatura crește cu 2°C/oră, iar rata de creștere însăși încetinește (a doua derivată este -0.5°C/oră²). Estimează temperatura la ora 13:00 cu Taylor de gradul 2.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Notăm T(0)=20 (valoare), T'(0)=2 (viteza de creștere), T''(0)=-0.5 (încetinirea).</p></div><div class="step"><div class="dot"></div><p>Polinomul Taylor de gradul 2: T(t)≈T(0)+T'(0)·t+T''(0)/2·t².</p></div><div class="step"><div class="dot"></div><p>Pentru t=1 oră: T(1)≈20+2·1+(-0.5)/2·1²=20+2-0.25=21.75°C.</p></div><div class="result">✓ Temperatura estimată la 13:00 este <strong>≈21.75°C</strong></div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Analiză</h3><div class="related-links"><a href="teorema-valorii-intermediare.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema valorii intermediare</a><a href="teorema-lui-rolle.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema lui Rolle</a><a href="teorema-valorii-medii-lagrange.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema valorii medii (Lagrange)</a><a href="teorema-lui-lhopital.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema lui L'Hôpital</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="teorema-lui-lhopital.html" class="tn-link prev">Teorema lui L'Hôpital</a><a href="teorema-fundamentala-a-calculului.html" class="tn-link next">Teorema fundamentală a calculului</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

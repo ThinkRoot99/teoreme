@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Teorema fundamentală a aritmeticii - ∑ Teoreme</title>
+<meta name="description" content="Orice număr natural mai mare decât 1 se descompune în mod unic ca produs de factori primi.">
+<meta property="og:title" content="Teorema fundamentală a aritmeticii - ∑ Teoreme">
+<meta property="og:description" content="Orice număr natural mai mare decât 1 se descompune în mod unic ca produs de factori primi.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/teorema-fundamentala-a-aritmeticii.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Teorema fundamentală a aritmeticii","description":"Orice număr natural mai mare decât 1 se descompune în mod unic ca produs de factori primi.","author":{"@type":"Person","name":"C.F. Gauss, 1801"},"inLanguage":"ro","educationalLevel":"Intermediar","url":"https://teoreme.ro/teoreme/teorema-fundamentala-a-aritmeticii.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Aritmetică</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Teorema fundamentală a aritmeticii</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-arit">Aritmetică</span><span class="badge-level bl-med">Intermediar</span></div><h1 itemprop="name">Teorema fundamentală a aritmeticii</h1><p class="author" itemprop="author">C.F. Gauss, 1801 · nr. 052</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Enunț:</strong> Orice număr natural mai mare decât 1 se poate scrie în mod unic ca produs de numere prime (până la ordinea factorilor).</div><div class="formula-block"><span class="formula-label">Formulă</span>n = p₁^a₁ × p₂^a₂ × … × pₖ^aₖ</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" width="280"><text x="150" y="18" text-anchor="middle" font-size="12" fill="#999" font-style="italic">Scara împărțirilor pentru 360</text><line x1="145" y1="26" x2="145" y2="178" stroke="#1a1510" stroke-width="1.5"/><line x1="105" y1="26" x2="145" y2="26" stroke="#1a1510" stroke-width="1.5"/><text x="140" y="44" text-anchor="end" font-size="14" font-family="'JetBrains Mono',monospace" fill="#1a1510">360</text><text x="150" y="44" font-size="14" font-family="'JetBrains Mono',monospace" fill="#c8922a" font-weight="600"> 2</text><text x="140" y="64" text-anchor="end" font-size="14" font-family="'JetBrains Mono',monospace" fill="#1a1510">180</text><text x="150" y="64" font-size="14" font-family="'JetBrains Mono',monospace" fill="#c8922a" font-weight="600"> 2</text><text x="140" y="84" text-anchor="end" font-size="14" font-family="'JetBrains Mono',monospace" fill="#1a1510"> 90</text><text x="150" y="84" font-size="14" font-family="'JetBrains Mono',monospace" fill="#c8922a" font-weight="600"> 2</text><text x="140" y="104" text-anchor="end" font-size="14" font-family="'JetBrains Mono',monospace" fill="#1a1510"> 45</text><text x="150" y="104" font-size="14" font-family="'JetBrains Mono',monospace" fill="#c45c30" font-weight="600"> 3</text><text x="140" y="124" text-anchor="end" font-size="14" font-family="'JetBrains Mono',monospace" fill="#1a1510"> 15</text><text x="150" y="124" font-size="14" font-family="'JetBrains Mono',monospace" fill="#c45c30" font-weight="600"> 3</text><text x="140" y="144" text-anchor="end" font-size="14" font-family="'JetBrains Mono',monospace" fill="#1a1510"> 5</text><text x="150" y="144" font-size="14" font-family="'JetBrains Mono',monospace" fill="#2d5a3d" font-weight="600"> 5</text><text x="140" y="164" text-anchor="end" font-size="14" font-family="'JetBrains Mono',monospace" fill="#1a1510"> 1</text><line x1="105" y1="150" x2="145" y2="150" stroke="#1a1510" stroke-width="1"/><text x="150" y="185" font-size="13" font-family="'JetBrains Mono',monospace" fill="#1a1510">360 = <tspan fill="#c8922a" font-weight="600">2³</tspan> × <tspan fill="#c45c30" font-weight="600">3²</tspan> × <tspan fill="#2d5a3d" font-weight="600">5</tspan></text></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story">Fiecare număr mai mare decât 1 este ca o rețetă de prăjitură făcută doar din „ingrediente prime”. <span class="hl">Oricine descompune același număr găsește exact aceleași ingrediente, în aceeași cantitate</span>, chiar dacă le scrie în altă ordine: 360 este mereu 2×2×2×3×3×5, niciodată altceva.</div><div class="intuitive-note">Criptografia modernă RSA se bazează pe dificultatea de a descompune un număr cu sute de cifre în factori primi - o problemă care ar dura milioane de ani pentru computerele actuale.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">Descompune 360 în factori primi.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Împărțim 360 la cel mai mic număr prim posibil, 2: 360÷2=180.</p></div><div class="step"><div class="dot"></div><p>Continuăm să împărțim la 2: 180÷2=90, apoi 90÷2=45 (45 nu se mai împarte exact la 2).</p></div><div class="step"><div class="dot"></div><p>Trecem la următorul prim, 3: 45÷3=15, apoi 15÷3=5.</p></div><div class="step"><div class="dot"></div><p>Numărul rămas, 5, este el însuși prim, deci ne oprim aici.</p></div><div class="step"><div class="dot"></div><p>Am folosit factorul 2 de trei ori și factorul 3 de două ori, plus 5 o singură dată.</p></div><div class="result">✓ 360 = <strong>2³×3²×5</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">Un număr are descompunerea 2²×5². Care este numărul, și câți divizori pozitivi are?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Calculăm numărul înmulțind factorii: 2²×5²=4×25=100.</p></div><div class="step"><div class="dot"></div><p>Numărul de divizori se obține adunând 1 la fiecare exponent și înmulțind rezultatele: (2+1)×(2+1)=3×3=9.</p></div><div class="result">✓ Numărul este <strong>100</strong> și are <strong>9</strong> divizori.</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">Ce descompunere în factori primi are un număr prim, de exemplu 17?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Testăm dacă 17 se împarte exact la 2, 3, 5, 7, 11 sau 13: niciunul nu îl împarte exact.</p></div><div class="step"><div class="dot"></div><p>Singurul „factor prim” al lui 17 este el însuși.</p></div><div class="result">✓ 17 = <strong>17</strong> (un număr prim este propriul său unic factor prim)</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Adevărat sau fals: 2×3×5 și 3×2×5 sunt descompuneri diferite ale lui 30.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Ambele produse folosesc exact aceiași factori: 2, 3 și 5, doar scriși în altă ordine.</p></div><div class="step"><div class="dot"></div><p>Teorema fundamentală spune că ordinea factorilor nu contează - descompunerea este unică „până la ordine”.</p></div><div class="result">✓ <strong>Fals</strong> - este aceeași descompunere, doar scrisă în altă ordine.</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">Un cofetar are 84 de bomboane și vrea să le împartă în pungi de mărime egală, fără resturi. În câte moduri poate alege mărimea pungii?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Descompunem 84 în factori primi: 84=2²×3×7.</p></div><div class="step"><div class="dot"></div><p>Numărul de divizori se calculează adunând 1 la fiecare exponent și înmulțind: (2+1)×(1+1)×(1+1)=3×2×2=12.</p></div><div class="result">✓ Cofetarul poate alege <strong>12</strong> mărimi diferite de pungă.</div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Aritmetică</h3><div class="related-links"><a href="infinitatea-numerelor-prime.html" class="related-link"><span class="card-tag tag-arit">Aritmetică</span> Infinitatea numerelor prime</a><a href="teorema-mica-a-lui-fermat.html" class="related-link"><span class="card-tag tag-arit">Aritmetică</span> Teorema mică a lui Fermat</a><a href="teorema-lui-euler-phi.html" class="related-link"><span class="card-tag tag-arit">Aritmetică</span> Teorema lui Euler (φ)</a><a href="teorema-lui-wilson.html" class="related-link"><span class="card-tag tag-arit">Aritmetică</span> Teorema lui Wilson</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="infinitatea-numerelor-prime.html" class="tn-link prev">Infinitatea numerelor prime</a><a href="teorema-mica-a-lui-fermat.html" class="tn-link next">Teorema mică a lui Fermat</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

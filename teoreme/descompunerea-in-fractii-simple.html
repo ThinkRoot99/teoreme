@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Descompunerea în fracții simple - ∑ Teoreme</title>
+<meta name="description" content="Orice funcție rațională se poate scrie ca sumă de fracții cu numitori de grad mic, facilitând integrarea și analiza.">
+<meta property="og:title" content="Descompunerea în fracții simple - ∑ Teoreme">
+<meta property="og:description" content="Orice funcție rațională se poate scrie ca sumă de fracții cu numitori de grad mic, facilitând integrarea și analiza.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/descompunerea-in-fractii-simple.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Descompunerea în fracții simple","description":"Orice funcție rațională se poate scrie ca sumă de fracții cu numitori de grad mic, facilitând integrarea și analiza.","author":{"@type":"Person","name":"Gottfried Leibniz / Johann Bernoulli, sec. XVIII"},"inLanguage":"ro","educationalLevel":"Intermediar","url":"https://teoreme.ro/teoreme/descompunerea-in-fractii-simple.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Algebră</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Descompunerea în fracții simple</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-alg">Algebră</span><span class="badge-level bl-med">Intermediar</span></div><h1 itemprop="name">Descompunerea în fracții simple</h1><p class="author" itemprop="author">Gottfried Leibniz / Johann Bernoulli, sec. XVIII · nr. 154</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Enunț:</strong> Orice funcție rațională P(x)/Q(x) cu grad(P)&lt;grad(Q) se poate scrie în mod unic ca sumă de fracții simple, cu numitori puteri ale factorilor ireductibili ai lui Q(x).</div><div class="formula-block"><span class="formula-label">Formulă</span>P(x)/Q(x) = ∑ Aᵢ/(x−rᵢ)ⁿⁱ</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 300 170" xmlns="http://www.w3.org/2000/svg"><rect x="30" y="60" width="80" height="50" fill="#2d5a3d" fill-opacity="0.8" stroke="#2d5a3d"/><text x="70" y="90" text-anchor="middle" font-size="12" fill="#fff">P(x)/Q(x)</text><path d="M 115 85 L 160 85" stroke="#555" stroke-width="2" marker-end="url(#pfArr)"/><rect x="170" y="40" width="55" height="35" fill="#c8922a" fill-opacity="0.5" stroke="#c8922a"/><text x="197" y="62" text-anchor="middle" font-size="11" fill="#2d5a3d">A/(x-r₁)</text><rect x="230" y="95" width="55" height="35" fill="#c8922a" fill-opacity="0.5" stroke="#c8922a"/><text x="257" y="117" text-anchor="middle" font-size="11" fill="#2d5a3d">B/(x-r₂)</text><text x="150" y="155" text-anchor="middle" font-size="11" fill="#555">O fracție complicată devine sumă de fracții simple</text><defs><marker id="pfArr" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#555"/></marker></defs></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story"><span class="hl">O fracție complicată, cu un numitor mare, se rupe în bucăți mici și simple, ușor de „mâncat” una câte una</span> - exact ca un baton mare de ciocolată pe care îl împarți în pătrățele, fiecare pătrățel fiind mult mai ușor de mâncat (integrat sau calculat) decât batonul întreg.</div><div class="intuitive-note">Metoda a fost dezvoltată de Leibniz și Johann Bernoulli în legătură cu calculul integralelor din funcții raționale, rămânând până azi tehnica standard pentru integrarea acestora și pentru transformata Laplace inversă.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">Descompune 1/((x-1)(x+1)) în fracții simple.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Scriem 1/((x-1)(x+1))=A/(x-1)+B/(x+1) și aducem partea dreaptă la același numitor: 1=A(x+1)+B(x-1).</p></div><div class="step"><div class="dot"></div><p>Alegem x=1 pentru a elimina termenul cu B: 1=A(1+1)=2A, deci A=1/2.</p></div><div class="step"><div class="dot"></div><p>Alegem x=-1 pentru a elimina termenul cu A: 1=B(-1-1)=-2B, deci B=-1/2.</p></div><div class="result">✓ = <strong>(1/2)/(x-1) - (1/2)/(x+1)</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">Știind că 2/(x+1)+1/(x+2) este descompunerea unei fracții P(x)/Q(x), reconstituie fracția inițială.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Aducem la același numitor: 2/(x+1)+1/(x+2) = [2(x+2)+1(x+1)] / [(x+1)(x+2)].</p></div><div class="step"><div class="dot"></div><p>Calculăm numărătorul: 2(x+2)+(x+1)=2x+4+x+1=3x+5.</p></div><div class="step"><div class="dot"></div><p>Fracția inițială este (3x+5)/((x+1)(x+2)) - exact inversul procesului de descompunere.</p></div><div class="result">✓ <strong>(3x+5)/((x+1)(x+2))</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">Descompune x/(x-2)² (rădăcină dublă - caz special).</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Cu rădăcină dublă, forma corectă este x/(x-2)²=A/(x-2)+B/(x-2)², un termen suplimentar față de rădăcinile simple.</p></div><div class="step"><div class="dot"></div><p>Aducem la același numitor: x=A(x-2)+B.</p></div><div class="step"><div class="dot"></div><p>Comparăm coeficienții lui x: A=1. Pentru termenul liber: 0=-2A+B, deci B=2A=2.</p></div><div class="result">✓ = <strong>1/(x-2) + 2/(x-2)²</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Adevărat sau fals: descompunerea în fracții simple funcționează direct și dacă gradul numărătorului este mai mare sau egal cu gradul numitorului.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Teorema cere explicit grad(P)&lt;grad(Q); dacă numărătorul are grad mai mare sau egal, trebuie mai întâi împărțit la numitor.</p></div><div class="step"><div class="dot"></div><p>De exemplu, (x²+1)/(x-1) nu se descompune direct - întâi se împarte: (x²+1)/(x-1)=x+1+2/(x-1), iar abia 2/(x-1) e deja o fracție simplă; afirmația e falsă fără acest pas.</p></div><div class="result">✓ <strong>Fals</strong> - necesită mai întâi împărțire dacă grad(P)≥grad(Q)</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">Un inginer electric trebuie să calculeze răspunsul unui circuit descris de 1/(x(x+1)) folosind transformata Laplace inversă, ceea ce necesită descompunerea în fracții simple. Ajută-l.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Scriem 1/(x(x+1))=A/x+B/(x+1) și aducem la același numitor: 1=A(x+1)+Bx.</p></div><div class="step"><div class="dot"></div><p>Pentru x=0: 1=A, deci A=1. Pentru x=-1: 1=-B, deci B=-1.</p></div><div class="step"><div class="dot"></div><p>Fracția devine 1/x - 1/(x+1) - acum inginerul poate aplica transformata Laplace inversă separat pe fiecare termen.</p></div><div class="result">✓ 1/(x(x+1)) = <strong>1/x - 1/(x+1)</strong></div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Algebră</h3><div class="related-links"><a href="teorema-lui-lagrange-grupuri.html" class="related-link"><span class="card-tag tag-alg">Algebră</span> Teorema lui Lagrange (grupuri)</a><a href="teorema-fundamentala-a-algebrei.html" class="related-link"><span class="card-tag tag-alg">Algebră</span> Teorema fundamentală a algebrei</a><a href="relatiile-lui-viete.html" class="related-link"><span class="card-tag tag-alg">Algebră</span> Relațiile lui Viète</a><a href="teorema-rouche-capelli.html" class="related-link"><span class="card-tag tag-alg">Algebră</span> Teorema Rouché–Capelli</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="polinomul-caracteristic-valori-proprii.html" class="tn-link prev">Valori proprii și polinom caracteristic</a><a href="formula-lui-gerschgorin.html" class="tn-link next">Teorema discurilor Gerschgorin</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

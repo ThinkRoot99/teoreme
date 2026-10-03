@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Teorema categoriei Baire - ∑ Teoreme</title>
+<meta name="description" content="Într-un spațiu metric complet, o intersecție numărabilă de mulțimi deschise dense este densă - spațiul nu este „sărac&quot; (de categoria I).">
+<meta property="og:title" content="Teorema categoriei Baire - ∑ Teoreme">
+<meta property="og:description" content="Într-un spațiu metric complet, o intersecție numărabilă de mulțimi deschise dense este densă - spațiul nu este „sărac&quot; (de categoria I).">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/teorema-lui-baire.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Teorema categoriei Baire","description":"Într-un spațiu metric complet, o intersecție numărabilă de mulțimi deschise dense este densă - spațiul nu este „sărac\" (de categoria I).","author":{"@type":"Person","name":"René-Louis Baire, 1899"},"inLanguage":"ro","educationalLevel":"Avansat","url":"https://teoreme.ro/teoreme/teorema-lui-baire.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Topologie</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Teorema categoriei Baire</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-topo">Topologie</span><span class="badge-level bl-adv">Avansat</span></div><h1 itemprop="name">Teorema categoriei Baire</h1><p class="author" itemprop="author">René-Louis Baire, 1899 · nr. 170</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Enunț:</strong> Dacă (X,d) este un spațiu metric complet, atunci intersecția oricărei familii numărabile de mulțimi deschise și dense în X este densă în X. Echivalent, X nu poate fi scris ca reuniune numărabilă de mulțimi nicăieri dense (X e de categoria a II-a Baire).</div><div class="formula-block"><span class="formula-label">Formulă</span>X metric complet, (Uₙ) deschise dense → ⋂ₙUₙ densă în X</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 300 170" xmlns="http://www.w3.org/2000/svg"><rect x="20" y="20" width="260" height="120" rx="8" fill="#1a604015" stroke="#1a6040" stroke-width="3"/><circle cx="60" cy="50" r="18" fill="none" stroke="#c8922a" stroke-width="1.5" stroke-dasharray="3 3"/><circle cx="120" cy="90" r="22" fill="none" stroke="#c8922a" stroke-width="1.5" stroke-dasharray="3 3"/><circle cx="200" cy="55" r="16" fill="none" stroke="#c8922a" stroke-width="1.5" stroke-dasharray="3 3"/><circle cx="240" cy="105" r="20" fill="none" stroke="#c8922a" stroke-width="1.5" stroke-dasharray="3 3"/><circle cx="150" cy="45" r="14" fill="none" stroke="#c8922a" stroke-width="1.5" stroke-dasharray="3 3"/><g fill="#1a6040"><circle cx="40" cy="30" r="2.5"/><circle cx="85" cy="120" r="2.5"/><circle cx="160" cy="115" r="2.5"/><circle cx="255" cy="35" r="2.5"/><circle cx="110" cy="35" r="2.5"/><circle cx="220" cy="125" r="2.5"/></g><text x="150" y="158" font-size="11" fill="#1a6040" text-anchor="middle">intersecția rămâne densă peste tot</text></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story"><span class="hl">Un burete complet îmbibat cu apă nu poate fi „golit” prin doar numărate găurele mici - oricâte ai înțepa, tot mai rămâne apă peste tot, în orice colțișor</span>. La fel, un spațiu complet nu poate fi „epuizat” de numărat de multe mulțimi mici.</div><div class="intuitive-note">René-Louis Baire a publicat teorema în 1899, iar de atunci ea stă la baza unor rezultate fundamentale de analiză funcțională: teorema aplicației deschise, teorema graficului închis și principiul mărginirii uniforme al lui Banach și Steinhaus.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">ℚ (numerele raționale, cu metrica uzuală) satisface concluzia teoremei lui Baire?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>ℚ nu e complet, există șiruri Cauchy de raționale care converg la iraționale.</p></div><div class="step"><div class="dot"></div><p>ℚ=⋃_{q∈ℚ}{q} este o reuniune numărabilă de mulțimi închise cu interior vid.</p></div><div class="step"><div class="dot"></div><p>Deci ℚ este de categoria I în el însuși, iar teorema lui Baire nu i se aplică.</p></div><div class="result">✓ <strong>Nu</strong> - ℚ nu e complet</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">Arătați că ℝ nu poate fi scris ca reuniune numărabilă de mulțimi închise cu interior vid.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>ℝ este spațiu metric complet.</p></div><div class="step"><div class="dot"></div><p>Dacă ℝ=⋃ₙFₙ cu Fₙ închise cu interior vid, mulțimile Uₙ=ℝ\Fₙ sunt deschise și dense.</p></div><div class="step"><div class="dot"></div><p>Prin Baire, ⋂ₙUₙ e densă, deci nevidă, așa că există un x care nu aparține niciunui Fₙ - contradicție.</p></div><div class="result">✓ <strong>Contradicție</strong> - ℝ e de categoria a II-a</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">[0,1] cu metrica uzuală este spațiu metric complet? Se aplică teorema lui Baire?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>[0,1] e închis în ℝ, deci complet ca spațiu metric.</p></div><div class="step"><div class="dot"></div><p>Da, teorema lui Baire se aplică pe [0,1].</p></div><div class="result">✓ <strong>Da</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Mulțimea numerelor iraționale ℝ\ℚ este de categoria a II-a Baire în ea însăși?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>ℝ\ℚ este Gδ în ℝ, o intersecție numărabilă de mulțimi deschise, deci e spațiu metrizabil complet cu o metrică echivalentă - un spațiu Polish.</p></div><div class="step"><div class="dot"></div><p>Fiind complet, satisface teorema lui Baire, deci e de categoria a II-a în ea însăși.</p></div><div class="result">✓ <strong>Da</strong>, categoria a II-a</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">De ce teorema lui Baire arată că un spațiu Banach infinit-dimensional nu poate avea o bază Hamel numărabilă?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Dacă baza Hamel ar fi B={e₁,e₂,...}, atunci X=⋃ₙ span{e₁,...,eₙ}.</p></div><div class="step"><div class="dot"></div><p>Fiecare subspațiu finit-dimensional este închis și are interior vid în X, care e infinit-dimensional.</p></div><div class="step"><div class="dot"></div><p>Prin Baire, un spațiu complet nu poate fi o astfel de reuniune numărabilă de mulțimi rare - contradicție.</p></div><div class="result">✓ <strong>Contradicție</strong> cu categoria Baire</div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Topologie</h3><div class="related-links"><a href="teorema-heine-borel.html" class="related-link"><span class="card-tag tag-topo">Topologie</span> Teorema Heine–Borel</a><a href="teorema-punctului-fix-brouwer.html" class="related-link"><span class="card-tag tag-topo">Topologie</span> Teorema punctului fix Brouwer</a><a href="teorema-lui-jordan.html" class="related-link"><span class="card-tag tag-topo">Topologie</span> Teorema lui Jordan</a><a href="teorema-borsuk-ulam.html" class="related-link"><span class="card-tag tag-topo">Topologie</span> Teorema Borsuk–Ulam</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="teorema-lui-urysohn.html" class="tn-link prev">Lema lui Urysohn</a><a href="teorema-lui-arzela-ascoli.html" class="tn-link next">Teorema Arzelà–Ascoli</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

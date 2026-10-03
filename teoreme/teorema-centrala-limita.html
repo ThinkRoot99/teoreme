@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Teorema centrală limită - ∑ Teoreme</title>
+<meta name="description" content="Suma standardizată a unui număr mare de variabile aleatoare independente tinde spre distribuția normală.">
+<meta property="og:title" content="Teorema centrală limită - ∑ Teoreme">
+<meta property="og:description" content="Suma standardizată a unui număr mare de variabile aleatoare independente tinde spre distribuția normală.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/teorema-centrala-limita.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Teorema centrală limită","description":"Suma standardizată a unui număr mare de variabile aleatoare independente tinde spre distribuția normală.","author":{"@type":"Person","name":"Moivre, Laplace, Lyapunov, 1733–1901"},"inLanguage":"ro","educationalLevel":"Avansat","url":"https://teoreme.ro/teoreme/teorema-centrala-limita.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Probabilitate</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Teorema centrală limită</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-prob">Probabilitate</span><span class="badge-level bl-adv">Avansat</span></div><h1 itemprop="name">Teorema centrală limită</h1><p class="author" itemprop="author">Moivre, Laplace, Lyapunov, 1733–1901 · nr. 102</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Enunț:</strong> Dacă X₁,X₂,... v.a. iid cu E[X]=μ și Var(X)=σ²&lt;∞, suma standardizată converge în distribuție la N(0,1).</div><div class="formula-block"><span class="formula-label">Formulă</span>√n(X̄-μ)/σ →^d N(0,1)</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg" width="320"><text x="48" y="15" text-anchor="middle" font-size="11" fill="#555" font-style="italic">distribuție oarecare</text><rect x="15" y="110" width="16" height="40" fill="#b06000"/><rect x="35" y="80" width="16" height="70" fill="#b06000"/><rect x="55" y="120" width="16" height="30" fill="#b06000"/><rect x="75" y="95" width="16" height="55" fill="#b06000"/><line x1="10" y1="150" x2="95" y2="150" stroke="#1a1510" stroke-width="1.5"/><text x="122" y="118" text-anchor="middle" font-size="12" fill="#1a1510">n → ∞</text><line x1="100" y1="128" x2="143" y2="128" stroke="#1a1510" stroke-width="1.5"/><line x1="135" y1="122" x2="143" y2="128" stroke="#1a1510" stroke-width="1.5"/><line x1="135" y1="134" x2="143" y2="128" stroke="#1a1510" stroke-width="1.5"/><text x="228" y="15" text-anchor="middle" font-size="11" fill="#555" font-style="italic">sumă standardizată</text><line x1="145" y1="150" x2="310" y2="150" stroke="#1a1510" stroke-width="1.5"/><path d="M150,150 C175,150 190,42 227,40 C264,42 280,150 305,150" fill="none" stroke="#c8922a" stroke-width="2.5"/></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story">Aruncă un zar de puține ori și adună numerele - suma pare neregulată, aleatoare. Dar dacă repeți asta de foarte multe ori și notezi de fiecare dată suma, toate acele sume, puse cap la cap, desenează aceeași formă de clopot - indiferent cum arată zarul, chiar și unul ciudat, cu fețe inegale. <span class="hl">Oricâte lucruri mici și independente aduni, rezultatul final seamănă aproape mereu cu un clopot</span>, chiar dacă nicio bucățică din el nu are formă de clopot.</div><div class="intuitive-note">De Moivre a schițat ideea încă din 1733, iar Laplace și apoi Lyapunov (1901) au dus-o mai departe și au rafinat-o. E considerat cel mai important rezultat din teoria probabilităților și stă la baza statisticii inferențiale.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">La un test, notele au media μ=50 și deviația standard σ=10. Pentru un eșantion de n=50 elevi, calculează probabilitatea ca media notelor eșantionului să depășească 52.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Conform TCL, media eșantionului X̄ₙ este aproximativ normală cu deviația standard σ/√n = 10/√50 ≈ 1.414.</p></div><div class="step"><div class="dot"></div><p>Standardizăm: Z = (52-50)/1.414 ≈ 1.414.</p></div><div class="step"><div class="dot"></div><p>Din tabelul normal, P(Z&gt;1.414) ≈ 1 - 0.9214 = 0.0786.</p></div><div class="result">✓ ≈<strong>7.9%</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">Aruncăm o monedă corectă de n ori și urmărim proporția de capete. Câte aruncări sunt necesare ca deviația standard a acestei proporții să scadă sub 0.01?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Deviația standard a proporției este σ = √(p(1-p)/n) = √(0.25/n).</p></div><div class="step"><div class="dot"></div><p>Punem condiția √(0.25/n) &lt; 0.01, adică 0.25/n &lt; 0.0001.</p></div><div class="step"><div class="dot"></div><p>Rezolvăm: n &gt; 0.25/0.0001 = 2500, deci sunt necesare cel puțin 2501 aruncări.</p></div><div class="result">✓ n ≥ <strong>2501</strong> aruncări</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">Dacă variabilele X_i sunt deja normal distribuite (nu doar aproximativ), ce se întâmplă cu media eșantionului X̄ₙ, chiar și pentru n=1?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>TCL e un rezultat de aproximare pentru n mare, dar dacă distribuția inițială e deja normală, suma (și media) rămân exact normale pentru orice n, chiar n=1.</p></div><div class="step"><div class="dot"></div><p>Acesta e cazul-limită „perfect”: nu mai e nevoie de n mare, aproximarea devine egalitate exactă.</p></div><div class="result">✓ X̄ₙ este <strong>exact normală pentru orice n</strong>, nu doar aproximativ</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Adevărat sau fals: teorema centrală limită garantează că datele individuale X_i devin normal distribuite atunci când n este mare.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Fals - aceasta e o confuzie foarte des întâlnită.</p></div><div class="step"><div class="dot"></div><p>TCL vorbește despre distribuția mediei (sau sumei) eșantionului, X̄ₙ, nu despre fiecare observație individuală X_i.</p></div><div class="step"><div class="dot"></div><p>Datele individuale își păstrează distribuția lor originală (uniformă, exponențială etc.) oricât de mare ar fi n.</p></div><div class="result">✓ <strong>Fals</strong> - TCL se referă la media eșantionului, nu la datele individuale</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">Aruncăm o monedă corectă de 1000 de ori. Folosind TCL, aproximează probabilitatea de a obține mai mult de 530 capete.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Numărul de capete X e suma a 1000 aruncări Bernoulli(0.5): μ=np=500, σ=√(np(1-p))=√250≈15.81.</p></div><div class="step"><div class="dot"></div><p>Standardizăm: Z=(530-500)/15.81≈1.9.</p></div><div class="step"><div class="dot"></div><p>Din tabelul normal: P(Z&gt;1.9)≈1-0.9713=0.0287.</p></div><div class="result">✓ ≈<strong>2.9%</strong></div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Probabilitate</h3><div class="related-links"><a href="teorema-lui-bayes.html" class="related-link"><span class="card-tag tag-prob">Probabilitate</span> Teorema lui Bayes</a><a href="legea-numerelor-mari.html" class="related-link"><span class="card-tag tag-prob">Probabilitate</span> Legea numerelor mari</a><a href="inegalitatea-lui-chebyshev.html" class="related-link"><span class="card-tag tag-prob">Probabilitate</span> Inegalitatea lui Cebîșev</a><a href="distributia-normala.html" class="related-link"><span class="card-tag tag-prob">Probabilitate</span> Distribuția normală (Gauss)</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="teorema-lui-bayes.html" class="tn-link prev">Teorema lui Bayes</a><a href="legea-numerelor-mari.html" class="tn-link next">Legea numerelor mari</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

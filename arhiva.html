@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Arhiva completă a teoremelor matematice - sortate alfabetic, cu filtrare după domeniu și nivel.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Arhivă teoreme - ∑ Teoreme">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://teoreme.ro/arhiva.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#1a1510">
+<title>Arhivă - ∑ Teoreme</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+/* ── ARCHIVE-SPECIFIC ── */
+.arch-hero {
+  background: #1a1510;
+  padding: 42px 24px 40px;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+}
+.arch-hero-inner {
+  max-width: 900px; margin: 0 auto;
+  display: flex; align-items: center; flex-wrap: wrap;
+}
+.arch-hero-inner > * { margin: 0 24px 0 0; }
+@supports (gap:1px) { .arch-hero-inner{ gap:24px } .arch-hero-inner > *{ margin:0 } }
+.arch-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 900; color: #fff; line-height: 1.15; flex: 1;
+}
+@media (min-width:640px){ .arch-hero h1{ font-size: 2.2rem; } }
+.arch-hero h1 span { color: #c8922a }
+.arch-hero p { color: rgba(255,255,255,.45); font-size: .88rem; margin-top: 6px }
+.arch-search-wrap {
+  position: relative; flex: 0 0 300px;
+}
+.arch-search-wrap input {
+  width: 100%; padding: 10px 16px 10px 38px;
+  border: 1.5px solid rgba(255,255,255,.15); border-radius: 28px;
+  background: rgba(255,255,255,.08); color: #fff;
+  font-family: 'Source Serif 4', serif; font-size: .9rem; outline: none;
+  transition: border-color .2s;
+}
+.arch-search-wrap input::placeholder { color: rgba(255,255,255,.35) }
+.arch-search-wrap input:focus { border-color: #c8922a }
+.arch-search-wrap .as-icon {
+  position: absolute; left: 13px; top: 50%; transform: translateY(-50%);
+  opacity: .4; font-size: .82rem; pointer-events: none;
+}
+
+/* Filters bar */
+.arch-filters {
+  background: #f6f2ea; border-bottom: 1px solid #e0d5c0;
+  padding: 14px 24px;
+}
+.arch-filters-inner {
+  max-width: 900px; margin: 0 auto;
+  display: flex; flex-wrap: wrap; align-items: center;
+}
+.arch-filters-inner > * { margin: 0 8px 4px 0; }
+@supports (gap:1px) { .arch-filters-inner{ gap:8px } .arch-filters-inner > *{ margin:0 } }
+.af-label {
+  font-family: 'JetBrains Mono', monospace; font-size: .67rem;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: #4a3f2f; opacity: .5; margin-right: 4px;
+}
+.af-chip {
+  padding: 5px 14px; border-radius: 16px; border: 1.5px solid #e0d5c0;
+  background: #fff; font-family: 'Source Serif 4', serif; font-size: .82rem;
+  color: #4a3f2f; cursor: pointer; transition: all .18s;
+}
+.af-chip:hover, .af-chip.active {
+  border-color: #c8922a; background: #fdf3d0; color: #1a1510;
+}
+.af-sep { width: 1px; height: 22px; background: #e0d5c0; margin: 0 4px }
+
+/* A-Z Bar */
+.az-bar-wrap {
+  background: #fff; border-bottom: 2px solid #e0d5c0;
+  position: sticky; top: 56px; z-index: 50;
+}
+.az-bar {
+  max-width: 900px; margin: 0 auto;
+  padding: 10px 24px; display: flex; flex-wrap: wrap;
+}
+.az-bar > * { margin: 0 2px 2px 0; }
+@supports (gap:1px) { .az-bar{ gap:2px } .az-bar > *{ margin:0 } }
+.az-btn {
+  min-width: 32px; height: 32px; padding: 0 6px;
+  border: none; background: transparent; cursor: pointer;
+  font-family: 'JetBrains Mono', monospace; font-size: .82rem;
+  font-weight: 600; color: #bbb; border-radius: 4px; transition: all .15s;
+}
+.az-btn.has-items { color: #4a3f2f }
+.az-btn.has-items:hover { background: #fdf3d0; color: #c8922a }
+.az-btn.highlighted { background: #c8922a; color: #1a1510; transform: scale(1.05) }
+
+/* Archive list */
+.arch-content { max-width: 900px; margin: 0 auto; padding: 32px 24px 80px }
+
+.arch-no-results {
+  text-align: center; padding: 60px 20px;
+  color: #4a3f2f; font-style: italic; display: none;
+}
+
+.letter-group { margin-bottom: 36px; scroll-margin-top: calc(56px + 54px) }
+.letter-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem; font-weight: 900; color: #c8922a;
+  padding-bottom: 10px; margin-bottom: 14px;
+  border-bottom: 2px solid #e0d5c0;
+  display: flex; align-items: baseline;
+}
+.letter-heading > *:not(:last-child) { margin-right: 12px; }
+@supports (gap:1px) { .letter-heading{ gap:12px } .letter-heading > *:not(:last-child){ margin-right:0 } }
+.letter-heading span {
+  font-family: 'JetBrains Mono', monospace; font-size: .7rem;
+  font-weight: 400; color: #4a3f2f; opacity: .5; letter-spacing: 1px;
+}
+
+.arch-row {
+  display: flex; align-items: center;
+  padding: 13px 16px; margin-bottom: 6px;
+  border: 1.5px solid #e0d5c0; border-radius: 6px; background: #fff;
+  text-decoration: none; color: inherit; transition: all .16s;
+}
+.arch-row > *:not(:last-child) { margin-right: 14px; }
+@supports (gap:1px) { .arch-row{ gap:14px } .arch-row > *:not(:last-child){ margin-right:0 } }
+.arch-row:hover { border-color: #c8922a; background: #fdf3d0; transform: translateX(3px) }
+.arch-row.hidden { display: none }
+.ar-num {
+  font-family: 'JetBrains Mono', monospace; font-size: .78rem;
+  color: #e0d5c0; min-width: 28px; flex-shrink: 0;
+}
+.ar-title {
+  flex: 1; font-size: 1rem; color: #1a1510; font-weight: 600;
+  font-family: 'Playfair Display', serif;
+}
+.ar-meta { display: flex; align-items: center; flex-shrink: 0; flex-wrap: wrap }
+.ar-meta > * { margin: 0 7px 4px 0; }
+@supports (gap:1px) { .ar-meta{ gap:7px } .ar-meta > *{ margin:0 } }
+.ar-author {
+  font-size: .78rem; color: #4a3f2f; font-style: italic;
+  opacity: .65; flex: 1; min-width: 140px;
+}
+.ar-arrow {
+  font-family: 'JetBrains Mono', monospace; font-size: .75rem;
+  color: #c8922a; opacity: .7; flex-shrink: 0;
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon">🔍</span>
+      <input type="search" id="navSrch" placeholder="Caută..." oninput="doFilter(this.value)" aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Acasă</a>
+      <a href="arhiva.html" class="active">Arhivă</a>
+      <a href="despre.html">Despre</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ARCHIVE HERO -->
+<div class="arch-hero">
+  <div class="arch-hero-inner">
+    <div style="flex:1">
+      <h1>Arhivă - <span>toate teoremele</span></h1>
+      <p id="archCount">Sortate alfabetic · 188 teoreme disponibile</p>
+    </div>
+    <div class="arch-search-wrap">
+      <span class="as-icon">🔍</span>
+      <input type="search" id="archSearch" placeholder="Filtrează arhiva..." oninput="doFilter(this.value)" aria-label="Filtrează arhiva">
+    </div>
+  </div>
+</div>
+
+<!-- FILTERS -->
+<div class="arch-filters">
+  <div class="arch-filters-inner">
+    <span class="af-label">Domeniu</span>
+    <button class="af-chip active" data-cat="toate"     onclick="setCat('toate',this)">Toate</button>
+    <button class="af-chip"        data-cat="geometrie"    onclick="setCat('geometrie',this)">📐 Geometrie</button>
+    <button class="af-chip"        data-cat="aritmetica"   onclick="setCat('aritmetica',this)">🔢 Aritmetică</button>
+    <button class="af-chip"        data-cat="analiza"      onclick="setCat('analiza',this)">📈 Analiză</button>
+    <button class="af-chip"        data-cat="algebra"      onclick="setCat('algebra',this)">🔣 Algebră</button>
+    <button class="af-chip"        data-cat="probabilitate" onclick="setCat('probabilitate',this)">🎲 Probabilitate</button>
+    <button class="af-chip"        data-cat="topologie"    onclick="setCat('topologie',this)">🔵 Topologie</button>
+    <button class="af-chip"        data-cat="combinatorica" onclick="setCat('combinatorica',this)">♟ Combinatorică</button>
+    <button class="af-chip"        data-cat="logica"       onclick="setCat('logica',this)">🧠 Logică</button>
+    <div class="af-sep"></div>
+    <span class="af-label">Nivel</span>
+    <button class="af-chip" data-lv="fundamental" onclick="setLv('fundamental',this)">Fundamental</button>
+    <button class="af-chip" data-lv="intermediar" onclick="setLv('intermediar',this)">Intermediar</button>
+    <button class="af-chip" data-lv="avansat"     onclick="setLv('avansat',this)">Avansat</button>
+  </div>
+</div>
+
+<!-- A-Z BAR -->
+<div class="az-bar-wrap">
+  <div class="az-bar" id="azBar"><!--BUILD:AZBAR:START--><button type="button" class="az-btn has-items" onclick="document.getElementById('letter-A').scrollIntoView({behavior:'smooth',block:'start'})">A</button><button type="button" class="az-btn has-items" onclick="document.getElementById('letter-B').scrollIntoView({behavior:'smooth',block:'start'})">B</button><button type="button" class="az-btn has-items" onclick="document.getElementById('letter-C').scrollIntoView({behavior:'smooth',block:'start'})">C</button><button type="button" class="az-btn has-items" onclick="document.getElementById('letter-D').scrollIntoView({behavior:'smooth',block:'start'})">D</button><button type="button" class="az-btn has-items" onclick="document.getElementById('letter-E').scrollIntoView({behavior:'smooth',block:'start'})">E</button><button type="button" class="az-btn has-items" onclick="document.getElementById('letter-F').scrollIntoView({behavior:'smooth',block:'start'})">F</button><button type="button" class="az-btn" disabled>G</button><button type="button" class="az-btn" disabled>H</button><button type="button" class="az-btn has-items" onclick="document.getElementById('letter-I').scrollIntoView({behavior:'smooth',block:'start'})">I</button><button type="button" class="az-btn" disabled>J</button><button type="button" class="az-btn" disabled>K</button><button type="button" class="az-btn has-items" onclick="document.getElementById('letter-L').scrollIntoView({behavior:'smooth',block:'start'})">L</button><button type="button" class="az-btn" disabled>M</button><button type="button" class="az-btn has-items" onclick="document.getElementById('letter-N').scrollIntoView({behavior:'smooth',block:'start'})">N</button><button type="button" class="az-btn" disabled>O</button><button type="button" class="az-btn has-items" onclick="document.getElementById('letter-P').scrollIntoView({behavior:'smooth',block:'start'})">P</button><button type="button" class="az-btn" disabled>Q</button><button type="button" class="az-btn has-items" onclick="document.getElementById('letter-R').scrollIntoView({behavior:'smooth',block:'start'})">R</button><button type="button" class="az-btn has-items" onclick="document.getElementById('letter-S').scrollIntoView({behavior:'smooth',block:'start'})">S</button><button type="button" class="az-btn has-items" onclick="document.getElementById('letter-T').scrollIntoView({behavior:'smooth',block:'start'})">T</button><button type="button" class="az-btn has-items" onclick="document.getElementById('letter-U').scrollIntoView({behavior:'smooth',block:'start'})">U</button><button type="button" class="az-btn has-items" onclick="document.getElementById('letter-V').scrollIntoView({behavior:'smooth',block:'start'})">V</button><button type="button" class="az-btn" disabled>W</button><button type="button" class="az-btn" disabled>X</button><button type="button" class="az-btn" disabled>Y</button><button type="button" class="az-btn" disabled>Z</button><!--BUILD:AZBAR:END--></div>
+</div>
+
+<!-- CONTENT -->
+<div class="arch-content">
+  <div class="arch-no-results" id="noRes">
+    Nicio teoremă nu corespunde filtrelor selectate.
+  </div>
+  <div id="archList">
+  <!--BUILD:ARCHLIST:START-->
+<div class="letter-group" id="letter-A"><div class="letter-heading">A<span>10 teoreme</span></div><a href="teoreme/algoritmul-lui-euclid.html" class="arch-row"><span class="ar-num">056</span><span class="ar-title">Algoritmul lui Euclid</span><span class="ar-author">Euclid, ~300 î.Hr.</span><div class="ar-meta"><span class="card-tag tag-arit">Aritmetică</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/aria-cercului.html" class="arch-row"><span class="ar-num">027</span><span class="ar-title">Aria cercului</span><span class="ar-author">Arhimede, ~250 î.Hr.</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/aria-paralelogramului.html" class="arch-row"><span class="ar-num">019</span><span class="ar-title">Aria paralelogramului</span><span class="ar-author">Euclid</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/aria-poligonului-regulat.html" class="arch-row"><span class="ar-num">029</span><span class="ar-title">Aria poligonului regulat</span><span class="ar-author">Euclid</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/aria-prin-coordonate.html" class="arch-row"><span class="ar-num">140</span><span class="ar-title">Aria prin coordonate (formula gaussiană)</span><span class="ar-author">Carl Friedrich Gauss (atribuit)</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/aria-sectorului-circular.html" class="arch-row"><span class="ar-num">024</span><span class="ar-title">Aria sectorului circular</span><span class="ar-author">Arhimede</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/aria-sferei.html" class="arch-row"><span class="ar-num">031</span><span class="ar-title">Aria sferei</span><span class="ar-author">Arhimede, ~250 î.Hr.</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/aria-trapezului.html" class="arch-row"><span class="ar-num">020</span><span class="ar-title">Aria trapezului</span><span class="ar-author">Euclid</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/asemanarea-triunghiurilor-aa.html" class="arch-row"><span class="ar-num">012</span><span class="ar-title">Asemănarea triunghiurilor (AA)</span><span class="ar-author">Euclid</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/axioma-alegerii.html" class="arch-row"><span class="ar-num">130</span><span class="ar-title">Axioma alegerii</span><span class="ar-author">Ernst Zermelo, 1904</span><div class="ar-meta"><span class="card-tag tag-log">Logică</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a></div>
+<div class="letter-group" id="letter-B"><div class="letter-heading">B<span>1 teoremă</span></div><a href="teoreme/binomul-lui-newton.html" class="arch-row"><span class="ar-num">120</span><span class="ar-title">Binomul lui Newton</span><span class="ar-author">Isaac Newton, 1665</span><div class="ar-meta"><span class="card-tag tag-comb">Combinatorică</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a></div>
+<div class="letter-group" id="letter-C"><div class="letter-heading">C<span>20 teoreme</span></div><a href="teoreme/caracteristica-euler-topologie.html" class="arch-row"><span class="ar-num">115</span><span class="ar-title">Caracteristica Euler</span><span class="ar-author">Leonhard Euler, 1752</span><div class="ar-meta"><span class="card-tag tag-topo">Topologie</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/cercul-celor-noua-puncte.html" class="arch-row"><span class="ar-num">048</span><span class="ar-title">Cercul celor nouă puncte</span><span class="ar-author">Feuerbach, 1822</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/cercul-circumscris-triunghiului.html" class="arch-row"><span class="ar-num">013</span><span class="ar-title">Cercul circumscris triunghiului</span><span class="ar-author">Euclid</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/cercul-inscris-triunghiului.html" class="arch-row"><span class="ar-num">014</span><span class="ar-title">Cercul înscris triunghiului</span><span class="ar-author">Euclid</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/ciurul-lui-eratostene.html" class="arch-row"><span class="ar-num">065</span><span class="ar-title">Ciurul lui Eratostene</span><span class="ar-author">Eratostene din Cyrene, ~240 î.Hr.</span><div class="ar-meta"><span class="card-tag tag-arit">Aritmetică</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/compactitate-secventiala.html" class="arch-row"><span class="ar-num">174</span><span class="ar-title">Compacitatea secvențială</span><span class="ar-author">Concept clasic de topologie generală</span><div class="ar-meta"><span class="card-tag tag-topo">Topologie</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/concurenta-bisectoarelor.html" class="arch-row"><span class="ar-num">042</span><span class="ar-title">Concurența bisectoarelor</span><span class="ar-author">Euclid</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/concurenta-inaltimilor.html" class="arch-row"><span class="ar-num">041</span><span class="ar-title">Concurența înălțimilor</span><span class="ar-author">Euclid</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/concurenta-medianelor.html" class="arch-row"><span class="ar-num">040</span><span class="ar-title">Concurența medianelor</span><span class="ar-author">Arhimede, ~250 î.Hr.</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/conexitate-prin-drumuri.html" class="arch-row"><span class="ar-num">172</span><span class="ar-title">Conexitatea prin drumuri</span><span class="ar-author">Concept clasic de topologie generală</span><div class="ar-meta"><span class="card-tag tag-topo">Topologie</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/congruenta-triunghiurilor-lll.html" class="arch-row"><span class="ar-num">009</span><span class="ar-title">Congruența triunghiurilor (LLL)</span><span class="ar-author">Euclid</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/congruenta-triunghiurilor-lul.html" class="arch-row"><span class="ar-num">010</span><span class="ar-title">Congruența triunghiurilor (LUL)</span><span class="ar-author">Euclid</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/congruenta-triunghiurilor-ulu.html" class="arch-row"><span class="ar-num">011</span><span class="ar-title">Congruența triunghiurilor (ULU)</span><span class="ar-author">Euclid</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/conjectura-lui-poincare-perelman.html" class="arch-row"><span class="ar-num">116</span><span class="ar-title">Conjectura Poincaré (Perelman)</span><span class="ar-author">Henri Poincaré 1904 / Grigori Perelman 2003</span><div class="ar-meta"><span class="card-tag tag-topo">Topologie</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/covarianta-si-corelatia.html" class="arch-row"><span class="ar-num">168</span><span class="ar-title">Covarianța și coeficientul de corelație</span><span class="ar-author">Francis Galton / Karl Pearson, sec. XIX</span><div class="ar-meta"><span class="card-tag tag-prob">Probabilitate</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/criteriul-dalembert.html" class="arch-row"><span class="ar-num">080</span><span class="ar-title">Criteriul D'Alembert</span><span class="ar-author">Jean le Rond d'Alembert, 1768</span><div class="ar-meta"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/criteriul-lui-cauchy-condensare.html" class="arch-row"><span class="ar-num">157</span><span class="ar-title">Criteriul de condensare Cauchy</span><span class="ar-author">Augustin-Louis Cauchy</span><div class="ar-meta"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/criteriul-eisenstein.html" class="arch-row"><span class="ar-num">100</span><span class="ar-title">Criteriul Eisenstein</span><span class="ar-author">Gotthold Eisenstein, 1850</span><div class="ar-meta"><span class="card-tag tag-alg">Algebră</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/criteriul-integral-convergenta.html" class="arch-row"><span class="ar-num">160</span><span class="ar-title">Criteriul integral de convergență</span><span class="ar-author">Colin Maclaurin / Augustin-Louis Cauchy</span><div class="ar-meta"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/criteriul-leibniz.html" class="arch-row"><span class="ar-num">081</span><span class="ar-title">Criteriul Leibniz</span><span class="ar-author">Gottfried Wilhelm Leibniz, 1682</span><div class="ar-meta"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a></div>
+<div class="letter-group" id="letter-D"><div class="letter-heading">D<span>12 teoreme</span></div><a href="teoreme/permutari-fara-puncte-fixe-derangements.html" class="arch-row"><span class="ar-num">182</span><span class="ar-title">Derajamente (permutări fără puncte fixe)</span><span class="ar-author">Pierre Rémond de Montmort, 1708</span><div class="ar-meta"><span class="card-tag tag-comb">Combinatorică</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/descompunerea-in-fractii-simple.html" class="arch-row"><span class="ar-num">154</span><span class="ar-title">Descompunerea în fracții simple</span><span class="ar-author">Gottfried Leibniz / Johann Bernoulli, sec. XVIII</span><div class="ar-meta"><span class="card-tag tag-alg">Algebră</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/diagonala-paralelipipedului.html" class="arch-row"><span class="ar-num">030</span><span class="ar-title">Diagonala paralelipipedului dreptunghic</span><span class="ar-author">Pitagora (generalizare)</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/distanta-de-la-punct-la-dreapta.html" class="arch-row"><span class="ar-num">045</span><span class="ar-title">Distanța de la un punct la o dreaptă</span><span class="ar-author">Euclid</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/distributia-binomiala.html" class="arch-row"><span class="ar-num">107</span><span class="ar-title">Distribuția binomială</span><span class="ar-author">Jacob Bernoulli, 1713</span><div class="ar-meta"><span class="card-tag tag-prob">Probabilitate</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/distributia-exponentiala.html" class="arch-row"><span class="ar-num">166</span><span class="ar-title">Distribuția exponențială</span><span class="ar-author">Formalizată în sec. XX</span><div class="ar-meta"><span class="card-tag tag-prob">Probabilitate</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/distributia-normala.html" class="arch-row"><span class="ar-num">105</span><span class="ar-title">Distribuția normală (Gauss)</span><span class="ar-author">Carl Friedrich Gauss, 1809</span><div class="ar-meta"><span class="card-tag tag-prob">Probabilitate</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/distributia-poisson.html" class="arch-row"><span class="ar-num">108</span><span class="ar-title">Distribuția Poisson</span><span class="ar-author">Siméon Denis Poisson, 1837</span><div class="ar-meta"><span class="card-tag tag-prob">Probabilitate</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/seria-armonica.html" class="arch-row"><span class="ar-num">086</span><span class="ar-title">Divergența seriei armonice</span><span class="ar-author">Nicole Oresme, ~1350</span><div class="ar-meta"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/doua-tangente-dintr-un-punct-exterior.html" class="arch-row"><span class="ar-num">026</span><span class="ar-title">Două tangente dintr-un punct exterior</span><span class="ar-author">Euclid</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/dreapta-lui-euler.html" class="arch-row"><span class="ar-num">018</span><span class="ar-title">Dreapta lui Euler</span><span class="ar-author">Leonhard Euler, 1765</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/dreapta-lui-simson.html" class="arch-row"><span class="ar-num">135</span><span class="ar-title">Dreapta lui Simson</span><span class="ar-author">Robert Simson (atribuit) / William Wallace, 1797</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a></div>
+<div class="letter-group" id="letter-E"><div class="letter-heading">E<span>2 teoreme</span></div><a href="teoreme/ecuatia-diofantica-liniara.html" class="arch-row"><span class="ar-num">069</span><span class="ar-title">Ecuația diofantică liniară</span><span class="ar-author">Diofant din Alexandria, ~250 d.Hr.</span><div class="ar-meta"><span class="card-tag tag-arit">Aritmetică</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/entropia-shannon.html" class="arch-row"><span class="ar-num">109</span><span class="ar-title">Entropia Shannon</span><span class="ar-author">Claude Shannon, 1948</span><div class="ar-meta"><span class="card-tag tag-prob">Probabilitate</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a></div>
+<div class="letter-group" id="letter-F"><div class="letter-heading">F<span>10 teoreme</span></div><a href="teoreme/formula-inversiunii-mobius.html" class="arch-row"><span class="ar-num">146</span><span class="ar-title">Formula de inversiune Möbius</span><span class="ar-author">August Möbius, 1832</span><div class="ar-meta"><span class="card-tag tag-arit">Aritmetică</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/formula-lui-brahmagupta.html" class="arch-row"><span class="ar-num">138</span><span class="ar-title">Formula lui Brahmagupta</span><span class="ar-author">Brahmagupta, ~628 d.Hr.</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/formula-lui-cayley-arbori.html" class="arch-row"><span class="ar-num">122</span><span class="ar-title">Formula lui Cayley (arbori marcați)</span><span class="ar-author">Arthur Cayley, 1889</span><div class="ar-meta"><span class="card-tag tag-comb">Combinatorică</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/formula-de-moivre.html" class="arch-row"><span class="ar-num">090</span><span class="ar-title">Formula lui De Moivre</span><span class="ar-author">Abraham de Moivre, 1722</span><div class="ar-meta"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/formula-lui-heron.html" class="arch-row"><span class="ar-num">007</span><span class="ar-title">Formula lui Heron</span><span class="ar-author">Heron din Alexandria, ~60 d.Hr.</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/formula-lui-stirling.html" class="arch-row"><span class="ar-num">162</span><span class="ar-title">Formula lui Stirling</span><span class="ar-author">James Stirling, 1730</span><div class="ar-meta"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/formula-lui-taylor.html" class="arch-row"><span class="ar-num">075</span><span class="ar-title">Formula lui Taylor</span><span class="ar-author">Brook Taylor, 1715</span><div class="ar-meta"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/functia-euler-totient.html" class="arch-row"><span class="ar-num">066</span><span class="ar-title">Funcția Euler totient φ(n)</span><span class="ar-author">Leonhard Euler, 1760</span><div class="ar-meta"><span class="card-tag tag-arit">Aritmetică</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/functia-mobius.html" class="arch-row"><span class="ar-num">145</span><span class="ar-title">Funcția Möbius</span><span class="ar-author">August Ferdinand Möbius, 1832</span><div class="ar-meta"><span class="card-tag tag-arit">Aritmetică</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/suma-divizorilor-functia-sigma.html" class="arch-row"><span class="ar-num">149</span><span class="ar-title">Funcția sigma (suma divizorilor)</span><span class="ar-author">Euclid & Euler</span><div class="ar-meta"><span class="card-tag tag-arit">Aritmetică</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a></div>
+<div class="letter-group" id="letter-I"><div class="letter-heading">I<span>13 teoreme</span></div><a href="teoreme/identitatea-lui-bezout.html" class="arch-row"><span class="ar-num">057</span><span class="ar-title">Identitatea lui Bézout</span><span class="ar-author">Étienne Bézout, 1779</span><div class="ar-meta"><span class="card-tag tag-arit">Aritmetică</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/formula-lui-euler-eipi.html" class="arch-row"><span class="ar-num">085</span><span class="ar-title">Identitatea lui Euler</span><span class="ar-author">Leonhard Euler, 1748</span><div class="ar-meta"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/identitate-lagrange.html" class="arch-row"><span class="ar-num">156</span><span class="ar-title">Identitatea lui Lagrange</span><span class="ar-author">Joseph-Louis Lagrange</span><div class="ar-meta"><span class="card-tag tag-alg">Algebră</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/formula-lui-vandermonde.html" class="arch-row"><span class="ar-num">181</span><span class="ar-title">Identitatea lui Vandermonde</span><span class="ar-author">Alexandre-Théophile Vandermonde, 1772</span><div class="ar-meta"><span class="card-tag tag-comb">Combinatorică</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/inegalitatea-cauchy-schwarz-integrala.html" class="arch-row"><span class="ar-num">084</span><span class="ar-title">Inegalitatea Cauchy–Schwarz</span><span class="ar-author">Cauchy & Schwarz, 1821–1888</span><div class="ar-meta"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/inegalitatea-cauchy-schwarz-vectori.html" class="arch-row"><span class="ar-num">098</span><span class="ar-title">Inegalitatea Cauchy–Schwarz (vectori)</span><span class="ar-author">Cauchy, 1821</span><div class="ar-meta"><span class="card-tag tag-alg">Algebră</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/inegalitatea-lui-chebyshev.html" class="arch-row"><span class="ar-num">104</span><span class="ar-title">Inegalitatea lui Cebîșev</span><span class="ar-author">Pafnuty Cebîșev, 1867</span><div class="ar-meta"><span class="card-tag tag-prob">Probabilitate</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/inegalitatea-lui-jensen.html" class="arch-row"><span class="ar-num">165</span><span class="ar-title">Inegalitatea lui Jensen</span><span class="ar-author">Johan Jensen, 1906</span><div class="ar-meta"><span class="card-tag tag-prob">Probabilitate</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/inegalitatea-lui-markov.html" class="arch-row"><span class="ar-num">110</span><span class="ar-title">Inegalitatea lui Markov</span><span class="ar-author">Andrei Markov, 1884</span><div class="ar-meta"><span class="card-tag tag-prob">Probabilitate</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/inegalitatea-mediilor-am-gm.html" class="arch-row"><span class="ar-num">152</span><span class="ar-title">Inegalitatea mediilor (AM–GM)</span><span class="ar-author">Augustin-Louis Cauchy, 1821</span><div class="ar-meta"><span class="card-tag tag-alg">Algebră</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/inegalitatea-triunghiului.html" class="arch-row"><span class="ar-num">039</span><span class="ar-title">Inegalitatea triunghiului</span><span class="ar-author">Euclid</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/infinitatea-numerelor-prime.html" class="arch-row"><span class="ar-num">051</span><span class="ar-title">Infinitatea numerelor prime</span><span class="ar-author">Euclid, ~300 î.Hr.</span><div class="ar-meta"><span class="card-tag tag-arit">Aritmetică</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/integrarea-prin-parti.html" class="arch-row"><span class="ar-num">078</span><span class="ar-title">Integrarea prin părți</span><span class="ar-author">Brook Taylor, 1715</span><div class="ar-meta"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a></div>
+<div class="letter-group" id="letter-L"><div class="letter-heading">L<span>12 teoreme</span></div><a href="teoreme/legea-cosinusurilor.html" class="arch-row"><span class="ar-num">005</span><span class="ar-title">Legea cosinusurilor</span><span class="ar-author">François Viète, sec. XVI</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/legea-numerelor-mari.html" class="arch-row"><span class="ar-num">103</span><span class="ar-title">Legea numerelor mari</span><span class="ar-author">Jacob Bernoulli, 1713</span><div class="ar-meta"><span class="card-tag tag-prob">Probabilitate</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/legea-reciprocitatii-patratice.html" class="arch-row"><span class="ar-num">143</span><span class="ar-title">Legea reciprocității pătratice</span><span class="ar-author">C.F. Gauss, 1796</span><div class="ar-meta"><span class="card-tag tag-arit">Aritmetică</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/legea-sinusurilor.html" class="arch-row"><span class="ar-num">006</span><span class="ar-title">Legea sinusurilor</span><span class="ar-author">Ptolemeu, ~150 d.Hr.</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-borel-cantelli.html" class="arch-row"><span class="ar-num">167</span><span class="ar-title">Lema Borel–Cantelli</span><span class="ar-author">Émile Borel, 1909 / Francesco Cantelli, 1917</span><div class="ar-meta"><span class="card-tag tag-prob">Probabilitate</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/lema-lui-euclid.html" class="arch-row"><span class="ar-num">058</span><span class="ar-title">Lema lui Euclid</span><span class="ar-author">Euclid, ~300 î.Hr.</span><div class="ar-meta"><span class="card-tag tag-arit">Aritmetică</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-urysohn.html" class="arch-row"><span class="ar-num">169</span><span class="ar-title">Lema lui Urysohn</span><span class="ar-author">Pavel Urysohn, 1925</span><div class="ar-meta"><span class="card-tag tag-topo">Topologie</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/lema-lui-zorn.html" class="arch-row"><span class="ar-num">117</span><span class="ar-title">Lema lui Zorn</span><span class="ar-author">Max Zorn, 1935</span><div class="ar-meta"><span class="card-tag tag-topo">Topologie</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/limita-lui-e.html" class="arch-row"><span class="ar-num">083</span><span class="ar-title">Limita lui e</span><span class="ar-author">Jacob Bernoulli, 1683</span><div class="ar-meta"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/linia-mijlocie-in-trapez.html" class="arch-row"><span class="ar-num">038</span><span class="ar-title">Linia mijlocie în trapez</span><span class="ar-author">Euclid</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/linia-mijlocie-in-triunghi.html" class="arch-row"><span class="ar-num">037</span><span class="ar-title">Linia mijlocie în triunghi</span><span class="ar-author">Euclid</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/lungimea-arcului-de-cerc.html" class="arch-row"><span class="ar-num">023</span><span class="ar-title">Lungimea arcului de cerc</span><span class="ar-author">Arhimede, ~250 î.Hr.</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a></div>
+<div class="letter-group" id="letter-N"><div class="letter-heading">N<span>7 teoreme</span></div><a href="teoreme/numerele-bell.html" class="arch-row"><span class="ar-num">179</span><span class="ar-title">Numerele Bell</span><span class="ar-author">Eric Temple Bell, 1934</span><div class="ar-meta"><span class="card-tag tag-comb">Combinatorică</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/numere-carmichael.html" class="arch-row"><span class="ar-num">147</span><span class="ar-title">Numerele Carmichael</span><span class="ar-author">Robert Carmichael, 1910</span><div class="ar-meta"><span class="card-tag tag-arit">Aritmetică</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/numerele-catalan.html" class="arch-row"><span class="ar-num">176</span><span class="ar-title">Numerele Catalan</span><span class="ar-author">Eugène Catalan, 1838 (cunoscute anterior de Euler)</span><div class="ar-meta"><span class="card-tag tag-comb">Combinatorică</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/numerele-fibonacci.html" class="arch-row"><span class="ar-num">063</span><span class="ar-title">Numerele Fibonacci</span><span class="ar-author">Leonardo Fibonacci, 1202</span><div class="ar-meta"><span class="card-tag tag-arit">Aritmetică</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/numere-mersenne.html" class="arch-row"><span class="ar-num">070</span><span class="ar-title">Numerele Mersenne</span><span class="ar-author">Marin Mersenne, 1644</span><div class="ar-meta"><span class="card-tag tag-arit">Aritmetică</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/numere-perfecte.html" class="arch-row"><span class="ar-num">067</span><span class="ar-title">Numerele perfecte</span><span class="ar-author">Euclid & Euler</span><div class="ar-meta"><span class="card-tag tag-arit">Aritmetică</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/numerele-stirling.html" class="arch-row"><span class="ar-num">177</span><span class="ar-title">Numerele Stirling</span><span class="ar-author">James Stirling, 1730</span><div class="ar-meta"><span class="card-tag tag-comb">Combinatorică</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a></div>
+<div class="letter-group" id="letter-P"><div class="letter-heading">P<span>10 teoreme</span></div><a href="teoreme/paradoxul-lui-russell.html" class="arch-row"><span class="ar-num">187</span><span class="ar-title">Paradoxul lui Russell</span><span class="ar-author">Bertrand Russell, 1901</span><div class="ar-meta"><span class="card-tag tag-log">Logică</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/postulatul-lui-bertrand.html" class="arch-row"><span class="ar-num">064</span><span class="ar-title">Postulatul lui Bertrand</span><span class="ar-author">Joseph Bertrand, 1845</span><div class="ar-meta"><span class="card-tag tag-arit">Aritmetică</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-izomorfismului-grupuri.html" class="arch-row"><span class="ar-num">151</span><span class="ar-title">Prima teoremă de izomorfism</span><span class="ar-author">formalizată de Emmy Noether, 1927</span><div class="ar-meta"><span class="card-tag tag-alg">Algebră</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/principiul-cutiei.html" class="arch-row"><span class="ar-num">119</span><span class="ar-title">Principiul cutiei (Pigeonhole)</span><span class="ar-author">Peter Gustav Lejeune Dirichlet, 1834</span><div class="ar-meta"><span class="card-tag tag-comb">Combinatorică</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/principiul-excluderii-includerii.html" class="arch-row"><span class="ar-num">121</span><span class="ar-title">Principiul excluderii–includerii</span><span class="ar-author">Euler & Sylvester, sec. XVIII–XIX</span><div class="ar-meta"><span class="card-tag tag-comb">Combinatorică</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/principiul-inductiei-matematice.html" class="arch-row"><span class="ar-num">184</span><span class="ar-title">Principiul inducției matematice</span><span class="ar-author">Blaise Pascal, 1665 (formalizare modernă: Giuseppe Peano)</span><div class="ar-meta"><span class="card-tag tag-log">Logică</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/probabilitatea-conditionata.html" class="arch-row"><span class="ar-num">106</span><span class="ar-title">Probabilitatea condiționată</span><span class="ar-author">Laplace, 1812</span><div class="ar-meta"><span class="card-tag tag-prob">Probabilitate</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/seria-lui-euler-pi-la-doi.html" class="arch-row"><span class="ar-num">087</span><span class="ar-title">Problema Basel - suma lui Euler</span><span class="ar-author">Leonhard Euler, 1734</span><div class="ar-meta"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/problema-halting.html" class="arch-row"><span class="ar-num">129</span><span class="ar-title">Problema opririi (Halting Problem)</span><span class="ar-author">Alan Turing, 1936</span><div class="ar-meta"><span class="card-tag tag-log">Logică</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/puterea-unui-punct-fata-de-cerc.html" class="arch-row"><span class="ar-num">025</span><span class="ar-title">Puterea unui punct față de un cerc</span><span class="ar-author">Euclid</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a></div>
+<div class="letter-group" id="letter-R"><div class="letter-heading">R<span>6 teoreme</span></div><a href="teoreme/recurente-liniare.html" class="arch-row"><span class="ar-num">125</span><span class="ar-title">Recurențe liniare cu coeficienți constanți</span><span class="ar-author">De Moivre, Euler, sec. XVIII</span><div class="ar-meta"><span class="card-tag tag-comb">Combinatorică</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/regula-lantului-derivate.html" class="arch-row"><span class="ar-num">077</span><span class="ar-title">Regula lanțului</span><span class="ar-author">Leibniz, ~1675</span><div class="ar-meta"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/regula-cramer.html" class="arch-row"><span class="ar-num">095</span><span class="ar-title">Regula lui Cramer</span><span class="ar-author">Gabriel Cramer, 1750</span><div class="ar-meta"><span class="card-tag tag-alg">Algebră</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/relatia-lui-euler-in-triunghi.html" class="arch-row"><span class="ar-num">050</span><span class="ar-title">Relația lui Euler în triunghi</span><span class="ar-author">Leonhard Euler, 1765</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/relatia-unghi-inscris-central.html" class="arch-row"><span class="ar-num">022</span><span class="ar-title">Relația unghi înscris - unghi central</span><span class="ar-author">Euclid</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/relatiile-lui-viete.html" class="arch-row"><span class="ar-num">093</span><span class="ar-title">Relațiile lui Viète</span><span class="ar-author">François Viète, 1591</span><div class="ar-meta"><span class="card-tag tag-alg">Algebră</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a></div>
+<div class="letter-group" id="letter-S"><div class="letter-heading">S<span>6 teoreme</span></div><a href="teoreme/seria-geometrica.html" class="arch-row"><span class="ar-num">079</span><span class="ar-title">Seria geometrică</span><span class="ar-author">Euclid & Arhimede</span><div class="ar-meta"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/suma-cuburilor-primelor-n-numere.html" class="arch-row"><span class="ar-num">062</span><span class="ar-title">Suma cuburilor primelor n numere</span><span class="ar-author">Nicomachus, ~100 d.Hr.</span><div class="ar-meta"><span class="card-tag tag-arit">Aritmetică</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/suma-patratelor-primelor-n-numere.html" class="arch-row"><span class="ar-num">061</span><span class="ar-title">Suma pătratelor primelor n numere</span><span class="ar-author">Arhimede</span><div class="ar-meta"><span class="card-tag tag-arit">Aritmetică</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/suma-primelor-n-numere-naturale.html" class="arch-row"><span class="ar-num">060</span><span class="ar-title">Suma primelor n numere naturale</span><span class="ar-author">Carl Friedrich Gauss, ~1787</span><div class="ar-meta"><span class="card-tag tag-arit">Aritmetică</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/suma-unghiurilor-poligon-convex.html" class="arch-row"><span class="ar-num">028</span><span class="ar-title">Suma unghiurilor unui poligon convex</span><span class="ar-author">Euclid</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/suma-unghiurilor-unui-triunghi.html" class="arch-row"><span class="ar-num">001</span><span class="ar-title">Suma unghiurilor unui triunghi</span><span class="ar-author">Euclid, ~300 î.Hr.</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a></div>
+<div class="letter-group" id="letter-T"><div class="letter-heading">T<span>73 teoreme</span></div><a href="teoreme/teorema-abel-ruffini.html" class="arch-row"><span class="ar-num">097</span><span class="ar-title">Teorema Abel–Ruffini</span><span class="ar-author">Abel & Ruffini, 1799–1824</span><div class="ar-meta"><span class="card-tag tag-alg">Algebră</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-arzela-ascoli.html" class="arch-row"><span class="ar-num">171</span><span class="ar-title">Teorema Arzelà–Ascoli</span><span class="ar-author">Cesare Arzelà / Giulio Ascoli, sec. XIX</span><div class="ar-meta"><span class="card-tag tag-topo">Topologie</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-bisectoarei.html" class="arch-row"><span class="ar-num">004</span><span class="ar-title">Teorema bisectoarei</span><span class="ar-author">Euclid</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-borsuk-ulam.html" class="arch-row"><span class="ar-num">114</span><span class="ar-title">Teorema Borsuk–Ulam</span><span class="ar-author">Borsuk & Ulam, 1933</span><div class="ar-meta"><span class="card-tag tag-topo">Topologie</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-baire.html" class="arch-row"><span class="ar-num">170</span><span class="ar-title">Teorema categoriei Baire</span><span class="ar-author">René-Louis Baire, 1899</span><div class="ar-meta"><span class="card-tag tag-topo">Topologie</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-cayley-hamilton.html" class="arch-row"><span class="ar-num">096</span><span class="ar-title">Teorema Cayley–Hamilton</span><span class="ar-author">Cayley & Hamilton, 1858</span><div class="ar-meta"><span class="card-tag tag-alg">Algebră</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-centrala-limita.html" class="arch-row"><span class="ar-num">102</span><span class="ar-title">Teorema centrală limită</span><span class="ar-author">Moivre, Laplace, Lyapunov, 1733–1901</span><div class="ar-meta"><span class="card-tag tag-prob">Probabilitate</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-chineza-a-resturilor.html" class="arch-row"><span class="ar-num">059</span><span class="ar-title">Teorema chineză a resturilor</span><span class="ar-author">Sun Tzu, sec. III d.Hr.</span><div class="ar-meta"><span class="card-tag tag-arit">Aritmetică</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-compactatii.html" class="arch-row"><span class="ar-num">131</span><span class="ar-title">Teorema compacității</span><span class="ar-author">Gödel & Malcev, 1930</span><div class="ar-meta"><span class="card-tag tag-log">Logică</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-cook-levin.html" class="arch-row"><span class="ar-num">132</span><span class="ar-title">Teorema Cook–Levin</span><span class="ar-author">Cook & Levin, 1971</span><div class="ar-meta"><span class="card-tag tag-log">Logică</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/tabele-de-adevar-completitudine.html" class="arch-row"><span class="ar-num">185</span><span class="ar-title">Teorema de completitudine (calcul propozițional)</span><span class="ar-author">Emil Post, 1921</span><div class="ar-meta"><span class="card-tag tag-log">Logică</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-tietze.html" class="arch-row"><span class="ar-num">175</span><span class="ar-title">Teorema de extensie Tietze</span><span class="ar-author">Heinrich Tietze, 1915</span><div class="ar-meta"><span class="card-tag tag-topo">Topologie</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-de-moivre-laplace.html" class="arch-row"><span class="ar-num">164</span><span class="ar-title">Teorema De Moivre–Laplace</span><span class="ar-author">Abraham de Moivre, 1733 / Pierre-Simon Laplace</span><div class="ar-meta"><span class="card-tag tag-prob">Probabilitate</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-tarski-nedefinibilitate.html" class="arch-row"><span class="ar-num">188</span><span class="ar-title">Teorema de nedefinibilitate a lui Tarski</span><span class="ar-author">Alfred Tarski, 1936</span><div class="ar-meta"><span class="card-tag tag-log">Logică</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/formula-lui-gerschgorin.html" class="arch-row"><span class="ar-num">155</span><span class="ar-title">Teorema discurilor Gerschgorin</span><span class="ar-author">Semyon Gerschgorin, 1931</span><div class="ar-meta"><span class="card-tag tag-alg">Algebră</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-erdos-szekeres.html" class="arch-row"><span class="ar-num">178</span><span class="ar-title">Teorema Erdős–Szekeres</span><span class="ar-author">Paul Erdős & George Szekeres, 1935</span><div class="ar-meta"><span class="card-tag tag-comb">Combinatorică</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-fundamentala-a-algebrei.html" class="arch-row"><span class="ar-num">092</span><span class="ar-title">Teorema fundamentală a algebrei</span><span class="ar-author">Carl Friedrich Gauss, 1799</span><div class="ar-meta"><span class="card-tag tag-alg">Algebră</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-fundamentala-a-aritmeticii.html" class="arch-row"><span class="ar-num">052</span><span class="ar-title">Teorema fundamentală a aritmeticii</span><span class="ar-author">C.F. Gauss, 1801</span><div class="ar-meta"><span class="card-tag tag-arit">Aritmetică</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-fundamentala-a-calculului.html" class="arch-row"><span class="ar-num">076</span><span class="ar-title">Teorema fundamentală a calculului</span><span class="ar-author">Newton & Leibniz, 1668–1686</span><div class="ar-meta"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-heine-borel.html" class="arch-row"><span class="ar-num">111</span><span class="ar-title">Teorema Heine–Borel</span><span class="ar-author">Heine & Borel, 1872–1895</span><div class="ar-meta"><span class="card-tag tag-topo">Topologie</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-goedel-incompletitudine-i.html" class="arch-row"><span class="ar-num">126</span><span class="ar-title">Teorema incompletitudinii (Gödel I)</span><span class="ar-author">Kurt Gödel, 1931</span><div class="ar-meta"><span class="card-tag tag-log">Logică</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-goedel-incompletitudine-ii.html" class="arch-row"><span class="ar-num">127</span><span class="ar-title">Teorema incompletitudinii (Gödel II)</span><span class="ar-author">Kurt Gödel, 1931</span><div class="ar-meta"><span class="card-tag tag-log">Logică</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-lowenheim-skolem.html" class="arch-row"><span class="ar-num">183</span><span class="ar-title">Teorema Löwenheim–Skolem</span><span class="ar-author">Leopold Löwenheim, 1915 / Thoralf Skolem, 1920</span><div class="ar-meta"><span class="card-tag tag-log">Logică</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-abel-serii.html" class="arch-row"><span class="ar-num">159</span><span class="ar-title">Teorema lui Abel</span><span class="ar-author">Niels Henrik Abel, 1826</span><div class="ar-meta"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-bayes.html" class="arch-row"><span class="ar-num">101</span><span class="ar-title">Teorema lui Bayes</span><span class="ar-author">Thomas Bayes, 1763</span><div class="ar-meta"><span class="card-tag tag-prob">Probabilitate</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-cantor-cardinale.html" class="arch-row"><span class="ar-num">128</span><span class="ar-title">Teorema lui Cantor</span><span class="ar-author">Georg Cantor, 1891</span><div class="ar-meta"><span class="card-tag tag-log">Logică</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-ceva.html" class="arch-row"><span class="ar-num">017</span><span class="ar-title">Teorema lui Ceva</span><span class="ar-author">Giovanni Ceva, 1678</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-darboux.html" class="arch-row"><span class="ar-num">161</span><span class="ar-title">Teorema lui Darboux</span><span class="ar-author">Jean Gaston Darboux, 1875</span><div class="ar-meta"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-desargues.html" class="arch-row"><span class="ar-num">136</span><span class="ar-title">Teorema lui Desargues</span><span class="ar-author">Girard Desargues, 1648</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-dini.html" class="arch-row"><span class="ar-num">163</span><span class="ar-title">Teorema lui Dini</span><span class="ar-author">Ulisse Dini, 1878</span><div class="ar-meta"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-euler-phi.html" class="arch-row"><span class="ar-num">054</span><span class="ar-title">Teorema lui Euler (φ)</span><span class="ar-author">Leonhard Euler, 1763</span><div class="ar-meta"><span class="card-tag tag-arit">Aritmetică</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-euler-poliedre.html" class="arch-row"><span class="ar-num">036</span><span class="ar-title">Teorema lui Euler pentru poliedre</span><span class="ar-author">Leonhard Euler, 1752</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-fubini.html" class="arch-row"><span class="ar-num">088</span><span class="ar-title">Teorema lui Fubini</span><span class="ar-author">Guido Fubini, 1907</span><div class="ar-meta"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-hall-cuplaje.html" class="arch-row"><span class="ar-num">124</span><span class="ar-title">Teorema lui Hall (cuplaje)</span><span class="ar-author">Philip Hall, 1935</span><div class="ar-meta"><span class="card-tag tag-comb">Combinatorică</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-jordan.html" class="arch-row"><span class="ar-num">113</span><span class="ar-title">Teorema lui Jordan</span><span class="ar-author">Camille Jordan, 1887</span><div class="ar-meta"><span class="card-tag tag-topo">Topologie</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-konig-cuplaje.html" class="arch-row"><span class="ar-num">180</span><span class="ar-title">Teorema lui Kőnig</span><span class="ar-author">Dénes Kőnig, 1931</span><div class="ar-meta"><span class="card-tag tag-comb">Combinatorică</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-lhopital.html" class="arch-row"><span class="ar-num">074</span><span class="ar-title">Teorema lui L'Hôpital</span><span class="ar-author">Guillaume de l'Hôpital, 1696</span><div class="ar-meta"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-lagrange-grupuri.html" class="arch-row"><span class="ar-num">091</span><span class="ar-title">Teorema lui Lagrange (grupuri)</span><span class="ar-author">Joseph-Louis Lagrange, 1771</span><div class="ar-meta"><span class="card-tag tag-alg">Algebră</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-lame.html" class="arch-row"><span class="ar-num">148</span><span class="ar-title">Teorema lui Lamé</span><span class="ar-author">Gabriel Lamé, 1844</span><div class="ar-meta"><span class="card-tag tag-arit">Aritmetică</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-menelaus.html" class="arch-row"><span class="ar-num">016</span><span class="ar-title">Teorema lui Menelaus</span><span class="ar-author">Menelaus din Alexandria, ~100 d.Hr.</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-miquel.html" class="arch-row"><span class="ar-num">142</span><span class="ar-title">Teorema lui Miquel</span><span class="ar-author">Auguste Miquel, 1838</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-morley.html" class="arch-row"><span class="ar-num">134</span><span class="ar-title">Teorema lui Morley</span><span class="ar-author">Frank Morley, 1899</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-napoleon.html" class="arch-row"><span class="ar-num">133</span><span class="ar-title">Teorema lui Napoleon</span><span class="ar-author">Napoleon Bonaparte (atribuit), ~1825</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-pappus.html" class="arch-row"><span class="ar-num">043</span><span class="ar-title">Teorema lui Pappus</span><span class="ar-author">Pappus din Alexandria, ~320 d.Hr.</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-pascal-hexagon.html" class="arch-row"><span class="ar-num">137</span><span class="ar-title">Teorema lui Pascal (hexagonul mistic)</span><span class="ar-author">Blaise Pascal, 1640</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-pick.html" class="arch-row"><span class="ar-num">044</span><span class="ar-title">Teorema lui Pick</span><span class="ar-author">Georg Pick, 1899</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-pitagora.html" class="arch-row"><span class="ar-num">002</span><span class="ar-title">Teorema lui Pitagora</span><span class="ar-author">Pitagora, ~570 î.Hr.</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-ptolemeu.html" class="arch-row"><span class="ar-num">015</span><span class="ar-title">Teorema lui Ptolemeu</span><span class="ar-author">Claudius Ptolemeu, ~150 d.Hr.</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-ramsey.html" class="arch-row"><span class="ar-num">123</span><span class="ar-title">Teorema lui Ramsey</span><span class="ar-author">Frank Ramsey, 1930</span><div class="ar-meta"><span class="card-tag tag-comb">Combinatorică</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-rolle.html" class="arch-row"><span class="ar-num">072</span><span class="ar-title">Teorema lui Rolle</span><span class="ar-author">Michel Rolle, 1691</span><div class="ar-meta"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-stewart.html" class="arch-row"><span class="ar-num">047</span><span class="ar-title">Teorema lui Stewart</span><span class="ar-author">Matthew Stewart, 1746</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-thales.html" class="arch-row"><span class="ar-num">003</span><span class="ar-title">Teorema lui Thales</span><span class="ar-author">Thales din Milet, ~600 î.Hr.</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-tychonoff.html" class="arch-row"><span class="ar-num">118</span><span class="ar-title">Teorema lui Tychonoff</span><span class="ar-author">Andrey Tychonoff, 1930</span><div class="ar-meta"><span class="card-tag tag-topo">Topologie</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-van-aubel.html" class="arch-row"><span class="ar-num">141</span><span class="ar-title">Teorema lui Van Aubel</span><span class="ar-author">H.H. van Aubel, 1878</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-varignon.html" class="arch-row"><span class="ar-num">046</span><span class="ar-title">Teorema lui Varignon</span><span class="ar-author">Pierre Varignon, 1731</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-weierstrass-functii-continue.html" class="arch-row"><span class="ar-num">082</span><span class="ar-title">Teorema lui Weierstrass</span><span class="ar-author">Karl Weierstrass, 1861</span><div class="ar-meta"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-wilson.html" class="arch-row"><span class="ar-num">055</span><span class="ar-title">Teorema lui Wilson</span><span class="ar-author">John Wilson, 1770</span><div class="ar-meta"><span class="card-tag tag-arit">Aritmetică</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-medianei-in-triunghi.html" class="arch-row"><span class="ar-num">008</span><span class="ar-title">Teorema medianei</span><span class="ar-author">Apollonius, ~200 î.Hr.</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-mica-a-lui-fermat.html" class="arch-row"><span class="ar-num">053</span><span class="ar-title">Teorema mică a lui Fermat</span><span class="ar-author">Pierre de Fermat, 1640</span><div class="ar-meta"><span class="card-tag tag-arit">Aritmetică</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-numerelor-prime.html" class="arch-row"><span class="ar-num">068</span><span class="ar-title">Teorema numerelor prime</span><span class="ar-author">Hadamard & de la Vallée-Poussin, 1896</span><div class="ar-meta"><span class="card-tag tag-arit">Aritmetică</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-punctului-fix-banach.html" class="arch-row"><span class="ar-num">089</span><span class="ar-title">Teorema punctului fix Banach</span><span class="ar-author">Stefan Banach, 1922</span><div class="ar-meta"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-punctului-fix-brouwer.html" class="arch-row"><span class="ar-num">112</span><span class="ar-title">Teorema punctului fix Brouwer</span><span class="ar-author">Luitzen Brouwer, 1910</span><div class="ar-meta"><span class="card-tag tag-topo">Topologie</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-rang-nulitate.html" class="arch-row"><span class="ar-num">099</span><span class="ar-title">Teorema rang–nulitate</span><span class="ar-author">Sylvester, 1850</span><div class="ar-meta"><span class="card-tag tag-alg">Algebră</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-rouche-capelli.html" class="arch-row"><span class="ar-num">094</span><span class="ar-title">Teorema Rouché–Capelli</span><span class="ar-author">Rouché & Capelli, sec. XIX</span><div class="ar-meta"><span class="card-tag tag-alg">Algebră</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-stolz-cesaro.html" class="arch-row"><span class="ar-num">158</span><span class="ar-title">Teorema Stolz–Cesàro</span><span class="ar-author">Otto Stolz, 1885 / Ernesto Cesàro</span><div class="ar-meta"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-stone-weierstrass.html" class="arch-row"><span class="ar-num">173</span><span class="ar-title">Teorema Stone–Weierstrass</span><span class="ar-author">Marshall Stone, 1937</span><div class="ar-meta"><span class="card-tag tag-topo">Topologie</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-tangenta-secanta.html" class="arch-row"><span class="ar-num">049</span><span class="ar-title">Teorema tangentă–secantă</span><span class="ar-author">Euclid</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-unghiului-exterior.html" class="arch-row"><span class="ar-num">139</span><span class="ar-title">Teorema unghiului exterior</span><span class="ar-author">Euclid</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-valorii-intermediare.html" class="arch-row"><span class="ar-num">071</span><span class="ar-title">Teorema valorii intermediare</span><span class="ar-author">Bernard Bolzano, 1817</span><div class="ar-meta"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-valorii-medii-lagrange.html" class="arch-row"><span class="ar-num">073</span><span class="ar-title">Teorema valorii medii (Lagrange)</span><span class="ar-author">Joseph-Louis Lagrange, 1797</span><div class="ar-meta"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-sylow.html" class="arch-row"><span class="ar-num">150</span><span class="ar-title">Teoremele lui Sylow</span><span class="ar-author">Ludwig Sylow, 1872</span><div class="ar-meta"><span class="card-tag tag-alg">Algebră</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-lucas-lehmer.html" class="arch-row"><span class="ar-num">144</span><span class="ar-title">Testul Lucas–Lehmer</span><span class="ar-author">Édouard Lucas, 1878 / Derrick H. Lehmer, 1930</span><div class="ar-meta"><span class="card-tag tag-arit">Aritmetică</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/teorema-lui-church-turing.html" class="arch-row"><span class="ar-num">186</span><span class="ar-title">Teza Church–Turing</span><span class="ar-author">Alonzo Church & Alan Turing, 1936</span><div class="ar-meta"><span class="card-tag tag-log">Logică</span><span class="badge-level bl-adv">Avansat</span></div><span class="ar-arrow">→</span></a></div>
+<div class="letter-group" id="letter-U"><div class="letter-heading">U<span>1 teoremă</span></div><a href="teoreme/unghiul-inscris-in-semicerc.html" class="arch-row"><span class="ar-num">021</span><span class="ar-title">Unghiul înscris în semicerc</span><span class="ar-author">Thales din Milet</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a></div>
+<div class="letter-group" id="letter-V"><div class="letter-heading">V<span>5 teoreme</span></div><a href="teoreme/polinomul-caracteristic-valori-proprii.html" class="arch-row"><span class="ar-num">153</span><span class="ar-title">Valori proprii și polinom caracteristic</span><span class="ar-author">Augustin-Louis Cauchy, sec. XIX</span><div class="ar-meta"><span class="card-tag tag-alg">Algebră</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/volumul-cilindrului.html" class="arch-row"><span class="ar-num">034</span><span class="ar-title">Volumul cilindrului</span><span class="ar-author">Arhimede</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/volumul-conului.html" class="arch-row"><span class="ar-num">033</span><span class="ar-title">Volumul conului</span><span class="ar-author">Euclid</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/volumul-piramidei.html" class="arch-row"><span class="ar-num">035</span><span class="ar-title">Volumul piramidei</span><span class="ar-author">Democrit, ~400 î.Hr.</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><span class="ar-arrow">→</span></a>
+<a href="teoreme/volumul-sferei.html" class="arch-row"><span class="ar-num">032</span><span class="ar-title">Volumul sferei</span><span class="ar-author">Arhimede, ~250 î.Hr.</span><div class="ar-meta"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-med">Intermediar</span></div><span class="ar-arrow">→</span></a></div>
+<!--BUILD:ARCHLIST:END-->
+</div>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="confidentialitate.html">Confidențialitate</a> · <a href="termeni.html">Termeni</a></p>
+</footer>
+
+<script src="date.js"></script>
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+var activeCat = 'toate';
+var activeLv  = 'toate';
+
+// Build the full alphabet and check which letters have theorems
+var ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+var letterMap = {};  // letter → [teoreme]
+
+TEOREME.forEach(function(t){
+  var l = t.litera;
+  if(!letterMap[l]) letterMap[l] = [];
+  letterMap[l].push(t);
+});
+
+// Sort teoreme within each letter group
+Object.keys(letterMap).forEach(function(l){
+  letterMap[l].sort(function(a,b){ return a.titlu.localeCompare(b.titlu,'ro') });
+});
+
+// Render A-Z bar - reflects the currently visible (filtered) letters
+function renderAZBar(visibleLetters){
+  var source = visibleLetters || letterMap;
+  var bar = document.getElementById('azBar');
+  bar.innerHTML = '';
+  ALPHABET.forEach(function(l){
+    var btn = document.createElement('button');
+    btn.className = 'az-btn' + (source[l] ? ' has-items' : '');
+    btn.textContent = l;
+    if(source[l]){
+      btn.onclick = function(){
+        // highlight + scroll
+        document.querySelectorAll('.az-btn').forEach(function(b){ b.classList.remove('highlighted') });
+        btn.classList.add('highlighted');
+        var target = document.getElementById('letter-' + l);
+        if(target) target.scrollIntoView({ behavior:'smooth', block:'start' });
+        setTimeout(function(){ btn.classList.remove('highlighted') }, 1200);
+      };
+    }
+    bar.appendChild(btn);
+  });
+}
+
+// Render archive list
+function renderList(){
+  var q   = (document.getElementById('archSearch').value || '').toLowerCase().trim();
+  var list= document.getElementById('archList');
+  list.innerHTML = '';
+  var totalVisible = 0;
+
+  var lettersWithVisible = {};
+
+  TEOREME.forEach(function(t){
+    var matchCat = (activeCat === 'toate' || t.domeniu === activeCat);
+    var matchLv  = (activeLv  === 'toate' || t.nivel  === activeLv);
+    var matchQ   = !q || (t.titlu + ' ' + t.descriere + ' ' + t.autor).toLowerCase().indexOf(q) !== -1;
+    if(matchCat && matchLv && matchQ){
+      totalVisible++;
+      if(!lettersWithVisible[t.litera]) lettersWithVisible[t.litera] = [];
+      lettersWithVisible[t.litera].push(t);
+    }
+  });
+
+  // Sort letters
+  Object.keys(lettersWithVisible).sort().forEach(function(l){
+    var group = document.createElement('div');
+    group.className = 'letter-group';
+    group.id = 'letter-' + l;
+
+    var cnt = lettersWithVisible[l].length;
+    group.innerHTML = '<div class="letter-heading">' + l +
+      '<span>' + cnt + ' teoremă' + (cnt === 1 ? '' : 'e') + '</span></div>';
+
+    lettersWithVisible[l].forEach(function(t){
+      var a = document.createElement('a');
+      a.href = t.url;
+      a.className = 'arch-row';
+      a.innerHTML =
+        '<span class="ar-num">' + t.numar + '</span>' +
+        '<span class="ar-title">' + t.titlu + '</span>' +
+        '<span class="ar-author">' + t.autor + '</span>' +
+        '<div class="ar-meta">' +
+          '<span class="card-tag ' + t.domeniu_tag + '">' + t.domeniu_label + '</span>' +
+          '<span class="badge-level ' + t.nivel_cls + '">' + t.nivel_label + '</span>' +
+        '</div>' +
+        '<span class="ar-arrow">→</span>';
+      group.appendChild(a);
+    });
+
+    list.appendChild(group);
+  });
+
+  document.getElementById('noRes').style.display = totalVisible === 0 ? 'block' : 'none';
+  document.getElementById('archCount').textContent =
+    'Sortate alfabetic · ' + totalVisible + ' teorem' + (totalVisible === 1 ? 'ă' : 'e') + ' disponibil' + (totalVisible === 1 ? 'ă' : 'e');
+  renderAZBar(lettersWithVisible);
+}
+
+function doFilter(val){
+  var v = val !== undefined ? val : '';
+  document.getElementById('archSearch').value = v;
+  document.getElementById('navSrch').value    = v;
+  renderList();
+}
+
+function setCat(cat, btn){
+  document.querySelectorAll('[data-cat]').forEach(function(b){ b.classList.remove('active') });
+  btn.classList.add('active');
+  activeCat = cat;
+  renderList();
+}
+
+function setLv(lv, btn){
+  var wasActive = btn.classList.contains('active');
+  document.querySelectorAll('[data-lv]').forEach(function(b){ b.classList.remove('active') });
+  if(!wasActive){ btn.classList.add('active'); activeLv = lv; }
+  else { activeLv = 'toate'; }
+  renderList();
+}
+
+// Init
+renderList();
+</script>
+</body>
+</html>

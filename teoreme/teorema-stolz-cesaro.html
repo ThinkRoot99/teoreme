@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Teorema Stolz–Cesàro - ∑ Teoreme</title>
+<meta name="description" content="Analogul discret al regulii lui L'Hôpital pentru șiruri: limita unui raport de șiruri se calculează din limita raportului diferențelor consecutive.">
+<meta property="og:title" content="Teorema Stolz–Cesàro - ∑ Teoreme">
+<meta property="og:description" content="Analogul discret al regulii lui L'Hôpital pentru șiruri: limita unui raport de șiruri se calculează din limita raportului diferențelor consecutive.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/teorema-stolz-cesaro.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Teorema Stolz–Cesàro","description":"Analogul discret al regulii lui L'Hôpital pentru șiruri: limita unui raport de șiruri se calculează din limita raportului diferențelor consecutive.","author":{"@type":"Person","name":"Otto Stolz, 1885 / Ernesto Cesàro"},"inLanguage":"ro","educationalLevel":"Avansat","url":"https://teoreme.ro/teoreme/teorema-stolz-cesaro.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Analiză</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Teorema Stolz–Cesàro</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-adv">Avansat</span></div><h1 itemprop="name">Teorema Stolz–Cesàro</h1><p class="author" itemprop="author">Otto Stolz, 1885 / Ernesto Cesàro · nr. 158</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Enunț (cazul ∞/∞):</strong> Fie (bₙ) strict crescător cu bₙ→∞. Dacă există lim (aₙ₊₁−aₙ)/(bₙ₊₁−bₙ)=L (finită sau infinită), atunci există și lim aₙ/bₙ=L.</div><div class="formula-block"><span class="formula-label">Formulă</span>lim aₙ/bₙ = lim (aₙ₊₁−aₙ)/(bₙ₊₁−bₙ)</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" width="300"><line x1="40" y1="170" x2="40" y2="20" stroke="#4a1a7a" stroke-width="1.5"/><line x1="30" y1="170" x2="300" y2="170" stroke="#4a1a7a" stroke-width="1.5"/><polyline points="50,160 80,145 110,122 140,92 170,55 200,10" fill="none" stroke="#4a1a7a" stroke-width="2.5"/><polyline points="50,165 80,158 110,148 140,133 170,112 200,82" fill="none" stroke="#c8922a" stroke-width="2.5"/><circle cx="140" cy="92" r="3.5" fill="#4a1a7a"/><circle cx="170" cy="55" r="3.5" fill="#4a1a7a"/><circle cx="140" cy="133" r="3.5" fill="#c8922a"/><circle cx="170" cy="112" r="3.5" fill="#c8922a"/><line x1="140" y1="92" x2="170" y2="92" stroke="#999" stroke-width="1" stroke-dasharray="2,2"/><line x1="170" y1="55" x2="170" y2="92" stroke="#999" stroke-width="1" stroke-dasharray="2,2"/><line x1="140" y1="133" x2="170" y2="133" stroke="#999" stroke-width="1" stroke-dasharray="2,2"/><line x1="170" y1="112" x2="170" y2="133" stroke="#999" stroke-width="1" stroke-dasharray="2,2"/><text x="255" y="20" font-size="11" fill="#4a1a7a" font-style="italic">aₙ</text><text x="255" y="88" font-size="11" fill="#c8922a" font-style="italic">bₙ</text><text x="155" y="85" text-anchor="middle" font-size="9" fill="#4a1a7a">Δa</text><text x="155" y="145" text-anchor="middle" font-size="9" fill="#c8922a">Δb</text><text x="150" y="188" text-anchor="middle" font-size="10" fill="#555">Δaₙ/Δbₙ → L ⟹ aₙ/bₙ → L</text></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story"><span class="hl">Dacă la fiecare pas doi copii cresc cam în același ritm - unul adaugă mereu cam cât adaugă și celălalt - atunci, per total, cei doi ajung tot cam la fel de „mari”</span>. Stolz-Cesàro spune exact asta: dacă pașii (diferențele) a două șiruri au un raport care se apropie de un număr L, atunci și șirurile în sine ajung să aibă același raport L.</div><div class="intuitive-note">Otto Stolz (1885) și, independent, Ernesto Cesàro au formulat criteriul. Este esențial la limite cu sume de tipul (1+2+...+n)/n² sau la medii Cesàro, acolo unde regula lui L'Hôpital nu se aplică direct, neexistând o funcție continuă de derivat.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">Calculează lim (1+2+...+n)/n².</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Notăm aₙ=1+2+...+n și bₙ=n²; (bₙ) e strict crescător și →∞.</p></div><div class="step"><div class="dot"></div><p>Calculăm diferențele: aₙ₊₁−aₙ=n+1, iar bₙ₊₁−bₙ=(n+1)²−n²=2n+1.</p></div><div class="step"><div class="dot"></div><p>Limita raportului diferențelor este lim (n+1)/(2n+1)=1/2, deci prin Stolz-Cesàro, lim aₙ/bₙ=1/2.</p></div><div class="result">✓ <strong>1/2</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">Pentru ce valoare a constantei c avem lim (c+2c+3c+...+nc)/n² = 6, folosind Stolz-Cesàro?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Notăm aₙ=c+2c+...+nc=c·(1+2+...+n) și bₙ=n².</p></div><div class="step"><div class="dot"></div><p>Diferențele: aₙ₊₁−aₙ=c·(n+1), iar bₙ₊₁−bₙ=2n+1; raportul lor tinde la lim c(n+1)/(2n+1)=c/2.</p></div><div class="step"><div class="dot"></div><p>Teorema garantează atunci lim aₙ/bₙ=c/2; punem condiția c/2=6, deci c=12.</p></div><div class="result">✓ c=<strong>12</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">Verifică teorema în cazul simplu aₙ=5n, bₙ=n (progresie aritmetică simplă).</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Diferențele sunt aₙ₊₁−aₙ=5(n+1)−5n=5, respectiv bₙ₊₁−bₙ=(n+1)−n=1, deci raportul lor este constant, 5/1=5.</p></div><div class="step"><div class="dot"></div><p>Prin Stolz-Cesàro, rezultă lim aₙ/bₙ=5.</p></div><div class="step"><div class="dot"></div><p>Verificăm direct: aₙ/bₙ=5n/n=5 pentru orice n - același rezultat, confirmând teorema în acest caz trivial.</p></div><div class="result">✓ <strong>5</strong>, confirmat și prin calcul direct</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Adevărat sau fals: dacă limita aₙ/bₙ există, atunci obligatoriu există și limita raportului diferențelor (aₙ₊₁−aₙ)/(bₙ₊₁−bₙ) - adică teorema Stolz-Cesàro s-ar putea „inversa”.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Fals. Contraexemplu: aₙ=(−1)ⁿ, bₙ=n (strict crescător, →∞).</p></div><div class="step"><div class="dot"></div><p>Limita aₙ/bₙ=(−1)ⁿ/n există și este 0.</p></div><div class="step"><div class="dot"></div><p>Dar raportul diferențelor este (aₙ₊₁−aₙ)/(bₙ₊₁−bₙ)=(−1)ⁿ·(−2)/1, care oscilează la nesfârșit între −2 și 2, fără limită.</p></div><div class="result">✓ <strong>Fals</strong> - limita aₙ/bₙ poate exista fără ca raportul diferențelor să aibă limită</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">Notele obținute de un elev la teste succesive se apropie tot mai mult de 8 (nota la testul n, xₙ, satisface xₙ→8). Dacă Sₙ=x₁+x₂+...+xₙ, ce spune Stolz-Cesàro despre media pe termen lung, lim Sₙ/n?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Notăm aₙ=Sₙ și bₙ=n. Diferența aₙ₊₁−aₙ=Sₙ₊₁−Sₙ=xₙ₊₁, adică exact nota la testul următor.</p></div><div class="step"><div class="dot"></div><p>Diferența bₙ₊₁−bₙ=1, deci raportul (aₙ₊₁−aₙ)/(bₙ₊₁−bₙ)=xₙ₊₁, care tinde la 8 prin ipoteză.</p></div><div class="step"><div class="dot"></div><p>Aplicând Stolz-Cesàro, rezultă lim Sₙ/n=8: media notelor pe termen lung tinde spre aceeași valoare spre care tind notele individuale.</p></div><div class="result">✓ Media pe termen lung tinde spre <strong>8</strong></div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Analiză</h3><div class="related-links"><a href="teorema-valorii-intermediare.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema valorii intermediare</a><a href="teorema-lui-rolle.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema lui Rolle</a><a href="teorema-valorii-medii-lagrange.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema valorii medii (Lagrange)</a><a href="teorema-lui-lhopital.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema lui L'Hôpital</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="criteriul-lui-cauchy-condensare.html" class="tn-link prev">Criteriul de condensare Cauchy</a><a href="teorema-lui-abel-serii.html" class="tn-link next">Teorema lui Abel</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

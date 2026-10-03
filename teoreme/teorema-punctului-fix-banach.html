@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Teorema punctului fix Banach - ∑ Teoreme</title>
+<meta name="description" content="Orice contracție pe un spațiu metric complet are exact un punct fix, obținut prin iterații succesive.">
+<meta property="og:title" content="Teorema punctului fix Banach - ∑ Teoreme">
+<meta property="og:description" content="Orice contracție pe un spațiu metric complet are exact un punct fix, obținut prin iterații succesive.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/teorema-punctului-fix-banach.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Teorema punctului fix Banach","description":"Orice contracție pe un spațiu metric complet are exact un punct fix, obținut prin iterații succesive.","author":{"@type":"Person","name":"Stefan Banach, 1922"},"inLanguage":"ro","educationalLevel":"Avansat","url":"https://teoreme.ro/teoreme/teorema-punctului-fix-banach.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Analiză</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Teorema punctului fix Banach</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-adv">Avansat</span></div><h1 itemprop="name">Teorema punctului fix Banach</h1><p class="author" itemprop="author">Stefan Banach, 1922 · nr. 089</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Enunț:</strong> Orice contracție f pe un spațiu metric complet (X,d) are un unic punct fix x*, obținut ca limita șirului xₙ₊₁=f(xₙ), pornind din orice punct x₀.</div><div class="formula-block"><span class="formula-label">Formulă</span>∃!x*: f(x*)=x*; d(f(x),f(y))≤q·d(x,y), q&lt;1</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" width="280"><line x1="40" y1="170" x2="40" y2="20" stroke="#4a1a7a" stroke-width="1.5"/><line x1="30" y1="170" x2="270" y2="170" stroke="#4a1a7a" stroke-width="1.5"/><line x1="40" y1="170" x2="200" y2="10" stroke="#999" stroke-width="1.5" stroke-dasharray="3,3"/><path d="M 40,130 L 200,55" fill="none" stroke="#4a1a7a" stroke-width="2.5"/><polyline points="55,170 55,124 124,124 124,92 155,92 155,76 170,76" fill="none" stroke="#c8922a" stroke-width="1.5"/><circle cx="140" cy="83" r="4.5" fill="#c8922a" stroke="#fff" stroke-width="1.5"/><text x="55" y="185" text-anchor="middle" font-size="11" fill="#555" font-style="italic">x₀</text><text x="140" y="100" text-anchor="middle" font-size="10" fill="#c8922a" font-weight="600">x*</text><text x="205" y="12" font-size="10" fill="#999">y=x</text><text x="205" y="52" font-size="10" fill="#4a1a7a">f(x)</text><text x="150" y="190" text-anchor="middle" font-size="10" fill="#555">iterațiile xₙ₊₁=f(xₙ) converg spre x*</text></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story"><span class="hl">Imaginează-ți un joc în care, la fiecare pas, te apropii de o comoară ascunsă la cel puțin jumătate din distanța rămasă</span>. Oriunde ai porni, după destui pași ajungi oricât de aproape vrei de comoară - și există un singur loc unde ea se poate afla, oricare ar fi drumul de pornire.</div><div class="intuitive-note">Stefan Banach a demonstrat teorema în 1922. Este baza multor algoritmi iterativi din calculatoare și a existenței soluțiilor pentru ecuații diferențiale.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">f(x)=cosx. Aproximează punctul fix prin iterații repetate, pornind de la x₀=0.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Calculăm primii termeni ai șirului xₙ₊₁=cos(xₙ): x₀=0, x₁=cos(0)=1, x₂=cos(1)≈0.540, x₃=cos(0.540)≈0.858.</p></div><div class="step"><div class="dot"></div><p>Continuând iterațiile, valorile oscilează tot mai puțin, apropiindu-se de soluția ecuației x=cosx.</p></div><div class="step"><div class="dot"></div><p>După suficiente iterații, șirul se stabilizează la x*≈0.739.</p></div><div class="result">✓ x*≈<strong>0.739</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">Iterația xₙ₊₁=xₙ/k+2 converge, indiferent de x₀, la punctul fix x*=5. Află valoarea lui k.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>La limită, punctul fix satisface ecuația x*=x*/k+2, deci 5=5/k+2.</p></div><div class="step"><div class="dot"></div><p>Rezolvăm pentru 5/k: 5/k=5−2=3.</p></div><div class="step"><div class="dot"></div><p>Rezultă k=5/3. Verificăm contracția: constanta este |1/k|=3/5=0.6&lt;1, deci într-adevăr converge.</p></div><div class="result">✓ k=<strong>5/3</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">f(x)=7 (funcție constantă) pentru orice x real. Care este punctul fix și în câți pași se ajunge exact la el?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Pentru orice x, f(x)=7, deci punctul fix trebuie să satisfacă x*=f(x*)=7, adică x*=7.</p></div><div class="step"><div class="dot"></div><p>Distanța dintre oricare două imagini este d(f(x),f(y))=|7−7|=0=0·d(x,y), deci constanta de contracție este q=0 - cea mai puternică contracție posibilă.</p></div><div class="step"><div class="dot"></div><p>Practic, orice iterație ajunge direct la punctul fix după un singur pas: x₁=f(x₀)=7, indiferent de x₀.</p></div><div class="result">✓ x*=<strong>7</strong>, atins într-un <strong>singur pas</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">f(x)=x+1 pe ℝ. Este f o contracție? Are punct fix?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Calculăm d(f(x),f(y))=|(x+1)−(y+1)|=|x−y|, deci constanta este q=1, nu strict subunitară.</p></div><div class="step"><div class="dot"></div><p>Fără q&lt;1, f nu este o contracție - distanța dintre puncte nu se micșorează niciodată la aplicarea lui f.</p></div><div class="step"><div class="dot"></div><p>Într-adevăr, ecuația x=f(x)=x+1 nu are nicio soluție, deci f nu are niciun punct fix, exact cum sugerează lipsa ipotezei.</p></div><div class="result">✓ <strong>Nu e contracție</strong> și <strong>nu are punct fix</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">Prețul unui produs se ajustează zilnic după regula pₙ₊₁=0.5·pₙ+50 (prețul de mâine depinde de cel de azi). La ce preț se stabilizează el pe termen lung, indiferent de prețul inițial?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>La echilibru, prețul limită satisface p*=0.5·p*+50.</p></div><div class="step"><div class="dot"></div><p>Rezolvăm: p*−0.5p*=50, deci 0.5·p*=50.</p></div><div class="step"><div class="dot"></div><p>Rezultă p*=100. Constanta de contracție este 0.5&lt;1, deci Banach garantează convergența la acest preț unic, indiferent de prețul de pornire.</p></div><div class="result">✓ Prețul se stabilizează la <strong>100 lei</strong></div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Analiză</h3><div class="related-links"><a href="teorema-valorii-intermediare.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema valorii intermediare</a><a href="teorema-lui-rolle.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema lui Rolle</a><a href="teorema-valorii-medii-lagrange.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema valorii medii (Lagrange)</a><a href="teorema-lui-lhopital.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema lui L'Hôpital</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="teorema-lui-fubini.html" class="tn-link prev">Teorema lui Fubini</a><a href="formula-de-moivre.html" class="tn-link next">Formula lui De Moivre</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

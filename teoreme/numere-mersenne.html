@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Numerele Mersenne - ∑ Teoreme</title>
+<meta name="description" content="Numerele de forma 2ⁿ−1; dacă n este prim, Mₙ poate fi prim, dar nu e garantat.">
+<meta property="og:title" content="Numerele Mersenne - ∑ Teoreme">
+<meta property="og:description" content="Numerele de forma 2ⁿ−1; dacă n este prim, Mₙ poate fi prim, dar nu e garantat.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/numere-mersenne.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Numerele Mersenne","description":"Numerele de forma 2ⁿ−1; dacă n este prim, Mₙ poate fi prim, dar nu e garantat.","author":{"@type":"Person","name":"Marin Mersenne, 1644"},"inLanguage":"ro","educationalLevel":"Intermediar","url":"https://teoreme.ro/teoreme/numere-mersenne.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Aritmetică</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Numerele Mersenne</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-arit">Aritmetică</span><span class="badge-level bl-med">Intermediar</span></div><h1 itemprop="name">Numerele Mersenne</h1><p class="author" itemprop="author">Marin Mersenne, 1644 · nr. 070</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Definiție:</strong> Numărul Mersenne Mₙ=2ⁿ−1. Dacă n este compus, Mₙ este compus. Dacă n este prim, Mₙ poate fi prim (dar nu este garantat).</div><div class="formula-block"><span class="formula-label">Formulă</span>Mₙ = 2ⁿ − 1</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 260 210" width="260" xmlns="http://www.w3.org/2000/svg"><text x="130" y="14" text-anchor="middle" font-size="11" fill="#999" font-style="italic">numerele Mersenne Mₙ = 2ⁿ−1</text><text x="35" y="30" font-size="9" fill="#999" font-style="italic">n</text><text x="100" y="30" font-size="9" fill="#999" font-style="italic">Mₙ</text><text x="175" y="30" font-size="9" fill="#999" font-style="italic">stare</text><rect x="15" y="34" width="230" height="20" rx="3" fill="rgba(200,146,42,0.22)" stroke="#c8922a" stroke-width="1"/><text x="35" y="48" text-anchor="middle" font-size="12" font-family="'JetBrains Mono',monospace" fill="#1a1510">2</text><text x="100" y="48" text-anchor="middle" font-size="12" font-family="'JetBrains Mono',monospace" fill="#8a5f10" font-weight="700">3</text><text x="185" y="48" text-anchor="middle" font-size="11" font-family="'JetBrains Mono',monospace" fill="#8a5f10">prim</text><rect x="15" y="59" width="230" height="20" rx="3" fill="rgba(200,146,42,0.22)" stroke="#c8922a" stroke-width="1"/><text x="35" y="73" text-anchor="middle" font-size="12" font-family="'JetBrains Mono',monospace" fill="#1a1510">3</text><text x="100" y="73" text-anchor="middle" font-size="12" font-family="'JetBrains Mono',monospace" fill="#8a5f10" font-weight="700">7</text><text x="185" y="73" text-anchor="middle" font-size="11" font-family="'JetBrains Mono',monospace" fill="#8a5f10">prim</text><rect x="15" y="84" width="230" height="20" rx="3" fill="#f8f8f6" stroke="#ddd" stroke-width="1"/><text x="35" y="98" text-anchor="middle" font-size="12" font-family="'JetBrains Mono',monospace" fill="#1a1510">4</text><text x="100" y="98" text-anchor="middle" font-size="12" font-family="'JetBrains Mono',monospace" fill="#999" font-weight="700">15</text><text x="185" y="98" text-anchor="middle" font-size="11" font-family="'JetBrains Mono',monospace" fill="#999">compus</text><rect x="15" y="109" width="230" height="20" rx="3" fill="rgba(200,146,42,0.22)" stroke="#c8922a" stroke-width="1"/><text x="35" y="123" text-anchor="middle" font-size="12" font-family="'JetBrains Mono',monospace" fill="#1a1510">5</text><text x="100" y="123" text-anchor="middle" font-size="12" font-family="'JetBrains Mono',monospace" fill="#8a5f10" font-weight="700">31</text><text x="185" y="123" text-anchor="middle" font-size="11" font-family="'JetBrains Mono',monospace" fill="#8a5f10">prim</text><rect x="15" y="134" width="230" height="20" rx="3" fill="#f8f8f6" stroke="#ddd" stroke-width="1"/><text x="35" y="148" text-anchor="middle" font-size="12" font-family="'JetBrains Mono',monospace" fill="#1a1510">6</text><text x="100" y="148" text-anchor="middle" font-size="12" font-family="'JetBrains Mono',monospace" fill="#999" font-weight="700">63</text><text x="185" y="148" text-anchor="middle" font-size="11" font-family="'JetBrains Mono',monospace" fill="#999">compus</text><rect x="15" y="159" width="230" height="20" rx="3" fill="rgba(200,146,42,0.22)" stroke="#c8922a" stroke-width="1"/><text x="35" y="173" text-anchor="middle" font-size="12" font-family="'JetBrains Mono',monospace" fill="#1a1510">7</text><text x="100" y="173" text-anchor="middle" font-size="12" font-family="'JetBrains Mono',monospace" fill="#8a5f10" font-weight="700">127</text><text x="185" y="173" text-anchor="middle" font-size="11" font-family="'JetBrains Mono',monospace" fill="#8a5f10">prim</text></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story">Pornește cu 1 bomboană și dublează-le mereu: 1, 2, 4, 8, 16, 32, … De fiecare dată când te oprești după n dublări, ia toate bomboanele obținute și scade doar una singură. <span class="hl">Așa obții numerele Mersenne, Mₙ=2ⁿ−1</span>: de exemplu, dublând de 3 ori pornind de la 1 ajungi la 8, iar 8−1=7 este chiar M₃, un număr Mersenne prim.</div><div class="intuitive-note">Marin Mersenne a listat primele de această formă încă din 1644, iar numerele perfecte pare sunt strâns legate de primele Mersenne: 2^(p-1)×(2^p-1), cu 2^p-1 prim.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">Calculează M₈ și verifică dacă este prim.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>M₈=2⁸−1=256−1=255.</p></div><div class="step"><div class="dot"></div><p>255 se împarte exact la 3: 255=3×85, deci 255 nu este prim.</p></div><div class="step"><div class="dot"></div><p>Acest lucru era de așteptat, pentru că 8 este un număr compus (8=2×4), iar dacă n este compus, Mₙ este automat compus.</p></div><div class="result">✓ M₈=<strong>255</strong>, compus</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">Se știe că un număr Mersenne este Mₙ=127. Care este n?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Căutăm n astfel încât 2ⁿ−1=127, adică 2ⁿ=128.</p></div><div class="step"><div class="dot"></div><p>Calculăm puterile lui 2: 2⁷=128.</p></div><div class="step"><div class="dot"></div><p>Deci n=7.</p></div><div class="result">✓ n = <strong>7</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">Cât este M₁, și este el prim?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>M₁=2¹−1=2−1=1.</p></div><div class="step"><div class="dot"></div><p>Numărul 1 nu este considerat, prin definiție, nici prim, nici compus.</p></div><div class="step"><div class="dot"></div><p>Deci M₁=1 este un caz special, în afara discuției despre numere prime Mersenne.</p></div><div class="result">✓ M₁ = <strong>1</strong>, nici prim, nici compus</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Adevărat sau fals: dacă n este un număr prim, atunci Mₙ=2ⁿ−1 este garantat prim.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Luăm n=11, care este un număr prim.</p></div><div class="step"><div class="dot"></div><p>Calculăm M₁₁=2¹¹−1=2048−1=2047.</p></div><div class="step"><div class="dot"></div><p>Verificăm: 2047=23×89, deci 2047 este compus, deși 11 este prim.</p></div><div class="step"><div class="dot"></div><p>Acest exemplu arată clar că n prim nu garantează că Mₙ este prim - este doar o condiție necesară, nu suficientă.</p></div><div class="result">✓ <strong>Fals</strong> - contraexemplu: n=11 prim, dar M₁₁=2047=23×89 este compus.</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">Un cercetător care caută numere prime Mersenne (ca în proiectul GIMPS) verifică exponentul n=13. Ce număr Mersenne trebuie testat, și cât este el?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Calculăm M₁₃=2¹³−1.</p></div><div class="step"><div class="dot"></div><p>2¹³=8192, deci M₁₃=8192−1=8191.</p></div><div class="step"><div class="dot"></div><p>Acest număr, 8191, este într-adevăr un număr prim Mersenne cunoscut.</p></div><div class="result">✓ M₁₃ = <strong>8191</strong>, un număr prim Mersenne.</div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Aritmetică</h3><div class="related-links"><a href="infinitatea-numerelor-prime.html" class="related-link"><span class="card-tag tag-arit">Aritmetică</span> Infinitatea numerelor prime</a><a href="teorema-fundamentala-a-aritmeticii.html" class="related-link"><span class="card-tag tag-arit">Aritmetică</span> Teorema fundamentală a aritmeticii</a><a href="teorema-mica-a-lui-fermat.html" class="related-link"><span class="card-tag tag-arit">Aritmetică</span> Teorema mică a lui Fermat</a><a href="teorema-lui-euler-phi.html" class="related-link"><span class="card-tag tag-arit">Aritmetică</span> Teorema lui Euler (φ)</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="ecuatia-diofantica-liniara.html" class="tn-link prev">Ecuația diofantică liniară</a><a href="teorema-valorii-intermediare.html" class="tn-link next">Teorema valorii intermediare</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

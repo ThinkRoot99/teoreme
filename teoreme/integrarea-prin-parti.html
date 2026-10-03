@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Integrarea prin părți - ∑ Teoreme</title>
+<meta name="description" content="Formula de integrare ce transformă integrala unui produs, analogul integralului al regulii produsului.">
+<meta property="og:title" content="Integrarea prin părți - ∑ Teoreme">
+<meta property="og:description" content="Formula de integrare ce transformă integrala unui produs, analogul integralului al regulii produsului.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/integrarea-prin-parti.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Integrarea prin părți","description":"Formula de integrare ce transformă integrala unui produs, analogul integralului al regulii produsului.","author":{"@type":"Person","name":"Brook Taylor, 1715"},"inLanguage":"ro","educationalLevel":"Intermediar","url":"https://teoreme.ro/teoreme/integrarea-prin-parti.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Analiză</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Integrarea prin părți</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-med">Intermediar</span></div><h1 itemprop="name">Integrarea prin părți</h1><p class="author" itemprop="author">Brook Taylor, 1715 · nr. 078</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Formulă:</strong> ∫u·v' dx = u·v - ∫u'·v dx (analogul integral al derivatei produsului).</div><div class="formula-block"><span class="formula-label">Formulă</span>∫u·dv = u·v − ∫v·du</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" width="300"><path d="M 40,170 Q 140,150 200,90 Q 230,55 260,30 L 260,170 Z" fill="#4a1a7a" fill-opacity="0.25" stroke="none"/><path d="M 40,170 Q 140,150 200,90 Q 230,55 260,30 L 40,30 Z" fill="#c8922a" fill-opacity="0.25" stroke="none"/><path d="M 40,170 Q 140,150 200,90 Q 230,55 260,30" fill="none" stroke="#1a1510" stroke-width="2"/><rect x="40" y="30" width="220" height="140" fill="none" stroke="#4a1a7a" stroke-width="1" stroke-dasharray="3,3"/><text x="260" y="188" text-anchor="middle" font-size="12" fill="#555" font-style="italic">u</text><text x="22" y="34" text-anchor="middle" font-size="12" fill="#555" font-style="italic">v</text><text x="120" y="163" font-size="11" fill="#4a1a7a" font-weight="600">∫v du</text><text x="60" y="55" font-size="11" fill="#c8922a" font-weight="600">∫u dv</text><text x="150" y="18" text-anchor="middle" font-size="10" fill="#555">u·v = ∫v du + ∫u dv</text></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story"><span class="hl">Gândește-te la aria unui dreptunghi cu laturile u și v</span>. Dacă tragi o linie curbă prin el, dreptunghiul se împarte în două bucăți: aria de sub curbă și aria de lângă curbă. Suma lor este exact aria întregului dreptunghi, u·v - de aici vine formula integrării prin părți.</div><div class="intuitive-note">Regula LIATE (Logaritm, Invers trigonometric, Algebric, Trigonometric, Exponențial) ajută la alegerea lui u - alege prima funcție din listă care apare în produs. Metoda se poate aplica repetat sau chiar circular (rezolvând o ecuație pentru integrala căutată).</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">Calculează ∫x·eˣ dx.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Alegem u=x (se simplifică prin derivare) și dv=eˣdx (ușor de integrat); atunci du=dx și v=eˣ.</p></div><div class="step"><div class="dot"></div><p>Aplicăm formula: ∫x·eˣdx = x·eˣ - ∫eˣdx.</p></div><div class="step"><div class="dot"></div><p>Integrăm ce a rămas: x·eˣ - eˣ + C.</p></div><div class="result">✓ <strong>(x-1)eˣ+C</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">Ce integrală de forma ∫x·(...)dx are ca rezultat x·sinx+cosx+C?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Derivăm rezultatul propus pentru a găsi integrandul: d/dx(x·sinx+cosx) = sinx+x·cosx-sinx = x·cosx.</p></div><div class="step"><div class="dot"></div><p>Deci integrandul căutat este x·cosx.</p></div><div class="step"><div class="dot"></div><p>Verificăm prin părți: u=x, dv=cosx dx, v=sinx; ∫x·cosx dx = x·sinx - ∫sinx dx = x·sinx+cosx+C. ✔</p></div><div class="result">✓ Integrala căutată este <strong>∫x·cosx dx</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">Calculează ∫ₐᵃ x·eˣ dx (interval degenerat, aceeași limită sus și jos).</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Indiferent de metoda de integrare, o integrală definită pe un interval de lungime 0 este întotdeauna 0.</p></div><div class="step"><div class="dot"></div><p>Prin părți am obținea aceeași primitivă F(x)=(x-1)eˣ, iar F(a)-F(a)=0.</p></div><div class="result">✓ <strong>0</strong> - integrala pe un interval degenerat e mereu nulă</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Adevărat sau fals: alegerea lui u și dv la integrarea prin părți este arbitrară și nu influențează cât de ușor este calculul.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Fals. La ∫x·eˣdx, dacă alegem greșit u=eˣ și dv=x dx, obținem v=x²/2, iar formula dă (x²/2)eˣ - ∫(x²/2)eˣdx.</p></div><div class="step"><div class="dot"></div><p>Noua integrală are un polinom de grad mai mare (x² în loc de x), deci calculul devine mai complicat, nu mai simplu.</p></div><div class="step"><div class="dot"></div><p>Regula LIATE există tocmai ca să ghideze spre alegerea care simplifică, nu complică, integrala rămasă.</p></div><div class="result">✓ <strong>Fals</strong> - alegerea greșită poate complica mult calculul</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">O populație de insecte are rata de creștere r(t)=t·e^(−t) (mii insecte/lună) - creștere inițială rapidă, urmată de declin. Câte insecte noi (în mii) s-au adăugat în primele 2 luni?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Numărul de insecte noi este ∫₀² t·e^(−t) dt. Alegem u=t, dv=e^(−t)dt, deci du=dt, v=-e^(−t).</p></div><div class="step"><div class="dot"></div><p>Aplicăm formula: ∫t·e^(−t)dt = -t·e^(−t) + ∫e^(−t)dt = -t·e^(−t) - e^(−t) + C = -(t+1)e^(−t)+C.</p></div><div class="step"><div class="dot"></div><p>Evaluăm între 0 și 2: [-(t+1)e^(−t)]₀² = -3e^(−2) - (-1) = 1-3e^(−2) ≈ 1-0.406 ≈ 0.594.</p></div><div class="result">✓ ≈<strong>0.594 mii</strong> (≈594 insecte noi)</div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Analiză</h3><div class="related-links"><a href="teorema-valorii-intermediare.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema valorii intermediare</a><a href="teorema-lui-rolle.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema lui Rolle</a><a href="teorema-valorii-medii-lagrange.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema valorii medii (Lagrange)</a><a href="teorema-lui-lhopital.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema lui L'Hôpital</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="regula-lantului-derivate.html" class="tn-link prev">Regula lanțului</a><a href="seria-geometrica.html" class="tn-link next">Seria geometrică</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

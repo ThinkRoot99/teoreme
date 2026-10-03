@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Teorema lui Weierstrass - ∑ Teoreme</title>
+<meta name="description" content="Orice funcție continuă pe un interval compact [a,b] atinge valorile sale maxime și minime.">
+<meta property="og:title" content="Teorema lui Weierstrass - ∑ Teoreme">
+<meta property="og:description" content="Orice funcție continuă pe un interval compact [a,b] atinge valorile sale maxime și minime.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/teorema-lui-weierstrass-functii-continue.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Teorema lui Weierstrass","description":"Orice funcție continuă pe un interval compact [a,b] atinge valorile sale maxime și minime.","author":{"@type":"Person","name":"Karl Weierstrass, 1861"},"inLanguage":"ro","educationalLevel":"Intermediar","url":"https://teoreme.ro/teoreme/teorema-lui-weierstrass-functii-continue.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Analiză</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Teorema lui Weierstrass</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-anal">Analiză</span><span class="badge-level bl-med">Intermediar</span></div><h1 itemprop="name">Teorema lui Weierstrass</h1><p class="author" itemprop="author">Karl Weierstrass, 1861 · nr. 082</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Enunț:</strong> Orice funcție continuă f:[a,b]→ℝ pe un interval compact atinge valorile sale maxime și minime.</div><div class="formula-block"><span class="formula-label">Formulă</span>∃x_max, x_min∈[a,b]: f(x_min)≤f(x)≤f(x_max)</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" width="300"><line x1="40" y1="170" x2="40" y2="20" stroke="#4a1a7a" stroke-width="1.5"/><line x1="30" y1="170" x2="300" y2="170" stroke="#4a1a7a" stroke-width="1.5"/><path d="M 60,140 C 100,60 140,150 180,90 C 210,45 250,70 280,110" fill="none" stroke="#4a1a7a" stroke-width="2.5"/><line x1="60" y1="170" x2="60" y2="140" stroke="#999" stroke-width="1" stroke-dasharray="3,3"/><line x1="280" y1="170" x2="280" y2="110" stroke="#999" stroke-width="1" stroke-dasharray="3,3"/><circle cx="60" cy="140" r="3.5" fill="#4a1a7a"/><circle cx="280" cy="110" r="3.5" fill="#4a1a7a"/><circle cx="205" cy="47" r="5" fill="#c8922a" stroke="#fff" stroke-width="1.5"/><circle cx="140" cy="150" r="5" fill="#c8922a" stroke="#fff" stroke-width="1.5"/><line x1="205" y1="47" x2="205" y2="170" stroke="#c8922a" stroke-width="1" stroke-dasharray="3,3"/><line x1="140" y1="150" x2="140" y2="170" stroke="#c8922a" stroke-width="1" stroke-dasharray="3,3"/><text x="60" y="188" text-anchor="middle" font-size="12" fill="#555" font-style="italic">a</text><text x="280" y="188" text-anchor="middle" font-size="12" fill="#555" font-style="italic">b</text><text x="205" y="35" text-anchor="middle" font-size="10" fill="#c8922a" font-weight="600">max</text><text x="140" y="188" text-anchor="middle" font-size="10" fill="#c8922a" font-weight="600">min</text></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story"><span class="hl">Dacă mergi pe o potecă între două garduri fixe (un drum închis, mărginit), iar înălțimea terenului se schimbă lin, fără salturi</span>, poteca are sigur un punct cel mai înalt și unul cel mai jos - nu poate „fugi” spre infinit sau doar să se apropie de un vârf fără să-l atingă niciodată.</div><div class="intuitive-note">Garantează existența soluțiilor la probleme de optimizare - stă la baza programării liniare și a multor algoritmi de optimizare folosiți în inginerie și economie.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">Găsește maximul și minimul lui f(x)=x² pe [-2,3].</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Evaluăm f la capete: f(-2)=4 și f(3)=9.</p></div><div class="step"><div class="dot"></div><p>Căutăm puncte critice în interior: f'(x)=2x=0 dă x=0, unde f(0)=0.</p></div><div class="step"><div class="dot"></div><p>Comparăm toate valorile candidate (0, 4, 9): minimul este 0 (în x=0), maximul este 9 (în x=3).</p></div><div class="result">✓ min=<strong>0</strong>, max=<strong>9</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">Weierstrass garantează un maxim pentru f(x)=sinx pe [0,b]. Care este cea mai mică valoare a lui b&gt;0 pentru care acest maxim atinge chiar valoarea 1?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Maximul absolut al lui sinx (adică 1) se atinge la x=π/2.</p></div><div class="step"><div class="dot"></div><p>Pentru ca acest punct să fie inclus în intervalul [0,b], e nevoie ca b≥π/2.</p></div><div class="step"><div class="dot"></div><p>Cea mai mică valoare posibilă este b=π/2.</p></div><div class="result">✓ b=<strong>π/2</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">Ce spune Weierstrass despre f pe intervalul degenerat [a,a] (un singur punct)?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Intervalul [a,a] conține un singur punct, x=a.</p></div><div class="step"><div class="dot"></div><p>Atât maximul cât și minimul lui f pe acest „interval” sunt automat f(a), pentru că nu există alt punct de comparat.</p></div><div class="result">✓ max=min=<strong>f(a)</strong> - cazul trivial al unui singur punct</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">f(x)=1/x pe (0,1]. Se poate aplica teorema lui Weierstrass pentru a garanta un maxim?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Intervalul (0,1] nu este închis (îi lipsește capătul 0), deci nu este compact.</p></div><div class="step"><div class="dot"></div><p>Când x→0⁺, f(x)=1/x→∞, deci funcția nu este mărginită - nu are maxim finit.</p></div><div class="step"><div class="dot"></div><p>Ipoteza de compactitate a intervalului lipsește, deci Weierstrass nu se aplică; și, într-adevăr, concluzia (existența unui maxim) e falsă aici.</p></div><div class="result">✓ <strong>Nu se aplică</strong> - (0,1] nu e compact, iar f nu are maxim</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">Temperatura unui oraș se măsoară continuu de la ora 0 la ora 24 dintr-o zi (intervalul închis [0,24]). Arată că a existat cu certitudine un moment cu temperatura maximă a zilei.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Fie T(t) temperatura la momentul t; T este continuă (temperatura nu sare brusc) pe intervalul închis și mărginit [0,24].</p></div><div class="step"><div class="dot"></div><p>Ipotezele teoremei lui Weierstrass sunt îndeplinite: funcție continuă pe un compact.</p></div><div class="step"><div class="dot"></div><p>Prin urmare T atinge efectiv un maxim (și un minim) undeva în [0,24] - a existat un moment exact cu temperatura cea mai ridicată a zilei.</p></div><div class="result">✓ <strong>Da</strong>, garantat de teorema lui Weierstrass</div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Analiză</h3><div class="related-links"><a href="teorema-valorii-intermediare.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema valorii intermediare</a><a href="teorema-lui-rolle.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema lui Rolle</a><a href="teorema-valorii-medii-lagrange.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema valorii medii (Lagrange)</a><a href="teorema-lui-lhopital.html" class="related-link"><span class="card-tag tag-anal">Analiză</span> Teorema lui L'Hôpital</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="criteriul-leibniz.html" class="tn-link prev">Criteriul Leibniz</a><a href="limita-lui-e.html" class="tn-link next">Limita lui e</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Inegalitatea Cauchy–Schwarz (vectori) - ∑ Teoreme</title>
+<meta name="description" content="Valoarea absolută a produsului scalar a doi vectori este cel mult produsul normelor lor.">
+<meta property="og:title" content="Inegalitatea Cauchy–Schwarz (vectori) - ∑ Teoreme">
+<meta property="og:description" content="Valoarea absolută a produsului scalar a doi vectori este cel mult produsul normelor lor.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/inegalitatea-cauchy-schwarz-vectori.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Inegalitatea Cauchy–Schwarz (vectori)","description":"Valoarea absolută a produsului scalar a doi vectori este cel mult produsul normelor lor.","author":{"@type":"Person","name":"Cauchy, 1821"},"inLanguage":"ro","educationalLevel":"Intermediar","url":"https://teoreme.ro/teoreme/inegalitatea-cauchy-schwarz-vectori.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Algebră</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Inegalitatea Cauchy–Schwarz (vectori)</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-alg">Algebră</span><span class="badge-level bl-med">Intermediar</span></div><h1 itemprop="name">Inegalitatea Cauchy–Schwarz (vectori)</h1><p class="author" itemprop="author">Cauchy, 1821 · nr. 098</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Enunț:</strong> Pentru orice vectori u,v dintr-un spațiu cu produs scalar: |⟨u,v⟩|²≤⟨u,u⟩·⟨v,v⟩, cu egalitate dacă și numai dacă u și v sunt colineari.</div><div class="formula-block"><span class="formula-label">Formulă</span>|⟨u,v⟩| ≤ ‖u‖ · ‖v‖</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg"><line x1="30" y1="150" x2="270" y2="150" stroke="#ccc"/><line x1="30" y1="150" x2="220" y2="40" stroke="#2d5a3d" stroke-width="3" marker-end="url(#csA)"/><line x1="30" y1="150" x2="240" y2="120" stroke="#c8922a" stroke-width="3" marker-end="url(#csB)"/><path d="M 90 150 A 60 60 0 0 0 110 122" fill="none" stroke="#555" stroke-width="1"/><text x="105" y="140" font-size="12" fill="#555">θ</text><text x="225" y="35" font-size="13" fill="#2d5a3d">u</text><text x="245" y="118" font-size="13" fill="#c8922a">v</text><text x="150" y="170" text-anchor="middle" font-size="12" fill="#555">|⟨u,v⟩| ≤ ‖u‖·‖v‖, egalitate doar dacă u,v sunt paraleli</text><defs><marker id="csA" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#2d5a3d"/></marker><marker id="csB" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#c8922a"/></marker></defs></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story"><span class="hl">Umbra pe care o aruncă o săgeată peste alta nu poate fi niciodată mai lungă decât săgețile înseși</span>. Oricât de bine ar „coopera” doi vectori, produsul lor scalar rămâne mereu mai mic sau egal cu produsul lungimilor lor - egalitatea apare doar când cei doi vectori merg exact în aceeași direcție (sau opusă).</div><div class="intuitive-note">Cauchy a demonstrat-o în 1821 pentru sume finite, iar Schwarz a extins-o în 1888 la spații Hilbert; inegalitatea stă și la baza principiului incertitudinii al lui Heisenberg.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">u=(1,2), v=(3,4). Verifică inegalitatea Cauchy-Schwarz.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Calculăm produsul scalar: ⟨u,v⟩=1×3+2×4=3+8=11.</p></div><div class="step"><div class="dot"></div><p>Calculăm normele: ‖u‖=√(1²+2²)=√5, ‖v‖=√(3²+4²)=√25=5.</p></div><div class="step"><div class="dot"></div><p>Verificăm inegalitatea la pătrat: 11²=121 și ‖u‖²‖v‖²=5×25=125, iar 121≤125, deci inegalitatea se confirmă.</p></div><div class="result">✓ <strong>121 ≤ 125</strong>, confirmat</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">Găsește un vector v (nenul) pentru care inegalitatea Cauchy-Schwarz devine egalitate, știind u=(2,1).</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Egalitatea are loc exact când v este paralel cu u, adică v=k·u pentru un scalar k≠0.</p></div><div class="step"><div class="dot"></div><p>Alegem, de exemplu, k=3: v=3×(2,1)=(6,3). Verificăm: ⟨u,v⟩=2×6+1×3=15, ‖u‖=√5, ‖v‖=3√5, iar ‖u‖‖v‖=√5×3√5=15=⟨u,v⟩, deci egalitate confirmată.</p></div><div class="result">✓ v=<strong>(6,3)</strong> (orice multiplu al lui u funcționează)</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">u=(1,0), v=(0,5) (vectori perpendiculari). Verifică inegalitatea și observă diferența maximă.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Produsul scalar este ⟨u,v⟩=1×0+0×5=0.</p></div><div class="step"><div class="dot"></div><p>‖u‖‖v‖=1×5=5, iar inegalitatea devine 0≤5, adevărată cu o marjă maximă.</p></div><div class="step"><div class="dot"></div><p>Perpendicularitatea este cazul „cel mai departe” posibil de egalitate (produsul scalar minim posibil, 0).</p></div><div class="result">✓ <strong>0 ≤ 5</strong>, diferență maximă (vectori perpendiculari)</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Adevărat sau fals: dacă |⟨u,v⟩|=‖u‖·‖v‖, atunci u și v sunt neapărat egali.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Egalitatea din Cauchy-Schwarz cere doar ca u și v să fie coliniari (unul multiplu scalar al celuilalt), nu ca vectorii să fie identici.</p></div><div class="step"><div class="dot"></div><p>Exemplu: u=(1,1) și v=(2,2) satisfac egalitatea (v=2u) dar u≠v, deci afirmația este falsă.</p></div><div class="result">✓ <strong>Fals</strong> - trebuie doar coliniari, nu egali</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">O forță F=(3,4) N acționează pe un deplasament d=(1,2) m. Care este cea mai mare valoare posibilă a lucrului mecanic F·d, dacă doar magnitudinile ‖F‖=5 și ‖d‖=√5 rămân fixe, dar direcția se poate schimba?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Conform Cauchy-Schwarz, |F·d|≤‖F‖‖d‖=5×√5=5√5≈11,18 J, indiferent de direcțiile alese.</p></div><div class="step"><div class="dot"></div><p>Acest maxim se atinge exact când forța este paralelă cu deplasamentul (aceeași direcție) - orice alt unghi dă un lucru mecanic mai mic.</p></div><div class="result">✓ Lucru mecanic maxim = <strong>5√5 ≈ 11,18 J</strong>, la direcții paralele</div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Algebră</h3><div class="related-links"><a href="teorema-lui-lagrange-grupuri.html" class="related-link"><span class="card-tag tag-alg">Algebră</span> Teorema lui Lagrange (grupuri)</a><a href="teorema-fundamentala-a-algebrei.html" class="related-link"><span class="card-tag tag-alg">Algebră</span> Teorema fundamentală a algebrei</a><a href="relatiile-lui-viete.html" class="related-link"><span class="card-tag tag-alg">Algebră</span> Relațiile lui Viète</a><a href="teorema-rouche-capelli.html" class="related-link"><span class="card-tag tag-alg">Algebră</span> Teorema Rouché–Capelli</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="teorema-abel-ruffini.html" class="tn-link prev">Teorema Abel–Ruffini</a><a href="teorema-rang-nulitate.html" class="tn-link next">Teorema rang–nulitate</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Distribuția exponențială - ∑ Teoreme</title>
+<meta name="description" content="Modelează timpul de așteptare până la un eveniment rar, cu proprietatea remarcabilă a lipsei de memorie.">
+<meta property="og:title" content="Distribuția exponențială - ∑ Teoreme">
+<meta property="og:description" content="Modelează timpul de așteptare până la un eveniment rar, cu proprietatea remarcabilă a lipsei de memorie.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:site_name" content="∑ Teoreme">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://teoreme.ro/teoreme/distributia-exponentiala.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Distribuția exponențială","description":"Modelează timpul de așteptare până la un eveniment rar, cu proprietatea remarcabilă a lipsei de memorie.","author":{"@type":"Person","name":"Formalizată în sec. XX"},"inLanguage":"ro","educationalLevel":"Intermediar","url":"https://teoreme.ro/teoreme/distributia-exponentiala.html","isPartOf":{"@type":"WebSite","name":"∑ Teoreme","url":"https://teoreme.ro/"}}</script>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-search-wrap">
+      <span class="ns-icon" aria-hidden="true">🔍</span>
+      <label for="navSearch" class="sr-only">Caută o teoremă</label>
+      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
+        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='../index.html?q='+encodeURIComponent(this.value.trim())"
+        aria-label="Caută o teoremă">
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Acasă</a>
+      <a href="../arhiva.html">Arhivă</a>
+      <a href="../despre.html">Despre</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap" id="pageWrap">
+<nav class="breadcrumb" aria-label="Navigare ierarhică"><a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span><a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span><span>Probabilitate</span><span class="sep" aria-hidden="true">›</span><span aria-current="page">Distribuția exponențială</span></nav><article itemscope itemtype="https://schema.org/Article"><div class="tp-head"><div class="tag-row"><span class="card-tag tag-prob">Probabilitate</span><span class="badge-level bl-med">Intermediar</span></div><h1 itemprop="name">Distribuția exponențială</h1><p class="author" itemprop="author">Formalizată în sec. XX · nr. 166</p></div><div class="tp-tabs" role="tablist"><button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,'panelDef')">📖 Definiție</button><button class="tab-btn" id="tabEx" type="button" role="tab" aria-selected="false" aria-controls="panelEx" onclick="showTab(this,'panelEx')">✏️ Exerciții rezolvate</button></div><div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody"><div class="def-box"><strong>Definiție:</strong> X~Exp(λ) modelează timpul de așteptare până la producerea unui eveniment rar, cu rata λ&gt;0 și densitate f(x)=λe^(−λx) pentru x≥0.</div><div class="formula-block"><span class="formula-label">Formulă</span>f(x) = λe^(−λx), x≥0 (E[X]=1/λ, Var(X)=1/λ²)</div><div class="diagram-area" aria-hidden="true"><svg viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg" width="300"><line x1="20" y1="150" x2="290" y2="150" stroke="#1a1510" stroke-width="1.5"/><line x1="20" y1="150" x2="20" y2="20" stroke="#1a1510" stroke-width="1.5"/><path d="M22,28 C45,110 65,140 100,147 C150,152 200,150 285,150 L22,150 Z" fill="rgba(176,96,0,0.12)" stroke="#b06000" stroke-width="2.5"/><line x1="100" y1="147" x2="100" y2="20" stroke="#c8922a" stroke-width="1.5" stroke-dasharray="4,4"/><line x1="170" y1="150" x2="170" y2="20" stroke="#c8922a" stroke-width="1.5" stroke-dasharray="4,4"/><text x="100" y="16" text-anchor="middle" font-size="11" fill="#a87418">s</text><text x="170" y="16" text-anchor="middle" font-size="11" fill="#a87418">s+t</text><text x="150" y="168" text-anchor="middle" font-size="11" fill="#555" font-style="italic">coada de după s arată la fel ca la început</text></svg></div><div class="intuitive-block"><div class="intuitive-title">Imaginea din spatele formulei</div><div class="intuitive-story">Aștepți să sune telefonul sau să vină autobuzul. <span class="hl">Distribuția exponențială spune că, dacă evenimentul nu s-a întâmplat încă, nu contează deloc cât ai așteptat deja - șansa de a mai aștepta un minut e mereu aceeași.</span> E ca și cum timpul „uită” tot ce s-a întâmplat până acum: nu ești nici mai norocos, nici mai ghinionist pentru că ai așteptat deja mult.</div><div class="intuitive-note">A fost formalizată în secolul XX, în teoria proceselor Poisson, și modelează durata de viață a componentelor electronice, timpul dintre dezintegrări radioactive sau timpul de așteptare la un ghișeu.</div></div></div><div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx"><div class="exercises-list"><div class="ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-q">Timpul de așteptare pentru un mesaj urmează Exp(λ=0.2) (mesaje pe minut). Care este timpul mediu de așteptare?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Formula spune că media distribuției exponențiale este E[X] = 1/λ.</p></div><div class="step"><div class="dot"></div><p>Înlocuim λ=0.2: E[X] = 1/0.2 = 5.</p></div><div class="result">✓ E[X] = <strong>5 minute</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">2</div><div class="ex-q">Se știe că media timpului de așteptare la un ghișeu este de 4 minute. Care este rata λ a distribuției exponențiale?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Pornim de la relația E[X] = 1/λ și o inversăm: λ = 1/E[X].</p></div><div class="step"><div class="dot"></div><p>Înlocuim E[X]=4: λ = 1/4 = 0.25.</p></div><div class="result">✓ λ = <strong>0.25 evenimente/minut</strong></div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">3</div><div class="ex-q">Ce se întâmplă cu probabilitatea P(X&gt;x) atunci când rata λ devine foarte mare, adică evenimentul e „nerăbdător” și tinde să se producă aproape imediat?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Formula probabilității de a aștepta mai mult decât x este P(X&gt;x) = e^(−λx).</p></div><div class="step"><div class="dot"></div><p>Dacă λ crește foarte mult, exponentul −λx devine tot mai negativ pentru orice x&gt;0 fixat, deci e^(−λx) se apropie de 0.</p></div><div class="step"><div class="dot"></div><p>Practic, cu o rată uriașă, evenimentul se întâmplă aproape instantaneu, deci șansa de a mai aștepta orice interval x&gt;0 devine neglijabilă.</p></div><div class="result">✓ P(X&gt;x) → <strong>0</strong> pe măsură ce λ → ∞</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">4</div><div class="ex-q">Adevărat sau fals: dacă ai așteptat deja 10 minute pentru autobuz și timpul de așteptare este exponențial, șansa de a mai aștepta încă 5 minute este mai mică decât dacă tocmai ai ajuns la stație.</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Fals. Proprietatea de lipsă de memorie a distribuției exponențiale spune că trecutul nu contează.</p></div><div class="step"><div class="dot"></div><p>P(mai aștepți 5 minute | ai așteptat deja 10) este exact egală cu P(aștepți 5 minute de la început), indiferent cât ai așteptat deja.</p></div><div class="result">✓ <strong>Fals</strong> - distribuția exponențială „uită” complet trecutul</div></div></div><div class="ex-card"><div class="ex-head"><div class="ex-num">5</div><div class="ex-q">O centrală telefonică primește apeluri, iar timpul dintre două apeluri succesive este Exp(λ=3) (apeluri pe minut). Care este probabilitatea ca următorul apel să vină în mai puțin de 20 de secunde?</div></div><div class="ex-body"><div class="step"><div class="dot"></div><p>Transformăm 20 de secunde în minute: 20/60 = 1/3 minut.</p></div><div class="step"><div class="dot"></div><p>Folosim formula P(X≤x) = 1 − e^(−λx), cu λ=3 și x=1/3.</p></div><div class="step"><div class="dot"></div><p>Calculăm exponentul: λx = 3 × 1/3 = 1, deci P(X≤1/3) = 1 − e^(−1) ≈ 1 − 0.3679 = 0.6321.</p></div><div class="result">✓ ≈<strong>63.21%</strong> șansă ca următorul apel să vină în sub 20 de secunde</div></div></div></div></div></article><div class="tp-related"><h3>Din același domeniu - Probabilitate</h3><div class="related-links"><a href="teorema-lui-bayes.html" class="related-link"><span class="card-tag tag-prob">Probabilitate</span> Teorema lui Bayes</a><a href="teorema-centrala-limita.html" class="related-link"><span class="card-tag tag-prob">Probabilitate</span> Teorema centrală limită</a><a href="legea-numerelor-mari.html" class="related-link"><span class="card-tag tag-prob">Probabilitate</span> Legea numerelor mari</a><a href="inegalitatea-lui-chebyshev.html" class="related-link"><span class="card-tag tag-prob">Probabilitate</span> Inegalitatea lui Cebîșev</a></div></div><nav class="theorem-nav" aria-label="Navigare teoreme"><a href="inegalitatea-lui-jensen.html" class="tn-link prev">Inegalitatea lui Jensen</a><a href="teorema-lui-borel-cantelli.html" class="tn-link next">Lema Borel–Cantelli</a></nav>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://code.linuxromania.ro/thinkroot/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) { callback.call(thisArg, this[i], i, this); }
+  };
+}
+function showTab(btn, panelId){
+  var article = btn;
+  while(article && article.tagName !== "ARTICLE"){ article = article.parentNode; }
+  article.querySelectorAll(".tab-btn").forEach(function(b){
+    b.classList.remove("active");
+    b.setAttribute("aria-selected","false");
+  });
+  article.querySelectorAll(".panel").forEach(function(p){ p.classList.remove("active"); });
+  btn.classList.add("active");
+  btn.setAttribute("aria-selected","true");
+  document.getElementById(panelId).classList.add("active");
+}
+</script>
+</body>
+</html>
