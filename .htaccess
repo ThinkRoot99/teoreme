@@ -1,0 +1,60 @@
+# ∑ Teoreme - configurare pentru hosting shared (Apache)
+
+# Pagina de eroare 404 personalizată
+ErrorDocument 404 /404.html
+
+# URL-uri curate, fără extensia .html
+# (dacă site-ul e instalat într-un subdirector, adaugă aici RewriteBase /subdirector/)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Canonicalizare: forțează https:// și domeniul fără "www." (o singură
+  # redirecționare, chiar și când ambele condiții sunt adevărate deodată)
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} ^www\. [NC]
+  RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)$ [NC]
+  RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+  # /index.html sau /index -> rădăcina directorului (niciodată vizibil "index")
+  RewriteRule ^index\.html$ ./ [R=301,L]
+  RewriteRule ^index$ ./ [R=301,L]
+
+  # Orice altă cerere *.html -> varianta fără extensie (o singură adresă canonică,
+  # 404.html e exclus ca să nu afecteze ErrorDocument de mai sus)
+  RewriteCond %{REQUEST_URI} !^/404\.html$
+  RewriteCond %{THE_REQUEST} \s/+(.+)\.html[\s?] [NC]
+  RewriteRule ^ /%1 [R=301,L]
+
+  # Servește intern fișierul .html corespunzător, fără să schimbe adresa din bara browserului
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.*)$ $1.html [L]
+</IfModule>
+
+# Comprimare (încărcare mai rapidă)
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/xml application/xml application/javascript text/javascript application/json image/svg+xml
+</IfModule>
+
+# Cache pentru resurse statice (browser-ul nu le mai redescarcă la fiecare vizită)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType text/html "access plus 1 hour"
+</IfModule>
+
+# Antete de securitate de bază
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  # Site-ul nu trebuie afișat niciodată în <iframe> pe alt domeniu (anti-clickjacking)
+  Header always set X-Frame-Options "SAMEORIGIN"
+  # Site-ul nu folosește geolocație, cameră, microfon etc. - le dezactivăm explicit
+  Header always set Permissions-Policy "geolocation=(), camera=(), microphone=(), payment=(), usb=()"
+  # Odată ce HTTPS e confirmat stabil, spune browserului să-l ceară mereu pentru acest domeniu
+  Header always set Strict-Transport-Security "max-age=15552000"
+</IfModule>
