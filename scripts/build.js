@@ -26,11 +26,11 @@ const PAGE_SIZE = 24; // trebuie să corespundă cu PAGE_SIZE din <script> din i
 // Pagini statice (în afară de cele 188 de teoreme) incluse în sitemap.xml
 const STATIC_PAGES = [
   { loc: '', lastmod: '2026-05-17', priority: '1.0' },
-  { loc: 'arhiva.html', lastmod: '2026-05-17', priority: '0.9' },
-  { loc: 'despre.html', lastmod: '2026-09-30', priority: '0.5' },
-  { loc: 'contact.html', lastmod: '2026-09-30', priority: '0.5' },
-  { loc: 'confidentialitate.html', lastmod: '2026-09-30', priority: '0.3' },
-  { loc: 'termeni.html', lastmod: '2026-09-30', priority: '0.3' },
+  { loc: 'arhiva', lastmod: '2026-05-17', priority: '0.9' },
+  { loc: 'despre', lastmod: '2026-09-30', priority: '0.5' },
+  { loc: 'contact', lastmod: '2026-09-30', priority: '0.5' },
+  { loc: 'confidentialitate', lastmod: '2026-09-30', priority: '0.3' },
+  { loc: 'termeni', lastmod: '2026-09-30', priority: '0.3' },
 ];
 
 // ---------- încarcă date.js ----------
@@ -82,15 +82,12 @@ function cardHtml(t, prefix) {
   prefix = prefix || '';
   return '<a href="' + prefix + t.url + '" class="t-card">' +
     '<div class="tc-top">' +
-    '<div class="tc-num">' + t.numar + '</div>' +
-    '<div>' +
     '<div class="tc-tags">' +
     '<span class="card-tag ' + t.domeniu_tag + '">' + t.domeniu_label + '</span>' +
     '<span class="badge-level ' + t.nivel_cls + '">' + t.nivel_label + '</span>' +
     '</div>' +
     '<div class="tc-title">' + t.titlu + '</div>' +
     '<div class="tc-author">' + t.autor + '</div>' +
-    '</div>' +
     '</div>' +
     '<p class="tc-desc">' + t.descriere + '</p>' +
     '<div class="tc-formula">' + t.formula + '</div>' +
@@ -126,7 +123,7 @@ let stats = { teoreme: 0, index: false, arhiva: false, sitemap: false };
 
     const fullTitle = m.titlu + ' - ∑ Teoreme';
     const desc = m.descriere || ('Teorema ' + m.titlu + ': definiție formală, diagramă, exerciții rezolvate și explicație intuitivă.');
-    const canon = 'https://teoreme.ro/teoreme/' + encodeURIComponent(m.id) + '.html';
+    const canon = 'https://teoreme.ro/teoreme/' + encodeURIComponent(m.id);
 
     const jsonLd = JSON.stringify({
       '@context': 'https://schema.org', '@type': 'Article',
@@ -142,14 +139,14 @@ let stats = { teoreme: 0, index: false, arhiva: false, sitemap: false };
       const diagHtml = c.diagrama ? '<div class="diagram-area" aria-hidden="true">' + c.diagrama + '</div>' : '';
       const related = TEOREME.filter(function (t) { return t.domeniu === m.domeniu && t.id !== m.id; }).slice(0, 4);
       const relHtml = related.map(function (t) {
-        return '<a href="' + encodeURIComponent(t.id) + '.html" class="related-link">' +
+        return '<a href="' + encodeURIComponent(t.id) + '" class="related-link">' +
           '<span class="card-tag ' + t.domeniu_tag + '">' + t.domeniu_label + '</span> ' + t.titlu + '</a>';
       }).join('');
 
       bodyHtml =
         '<nav class="breadcrumb" aria-label="Navigare ierarhică">' +
-        '<a href="../index.html">Acasă</a><span class="sep" aria-hidden="true">›</span>' +
-        '<a href="../arhiva.html">Arhivă</a><span class="sep" aria-hidden="true">›</span>' +
+        '<a href="../">Acasă</a><span class="sep" aria-hidden="true">›</span>' +
+        '<a href="../arhiva">Arhivă</a><span class="sep" aria-hidden="true">›</span>' +
         '<span>' + m.domeniu_label + '</span><span class="sep" aria-hidden="true">›</span>' +
         '<span aria-current="page">' + m.titlu + '</span>' +
         '</nav>' +
@@ -183,14 +180,14 @@ let stats = { teoreme: 0, index: false, arhiva: false, sitemap: false };
         '</article>' +
         (relHtml ? '<div class="tp-related"><h3>Din același domeniu - ' + m.domeniu_label + '</h3><div class="related-links">' + relHtml + '</div></div>' : '') +
         '<nav class="theorem-nav" aria-label="Navigare teoreme">' +
-        (prev ? '<a href="' + encodeURIComponent(prev.id) + '.html" class="tn-link prev">' + prev.titlu + '</a>' : '<a href="../arhiva.html" class="tn-link prev">Arhivă</a>') +
-        (next ? '<a href="' + encodeURIComponent(next.id) + '.html" class="tn-link next">' + next.titlu + '</a>' : '<a href="../arhiva.html" class="tn-link next">Arhivă</a>') +
+        (prev ? '<a href="' + encodeURIComponent(prev.id) + '" class="tn-link prev">' + prev.titlu + '</a>' : '<a href="../arhiva" class="tn-link prev">Arhivă</a>') +
+        (next ? '<a href="' + encodeURIComponent(next.id) + '" class="tn-link next">' + next.titlu + '</a>' : '<a href="../arhiva" class="tn-link next">Arhivă</a>') +
         '</nav>';
       stats.teoreme++;
     } else {
       bodyHtml =
-        '<nav class="breadcrumb"><a href="../index.html">Acasă</a><span class="sep">›</span>' +
-        '<a href="../arhiva.html">Arhivă</a><span class="sep">›</span>' +
+        '<nav class="breadcrumb"><a href="../">Acasă</a><span class="sep">›</span>' +
+        '<a href="../arhiva">Arhivă</a><span class="sep">›</span>' +
         '<span>' + m.domeniu_label + '</span><span class="sep">›</span>' +
         '<span aria-current="page">' + m.titlu + '</span></nav>' +
         '<article><div class="tp-head">' +
@@ -201,8 +198,8 @@ let stats = { teoreme: 0, index: false, arhiva: false, sitemap: false };
         '<strong>Formulă:</strong> ' + m.formula + '</div>' +
         '<div class="formula-block"><span class="formula-label">Formulă</span>' + m.formula + '</div></article>' +
         '<nav class="theorem-nav">' +
-        (prev ? '<a href="' + encodeURIComponent(prev.id) + '.html" class="tn-link prev">' + prev.titlu + '</a>' : '<a href="../arhiva.html" class="tn-link prev">Arhivă</a>') +
-        (next ? '<a href="' + encodeURIComponent(next.id) + '.html" class="tn-link next">' + next.titlu + '</a>' : '<a href="../arhiva.html" class="tn-link next">Arhivă</a>') +
+        (prev ? '<a href="' + encodeURIComponent(prev.id) + '" class="tn-link prev">' + prev.titlu + '</a>' : '<a href="../arhiva" class="tn-link prev">Arhivă</a>') +
+        (next ? '<a href="' + encodeURIComponent(next.id) + '" class="tn-link next">' + next.titlu + '</a>' : '<a href="../arhiva" class="tn-link next">Arhivă</a>') +
         '</nav>';
     }
 
@@ -250,31 +247,27 @@ let stats = { teoreme: 0, index: false, arhiva: false, sitemap: false };
       '<link rel="apple-touch-icon" href="../apple-touch-icon.png">\n' +
       '<link rel="manifest" href="../manifest.json">\n' +
       '<meta name="theme-color" content="#1a1510">\n' +
+      '<link rel="preconnect" href="https://www.googletagmanager.com">\n' +
+      '<link rel="preconnect" href="https://pagead2.googlesyndication.com">\n' +
       '<link rel="preconnect" href="https://fonts.googleapis.com">\n' +
       '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n' +
-      '<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">\n' +
+      '<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">\n' +
       '<link rel="stylesheet" href="../style.css">\n' +
       '<script type="application/ld+json">' + jsonLd + '</script>\n' +
       '</head>\n<body>\n' +
       '<nav class="site-nav">\n  <div class="nav-inner">\n' +
-      '    <a href="../index.html" class="logo">∑ <span>Teoreme</span></a>\n' +
-      '    <div class="nav-search-wrap">\n' +
-      '      <span class="ns-icon" aria-hidden="true">🔍</span>\n' +
-      '      <label for="navSearch" class="sr-only">Caută o teoremă</label>\n' +
-      '      <input type="search" id="navSearch" placeholder="Caută o teoremă..."\n' +
-      '        onkeydown="if(event.key===\'Enter\'&&this.value.trim())window.location=\'../index.html?q=\'+encodeURIComponent(this.value.trim())"\n' +
-      '        aria-label="Caută o teoremă">\n' +
-      '    </div>\n' +
+      '    <a href="../" class="logo">∑ <span>Teoreme</span></a>\n' +
       '    <div class="nav-links">\n' +
-      '      <a href="../index.html">Acasă</a>\n' +
-      '      <a href="../arhiva.html">Arhivă</a>\n' +
-      '      <a href="../despre.html">Despre</a>\n' +
-      '      <a href="../contact.html">Contact</a>\n' +
+      '      <a href="../">Acasă</a>\n' +
+      '      <a href="../arhiva">Arhivă</a>\n' +
+      '      <a href="../despre">Despre</a>\n' +
+      '      <a href="../contact">Contact</a>\n' +
       '    </div>\n' +
       '  </div>\n</nav>\n\n' +
       '<div class="page-wrap" id="pageWrap">\n' + bodyHtml + '\n</div>\n\n' +
       '<footer>\n  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://github.com/ThinkRoot99/teoreme">Cod sursă</a></p>\n' +
-      '  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="../confidentialitate.html">Confidențialitate</a> · <a href="../termeni.html">Termeni</a> · <a href="#" onclick="event.preventDefault();window.openCookieSettings&amp;&amp;window.openCookieSettings()">Setări cookie-uri</a></p>\n</footer>\n\n' +
+      '  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>\n' +
+      '  <p><a href="../confidentialitate">Confidențialitate</a> · <a href="../termeni">Termeni</a> · <a href="#" onclick="event.preventDefault();window.openCookieSettings&amp;&amp;window.openCookieSettings()">Setări cookie-uri</a></p>\n</footer>\n\n' +
       '<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>\n\n' +
       '<script>\n' +
       'if (window.NodeList && !NodeList.prototype.forEach) {\n' +
@@ -295,8 +288,9 @@ let stats = { teoreme: 0, index: false, arhiva: false, sitemap: false };
       '  btn.setAttribute("aria-selected","true");\n' +
       '  document.getElementById(panelId).classList.add("active");\n' +
       '}\n' +
+      '(function(){ var p = document.getElementById("panelEx"); if (p) p.classList.remove("active"); })();\n' +
       '</script>\n' +
-      '<script src="../consent.js"></script>\n' +
+      '<script src="../consent.js" defer></script>\n' +
       '</body>\n</html>\n';
 
     fs.writeFileSync(path.join(OUT_DIR, m.id + '.html'), page);
@@ -356,7 +350,6 @@ let stats = { teoreme: 0, index: false, arhiva: false, sitemap: false };
     const items = letterMap[l];
     const rows = items.map(function (t) {
       return '<a href="' + t.url + '" class="arch-row">' +
-        '<span class="ar-num">' + t.numar + '</span>' +
         '<span class="ar-title">' + t.titlu + '</span>' +
         '<span class="ar-author">' + t.autor + '</span>' +
         '<div class="ar-meta">' +

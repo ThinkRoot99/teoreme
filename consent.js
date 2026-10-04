@@ -33,7 +33,7 @@
     banner.setAttribute('aria-label', 'Consimțământ cookie-uri');
     banner.innerHTML =
       '<p>Folosim Google Analytics pentru statistici de trafic și afișăm reclame Google AdSense. Poți accepta sau refuza oricând. ' +
-      '<a href="' + prefix + 'confidentialitate.html">Detalii și drepturile tale</a></p>' +
+      '<a href="' + prefix + 'confidentialitate">Detalii și drepturile tale</a></p>' +
       '<div class="cookie-banner-actions">' +
       '<button type="button" id="cookieDecline" class="cookie-btn cookie-btn-decline">Refuz</button>' +
       '<button type="button" id="cookieAccept" class="cookie-btn cookie-btn-accept">Accept</button>' +

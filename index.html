@@ -44,9 +44,11 @@ gtag('config', 'G-XXXXXXXXXX');
 <meta name="theme-color" content="#1a1510">
 <title>∑ Teoreme - Matematică pe înțelesul tuturor</title>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"∑ Teoreme","description":"Enciclopedie matematică în limba română","url":"https://teoreme.ro/","inLanguage":"ro"}</script>
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://pagead2.googlesyndication.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <style>
 /* ── INDEX-SPECIFIC ── */
@@ -88,15 +90,10 @@ gtag('config', 'G-XXXXXXXXXX');
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
   font-weight: 900; color: #fff; line-height: 1.1;
-  margin-bottom: 18px;
+  margin-bottom: 36px;
 }
 @media (min-width:640px){ .hero h1{ font-size: 3.8rem; } }
 .hero h1 em { font-style: italic; color: #c8922a }
-.hero-desc {
-  max-width: 600px; margin: 0 auto 36px;
-  font-size: 1rem; color: rgba(255,255,255,.62);
-  font-weight: 300; line-height: 1.75;
-}
 /* Hero search */
 .hero-search {
   max-width: 540px; margin: 0 auto; position: relative;
@@ -114,29 +111,6 @@ gtag('config', 'G-XXXXXXXXXX');
   position: absolute; left: 19px; top: 50%; transform: translateY(-50%);
   font-size: 1rem; opacity: .45; pointer-events: none;
 }
-.search-hint {
-  margin-top: 12px; font-size: .8rem; color: rgba(255,255,255,.3);
-}
-
-/* Stats bar */
-.stats-bar {
-  background: #1a1510; border-top: 1px solid rgba(255,255,255,.07);
-  padding: 16px 24px;
-}
-.stats-inner {
-  max-width: 1100px; margin: 0 auto;
-  display: flex; justify-content: center; flex-wrap: wrap;
-}
-.stats-inner > * { margin: 0 16px 8px; }
-@supports (gap:1px) { .stats-inner{ gap:32px } .stats-inner > *{ margin:0 } }
-.stat {
-  display: flex; align-items: center;
-  font-family: 'JetBrains Mono', monospace; font-size: .78rem;
-  color: rgba(255,255,255,.4);
-}
-.stat > *:not(:last-child) { margin-right: 8px; }
-@supports (gap:1px) { .stat{ gap:8px } .stat > *:not(:last-child){ margin-right:0 } }
-.stat-num { color: #c8922a; font-weight: 600; font-size: .9rem }
 
 /* Filter chips */
 .filter-row {
@@ -146,9 +120,10 @@ gtag('config', 'G-XXXXXXXXXX');
 .filter-label {
   font-family: 'JetBrains Mono', monospace; font-size: .68rem;
   letter-spacing: 2.5px; text-transform: uppercase;
-  color: #4a3f2f; opacity: .55; margin-bottom: 12px;
+  color: #4a3f2f; opacity: .8; margin-bottom: 12px;
+  text-align: center;
 }
-.filter-chips { display: flex; flex-wrap: wrap }
+.filter-chips { display: flex; flex-wrap: wrap; justify-content: center }
 .filter-chips > * { margin: 0 8px 8px 0; }
 @supports (gap:1px) { .filter-chips{ gap:8px } .filter-chips > *{ margin:0 } }
 .chip {
@@ -165,7 +140,7 @@ gtag('config', 'G-XXXXXXXXXX');
 .cards-section { max-width: 1100px; margin: 0 auto; padding: 8px 24px 80px }
 .results-info {
   font-size: .84rem; color: #4a3f2f; margin-bottom: 18px;
-  font-style: italic; opacity: .7;
+  font-style: italic; opacity: .8;
 }
 .cards-grid {
   display: grid;
@@ -182,24 +157,16 @@ gtag('config', 'G-XXXXXXXXXX');
 .t-card:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(26,21,16,.13) }
 .tc-top {
   padding: 20px 22px 14px;
-  display: flex; align-items: flex-start;
-  justify-content: space-between;
 }
-.tc-top > *:not(:last-child) { margin-right: 10px; }
-@supports (gap:1px) { .tc-top{ gap:10px } .tc-top > *:not(:last-child){ margin-right:0 } }
 .tc-tags { display: flex; flex-wrap: wrap; margin-bottom: 6px; }
 .tc-tags > * { margin: 0 7px 7px 0; }
 @supports (gap:1px) { .tc-tags{ gap:7px } .tc-tags > *{ margin:0 0 7px 0 } }
-.tc-num {
-  font-family: 'Playfair Display', serif; font-size: 2.2rem;
-  font-weight: 900; color: #e0d5c0; line-height: 1; flex-shrink: 0;
-}
 .tc-title {
   font-family: 'Playfair Display', serif;
   font-size: 1.15rem; font-weight: 700; line-height: 1.25;
   color: #1a1510; margin: 6px 0 3px;
 }
-.tc-author { font-size: .77rem; color: #4a3f2f; font-style: italic; opacity: .7 }
+.tc-author { font-size: .77rem; color: #4a3f2f; font-style: italic; opacity: .8 }
 .tc-desc {
   padding: 0 22px 12px; font-size: .9rem;
   color: #4a3f2f; line-height: 1.65; flex: 1;
@@ -217,7 +184,7 @@ gtag('config', 'G-XXXXXXXXXX');
 }
 .tc-cta {
   font-family: 'JetBrains Mono', monospace; font-size: .72rem;
-  font-weight: 600; color: #c8922a; letter-spacing: .5px;
+  font-weight: 600; color: #8c6518; letter-spacing: .5px;
 }
 
 /* No results */
@@ -252,16 +219,12 @@ gtag('config', 'G-XXXXXXXXXX');
 
 <nav class="site-nav">
   <div class="nav-inner">
-    <a href="index.html" class="logo">∑ <span>Teoreme</span></a>
-    <div class="nav-search-wrap">
-      <span class="ns-icon">🔍</span>
-      <input type="search" id="navSearch" placeholder="Caută o teoremă..." oninput="doSearch(this.value)" aria-label="Caută o teoremă">
-    </div>
+    <a href="./" class="logo">∑ <span>Teoreme</span></a>
     <div class="nav-links">
-      <a href="index.html" class="active">Acasă</a>
-      <a href="arhiva.html">Arhivă</a>
-      <a href="despre.html">Despre</a>
-      <a href="contact.html">Contact</a>
+      <a href="./" class="active">Acasă</a>
+      <a href="arhiva">Arhivă</a>
+      <a href="despre">Despre</a>
+      <a href="contact">Contact</a>
     </div>
   </div>
 </nav>
@@ -274,29 +237,13 @@ gtag('config', 'G-XXXXXXXXXX');
   </div>
   <div class="hero-content">
     <h1>Matematica<br><em>pe înțelesul tuturor</em></h1>
-    <p class="hero-desc">
-      ∑ Teoreme este o enciclopedie matematică liberă în limba română. Fiecare teoremă vine cu o
-      definiție formală, o diagramă explicativă, cinci exerciții rezolvate pas cu pas și o explicație
-      intuitivă - accesibilă oricui, de la elevi la cercetători.
-    </p>
     <div class="hero-search">
       <span class="hs-icon">🔍</span>
       <input type="search" id="heroSearch" placeholder="Caută - ex: Pitagora, triunghi, prime..."
              oninput="doSearch(this.value)" autofocus aria-label="Caută o teoremă">
     </div>
-    <p class="search-hint">Apasă Enter pentru a căuta sau alege o categorie mai jos</p>
   </div>
 </section>
-
-<!-- STATS -->
-<div class="stats-bar">
-  <div class="stats-inner">
-    <div class="stat"><span class="stat-num" id="statTotal">188</span> teoreme disponibile</div>
-    <div class="stat"><span class="stat-num" id="statDomenii">8</span> domenii</div>
-    <div class="stat"><span class="stat-num">3</span> niveluri de dificultate</div>
-    <div class="stat"><span class="stat-num" id="statEx">940</span> exerciții rezolvate</div>
-  </div>
-</div>
 
 <!-- FILTERS -->
 <div class="filter-row">
@@ -319,41 +266,42 @@ gtag('config', 'G-XXXXXXXXXX');
   <div class="results-info" id="resultsInfo"></div>
   <div class="cards-grid" id="cardsGrid">
   <!--BUILD:CARDS:START-->
-<a href="teoreme/suma-unghiurilor-unui-triunghi.html" class="t-card"><div class="tc-top"><div class="tc-num">001</div><div><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><div class="tc-title">Suma unghiurilor unui triunghi</div><div class="tc-author">Euclid, ~300 î.Hr.</div></div></div><p class="tc-desc">Suma celor trei unghiuri interioare ale oricărui triunghi euclidian este egală cu 180°.</p><div class="tc-formula">α + β + γ = 180°</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
-<a href="teoreme/teorema-lui-pitagora.html" class="t-card"><div class="tc-top"><div class="tc-num">002</div><div><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><div class="tc-title">Teorema lui Pitagora</div><div class="tc-author">Pitagora, ~570 î.Hr.</div></div></div><p class="tc-desc">Într-un triunghi dreptunghic, pătratul ipotenuzei egal cu suma pătratelor catetelor.</p><div class="tc-formula">a² + b² = c²</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
-<a href="teoreme/teorema-lui-thales.html" class="t-card"><div class="tc-top"><div class="tc-num">003</div><div><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><div class="tc-title">Teorema lui Thales</div><div class="tc-author">Thales din Milet, ~600 î.Hr.</div></div></div><p class="tc-desc">O dreaptă paralelă cu baza unui triunghi împarte celelalte laturi proporțional.</p><div class="tc-formula">AM/MB = AN/NC</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
-<a href="teoreme/teorema-bisectoarei.html" class="t-card"><div class="tc-top"><div class="tc-num">004</div><div><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><div class="tc-title">Teorema bisectoarei</div><div class="tc-author">Euclid</div></div></div><p class="tc-desc">Bisectoarea unui unghi al triunghiului împarte latura opusă în raportul celorlalte laturi.</p><div class="tc-formula">BD/DC = AB/AC</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
-<a href="teoreme/legea-cosinusurilor.html" class="t-card"><div class="tc-top"><div class="tc-num">005</div><div><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-med">Intermediar</span></div><div class="tc-title">Legea cosinusurilor</div><div class="tc-author">François Viète, sec. XVI</div></div></div><p class="tc-desc">Generalizare a teoremei lui Pitagora pentru orice triunghi, legând o latură de celelalte două și unghiul cuprins.</p><div class="tc-formula">a² = b² + c² − 2bc·cosA</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
-<a href="teoreme/legea-sinusurilor.html" class="t-card"><div class="tc-top"><div class="tc-num">006</div><div><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-med">Intermediar</span></div><div class="tc-title">Legea sinusurilor</div><div class="tc-author">Ptolemeu, ~150 d.Hr.</div></div></div><p class="tc-desc">Raportul dintre orice latură și sinusul unghiului opus este constant și egal cu diametrul cercului circumscris.</p><div class="tc-formula">a/sinA = b/sinB = c/sinC = 2R</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
-<a href="teoreme/formula-lui-heron.html" class="t-card"><div class="tc-top"><div class="tc-num">007</div><div><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-med">Intermediar</span></div><div class="tc-title">Formula lui Heron</div><div class="tc-author">Heron din Alexandria, ~60 d.Hr.</div></div></div><p class="tc-desc">Aria unui triunghi calculată exclusiv din lungimile celor trei laturi, prin semiperimetru.</p><div class="tc-formula">S = √(s(s−a)(s−b)(s−c))</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
-<a href="teoreme/teorema-medianei-in-triunghi.html" class="t-card"><div class="tc-top"><div class="tc-num">008</div><div><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-med">Intermediar</span></div><div class="tc-title">Teorema medianei</div><div class="tc-author">Apollonius, ~200 î.Hr.</div></div></div><p class="tc-desc">Lungimea medianei unui triunghi exprimată prin lungimile laturilor.</p><div class="tc-formula">mₐ² = (2b²+2c²−a²)/4</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
-<a href="teoreme/congruenta-triunghiurilor-lll.html" class="t-card"><div class="tc-top"><div class="tc-num">009</div><div><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><div class="tc-title">Congruența triunghiurilor (LLL)</div><div class="tc-author">Euclid</div></div></div><p class="tc-desc">Două triunghiuri cu cele trei laturi perechi egale sunt congruente.</p><div class="tc-formula">a₁=a₂, b₁=b₂, c₁=c₂ → △₁≅△₂</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
-<a href="teoreme/congruenta-triunghiurilor-lul.html" class="t-card"><div class="tc-top"><div class="tc-num">010</div><div><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><div class="tc-title">Congruența triunghiurilor (LUL)</div><div class="tc-author">Euclid</div></div></div><p class="tc-desc">Dacă două laturi și unghiul cuprins sunt egale, triunghiurile sunt congruente.</p><div class="tc-formula">a₁=a₂, α₁=α₂, b₁=b₂ → △₁≅△₂</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
-<a href="teoreme/congruenta-triunghiurilor-ulu.html" class="t-card"><div class="tc-top"><div class="tc-num">011</div><div><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><div class="tc-title">Congruența triunghiurilor (ULU)</div><div class="tc-author">Euclid</div></div></div><p class="tc-desc">Dacă două unghiuri și latura cuprinsă sunt egale, triunghiurile sunt congruente.</p><div class="tc-formula">α₁=α₂, a₁=a₂, β₁=β₂ → △₁≅△₂</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
-<a href="teoreme/asemanarea-triunghiurilor-aa.html" class="t-card"><div class="tc-top"><div class="tc-num">012</div><div><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><div class="tc-title">Asemănarea triunghiurilor (AA)</div><div class="tc-author">Euclid</div></div></div><p class="tc-desc">Dacă două unghiuri ale unui triunghi sunt egale cu două unghiuri ale altuia, triunghiurile sunt asemănătoare.</p><div class="tc-formula">α₁=α₂, β₁=β₂ → △₁∼△₂</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
-<a href="teoreme/cercul-circumscris-triunghiului.html" class="t-card"><div class="tc-top"><div class="tc-num">013</div><div><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-med">Intermediar</span></div><div class="tc-title">Cercul circumscris triunghiului</div><div class="tc-author">Euclid</div></div></div><p class="tc-desc">Raza cercului circumscris unui triunghi exprimată prin laturi și arie.</p><div class="tc-formula">R = abc/(4S)</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
-<a href="teoreme/cercul-inscris-triunghiului.html" class="t-card"><div class="tc-top"><div class="tc-num">014</div><div><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-med">Intermediar</span></div><div class="tc-title">Cercul înscris triunghiului</div><div class="tc-author">Euclid</div></div></div><p class="tc-desc">Raza cercului înscris exprimată prin aria și semiperimetrul triunghiului.</p><div class="tc-formula">r = S/s</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
-<a href="teoreme/teorema-lui-ptolemeu.html" class="t-card"><div class="tc-top"><div class="tc-num">015</div><div><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-med">Intermediar</span></div><div class="tc-title">Teorema lui Ptolemeu</div><div class="tc-author">Claudius Ptolemeu, ~150 d.Hr.</div></div></div><p class="tc-desc">Într-un patrulater inscriptibil, produsul diagonalelor este egal cu suma produselor laturilor opuse.</p><div class="tc-formula">AC·BD = AB·CD + AD·BC</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
-<a href="teoreme/teorema-lui-menelaus.html" class="t-card"><div class="tc-top"><div class="tc-num">016</div><div><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-adv">Avansat</span></div><div class="tc-title">Teorema lui Menelaus</div><div class="tc-author">Menelaus din Alexandria, ~100 d.Hr.</div></div></div><p class="tc-desc">Condiție necesară și suficientă de coliniaritate a trei puncte aflate pe laturile unui triunghi.</p><div class="tc-formula">(AM/MB)·(BC'/C'B)·(CA'/A'C) = −1</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
-<a href="teoreme/teorema-lui-ceva.html" class="t-card"><div class="tc-top"><div class="tc-num">017</div><div><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-adv">Avansat</span></div><div class="tc-title">Teorema lui Ceva</div><div class="tc-author">Giovanni Ceva, 1678</div></div></div><p class="tc-desc">Condiție necesară și suficientă de concurență a trei ceviame ale unui triunghi.</p><div class="tc-formula">(AF/FB)·(BD/DC)·(CE/EA) = 1</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
-<a href="teoreme/dreapta-lui-euler.html" class="t-card"><div class="tc-top"><div class="tc-num">018</div><div><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-adv">Avansat</span></div><div class="tc-title">Dreapta lui Euler</div><div class="tc-author">Leonhard Euler, 1765</div></div></div><p class="tc-desc">Circumcentrul, centroida și ortocentrul oricărui triunghi sunt coliniare pe dreapta lui Euler.</p><div class="tc-formula">O, G, H coliniare; OG:GH = 1:2</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
-<a href="teoreme/aria-paralelogramului.html" class="t-card"><div class="tc-top"><div class="tc-num">019</div><div><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><div class="tc-title">Aria paralelogramului</div><div class="tc-author">Euclid</div></div></div><p class="tc-desc">Aria paralelogramului egală cu produsul bazei și înălțimii.</p><div class="tc-formula">S = b·h = a·b·sinα</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
-<a href="teoreme/aria-trapezului.html" class="t-card"><div class="tc-top"><div class="tc-num">020</div><div><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><div class="tc-title">Aria trapezului</div><div class="tc-author">Euclid</div></div></div><p class="tc-desc">Aria trapezului egală cu jumătatea sumei bazelor înmulțite cu înălțimea.</p><div class="tc-formula">S = (a+b)·h/2</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
-<a href="teoreme/unghiul-inscris-in-semicerc.html" class="t-card"><div class="tc-top"><div class="tc-num">021</div><div><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><div class="tc-title">Unghiul înscris în semicerc</div><div class="tc-author">Thales din Milet</div></div></div><p class="tc-desc">Orice unghi înscris într-un semicerc (cu vârful pe cerc și pe diametru ca bază) este drept.</p><div class="tc-formula">∡ACB = 90° (AB diametru)</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
-<a href="teoreme/relatia-unghi-inscris-central.html" class="t-card"><div class="tc-top"><div class="tc-num">022</div><div><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><div class="tc-title">Relația unghi înscris - unghi central</div><div class="tc-author">Euclid</div></div></div><p class="tc-desc">Unghiul înscris este jumătate din unghiul central care subtinde același arc.</p><div class="tc-formula">∡inscris = (1/2)·∡central</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
-<a href="teoreme/lungimea-arcului-de-cerc.html" class="t-card"><div class="tc-top"><div class="tc-num">023</div><div><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><div class="tc-title">Lungimea arcului de cerc</div><div class="tc-author">Arhimede, ~250 î.Hr.</div></div></div><p class="tc-desc">Lungimea unui arc de cerc egală cu produsul razei și măsurii unghiului central în radiani.</p><div class="tc-formula">l = r·α</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
-<a href="teoreme/aria-sectorului-circular.html" class="t-card"><div class="tc-top"><div class="tc-num">024</div><div><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><div class="tc-title">Aria sectorului circular</div><div class="tc-author">Arhimede</div></div></div><p class="tc-desc">Aria sectorului circular cu raza r și unghiul α (radiani).</p><div class="tc-formula">S = r²α/2</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
+<a href="teoreme/suma-unghiurilor-unui-triunghi" class="t-card"><div class="tc-top"><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><div class="tc-title">Suma unghiurilor unui triunghi</div><div class="tc-author">Euclid, ~300 î.Hr.</div></div><p class="tc-desc">Suma celor trei unghiuri interioare ale oricărui triunghi euclidian este egală cu 180°.</p><div class="tc-formula">α + β + γ = 180°</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
+<a href="teoreme/teorema-lui-pitagora" class="t-card"><div class="tc-top"><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><div class="tc-title">Teorema lui Pitagora</div><div class="tc-author">Pitagora, ~570 î.Hr.</div></div><p class="tc-desc">Într-un triunghi dreptunghic, pătratul ipotenuzei egal cu suma pătratelor catetelor.</p><div class="tc-formula">a² + b² = c²</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
+<a href="teoreme/teorema-lui-thales" class="t-card"><div class="tc-top"><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><div class="tc-title">Teorema lui Thales</div><div class="tc-author">Thales din Milet, ~600 î.Hr.</div></div><p class="tc-desc">O dreaptă paralelă cu baza unui triunghi împarte celelalte laturi proporțional.</p><div class="tc-formula">AM/MB = AN/NC</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
+<a href="teoreme/teorema-bisectoarei" class="t-card"><div class="tc-top"><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><div class="tc-title">Teorema bisectoarei</div><div class="tc-author">Euclid</div></div><p class="tc-desc">Bisectoarea unui unghi al triunghiului împarte latura opusă în raportul celorlalte laturi.</p><div class="tc-formula">BD/DC = AB/AC</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
+<a href="teoreme/legea-cosinusurilor" class="t-card"><div class="tc-top"><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-med">Intermediar</span></div><div class="tc-title">Legea cosinusurilor</div><div class="tc-author">François Viète, sec. XVI</div></div><p class="tc-desc">Generalizare a teoremei lui Pitagora pentru orice triunghi, legând o latură de celelalte două și unghiul cuprins.</p><div class="tc-formula">a² = b² + c² − 2bc·cosA</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
+<a href="teoreme/legea-sinusurilor" class="t-card"><div class="tc-top"><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-med">Intermediar</span></div><div class="tc-title">Legea sinusurilor</div><div class="tc-author">Ptolemeu, ~150 d.Hr.</div></div><p class="tc-desc">Raportul dintre orice latură și sinusul unghiului opus este constant și egal cu diametrul cercului circumscris.</p><div class="tc-formula">a/sinA = b/sinB = c/sinC = 2R</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
+<a href="teoreme/formula-lui-heron" class="t-card"><div class="tc-top"><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-med">Intermediar</span></div><div class="tc-title">Formula lui Heron</div><div class="tc-author">Heron din Alexandria, ~60 d.Hr.</div></div><p class="tc-desc">Aria unui triunghi calculată exclusiv din lungimile celor trei laturi, prin semiperimetru.</p><div class="tc-formula">S = √(s(s−a)(s−b)(s−c))</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
+<a href="teoreme/teorema-medianei-in-triunghi" class="t-card"><div class="tc-top"><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-med">Intermediar</span></div><div class="tc-title">Teorema medianei</div><div class="tc-author">Apollonius, ~200 î.Hr.</div></div><p class="tc-desc">Lungimea medianei unui triunghi exprimată prin lungimile laturilor.</p><div class="tc-formula">mₐ² = (2b²+2c²−a²)/4</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
+<a href="teoreme/congruenta-triunghiurilor-lll" class="t-card"><div class="tc-top"><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><div class="tc-title">Congruența triunghiurilor (LLL)</div><div class="tc-author">Euclid</div></div><p class="tc-desc">Două triunghiuri cu cele trei laturi perechi egale sunt congruente.</p><div class="tc-formula">a₁=a₂, b₁=b₂, c₁=c₂ → △₁≅△₂</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
+<a href="teoreme/congruenta-triunghiurilor-lul" class="t-card"><div class="tc-top"><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><div class="tc-title">Congruența triunghiurilor (LUL)</div><div class="tc-author">Euclid</div></div><p class="tc-desc">Dacă două laturi și unghiul cuprins sunt egale, triunghiurile sunt congruente.</p><div class="tc-formula">a₁=a₂, α₁=α₂, b₁=b₂ → △₁≅△₂</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
+<a href="teoreme/congruenta-triunghiurilor-ulu" class="t-card"><div class="tc-top"><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><div class="tc-title">Congruența triunghiurilor (ULU)</div><div class="tc-author">Euclid</div></div><p class="tc-desc">Dacă două unghiuri și latura cuprinsă sunt egale, triunghiurile sunt congruente.</p><div class="tc-formula">α₁=α₂, a₁=a₂, β₁=β₂ → △₁≅△₂</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
+<a href="teoreme/asemanarea-triunghiurilor-aa" class="t-card"><div class="tc-top"><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><div class="tc-title">Asemănarea triunghiurilor (AA)</div><div class="tc-author">Euclid</div></div><p class="tc-desc">Dacă două unghiuri ale unui triunghi sunt egale cu două unghiuri ale altuia, triunghiurile sunt asemănătoare.</p><div class="tc-formula">α₁=α₂, β₁=β₂ → △₁∼△₂</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
+<a href="teoreme/cercul-circumscris-triunghiului" class="t-card"><div class="tc-top"><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-med">Intermediar</span></div><div class="tc-title">Cercul circumscris triunghiului</div><div class="tc-author">Euclid</div></div><p class="tc-desc">Raza cercului circumscris unui triunghi exprimată prin laturi și arie.</p><div class="tc-formula">R = abc/(4S)</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
+<a href="teoreme/cercul-inscris-triunghiului" class="t-card"><div class="tc-top"><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-med">Intermediar</span></div><div class="tc-title">Cercul înscris triunghiului</div><div class="tc-author">Euclid</div></div><p class="tc-desc">Raza cercului înscris exprimată prin aria și semiperimetrul triunghiului.</p><div class="tc-formula">r = S/s</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
+<a href="teoreme/teorema-lui-ptolemeu" class="t-card"><div class="tc-top"><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-med">Intermediar</span></div><div class="tc-title">Teorema lui Ptolemeu</div><div class="tc-author">Claudius Ptolemeu, ~150 d.Hr.</div></div><p class="tc-desc">Într-un patrulater inscriptibil, produsul diagonalelor este egal cu suma produselor laturilor opuse.</p><div class="tc-formula">AC·BD = AB·CD + AD·BC</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
+<a href="teoreme/teorema-lui-menelaus" class="t-card"><div class="tc-top"><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-adv">Avansat</span></div><div class="tc-title">Teorema lui Menelaus</div><div class="tc-author">Menelaus din Alexandria, ~100 d.Hr.</div></div><p class="tc-desc">Condiție necesară și suficientă de coliniaritate a trei puncte aflate pe laturile unui triunghi.</p><div class="tc-formula">(AM/MB)·(BC'/C'B)·(CA'/A'C) = −1</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
+<a href="teoreme/teorema-lui-ceva" class="t-card"><div class="tc-top"><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-adv">Avansat</span></div><div class="tc-title">Teorema lui Ceva</div><div class="tc-author">Giovanni Ceva, 1678</div></div><p class="tc-desc">Condiție necesară și suficientă de concurență a trei ceviame ale unui triunghi.</p><div class="tc-formula">(AF/FB)·(BD/DC)·(CE/EA) = 1</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
+<a href="teoreme/dreapta-lui-euler" class="t-card"><div class="tc-top"><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-adv">Avansat</span></div><div class="tc-title">Dreapta lui Euler</div><div class="tc-author">Leonhard Euler, 1765</div></div><p class="tc-desc">Circumcentrul, centroida și ortocentrul oricărui triunghi sunt coliniare pe dreapta lui Euler.</p><div class="tc-formula">O, G, H coliniare; OG:GH = 1:2</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
+<a href="teoreme/aria-paralelogramului" class="t-card"><div class="tc-top"><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><div class="tc-title">Aria paralelogramului</div><div class="tc-author">Euclid</div></div><p class="tc-desc">Aria paralelogramului egală cu produsul bazei și înălțimii.</p><div class="tc-formula">S = b·h = a·b·sinα</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
+<a href="teoreme/aria-trapezului" class="t-card"><div class="tc-top"><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><div class="tc-title">Aria trapezului</div><div class="tc-author">Euclid</div></div><p class="tc-desc">Aria trapezului egală cu jumătatea sumei bazelor înmulțite cu înălțimea.</p><div class="tc-formula">S = (a+b)·h/2</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
+<a href="teoreme/unghiul-inscris-in-semicerc" class="t-card"><div class="tc-top"><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><div class="tc-title">Unghiul înscris în semicerc</div><div class="tc-author">Thales din Milet</div></div><p class="tc-desc">Orice unghi înscris într-un semicerc (cu vârful pe cerc și pe diametru ca bază) este drept.</p><div class="tc-formula">∡ACB = 90° (AB diametru)</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
+<a href="teoreme/relatia-unghi-inscris-central" class="t-card"><div class="tc-top"><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><div class="tc-title">Relația unghi înscris - unghi central</div><div class="tc-author">Euclid</div></div><p class="tc-desc">Unghiul înscris este jumătate din unghiul central care subtinde același arc.</p><div class="tc-formula">∡inscris = (1/2)·∡central</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
+<a href="teoreme/lungimea-arcului-de-cerc" class="t-card"><div class="tc-top"><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><div class="tc-title">Lungimea arcului de cerc</div><div class="tc-author">Arhimede, ~250 î.Hr.</div></div><p class="tc-desc">Lungimea unui arc de cerc egală cu produsul razei și măsurii unghiului central în radiani.</p><div class="tc-formula">l = r·α</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
+<a href="teoreme/aria-sectorului-circular" class="t-card"><div class="tc-top"><div class="tc-tags"><span class="card-tag tag-geo">Geometrie</span><span class="badge-level bl-fund">Fundamental</span></div><div class="tc-title">Aria sectorului circular</div><div class="tc-author">Arhimede</div></div><p class="tc-desc">Aria sectorului circular cu raza r și unghiul α (radiani).</p><div class="tc-formula">S = r²α/2</div><div class="tc-footer"><div style="display:flex;gap:7px"></div><span class="tc-cta">Vezi teorema →</span></div></a>
 <!--BUILD:CARDS:END-->
 </div>
   <div class="no-results" id="noResults">
-    Nicio teoremă nu corespunde căutării. Încearcă un alt cuvânt cheie sau <a href="arhiva.html">răsfoiește arhiva</a>.
+    Nicio teoremă nu corespunde căutării. Încearcă un alt cuvânt cheie sau <a href="arhiva">răsfoiește arhiva</a>.
   </div>
   <nav class="pagination" id="pagination" aria-label="Paginare rezultate"></nav>
 </div>
 
 <footer>
   <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://github.com/ThinkRoot99/teoreme">Cod sursă</a></p>
-  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="confidentialitate.html">Confidențialitate</a> · <a href="termeni.html">Termeni</a> · <a href="#" onclick="event.preventDefault();window.openCookieSettings&amp;&amp;window.openCookieSettings()">Setări cookie-uri</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
+  <p><a href="confidentialitate">Confidențialitate</a> · <a href="termeni">Termeni</a> · <a href="#" onclick="event.preventDefault();window.openCookieSettings&amp;&amp;window.openCookieSettings()">Setări cookie-uri</a></p>
 </footer>
 
 <script src="date.js"></script>
@@ -386,7 +334,6 @@ function getQueryParam(name){
   var q = getQueryParam('q') || '';
   if(q){
     document.getElementById('heroSearch').value = q;
-    document.getElementById('navSearch').value  = q;
     activeQuery = q.toLowerCase();
   }
 })();
@@ -417,15 +364,12 @@ function renderCards(){
     a.className = 't-card';
     a.innerHTML =
       '<div class="tc-top">' +
-        '<div class="tc-num">' + t.numar + '</div>' +
-        '<div>' +
-          '<div class="tc-tags">' +
-            '<span class="card-tag ' + t.domeniu_tag + '">' + t.domeniu_label + '</span>' +
-            '<span class="badge-level ' + t.nivel_cls + '">' + t.nivel_label + '</span>' +
-          '</div>' +
-          '<div class="tc-title">' + t.titlu + '</div>' +
-          '<div class="tc-author">' + t.autor + '</div>' +
+        '<div class="tc-tags">' +
+          '<span class="card-tag ' + t.domeniu_tag + '">' + t.domeniu_label + '</span>' +
+          '<span class="badge-level ' + t.nivel_cls + '">' + t.nivel_label + '</span>' +
         '</div>' +
+        '<div class="tc-title">' + t.titlu + '</div>' +
+        '<div class="tc-author">' + t.autor + '</div>' +
       '</div>' +
       '<p class="tc-desc">' + t.descriere + '</p>' +
       '<div class="tc-formula">' + t.formula + '</div>' +
@@ -446,7 +390,6 @@ function renderCards(){
     info = '0 rezultate pentru „' + q + '”';
   }
   document.getElementById('resultsInfo').textContent = info;
-  document.getElementById('statTotal').textContent = TEOREME.length;
 
   renderPagination(matches.length, totalPages);
 }
@@ -503,9 +446,7 @@ function goToPage(page){
 function doSearch(val){
   activeQuery = val;
   currentPage = 1;
-  // sync both inputs
   document.getElementById('heroSearch').value = val;
-  document.getElementById('navSearch').value  = val;
   renderCards();
 }
 
@@ -519,15 +460,7 @@ function setFilter(cat, btn){
 
 // Init
 renderCards();
-// Update stats dynamically
-(function(){
-  var domenii = {};
-  TEOREME.forEach(function(t){ domenii[t.domeniu]=1; });
-  var nd = Object.keys(domenii).length;
-  if(document.getElementById('statDomenii')) document.getElementById('statDomenii').textContent = nd;
-  if(document.getElementById('statEx')) document.getElementById('statEx').textContent = TEOREME.length * 5;
-})();
 </script>
-<script src="consent.js"></script>
+<script src="consent.js" defer></script>
 </body>
 </html>

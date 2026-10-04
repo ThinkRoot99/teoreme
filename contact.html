@@ -34,16 +34,18 @@ gtag('config', 'G-XXXXXXXXXX');
 <meta property="og:title" content="Contact - ∑ Teoreme">
 <meta property="og:description" content="Contactează-mă pentru ∑ Teoreme - întrebări, sugestii de teoreme noi sau semnalarea unei erori.">
 <meta property="og:type" content="website">
-<link rel="canonical" href="https://teoreme.ro/contact.html">
+<link rel="canonical" href="https://teoreme.ro/contact">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#1a1510">
 <title>Contact - ∑ Teoreme</title>
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://pagead2.googlesyndication.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <style>
 .contact-hero {
@@ -61,7 +63,7 @@ gtag('config', 'G-XXXXXXXXXX');
 .contact-hero h1 span { color: #c8922a }
 .contact-hero p { color: rgba(255,255,255,.55); font-size: .95rem; margin-top: 10px }
 
-.contact-wrap { max-width: 640px; margin: 0 auto; padding: 48px 24px 80px }
+.contact-wrap { max-width: 1100px; margin: 0 auto; padding: 48px 24px 80px }
 .contact-card {
   background: #fff; border: 1.5px solid #e0d5c0; border-radius: 8px;
   padding: 32px 28px; text-align: center;
@@ -84,18 +86,12 @@ gtag('config', 'G-XXXXXXXXXX');
 
 <nav class="site-nav">
   <div class="nav-inner">
-    <a href="index.html" class="logo">∑ <span>Teoreme</span></a>
-    <div class="nav-search-wrap">
-      <span class="ns-icon" aria-hidden="true">🔍</span>
-      <label for="navSearch" class="sr-only">Caută o teoremă</label>
-      <input type="search" id="navSearch" placeholder="Caută o teoremă..."
-        onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='index.html?q='+encodeURIComponent(this.value.trim())"
-        aria-label="Caută o teoremă">
-    </div>
+    <a href="./" class="logo">∑ <span>Teoreme</span></a>
     <div class="nav-links">
-      <a href="index.html">Acasă</a>
-      <a href="arhiva.html">Arhivă</a>
-      <a href="contact.html" class="active">Contact</a>
+      <a href="./">Acasă</a>
+      <a href="arhiva">Arhivă</a>
+      <a href="despre">Despre</a>
+      <a href="contact" class="active">Contact</a>
     </div>
   </div>
 </nav>
@@ -114,11 +110,12 @@ gtag('config', 'G-XXXXXXXXXX');
 
 <footer>
   <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://github.com/ThinkRoot99/teoreme">Cod sursă</a></p>
-  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> · <a href="confidentialitate.html">Confidențialitate</a> · <a href="termeni.html">Termeni</a> · <a href="#" onclick="event.preventDefault();window.openCookieSettings&amp;&amp;window.openCookieSettings()">Setări cookie-uri</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
+  <p><a href="confidentialitate">Confidențialitate</a> · <a href="termeni">Termeni</a> · <a href="#" onclick="event.preventDefault();window.openCookieSettings&amp;&amp;window.openCookieSettings()">Setări cookie-uri</a></p>
 </footer>
 
 <style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
 
-<script src="consent.js"></script>
+<script src="consent.js" defer></script>
 </body>
 </html>
