@@ -228,8 +228,7 @@ let stats = { teoreme: 0, index: false, arhiva: false, sitemap: false };
       "gtag('config', 'G-XXXXXXXXXX');\n" +
       '</script>\n' +
       '<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>\n' +
-      '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"\n' +
-      '     crossorigin="anonymous"></script>\n' +
+      '<meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX">\n' +
       '<meta charset="UTF-8">\n' +
       '<meta name="viewport" content="width=device-width, initial-scale=1.0">\n' +
       '<meta name="robots" content="index, follow">\n' +
@@ -249,9 +248,8 @@ let stats = { teoreme: 0, index: false, arhiva: false, sitemap: false };
       '<meta name="theme-color" content="#1a1510">\n' +
       '<link rel="preconnect" href="https://www.googletagmanager.com">\n' +
       '<link rel="preconnect" href="https://pagead2.googlesyndication.com">\n' +
-      '<link rel="preconnect" href="https://fonts.googleapis.com">\n' +
-      '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n' +
-      '<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">\n' +
+      '<link rel="preload" as="font" type="font/woff2" href="../fonts/source-serif-4-400-latin.woff2" crossorigin>\n' +
+      '<link rel="preload" as="font" type="font/woff2" href="../fonts/source-serif-4-400-latin-ext.woff2" crossorigin>\n' +
       '<link rel="stylesheet" href="../style.css">\n' +
       '<script type="application/ld+json">' + jsonLd + '</script>\n' +
       '</head>\n<body>\n' +

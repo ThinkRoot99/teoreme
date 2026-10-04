@@ -56,11 +56,28 @@
     showBanner();
   };
 
+  function protectEmails(){
+    var nodes = document.querySelectorAll('.email-protected');
+    for (var i = 0; i < nodes.length; i++) {
+      var el = nodes[i];
+      var user = el.getAttribute('data-user');
+      var domain = el.getAttribute('data-domain');
+      if (!user || !domain) continue;
+      var address = user + String.fromCharCode(64) + domain;
+      var link = document.createElement('a');
+      link.href = 'mailto' + String.fromCharCode(58) + address;
+      link.textContent = address;
+      link.className = el.className.replace('email-protected', '').trim();
+      el.parentNode.replaceChild(link, el);
+    }
+  }
+
   function init(){
     var consent = getConsent();
     if (consent !== 'granted' && consent !== 'denied') {
       showBanner();
     }
+    protectEmails();
   }
 
   if (document.readyState === 'loading') {
