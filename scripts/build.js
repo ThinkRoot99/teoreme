@@ -27,6 +27,7 @@ const PAGE_SIZE = 24; // trebuie să corespundă cu PAGE_SIZE din <script> din i
 const STATIC_PAGES = [
   { loc: '', lastmod: '2026-05-17', priority: '1.0' },
   { loc: 'arhiva', lastmod: '2026-05-17', priority: '0.9' },
+  { loc: 'unelte', lastmod: '2026-10-04', priority: '0.7' },
   { loc: 'despre', lastmod: '2026-09-30', priority: '0.5' },
   { loc: 'contact', lastmod: '2026-09-30', priority: '0.5' },
   { loc: 'confidentialitate', lastmod: '2026-09-30', priority: '0.3' },
@@ -258,6 +259,7 @@ let stats = { teoreme: 0, index: false, arhiva: false, sitemap: false };
       '    <div class="nav-links">\n' +
       '      <a href="../">Acasă</a>\n' +
       '      <a href="../arhiva">Arhivă</a>\n' +
+      '      <a href="../unelte">Unelte</a>\n' +
       '      <a href="../despre">Despre</a>\n' +
       '      <a href="../contact">Contact</a>\n' +
       '    </div>\n' +
