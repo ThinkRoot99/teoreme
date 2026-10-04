@@ -1,7 +1,9 @@
 (function(){
   var STORAGE_KEY = 'cookie-consent';
-  var inTheoremPage = /\/teoreme\//.test(window.location.pathname);
-  var prefix = inTheoremPage ? '../' : '';
+  // adâncimea căii decide prefixul relativ (ex. /teoreme/x sau /unelte/x
+  // au nevoie de "../", paginile de nivel 1 ca /despre nu au nevoie)
+  var pathDepth = window.location.pathname.split('/').filter(Boolean).length;
+  var prefix = pathDepth >= 2 ? '../' : '';
 
   function getConsent(){
     try { return window.localStorage.getItem(STORAGE_KEY); } catch(e){ return null; }

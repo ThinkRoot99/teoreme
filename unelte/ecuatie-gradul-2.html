@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){window.dataLayer.push(arguments);}
+window.gtag = gtag;
+gtag('consent', 'default', {
+  'ad_storage': 'denied',
+  'ad_user_data': 'denied',
+  'ad_personalization': 'denied',
+  'analytics_storage': 'denied'
+});
+try {
+  if (window.localStorage.getItem('cookie-consent') === 'granted') {
+    gtag('consent', 'update', {
+      'ad_storage': 'granted',
+      'ad_user_data': 'granted',
+      'ad_personalization': 'granted',
+      'analytics_storage': 'granted'
+    });
+  }
+} catch(e) {}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXXXXX');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Calculator pentru ecuații de gradul al doilea (ax²+bx+c=0), cu explicația fiecărui pas și grafic live - rădăcini reale, duble sau complexe.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Calculator ecuații de gradul al doilea - ∑ Teoreme">
+<meta property="og:description" content="Calculator pentru ecuații de gradul al doilea, cu explicația fiecărui pas și grafic live.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://teoreme.ro/unelte/ecuatie-gradul-2">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<title>Calculator ecuații de gradul al doilea - ∑ Teoreme</title>
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://pagead2.googlesyndication.com">
+<link rel="preload" as="font" type="font/woff2" href="../fonts/source-serif-4-400-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../fonts/source-serif-4-400-latin-ext.woff2" crossorigin>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-links">
+      <a href="../">Acasă</a>
+      <a href="../arhiva">Arhivă</a>
+      <a href="../unelte/">Unelte</a>
+      <a href="../despre">Despre</a>
+      <a href="../contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div style="max-width:1100px;margin:0 auto;padding:20px 24px 0">
+  <nav class="breadcrumb" aria-label="Navigare ierarhică">
+    <a href="../">Acasă</a><span class="sep" aria-hidden="true">›</span>
+    <a href="../unelte/">Unelte</a><span class="sep" aria-hidden="true">›</span>
+    <span aria-current="page">Calculator ecuații de gradul al doilea</span>
+  </nav>
+</div>
+
+<div class="unelte-hero">
+  <h1>Calculator <span>ecuații de gradul al doilea</span></h1>
+  <p>ax² + bx + c = 0, cu explicația fiecărui pas și grafic live.</p>
+</div>
+
+<div class="unelte-wrap">
+  <div class="unelte-card">
+    <p>Orice ecuație de forma <strong>ax² + bx + c = 0</strong> (cu a ≠ 0) se rezolvă cu formula:</p>
+    <div class="formula-block"><span class="formula-label">Formulă</span>x = (−b ± √(b²−4ac)) / 2a</div>
+    <p>Semnul discriminantului <strong>Δ = b² − 4ac</strong> spune ce fel de rădăcini are ecuația: două rădăcini reale dacă Δ&gt;0, o rădăcină dublă dacă Δ=0, sau două rădăcini complexe dacă Δ&lt;0.</p>
+
+    <noscript>
+      <p class="qf-error">Calculatorul de mai jos are nevoie de JavaScript ca să funcționeze. Poți totuși rezolva ecuația manual, cu formula de mai sus.</p>
+    </noscript>
+
+    <div id="qfWidget">
+      <div class="qf-inputs">
+        <div class="qf-field"><label for="qfA">a</label><input type="text" inputmode="decimal" id="qfA" placeholder="1" autocomplete="off" spellcheck="false"></div>
+        <div class="qf-eq">x² +</div>
+        <div class="qf-field"><label for="qfB">b</label><input type="text" inputmode="decimal" id="qfB" placeholder="-5" autocomplete="off" spellcheck="false"></div>
+        <div class="qf-eq">x +</div>
+        <div class="qf-field"><label for="qfC">c</label><input type="text" inputmode="decimal" id="qfC" placeholder="6" autocomplete="off" spellcheck="false"></div>
+        <div class="qf-eq">= 0</div>
+      </div>
+
+      <div class="qf-result empty" id="qfResult">
+        <div class="qf-status" id="qfStatus"></div>
+        <div id="qfRoots"></div>
+        <div class="qf-graph" id="qfGraph" style="display:none">
+          <svg id="qfGraphSvg" viewBox="0 0 480 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Graficul parabolei"></svg>
+          <div class="qf-graph-legend">
+            <span><i class="qf-dot" style="background:#c8922a"></i> curba y = ax²+bx+c</span>
+            <span><i class="qf-dot" style="background:#1a1510"></i> vârful parabolei</span>
+            <span id="qfLegendRoots"><i class="qf-dot" style="background:#a3461c"></i> rădăcini (unde curba atinge axa x)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://github.com/ThinkRoot99/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
+  <p><a href="../confidentialitate">Confidențialitate</a> · <a href="../termeni">Termeni</a> · <a href="#" onclick="event.preventDefault();window.openCookieSettings&amp;&amp;window.openCookieSettings()">Setări cookie-uri</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script src="../unelte.js"></script>
+<script>initQuadraticTool();</script>
+<script src="../consent.js" defer></script>
+</body>
+</html>

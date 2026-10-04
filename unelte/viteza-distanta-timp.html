@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){window.dataLayer.push(arguments);}
+window.gtag = gtag;
+gtag('consent', 'default', {
+  'ad_storage': 'denied',
+  'ad_user_data': 'denied',
+  'ad_personalization': 'denied',
+  'analytics_storage': 'denied'
+});
+try {
+  if (window.localStorage.getItem('cookie-consent') === 'granted') {
+    gtag('consent', 'update', {
+      'ad_storage': 'granted',
+      'ad_user_data': 'granted',
+      'ad_personalization': 'granted',
+      'analytics_storage': 'granted'
+    });
+  }
+} catch(e) {}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXXXXX');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Calculator viteză, distanță și timp - completezi oricare două valori, a treia se calculează automat din formula viteză = distanță / timp.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Calculator viteză, distanță și timp - ∑ Teoreme">
+<meta property="og:description" content="Completezi oricare două valori, a treia se calculează automat din formula viteză = distanță / timp.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://teoreme.ro/unelte/viteza-distanta-timp">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<title>Calculator viteză, distanță și timp - ∑ Teoreme</title>
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://pagead2.googlesyndication.com">
+<link rel="preload" as="font" type="font/woff2" href="../fonts/source-serif-4-400-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../fonts/source-serif-4-400-latin-ext.woff2" crossorigin>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-links">
+      <a href="../">Acasă</a>
+      <a href="../arhiva">Arhivă</a>
+      <a href="../unelte/">Unelte</a>
+      <a href="../despre">Despre</a>
+      <a href="../contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div style="max-width:1100px;margin:0 auto;padding:20px 24px 0">
+  <nav class="breadcrumb" aria-label="Navigare ierarhică">
+    <a href="../">Acasă</a><span class="sep" aria-hidden="true">›</span>
+    <a href="../unelte/">Unelte</a><span class="sep" aria-hidden="true">›</span>
+    <span aria-current="page">Viteză, distanță și timp</span>
+  </nav>
+</div>
+
+<div class="unelte-hero">
+  <h1>Viteză, <span>distanță și timp</span></h1>
+  <p>Completează oricare două valori - a treia se calculează automat.</p>
+</div>
+
+<div class="unelte-wrap">
+  <div class="unelte-card">
+    <p>Completează exact două din cele trei câmpuri - al treilea se calculează automat, din formula <strong>viteză = distanță / timp</strong>.</p>
+
+    <noscript>
+      <p class="qf-error">Calculatorul are nevoie de JavaScript ca să funcționeze.</p>
+    </noscript>
+
+    <div class="sdt-inputs">
+      <div class="sdt-group">
+        <label for="sdtD">Distanță</label>
+        <div class="sdt-row">
+          <input type="text" inputmode="decimal" id="sdtD" placeholder="120" autocomplete="off" spellcheck="false">
+          <select id="sdtDUnit" aria-label="Unitate distanță"><option value="km">km</option><option value="m">m</option></select>
+        </div>
+      </div>
+      <div class="sdt-group">
+        <label>Timp</label>
+        <div class="sdt-time-row">
+          <div class="sdt-time-field"><input type="text" inputmode="decimal" id="sdtH" placeholder="2" autocomplete="off" spellcheck="false" aria-label="Ore"><span>h</span></div>
+          <div class="sdt-time-field"><input type="text" inputmode="decimal" id="sdtM" placeholder="0" autocomplete="off" spellcheck="false" aria-label="Minute"><span>min</span></div>
+          <div class="sdt-time-field"><input type="text" inputmode="decimal" id="sdtS" placeholder="0" autocomplete="off" spellcheck="false" aria-label="Secunde"><span>s</span></div>
+        </div>
+      </div>
+      <div class="sdt-group">
+        <label for="sdtV">Viteză</label>
+        <div class="sdt-row">
+          <input type="text" inputmode="decimal" id="sdtV" placeholder="60" autocomplete="off" spellcheck="false">
+          <select id="sdtVUnit" aria-label="Unitate viteză"><option value="km/h">km/h</option><option value="m/s">m/s</option></select>
+        </div>
+      </div>
+    </div>
+    <div class="qf-result empty" id="sdtResult">
+      <div id="sdtStatus"></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://github.com/ThinkRoot99/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
+  <p><a href="../confidentialitate">Confidențialitate</a> · <a href="../termeni">Termeni</a> · <a href="#" onclick="event.preventDefault();window.openCookieSettings&amp;&amp;window.openCookieSettings()">Setări cookie-uri</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script src="../unelte.js"></script>
+<script>initSdtTool();</script>
+<script src="../consent.js" defer></script>
+</body>
+</html>

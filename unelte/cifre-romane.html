@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){window.dataLayer.push(arguments);}
+window.gtag = gtag;
+gtag('consent', 'default', {
+  'ad_storage': 'denied',
+  'ad_user_data': 'denied',
+  'ad_personalization': 'denied',
+  'analytics_storage': 'denied'
+});
+try {
+  if (window.localStorage.getItem('cookie-consent') === 'granted') {
+    gtag('consent', 'update', {
+      'ad_storage': 'granted',
+      'ad_user_data': 'granted',
+      'ad_personalization': 'granted',
+      'analytics_storage': 'granted'
+    });
+  }
+} catch(e) {}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXXXXX');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Convertor de cifre arabe în cifre romane și invers, pentru numere de la 1 la 3999 - scrii într-o căsuță, cealaltă se completează automat.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Convertor cifre arabe-romane - ∑ Teoreme">
+<meta property="og:description" content="Convertor de cifre arabe în cifre romane și invers, pentru numere de la 1 la 3999.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://teoreme.ro/unelte/cifre-romane">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<title>Convertor cifre arabe-romane - ∑ Teoreme</title>
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://pagead2.googlesyndication.com">
+<link rel="preload" as="font" type="font/woff2" href="../fonts/source-serif-4-400-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../fonts/source-serif-4-400-latin-ext.woff2" crossorigin>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-links">
+      <a href="../">Acasă</a>
+      <a href="../arhiva">Arhivă</a>
+      <a href="../unelte/">Unelte</a>
+      <a href="../despre">Despre</a>
+      <a href="../contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div style="max-width:1100px;margin:0 auto;padding:20px 24px 0">
+  <nav class="breadcrumb" aria-label="Navigare ierarhică">
+    <a href="../">Acasă</a><span class="sep" aria-hidden="true">›</span>
+    <a href="../unelte/">Unelte</a><span class="sep" aria-hidden="true">›</span>
+    <span aria-current="page">Convertor cifre arabe-romane</span>
+  </nav>
+</div>
+
+<div class="unelte-hero">
+  <h1>Convertor <span>cifre arabe-romane</span></h1>
+  <p>Pentru numere de la 1 la 3999, în ambele direcții.</p>
+</div>
+
+<div class="unelte-wrap">
+  <div class="unelte-card">
+    <p>Scrie un număr (1-3999) sau o cifră romană - cealaltă căsuță se completează automat.</p>
+
+    <noscript>
+      <p class="qf-error">Convertorul are nevoie de JavaScript ca să funcționeze.</p>
+    </noscript>
+
+    <div class="rc-inputs">
+      <div class="qf-field"><label for="rcArabic">Cifră arabă</label><input type="text" inputmode="numeric" id="rcArabic" placeholder="1994" autocomplete="off" spellcheck="false"></div>
+      <div class="rc-arrow">⇄</div>
+      <div class="qf-field"><label for="rcRoman">Cifră romană</label><input type="text" id="rcRoman" placeholder="MCMXCIV" autocomplete="off" spellcheck="false"></div>
+    </div>
+    <div id="rcError"></div>
+  </div>
+
+  <div class="unelte-card">
+    <h2>Tabel de referință</h2>
+    <p>Fiecare literă are o valoare fixă. Un simbol mai mic așezat înaintea unuia mai mare se scade (ex. IV = 5−1 = 4); așezat după, se adună (ex. VI = 5+1 = 6).</p>
+    <table class="rc-table">
+      <tr><th>I</th><th>V</th><th>X</th><th>L</th><th>C</th><th>D</th><th>M</th></tr>
+      <tr><td>1</td><td>5</td><td>10</td><td>50</td><td>100</td><td>500</td><td>1000</td></tr>
+    </table>
+  </div>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://github.com/ThinkRoot99/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
+  <p><a href="../confidentialitate">Confidențialitate</a> · <a href="../termeni">Termeni</a> · <a href="#" onclick="event.preventDefault();window.openCookieSettings&amp;&amp;window.openCookieSettings()">Setări cookie-uri</a></p>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script src="../unelte.js"></script>
+<script>initRomanTool();</script>
+<script src="../consent.js" defer></script>
+</body>
+</html>
