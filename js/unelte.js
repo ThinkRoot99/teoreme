@@ -162,11 +162,11 @@ function initQuadraticTool() {
       statusEl.innerHTML = '';
       rootsEl.innerHTML = '<div class="qf-error">' + r.message + '</div>';
     } else if (r.type === 'no-solution') {
-      statusEl.innerHTML = 'Cu a = 0 și b = 0, ecuația devine „' + fmt(c) + ' = 0”, ceea ce e fals.';
-      rootsEl.innerHTML = '<div class="qf-roots">Nicio soluție.</div>';
+      statusEl.innerHTML = 'Cu a = 0 și b = 0 nu mai avem o ecuație de gradul al doilea: rămâne „' + fmt(c) + ' = 0”, o egalitate falsă.';
+      rootsEl.innerHTML = '<div class="qf-roots">Nicio soluție: S = ∅</div>';
     } else if (r.type === 'identity') {
-      statusEl.innerHTML = 'Cu a = 0, b = 0 și c = 0, ecuația devine „0 = 0”, adevărat mereu.';
-      rootsEl.innerHTML = '<div class="qf-roots">Orice număr x este soluție.</div>';
+      statusEl.innerHTML = 'Cu a = b = c = 0 nu mai avem o ecuație propriu-zisă, ci identitatea „0 = 0”, adevărată pentru orice x.';
+      rootsEl.innerHTML = '<div class="qf-roots">Orice număr real este soluție: S = ℝ<br>(la fel, orice număr complex: S = ℂ)</div>';
     } else if (r.type === 'linear') {
       statusEl.innerHTML =
         step('Cu a = 0, nu mai e o ecuație de gradul II, ci una liniară: ' + fmt(b) + 'x + (' + fmt(c) + ') = 0.') +
