@@ -510,10 +510,12 @@ let stats = { teoreme: 0, index: false, arhiva: false, sitemap: false };
     })
     .slice(0, 6)
     .map(function (t) {
-      return '<li><a href="teoreme/' + encodeURIComponent(t.id) + '">' + t.titlu + '</a> <span class="recent-data">· ' +
-        dataRo(ACTUALIZAT[t.id].data) + (DEMONSTRATII[t.id] ? ' · cu demonstrație' : '') + '</span></li>';
+      return '<a class="r-card" href="teoreme/' + encodeURIComponent(t.id) + '">' +
+        '<span class="card-tag ' + (t.domeniu_tag || 'tag-geo') + '">' + t.domeniu_label + '</span>' +
+        '<span class="r-title">' + t.titlu + '</span>' +
+        '<span class="r-meta">' + dataRo(ACTUALIZAT[t.id].data) + (DEMONSTRATII[t.id] ? ' · cu demonstrație' : '') + '</span></a>';
     }).join('');
-  html = replaceBetween(html, 'RECENTE', '\n<ul class="recente">' + recente + '</ul>\n');
+  html = replaceBetween(html, 'RECENTE', '\n' + recente + '\n');
   fs.writeFileSync(file, html);
   console.log('  index.html      -> OK (secțiunea „Actualizate recent”)');
 })();

@@ -804,10 +804,25 @@ footer a{color:#c8922a}
 .greseli h2{color:#a3461c}
 .greseli ul{padding-left:20px;margin:0}
 .greseli li{color:#4a3f2f;line-height:1.7;margin-bottom:9px}
-/* ── ACTUALIZATE RECENT (prima pagină) ── */
-.recent-section{max-width:1100px;margin:0 auto;padding:0 24px 64px}
-.recent-section h2{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:#1a1510;margin-bottom:12px}
-.recente{padding-left:20px;margin:0}
-.recente li{color:#4a3f2f;line-height:1.7;margin-bottom:6px}
-.recente a{color:#8c6518;border-bottom:1.5px solid rgba(200,146,42,.4)}
-.recent-data{font-size:.85rem;color:#7a6a52}
+/* ── ACTUALIZATE RECENT (prima pagină, deasupra filtrelor) ── */
+.recent-row{max-width:1100px;margin:0 auto;padding:28px 24px 0}
+.recent-row .filter-label{font-weight:400;margin-bottom:12px}
+.recent-cards{display:flex;flex-wrap:wrap;justify-content:center}
+.recent-cards>*{margin:0 10px 10px 0}
+@supports (display:grid){
+  .recent-cards{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
+  .recent-cards>*{margin:0}
+}
+.r-card{display:flex;flex-direction:column;background:#fff;border:1.5px solid #e0d5c0;border-radius:8px;padding:10px 12px;
+  box-shadow:0 2px 10px rgba(26,21,16,.07);text-decoration:none;color:inherit;transition:transform .18s,box-shadow .18s;min-width:0}
+.r-card:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(26,21,16,.12);border-color:#c8922a}
+.r-card .card-tag{align-self:flex-start;font-size:.6rem;margin-bottom:6px}
+.r-title{font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;line-height:1.25;color:#1a1510;margin-bottom:6px;overflow-wrap:break-word}
+.r-meta{margin-top:auto;font-size:.7rem;color:#7a6a52;line-height:1.35}
+@media (max-width:900px){ @supports (display:grid){ .recent-cards{grid-template-columns:repeat(3,minmax(0,1fr))} } }
+@media (max-width:640px){
+  .recent-cards{display:flex;flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;padding-bottom:4px;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;scrollbar-width:none}
+  .recent-cards::-webkit-scrollbar{display:none}
+  .recent-cards>*{flex:0 0 62%;margin:0 10px 0 0;scroll-snap-align:start}
+  @supports (gap:1px){ .recent-cards{gap:10px} .recent-cards>*{margin:0} }
+}
