@@ -1,30 +1,6 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){window.dataLayer.push(arguments);}
-window.gtag = gtag;
-gtag('consent', 'default', {
-  'ad_storage': 'denied',
-  'ad_user_data': 'denied',
-  'ad_personalization': 'denied',
-  'analytics_storage': 'denied'
-});
-try {
-  if (window.localStorage.getItem('cookie-consent') === 'granted') {
-    gtag('consent', 'update', {
-      'ad_storage': 'granted',
-      'ad_user_data': 'granted',
-      'ad_personalization': 'granted',
-      'analytics_storage': 'granted'
-    });
-  }
-} catch(e) {}
-gtag('js', new Date());
-gtag('config', 'G-XXXXXXXXXX');
-</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,175 +19,9 @@ gtag('config', 'G-XXXXXXXXXX');
 <meta name="theme-color" content="#1a1510">
 <title>∑ Teoreme - Matematică pe înțelesul tuturor</title>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"∑ Teoreme","description":"Enciclopedie matematică în limba română","url":"https://teoreme.ro/","inLanguage":"ro"}</script>
-<link rel="preconnect" href="https://www.googletagmanager.com">
-<link rel="preconnect" href="https://pagead2.googlesyndication.com">
 <link rel="preload" as="font" type="font/woff2" href="fonts/source-serif-4-400-latin.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="fonts/source-serif-4-400-latin-ext.woff2" crossorigin>
-<link rel="stylesheet" href="style.css">
-<style>
-/* ── INDEX-SPECIFIC ── */
-.hero {
-  background: #1a1510;
-  padding: 72px 24px 80px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-.hero::before {
-  content: '';
-  position: absolute; inset: 0;
-  background:
-    radial-gradient(ellipse 55% 55% at 15% 50%, rgba(200,146,42,.11) 0%, transparent 70%),
-    radial-gradient(ellipse 45% 65% at 85% 50%, rgba(45,90,61,.13)  0%, transparent 70%);
-  pointer-events: none;
-}
-.hero-bg-syms {
-  position: absolute; inset: 0; overflow: hidden; pointer-events: none;
-}
-.bg-sym {
-  position: absolute; font-family: 'Playfair Display', serif;
-  color: rgba(255,255,255,.035); font-size: 110px; font-weight: 900;
-  user-select: none; animation: floatS 22s ease-in-out infinite;
-}
-.bg-sym:nth-child(1){top:-15px;left:4%;animation-delay:0s}
-.bg-sym:nth-child(2){top:35%;left:18%;font-size:75px;animation-delay:-6s}
-.bg-sym:nth-child(3){top:-5px;right:8%;animation-delay:-11s}
-.bg-sym:nth-child(4){bottom:-15px;right:22%;font-size:85px;animation-delay:-16s}
-.bg-sym:nth-child(5){top:45%;right:4%;font-size:95px;animation-delay:-8s}
-@keyframes floatS {
-  0%,100%{transform:translateY(0) rotate(0)}
-  33%{transform:translateY(-12px) rotate(2deg)}
-  66%{transform:translateY(7px) rotate(-1deg)}
-}
-.hero-content { position: relative }
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  font-weight: 900; color: #fff; line-height: 1.1;
-  margin-bottom: 36px;
-}
-@media (min-width:640px){ .hero h1{ font-size: 3.8rem; } }
-.hero h1 em { font-style: italic; color: #c8922a }
-/* Hero search */
-.hero-search {
-  max-width: 540px; margin: 0 auto; position: relative;
-}
-.hero-search input {
-  width: 100%; padding: 15px 22px 15px 50px;
-  border: 2px solid rgba(255,255,255,.15); border-radius: 50px;
-  background: rgba(255,255,255,.09); color: #fff;
-  font-family: 'Source Serif 4', serif; font-size: 1rem; outline: none;
-  transition: all .25s;
-}
-.hero-search input::placeholder { color: rgba(255,255,255,.38) }
-.hero-search input:focus { border-color: #c8922a; background: rgba(255,255,255,.12) }
-.hero-search .hs-icon {
-  position: absolute; left: 19px; top: 50%; transform: translateY(-50%);
-  font-size: 1rem; opacity: .45; pointer-events: none;
-}
-
-/* Filter chips */
-.filter-row {
-  max-width: 1100px; margin: 0 auto;
-  padding: 32px 24px 16px;
-}
-.filter-label {
-  font-family: 'JetBrains Mono', monospace; font-size: .68rem;
-  letter-spacing: 2.5px; text-transform: uppercase;
-  color: #4a3f2f; opacity: .8; margin-bottom: 12px;
-  text-align: center;
-}
-.filter-chips { display: flex; flex-wrap: wrap; justify-content: center }
-.filter-chips > * { margin: 0 8px 8px 0; }
-@supports (gap:1px) { .filter-chips{ gap:8px } .filter-chips > *{ margin:0 } }
-.chip {
-  padding: 7px 17px; border-radius: 20px;
-  border: 1.5px solid #e0d5c0; background: #fff;
-  font-family: 'Source Serif 4', serif; font-size: .86rem;
-  color: #4a3f2f; cursor: pointer; transition: all .18s;
-}
-.chip:hover, .chip.active {
-  border-color: #c8922a; background: #fdf3d0; color: #1a1510;
-}
-
-/* Cards grid */
-.cards-section { max-width: 1100px; margin: 0 auto; padding: 8px 24px 80px }
-.results-info {
-  font-size: .84rem; color: #4a3f2f; margin-bottom: 18px;
-  font-style: italic; opacity: .8;
-}
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-}
-.t-card {
-  background: #fff; border: 1.5px solid #e0d5c0; border-radius: 8px;
-  overflow: hidden; box-shadow: 0 2px 14px rgba(26,21,16,.09);
-  display: flex; flex-direction: column;
-  transition: transform .18s, box-shadow .18s;
-  text-decoration: none; color: inherit;
-}
-.t-card:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(26,21,16,.13) }
-.tc-top {
-  padding: 20px 22px 14px;
-}
-.tc-tags { display: flex; flex-wrap: wrap; margin-bottom: 6px; }
-.tc-tags > * { margin: 0 7px 7px 0; }
-@supports (gap:1px) { .tc-tags{ gap:7px } .tc-tags > *{ margin:0 0 7px 0 } }
-.tc-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.15rem; font-weight: 700; line-height: 1.25;
-  color: #1a1510; margin: 6px 0 3px;
-}
-.tc-author { font-size: .77rem; color: #4a3f2f; font-style: italic; opacity: .8 }
-.tc-desc {
-  padding: 0 22px 12px; font-size: .9rem;
-  color: #4a3f2f; line-height: 1.65; flex: 1;
-}
-.tc-formula {
-  margin: 0 22px 14px; padding: 8px 14px;
-  background: #1a1510; color: #fff;
-  border-radius: 5px; font-family: 'JetBrains Mono', monospace;
-  font-size: .85rem; text-align: center;
-}
-.tc-footer {
-  padding: 12px 22px; border-top: 1px solid #e0d5c0;
-  background: #fdf9f3; display: flex;
-  align-items: center; justify-content: space-between;
-}
-.tc-cta {
-  font-family: 'JetBrains Mono', monospace; font-size: .72rem;
-  font-weight: 600; color: #8c6518; letter-spacing: .5px;
-}
-
-/* No results */
-.no-results {
-  display: none; text-align: center; padding: 60px 20px;
-  color: #4a3f2f; font-style: italic;
-}
-
-/* Pagination */
-.pagination {
-  display: flex; align-items: center; justify-content: center;
-  flex-wrap: wrap; margin-top: 36px;
-}
-.pagination > * { margin: 0 3px 6px; }
-@supports (gap:1px) { .pagination{ gap:6px } .pagination > *{ margin:0 } }
-.page-btn {
-  min-width: 38px; height: 38px; padding: 0 10px;
-  border: 1.5px solid #e0d5c0; border-radius: 8px; background: #fff;
-  font-family: 'JetBrains Mono', monospace; font-size: .82rem; font-weight: 600;
-  color: #4a3f2f; cursor: pointer; transition: all .15s;
-}
-.page-btn:hover:not(:disabled) { border-color: #c8922a; background: #fdf3d0; color: #1a1510; }
-.page-btn.active { background: #c8922a; border-color: #c8922a; color: #1a1510; }
-.page-btn:disabled { opacity: .35; cursor: default; }
-.page-ellipsis {
-  min-width: 24px; text-align: center; color: #4a3f2f; opacity: .5;
-  font-family: 'JetBrains Mono', monospace; font-size: .82rem;
-}
-</style>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -303,7 +113,9 @@ gtag('config', 'G-XXXXXXXXXX');
   <p><a href="confidentialitate">Confidențialitate</a> · <a href="termeni">Termeni</a> · <a href="#" onclick="event.preventDefault();window.openCookieSettings&amp;&amp;window.openCookieSettings()">Setări cookie-uri</a></p>
 </footer>
 
-<script src="date.js"></script>
+<button id="backToTop" class="back-to-top" aria-label="Înapoi sus">↑</button>
+
+<script src="js/date.js"></script>
 <script>
 if (window.NodeList && !NodeList.prototype.forEach) {
   NodeList.prototype.forEach = function (callback, thisArg) {
@@ -315,6 +127,17 @@ var activeFilter = 'toate';
 var activeQuery  = '';
 var currentPage  = 1;
 var PAGE_SIZE    = 24;
+
+// Amestecă teoremele într-o ordine nouă la fiecare încărcare a paginii
+// (Fisher-Yates), ca aceleași 24 să nu fie mereu primele afișate.
+function shuffle(arr){
+  for(var i = arr.length - 1; i > 0; i--){
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+  }
+  return arr;
+}
+var TEOREME_SHUFFLED = shuffle(TEOREME.slice());
 
 // Read URL param ?q=...
 function getQueryParam(name){
@@ -344,7 +167,7 @@ function renderCards(){
   var q   = activeQuery.trim().toLowerCase();
   var cat = activeFilter;
 
-  var matches = TEOREME.filter(function(t){
+  var matches = TEOREME_SHUFFLED.filter(function(t){
     var matchCat = (cat === 'toate' || t.domeniu === cat);
     var matchQ   = !q || (t.titlu + ' ' + t.descriere + ' ' + t.autor + ' ' + t.formula).toLowerCase().indexOf(q) !== -1;
     return matchCat && matchQ;
@@ -460,6 +283,6 @@ function setFilter(cat, btn){
 // Init
 renderCards();
 </script>
-<script src="consent.js" defer></script>
+<script src="js/consent.js" defer></script>
 </body>
 </html>

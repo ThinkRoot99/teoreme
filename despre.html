@@ -1,30 +1,6 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){window.dataLayer.push(arguments);}
-window.gtag = gtag;
-gtag('consent', 'default', {
-  'ad_storage': 'denied',
-  'ad_user_data': 'denied',
-  'ad_personalization': 'denied',
-  'analytics_storage': 'denied'
-});
-try {
-  if (window.localStorage.getItem('cookie-consent') === 'granted') {
-    gtag('consent', 'update', {
-      'ad_storage': 'granted',
-      'ad_user_data': 'granted',
-      'ad_personalization': 'granted',
-      'analytics_storage': 'granted'
-    });
-  }
-} catch(e) {}
-gtag('js', new Date());
-gtag('config', 'G-XXXXXXXXXX');
-</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,64 +16,9 @@ gtag('config', 'G-XXXXXXXXXX');
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#1a1510">
 <title>Despre - ∑ Teoreme</title>
-<link rel="preconnect" href="https://www.googletagmanager.com">
-<link rel="preconnect" href="https://pagead2.googlesyndication.com">
 <link rel="preload" as="font" type="font/woff2" href="fonts/source-serif-4-400-latin.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="fonts/source-serif-4-400-latin-ext.woff2" crossorigin>
-<link rel="stylesheet" href="style.css">
-<style>
-.despre-hero {
-  background: #1a1510;
-  padding: 42px 24px 40px;
-  border-bottom: 1px solid rgba(255,255,255,.07);
-  text-align: center;
-}
-.despre-hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.9rem;
-  font-weight: 900; color: #fff; line-height: 1.15;
-}
-@media (min-width:640px){ .despre-hero h1{ font-size: 2.4rem; } }
-.despre-hero h1 span { color: #c8922a }
-.despre-hero p { color: rgba(255,255,255,.55); font-size: .95rem; margin-top: 10px }
-
-.despre-wrap { max-width: 1100px; margin: 0 auto; padding: 48px 24px 80px }
-.despre-card {
-  background: #fff; border: 1.5px solid #e0d5c0; border-radius: 8px;
-  padding: 32px 28px;
-  box-shadow: 0 2px 14px rgba(26,21,16,.09);
-  margin-bottom: 20px;
-}
-.despre-card h2 {
-  font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700;
-  color: #1a1510; margin-bottom: 14px;
-}
-.despre-card p { color: #4a3f2f; line-height: 1.75; margin-bottom: 14px }
-.despre-card p:last-child { margin-bottom: 0 }
-.despre-card p a { color: #8c6518; border-bottom: 1.5px solid rgba(200,146,42,.4) }
-.despre-card p a:hover { border-bottom-color: #8c6518 }
-
-.despre-stats {
-  display: flex; flex-wrap: wrap; justify-content: center;
-  margin: 24px 0;
-}
-.despre-stats > * { margin: 0 12px; }
-@supports (gap:1px) { .despre-stats{ gap:24px } .despre-stats > *{ margin:0 } }
-.despre-stat { text-align: center }
-.despre-stat b {
-  display: block; font-family: 'Playfair Display', serif; font-size: 1.8rem;
-  font-weight: 900; color: #8c6518;
-}
-.despre-stat span { font-size: .78rem; color: #4a3f2f; opacity: .8 }
-
-.despre-cta {
-  text-align: center; margin-top: 8px;
-}
-.despre-cta a {
-  color: #8c6518; font-weight: 600; border-bottom: 1.5px solid rgba(200,146,42,.4);
-}
-.despre-cta a:hover { border-bottom-color: #c8922a }
-</style>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -114,19 +35,23 @@ gtag('config', 'G-XXXXXXXXXX');
   </div>
 </nav>
 
-<div class="despre-hero">
+<div class="page-hero">
+  <div class="hero-bg-syms" aria-hidden="true">
+    <div class="bg-sym">π</div><div class="bg-sym">∑</div><div class="bg-sym">√</div>
+    <div class="bg-sym">∞</div><div class="bg-sym">Δ</div>
+  </div>
   <h1>Despre <span>∑ Teoreme</span></h1>
   <p>De ce există acest site și cine îl întreține.</p>
 </div>
 
-<div class="despre-wrap">
-  <div class="despre-card">
+<div class="page-wrap">
+  <div class="content-card">
     <h2>De ce există</h2>
     <p>∑ Teoreme a pornit de la o observație simplă: în limba română nu exista un loc unde teoremele matematice să fie explicate complet - definiție formală, diagramă, explicație intuitivă și exerciții rezolvate - toate într-un singur loc, gratuit.</p>
     <p>Așa că am construit unul.</p>
   </div>
 
-  <div class="despre-card">
+  <div class="content-card">
     <h2>Ce conține</h2>
     <p>Site-ul acoperă 188 de teoreme din 8 domenii ale matematicii, de la geometrie și aritmetică până la topologie și logică matematică. Fiecare teoremă are aceeași structură: enunț, formulă, o explicație pe înțelesul oricui și cinci exerciții rezolvate pas cu pas.</p>
     <div class="despre-stats">
@@ -137,13 +62,13 @@ gtag('config', 'G-XXXXXXXXXX');
     </div>
   </div>
 
-  <div class="despre-card">
+  <div class="content-card">
     <h2>Cine îl întreține</h2>
     <p>∑ Teoreme e întreținut de o singură persoană, în timpul liber. Conținutul e gratuit și va rămâne gratuit.</p>
     <p class="despre-cta">Ai o sugestie sau ai găsit o greșeală? <a href="contact">Scrie-mi</a>.</p>
   </div>
 
-  <div class="despre-card">
+  <div class="content-card">
     <h2>Licență și cod sursă</h2>
     <p>Conținutul (text, diagrame) e licențiat sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, iar codul site-ului sub <a href="https://opensource.org/license/mit">MIT</a> - poți refolosi orice, cu atribuire.</p>
     <p>Codul e open source, pe <a href="https://github.com/ThinkRoot99/teoreme">GitHub</a> - dacă găsești o greșeală sau vrei să contribui direct, poți deschide acolo un pull request.</p>
@@ -156,8 +81,8 @@ gtag('config', 'G-XXXXXXXXXX');
   <p><a href="confidentialitate">Confidențialitate</a> · <a href="termeni">Termeni</a> · <a href="#" onclick="event.preventDefault();window.openCookieSettings&amp;&amp;window.openCookieSettings()">Setări cookie-uri</a></p>
 </footer>
 
-<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+<button id="backToTop" class="back-to-top" aria-label="Înapoi sus">↑</button>
 
-<script src="consent.js" defer></script>
+<script src="js/consent.js" defer></script>
 </body>
 </html>

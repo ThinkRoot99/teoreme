@@ -1,30 +1,6 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){window.dataLayer.push(arguments);}
-window.gtag = gtag;
-gtag('consent', 'default', {
-  'ad_storage': 'denied',
-  'ad_user_data': 'denied',
-  'ad_personalization': 'denied',
-  'analytics_storage': 'denied'
-});
-try {
-  if (window.localStorage.getItem('cookie-consent') === 'granted') {
-    gtag('consent', 'update', {
-      'ad_storage': 'granted',
-      'ad_user_data': 'granted',
-      'ad_personalization': 'granted',
-      'analytics_storage': 'granted'
-    });
-  }
-} catch(e) {}
-gtag('js', new Date());
-gtag('config', 'G-XXXXXXXXXX');
-</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,147 +14,9 @@ gtag('config', 'G-XXXXXXXXXX');
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="theme-color" content="#1a1510">
 <title>Arhivă - ∑ Teoreme</title>
-<link rel="preconnect" href="https://www.googletagmanager.com">
-<link rel="preconnect" href="https://pagead2.googlesyndication.com">
 <link rel="preload" as="font" type="font/woff2" href="fonts/source-serif-4-400-latin.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="fonts/source-serif-4-400-latin-ext.woff2" crossorigin>
-<link rel="stylesheet" href="style.css">
-<style>
-/* ── ARCHIVE-SPECIFIC ── */
-.arch-hero {
-  background: #1a1510;
-  padding: 42px 24px 40px;
-  border-bottom: 1px solid rgba(255,255,255,.07);
-}
-.arch-hero-inner {
-  max-width: 1100px; margin: 0 auto;
-  display: flex; align-items: center; flex-wrap: wrap;
-}
-.arch-hero-inner > * { margin: 0 24px 0 0; }
-@supports (gap:1px) { .arch-hero-inner{ gap:24px } .arch-hero-inner > *{ margin:0 } }
-.arch-hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.6rem;
-  font-weight: 900; color: #fff; line-height: 1.15; flex: 1;
-}
-@media (min-width:640px){ .arch-hero h1{ font-size: 2.2rem; } }
-.arch-hero h1 span { color: #c8922a }
-.arch-hero p { color: rgba(255,255,255,.45); font-size: .88rem; margin-top: 6px }
-.arch-search-wrap {
-  position: relative; flex: 0 0 300px;
-}
-.arch-search-wrap input {
-  width: 100%; padding: 10px 16px 10px 38px;
-  border: 1.5px solid rgba(255,255,255,.15); border-radius: 28px;
-  background: rgba(255,255,255,.08); color: #fff;
-  font-family: 'Source Serif 4', serif; font-size: .9rem; outline: none;
-  transition: border-color .2s;
-}
-.arch-search-wrap input::placeholder { color: rgba(255,255,255,.35) }
-.arch-search-wrap input:focus { border-color: #c8922a }
-.arch-search-wrap .as-icon {
-  position: absolute; left: 13px; top: 50%; transform: translateY(-50%);
-  opacity: .4; font-size: .82rem; pointer-events: none;
-}
-
-/* Filters bar */
-.arch-filters {
-  background: #f6f2ea; border-bottom: 1px solid #e0d5c0;
-  padding: 14px 24px;
-}
-.arch-filters-inner {
-  max-width: 1100px; margin: 0 auto;
-  display: flex; flex-wrap: wrap; align-items: center;
-  justify-content: center;
-}
-.arch-filters-inner > * { margin: 0 8px 4px 0; }
-@supports (gap:1px) { .arch-filters-inner{ gap:8px } .arch-filters-inner > *{ margin:0 } }
-.af-label {
-  font-family: 'JetBrains Mono', monospace; font-size: .67rem;
-  letter-spacing: 2px; text-transform: uppercase;
-  color: #4a3f2f; opacity: .5; margin-right: 4px;
-}
-.af-chip {
-  padding: 5px 14px; border-radius: 16px; border: 1.5px solid #e0d5c0;
-  background: #fff; font-family: 'Source Serif 4', serif; font-size: .82rem;
-  color: #4a3f2f; cursor: pointer; transition: all .18s;
-}
-.af-chip:hover, .af-chip.active {
-  border-color: #c8922a; background: #fdf3d0; color: #1a1510;
-}
-.af-sep { width: 1px; height: 22px; background: #e0d5c0; margin: 0 4px }
-
-/* A-Z Bar */
-.az-bar-wrap {
-  background: #fff; border-bottom: 2px solid #e0d5c0;
-  position: sticky; top: 56px; z-index: 50;
-}
-.az-bar {
-  max-width: 1100px; margin: 0 auto;
-  padding: 10px 24px; display: flex; flex-wrap: wrap;
-  justify-content: center;
-}
-.az-bar > * { margin: 0 2px 2px 0; }
-@supports (gap:1px) { .az-bar{ gap:2px } .az-bar > *{ margin:0 } }
-.az-btn {
-  min-width: 32px; height: 32px; padding: 0 6px;
-  border: none; background: transparent; cursor: pointer;
-  font-family: 'JetBrains Mono', monospace; font-size: .82rem;
-  font-weight: 600; color: #bbb; border-radius: 4px; transition: all .15s;
-}
-.az-btn.has-items { color: #4a3f2f }
-.az-btn.has-items:hover { background: #fdf3d0; color: #c8922a }
-.az-btn.highlighted { background: #c8922a; color: #1a1510; transform: scale(1.05) }
-
-/* Archive list */
-.arch-content { max-width: 1100px; margin: 0 auto; padding: 32px 24px 80px }
-
-.arch-no-results {
-  text-align: center; padding: 60px 20px;
-  color: #4a3f2f; font-style: italic; display: none;
-}
-
-.letter-group { margin-bottom: 36px; scroll-margin-top: calc(56px + 54px) }
-.letter-heading {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem; font-weight: 900; color: #c8922a;
-  padding-bottom: 10px; margin-bottom: 14px;
-  border-bottom: 2px solid #e0d5c0;
-  display: flex; align-items: baseline;
-}
-.letter-heading > *:not(:last-child) { margin-right: 12px; }
-@supports (gap:1px) { .letter-heading{ gap:12px } .letter-heading > *:not(:last-child){ margin-right:0 } }
-.letter-heading span {
-  font-family: 'JetBrains Mono', monospace; font-size: .7rem;
-  font-weight: 400; color: #4a3f2f; opacity: .5; letter-spacing: 1px;
-}
-
-.arch-row {
-  display: flex; align-items: center;
-  padding: 13px 16px; margin-bottom: 6px;
-  border: 1.5px solid #e0d5c0; border-radius: 6px; background: #fff;
-  text-decoration: none; color: inherit; transition: all .16s;
-}
-.arch-row > *:not(:last-child) { margin-right: 14px; }
-@supports (gap:1px) { .arch-row{ gap:14px } .arch-row > *:not(:last-child){ margin-right:0 } }
-.arch-row:hover { border-color: #c8922a; background: #fdf3d0; transform: translateX(3px) }
-.arch-row.hidden { display: none }
-.ar-title {
-  flex: 1; font-size: 1rem; color: #1a1510; font-weight: 700;
-  font-family: 'Playfair Display', serif;
-}
-.ar-meta { display: flex; align-items: center; flex-shrink: 0; flex-wrap: wrap }
-.ar-meta > * { margin: 0 7px 4px 0; }
-@supports (gap:1px) { .ar-meta{ gap:7px } .ar-meta > *{ margin:0 } }
-.ar-author {
-  font-size: .78rem; color: #4a3f2f; font-style: italic;
-  opacity: .65; flex: 1; min-width: 140px;
-}
-.ar-arrow {
-  font-family: 'JetBrains Mono', monospace; font-size: .75rem;
-  color: #c8922a; opacity: .7; flex-shrink: 0;
-}
-</style>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -197,11 +35,13 @@ gtag('config', 'G-XXXXXXXXXX');
 
 <!-- ARCHIVE HERO -->
 <div class="arch-hero">
+  <div class="hero-bg-syms" aria-hidden="true">
+    <div class="bg-sym">π</div><div class="bg-sym">∑</div><div class="bg-sym">√</div>
+    <div class="bg-sym">∞</div><div class="bg-sym">Δ</div>
+  </div>
   <div class="arch-hero-inner">
-    <div style="flex:1">
-      <h1>Arhivă - <span>toate teoremele</span></h1>
-      <p id="archCount">Sortate alfabetic · 188 teoreme disponibile</p>
-    </div>
+    <h1>Arhivă - <span>toate teoremele</span></h1>
+    <p id="archCount">Sortate alfabetic · 188 teoreme disponibile</p>
     <div class="arch-search-wrap">
       <span class="as-icon">🔍</span>
       <input type="search" id="archSearch" placeholder="Filtrează arhiva..." oninput="doFilter(this.value)" aria-label="Filtrează arhiva">
@@ -212,21 +52,25 @@ gtag('config', 'G-XXXXXXXXXX');
 <!-- FILTERS -->
 <div class="arch-filters">
   <div class="arch-filters-inner">
-    <span class="af-label">Domeniu</span>
-    <button class="af-chip active" data-cat="toate"     onclick="setCat('toate',this)">Toate</button>
-    <button class="af-chip"        data-cat="geometrie"    onclick="setCat('geometrie',this)">📐 Geometrie</button>
-    <button class="af-chip"        data-cat="aritmetica"   onclick="setCat('aritmetica',this)">🔢 Aritmetică</button>
-    <button class="af-chip"        data-cat="analiza"      onclick="setCat('analiza',this)">📈 Analiză</button>
-    <button class="af-chip"        data-cat="algebra"      onclick="setCat('algebra',this)">🔣 Algebră</button>
-    <button class="af-chip"        data-cat="probabilitate" onclick="setCat('probabilitate',this)">🎲 Probabilitate</button>
-    <button class="af-chip"        data-cat="topologie"    onclick="setCat('topologie',this)">🔵 Topologie</button>
-    <button class="af-chip"        data-cat="combinatorica" onclick="setCat('combinatorica',this)">♟ Combinatorică</button>
-    <button class="af-chip"        data-cat="logica"       onclick="setCat('logica',this)">🧠 Logică</button>
+    <div class="af-group">
+      <span class="af-label">Domeniu</span>
+      <button class="af-chip active" data-cat="toate"     onclick="setCat('toate',this)">Toate</button>
+      <button class="af-chip"        data-cat="geometrie"    onclick="setCat('geometrie',this)">📐 Geometrie</button>
+      <button class="af-chip"        data-cat="aritmetica"   onclick="setCat('aritmetica',this)">🔢 Aritmetică</button>
+      <button class="af-chip"        data-cat="analiza"      onclick="setCat('analiza',this)">📈 Analiză</button>
+      <button class="af-chip"        data-cat="algebra"      onclick="setCat('algebra',this)">🔣 Algebră</button>
+      <button class="af-chip"        data-cat="probabilitate" onclick="setCat('probabilitate',this)">🎲 Probabilitate</button>
+      <button class="af-chip"        data-cat="topologie"    onclick="setCat('topologie',this)">🔵 Topologie</button>
+      <button class="af-chip"        data-cat="combinatorica" onclick="setCat('combinatorica',this)">♟ Combinatorică</button>
+      <button class="af-chip"        data-cat="logica"       onclick="setCat('logica',this)">🧠 Logică</button>
+    </div>
     <div class="af-sep"></div>
-    <span class="af-label">Nivel</span>
-    <button class="af-chip" data-lv="fundamental" onclick="setLv('fundamental',this)">Fundamental</button>
-    <button class="af-chip" data-lv="intermediar" onclick="setLv('intermediar',this)">Intermediar</button>
-    <button class="af-chip" data-lv="avansat"     onclick="setLv('avansat',this)">Avansat</button>
+    <div class="af-group">
+      <span class="af-label">Nivel</span>
+      <button class="af-chip" data-lv="fundamental" onclick="setLv('fundamental',this)">Fundamental</button>
+      <button class="af-chip" data-lv="intermediar" onclick="setLv('intermediar',this)">Intermediar</button>
+      <button class="af-chip" data-lv="avansat"     onclick="setLv('avansat',this)">Avansat</button>
+    </div>
   </div>
 </div>
 
@@ -440,7 +284,9 @@ gtag('config', 'G-XXXXXXXXXX');
   <p><a href="confidentialitate">Confidențialitate</a> · <a href="termeni">Termeni</a> · <a href="#" onclick="event.preventDefault();window.openCookieSettings&amp;&amp;window.openCookieSettings()">Setări cookie-uri</a></p>
 </footer>
 
-<script src="date.js"></script>
+<button id="backToTop" class="back-to-top" aria-label="Înapoi sus">↑</button>
+
+<script src="js/date.js"></script>
 <script>
 if (window.NodeList && !NodeList.prototype.forEach) {
   NodeList.prototype.forEach = function (callback, thisArg) {
@@ -567,6 +413,6 @@ function setLv(lv, btn){
 // Init
 renderList();
 </script>
-<script src="consent.js" defer></script>
+<script src="js/consent.js" defer></script>
 </body>
 </html>
