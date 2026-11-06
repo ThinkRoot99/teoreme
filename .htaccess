@@ -27,6 +27,9 @@ ErrorDocument 404 /404.html
   RewriteRule ^teorema(\.html)?$ /teoreme/%2? [R=301,L]
   RewriteRule ^teorema(\.html)?$ /arhiva? [R=301,L]
 
+  # Pagina „Noutăți” a fost retrasă: duce la secțiunea „Actualizate recent” de pe prima pagină
+  RewriteRule ^noutati(\.html)?$ /#actualizate-recent [R=301,NE,L]
+
   # Orice altă cerere *.html -> varianta fără extensie (o singură adresă canonică,
   # 404.html e exclus ca să nu afecteze ErrorDocument de mai sus)
   RewriteCond %{REQUEST_URI} !^/404\.html$

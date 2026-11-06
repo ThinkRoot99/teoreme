@@ -37,7 +37,6 @@ const STATIC_PAGES = [
   { loc: 'unelte/combinari-aranjamente', lastmod: '2026-11-06', priority: '0.6' },
   { loc: 'despre', lastmod: '2026-11-06', priority: '0.5' },
   { loc: 'autor', lastmod: '2026-11-06', priority: '0.5' },
-  { loc: 'noutati', lastmod: '2026-11-06', priority: '0.6' },
   { loc: 'contact', lastmod: '2026-09-30', priority: '0.5' },
   { loc: 'confidentialitate', lastmod: '2026-09-30', priority: '0.3' },
   { loc: 'termeni', lastmod: '2026-09-30', priority: '0.3' },
@@ -367,7 +366,7 @@ let stats = { teoreme: 0, index: false, arhiva: false, sitemap: false };
       '<div class="page-wrap" id="pageWrap">\n' + bodyHtml + '\n</div>\n\n' +
       '<footer>\n  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://github.com/ThinkRoot99/teoreme">Cod sursă</a></p>\n' +
       '  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>\n' +
-      '  <p><a href="../noutati">Noutăți</a> · <a href="../confidentialitate">Confidențialitate</a> · <a href="../termeni">Termeni</a> · <a href="#" onclick="event.preventDefault();window.openCookieSettings&amp;&amp;window.openCookieSettings()">Setări cookie-uri</a></p>\n</footer>\n\n' +
+      '  <p><a href="../confidentialitate">Confidențialitate</a> · <a href="../termeni">Termeni</a> · <a href="#" onclick="event.preventDefault();window.openCookieSettings&amp;&amp;window.openCookieSettings()">Setări cookie-uri</a></p>\n</footer>\n\n' +
       '<button id="backToTop" class="back-to-top" aria-label="Înapoi sus">↑</button>\n\n' +
       '<script>\n' +
       'if (window.NodeList && !NodeList.prototype.forEach) {\n' +
@@ -496,46 +495,27 @@ let stats = { teoreme: 0, index: false, arhiva: false, sitemap: false };
 })();
 
 // =====================================================================
-// 5. noutati.html - cifrele conținutului și teoremele actualizate recent (istoricul e scris de mână)
+// 5. index.html - secțiunea „Actualizate recent” (ultimele teoreme modificate)
 // =====================================================================
-(function generateNoutati() {
-  const file = path.join(ROOT, 'noutati.html');
-  if (!fs.existsSync(file)) return;
+(function generateRecente() {
+  const file = path.join(ROOT, 'index.html');
   let html = fs.readFileSync(file, 'utf8');
-
-  const nrExercitii = TEOREME.reduce(function (s, t) {
-    const c = stores[t.domeniu] && stores[t.domeniu][t.id];
-    return s + (c && c.exercitii ? c.exercitii.length : 0);
-  }, 0);
-  const nrDem = TEOREME.filter(function (t) { return DEMONSTRATII[t.id]; }).length;
-  const nrUnelte = fs.readdirSync(path.join(ROOT, 'unelte')).filter(function (f) { return /\.html$/.test(f) && f !== 'index.html'; }).length;
-  const date = TEOREME.map(function (t) { return ACTUALIZAT[t.id] ? ACTUALIZAT[t.id].data : ''; }).filter(Boolean).sort();
-  const ultima = date.length ? date[date.length - 1] : AZI;
-
-  const cifre =
-    '<div class="despre-stats">' +
-    '<div class="despre-stat"><b>' + TEOREME.length + '</b><span>teoreme</span></div>' +
-    '<div class="despre-stat"><b>' + nrExercitii + '</b><span>exerciții rezolvate</span></div>' +
-    '<div class="despre-stat"><b>' + nrDem + '</b><span>demonstrații</span></div>' +
-    '<div class="despre-stat"><b>' + nrUnelte + '</b><span>unelte</span></div>' +
-    '</div>' +
-    '<p>Ultima actualizare a conținutului: <time datetime="' + ultima + '">' + dataRo(ultima) + '</time>.</p>';
-
+  if (html.indexOf('<!--BUILD:RECENTE:START-->') === -1) return;
   const recente = TEOREME.filter(function (t) { return ACTUALIZAT[t.id]; })
     .sort(function (a, b) {
       const d = ACTUALIZAT[b.id].data.localeCompare(ACTUALIZAT[a.id].data);
-      return d !== 0 ? d : a.titlu.localeCompare(b.titlu, 'ro');
+      if (d !== 0) return d;
+      const dem = (DEMONSTRATII[b.id] ? 1 : 0) - (DEMONSTRATII[a.id] ? 1 : 0);
+      return dem !== 0 ? dem : a.titlu.localeCompare(b.titlu, 'ro');
     })
-    .slice(0, 12)
+    .slice(0, 6)
     .map(function (t) {
       return '<li><a href="teoreme/' + encodeURIComponent(t.id) + '">' + t.titlu + '</a> <span class="recent-data">· ' +
         dataRo(ACTUALIZAT[t.id].data) + (DEMONSTRATII[t.id] ? ' · cu demonstrație' : '') + '</span></li>';
     }).join('');
-
-  html = replaceBetween(html, 'NOUTATI-CIFRE', '\n' + cifre + '\n');
-  html = replaceBetween(html, 'NOUTATI-RECENTE', '\n<ul class="recente">' + recente + '</ul>\n');
+  html = replaceBetween(html, 'RECENTE', '\n<ul class="recente">' + recente + '</ul>\n');
   fs.writeFileSync(file, html);
-  console.log('  noutati.html    -> OK (' + nrDem + ' demonstrații, ' + nrUnelte + ' unelte)');
+  console.log('  index.html      -> OK (secțiunea „Actualizate recent”)');
 })();
 
 // Salvează datele de actualizare (în ordinea teoremelor), ca build-ul următor să știe ce s-a schimbat
