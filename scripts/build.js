@@ -67,6 +67,70 @@ Object.keys(domainFiles).forEach(function (dom) {
   stores[dom] = ctx[domainVars[dom]];
 });
 
+// ---------- surse și data ultimei actualizări ----------
+// surse.json: articolul enciclopedic verificat pentru fiecare teoremă (se reface cu scripts/verifica-surse.py).
+// actualizat.json: amprenta conținutului fiecărei teoreme și data ultimei schimbări; dacă la build amprenta
+// diferă, data devine ziua de azi, iar fișierul se rescrie.
+const crypto = require('crypto');
+const SURSE = JSON.parse(fs.readFileSync(path.join(__dirname, 'surse.json'), 'utf8'));
+const ACTUALIZAT_FILE = path.join(__dirname, 'actualizat.json');
+const ACTUALIZAT = fs.existsSync(ACTUALIZAT_FILE) ? JSON.parse(fs.readFileSync(ACTUALIZAT_FILE, 'utf8')) : {};
+const AZI = new Date().toISOString().slice(0, 10);
+function amprenta(c) {
+  return crypto.createHash('sha1').update(JSON.stringify([c.definitie, c.formula_display, c.diagrama,
+    c.intuitiv_text, c.intuitiv_nota, c.exercitii])).digest('hex').slice(0, 16);
+}
+const LUNI = ['ianuarie', 'februarie', 'martie', 'aprilie', 'mai', 'iunie', 'iulie', 'august',
+  'septembrie', 'octombrie', 'noiembrie', 'decembrie'];
+function dataRo(iso) { const p = iso.split('-'); return parseInt(p[2], 10) + ' ' + LUNI[parseInt(p[1], 10) - 1] + ' ' + p[0]; }
+
+// Lucrări de referință pe domenii (manuale universitare standard)
+const BIBLIOGRAFIE = {
+  geometrie: [
+    'H. S. M. Coxeter, S. L. Greitzer, <cite>Geometry Revisited</cite>, Mathematical Association of America, 1967.',
+    'Robin Hartshorne, <cite>Geometry: Euclid and Beyond</cite>, Springer, 2000.'
+  ],
+  aritmetica: [
+    'G. H. Hardy, E. M. Wright, <cite>An Introduction to the Theory of Numbers</cite>, ed. a 6-a, Oxford University Press, 2008.',
+    'Ivan Niven, Herbert S. Zuckerman, Hugh L. Montgomery, <cite>An Introduction to the Theory of Numbers</cite>, ed. a 5-a, Wiley, 1991.'
+  ],
+  analiza: [
+    'Walter Rudin, <cite>Principles of Mathematical Analysis</cite>, ed. a 3-a, McGraw-Hill, 1976.',
+    'Michael Spivak, <cite>Calculus</cite>, ed. a 4-a, Publish or Perish, 2008.'
+  ],
+  algebra: [
+    'Michael Artin, <cite>Algebra</cite>, ed. a 2-a, Pearson, 2011.',
+    'Gilbert Strang, <cite>Introduction to Linear Algebra</cite>, ed. a 5-a, Wellesley-Cambridge Press, 2016.'
+  ],
+  probabilitate: [
+    'William Feller, <cite>An Introduction to Probability Theory and Its Applications</cite>, vol. I, ed. a 3-a, Wiley, 1968.',
+    'Sheldon Ross, <cite>A First Course in Probability</cite>, ed. a 10-a, Pearson, 2019.'
+  ],
+  topologie: [
+    'James R. Munkres, <cite>Topology</cite>, ed. a 2-a, Prentice Hall, 2000.'
+  ],
+  combinatorica: [
+    'Ronald L. Graham, Donald E. Knuth, Oren Patashnik, <cite>Concrete Mathematics</cite>, ed. a 2-a, Addison-Wesley, 1994.',
+    'Richard P. Stanley, <cite>Enumerative Combinatorics</cite>, vol. 1, ed. a 2-a, Cambridge University Press, 2011.'
+  ],
+  logica: [
+    'Herbert B. Enderton, <cite>A Mathematical Introduction to Logic</cite>, ed. a 2-a, Academic Press, 2001.',
+    'Michael Sipser, <cite>Introduction to the Theory of Computation</cite>, ed. a 3-a, Cengage Learning, 2012.'
+  ]
+};
+
+function surseHtml(m) {
+  const s = SURSE[m.id];
+  const items = [];
+  if (s) {
+    items.push('<li>Wikipedia' + (s.limba === 'ro' ? '' : ' (în engleză)') + ': <a href="' + s.url + '" rel="noopener">' + s.titlu + '</a></li>');
+  }
+  (BIBLIOGRAFIE[m.domeniu] || []).forEach(function (b) { items.push('<li>' + b + '</li>'); });
+  if (!items.length) return '';
+  return '<section class="surse" aria-labelledby="surse-' + m.id + '">' +
+    '<h2 id="surse-' + m.id + '">Surse și lecturi suplimentare</h2><ul>' + items.join('') + '</ul></section>';
+}
+
 function esc(s) {
   return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
@@ -130,9 +194,21 @@ let stats = { teoreme: 0, index: false, arhiva: false, sitemap: false };
     const desc = m.descriere || ('Teorema ' + m.titlu + ': definiție formală, diagramă, exerciții rezolvate și explicație intuitivă.');
     const canon = 'https://teoreme.ro/teoreme/' + encodeURIComponent(m.id);
 
+    let actualizat = null;
+    if (c) {
+      const a = amprenta(c);
+      if (!ACTUALIZAT[m.id] || ACTUALIZAT[m.id].amprenta !== a) ACTUALIZAT[m.id] = { amprenta: a, data: AZI };
+      actualizat = ACTUALIZAT[m.id].data;
+    }
+    const citation = (SURSE[m.id] ? [SURSE[m.id].url] : []).concat((BIBLIOGRAFIE[m.domeniu] || []).map(function (b) {
+      return b.replace(/<[^>]+>/g, '');
+    }));
+
     const jsonLd = JSON.stringify({
       '@context': 'https://schema.org', '@type': 'Article',
       name: m.titlu, description: desc,
+      dateModified: actualizat || undefined,
+      citation: citation.length ? citation : undefined,
       author: { '@type': 'Person', name: 'Moldovan Cristian', url: 'https://teoreme.ro/autor' },
       about: { '@type': 'Thing', name: m.titlu, description: 'Rezultat atribuit lui ' + m.autor },
       inLanguage: 'ro', educationalLevel: m.nivel_label, url: canon,
@@ -164,7 +240,8 @@ let stats = { teoreme: 0, index: false, arhiva: false, sitemap: false };
         '</div>' +
         '<h1 itemprop="name">' + m.titlu + '</h1>' +
         '<p class="author">' + m.autor + ' · nr. ' + m.numar + '</p>' +
-        '<p class="byline">Explicații și exerciții: <a href="../autor" itemprop="author">Moldovan Cristian</a></p>' +
+        '<p class="byline">Explicații și exerciții: <a href="../autor" itemprop="author">Moldovan Cristian</a>' +
+        ' · actualizat <time itemprop="dateModified" datetime="' + actualizat + '">' + dataRo(actualizat) + '</time></p>' +
         '</div>' +
         '<div class="tp-tabs" role="tablist">' +
         '<button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,\'panelDef\')">📖 Definiție</button>' +
@@ -184,6 +261,7 @@ let stats = { teoreme: 0, index: false, arhiva: false, sitemap: false };
         '<div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx">' +
         '<div class="exercises-list">' + exHtml + '</div>' +
         '</div>' +
+        surseHtml(m) +
         '</article>' +
         (relHtml ? '<div class="tp-related"><h3>Din același domeniu - ' + m.domeniu_label + '</h3><div class="related-links">' + relHtml + '</div></div>' : '') +
         '<nav class="theorem-nav" aria-label="Navigare teoreme">' +
@@ -366,12 +444,20 @@ let stats = { teoreme: 0, index: false, arhiva: false, sitemap: false };
     lines.push('<url><loc>https://teoreme.ro/' + p.loc + '</loc><lastmod>' + p.lastmod + '</lastmod><priority>' + p.priority + '</priority></url>');
   });
   TEOREME.forEach(function (t) {
-    lines.push('<url><loc>https://teoreme.ro/' + t.url + '</loc><lastmod>2026-09-30</lastmod><priority>0.8</priority></url>');
+    const lastmod = ACTUALIZAT[t.id] ? ACTUALIZAT[t.id].data : '2026-10-03';
+    lines.push('<url><loc>https://teoreme.ro/' + t.url + '</loc><lastmod>' + lastmod + '</lastmod><priority>0.8</priority></url>');
   });
   lines.push('</urlset>');
 
   fs.writeFileSync(file, lines.join('\n') + '\n');
   stats.sitemap = true;
+})();
+
+// Salvează datele de actualizare (în ordinea teoremelor), ca build-ul următor să știe ce s-a schimbat
+(function salveazaActualizat() {
+  const ordonat = {};
+  TEOREME.forEach(function (t) { if (ACTUALIZAT[t.id]) ordonat[t.id] = ACTUALIZAT[t.id]; });
+  fs.writeFileSync(ACTUALIZAT_FILE, JSON.stringify(ordonat, null, 1) + '\n');
 })();
 
 console.log('Build complet:');

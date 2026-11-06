@@ -782,3 +782,11 @@ footer a{color:#c8922a}
 .byline a{color:#8c6518;border-bottom:1.5px solid rgba(200,146,42,.4)}
 .byline a:hover{border-bottom-color:#8c6518}
 .autor-foto{display:block;width:100%;max-width:320px;height:auto;margin:0 auto 22px;border-radius:8px;border:1.5px solid #e0d5c0}
+/* ── SURSE ── */
+.surse{margin-top:28px;padding:20px 22px;background:#fbf8f2;border:1.5px solid #e0d5c0;border-radius:8px}
+.surse h2{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:#1a1510;margin-bottom:10px}
+.surse ul{padding-left:20px;margin:0}
+.surse li{color:#4a3f2f;line-height:1.65;margin-bottom:6px;font-size:.92rem}
+.surse a{color:#8c6518;border-bottom:1.5px solid rgba(200,146,42,.4)}
+.surse a:hover{border-bottom-color:#8c6518}
+.surse cite{font-style:italic}

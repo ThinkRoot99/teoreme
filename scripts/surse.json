@@ -1,0 +1,942 @@
+{
+ "suma-unghiurilor-unui-triunghi": {
+  "titlu": "Sum of angles of a triangle",
+  "url": "https://en.wikipedia.org/wiki/Sum_of_angles_of_a_triangle",
+  "limba": "en"
+ },
+ "teorema-lui-pitagora": {
+  "titlu": "Teorema lui Pitagora",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_lui_Pitagora",
+  "limba": "ro"
+ },
+ "teorema-lui-thales": {
+  "titlu": "Teorema lui Thales",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_lui_Thales",
+  "limba": "ro"
+ },
+ "teorema-bisectoarei": {
+  "titlu": "Teorema bisectoarei",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_bisectoarei",
+  "limba": "ro"
+ },
+ "legea-cosinusurilor": {
+  "titlu": "Teorema cosinusului",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_cosinusului",
+  "limba": "ro"
+ },
+ "legea-sinusurilor": {
+  "titlu": "Teorema sinusurilor",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_sinusurilor",
+  "limba": "ro"
+ },
+ "formula-lui-heron": {
+  "titlu": "Formula lui Heron",
+  "url": "https://ro.wikipedia.org/wiki/Formula_lui_Heron",
+  "limba": "ro"
+ },
+ "teorema-medianei-in-triunghi": {
+  "titlu": "Teorema medianei",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_medianei",
+  "limba": "ro"
+ },
+ "congruenta-triunghiurilor-lll": {
+  "titlu": "Congruență (geometrie)",
+  "url": "https://ro.wikipedia.org/wiki/Congruen%C8%9B%C4%83_%28geometrie%29",
+  "limba": "ro"
+ },
+ "congruenta-triunghiurilor-lul": {
+  "titlu": "Congruență (geometrie)",
+  "url": "https://ro.wikipedia.org/wiki/Congruen%C8%9B%C4%83_%28geometrie%29",
+  "limba": "ro"
+ },
+ "congruenta-triunghiurilor-ulu": {
+  "titlu": "Congruență (geometrie)",
+  "url": "https://ro.wikipedia.org/wiki/Congruen%C8%9B%C4%83_%28geometrie%29",
+  "limba": "ro"
+ },
+ "asemanarea-triunghiurilor-aa": {
+  "titlu": "Asemănare (geometrie)",
+  "url": "https://ro.wikipedia.org/wiki/Asem%C4%83nare_%28geometrie%29",
+  "limba": "ro"
+ },
+ "cercul-circumscris-triunghiului": {
+  "titlu": "Circumcircle",
+  "url": "https://en.wikipedia.org/wiki/Circumcircle",
+  "limba": "en"
+ },
+ "cercul-inscris-triunghiului": {
+  "titlu": "Cerc înscris și cerc exînscris unui triunghi",
+  "url": "https://ro.wikipedia.org/wiki/Cerc_%C3%AEnscris_%C8%99i_cerc_ex%C3%AEnscris_unui_triunghi",
+  "limba": "ro"
+ },
+ "teorema-lui-ptolemeu": {
+  "titlu": "Teorema lui Ptolemeu",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_lui_Ptolemeu",
+  "limba": "ro"
+ },
+ "teorema-lui-menelaus": {
+  "titlu": "Teorema lui Menelaus",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_lui_Menelaus",
+  "limba": "ro"
+ },
+ "teorema-lui-ceva": {
+  "titlu": "Teorema lui Ceva",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_lui_Ceva",
+  "limba": "ro"
+ },
+ "dreapta-lui-euler": {
+  "titlu": "Dreapta lui Euler",
+  "url": "https://ro.wikipedia.org/wiki/Dreapta_lui_Euler",
+  "limba": "ro"
+ },
+ "aria-paralelogramului": {
+  "titlu": "Paralelogram",
+  "url": "https://ro.wikipedia.org/wiki/Paralelogram",
+  "limba": "ro"
+ },
+ "aria-trapezului": {
+  "titlu": "Trapez",
+  "url": "https://ro.wikipedia.org/wiki/Trapez",
+  "limba": "ro"
+ },
+ "unghiul-inscris-in-semicerc": {
+  "titlu": "Teorema lui Thales (cerc)",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_lui_Thales_%28cerc%29",
+  "limba": "ro"
+ },
+ "relatia-unghi-inscris-central": {
+  "titlu": "Unghi înscris",
+  "url": "https://ro.wikipedia.org/wiki/Unghi_%C3%AEnscris",
+  "limba": "ro"
+ },
+ "lungimea-arcului-de-cerc": {
+  "titlu": "Arc length",
+  "url": "https://en.wikipedia.org/wiki/Arc_length",
+  "limba": "en"
+ },
+ "aria-sectorului-circular": {
+  "titlu": "Sector de cerc",
+  "url": "https://ro.wikipedia.org/wiki/Sector_de_cerc",
+  "limba": "ro"
+ },
+ "puterea-unui-punct-fata-de-cerc": {
+  "titlu": "Power of a point",
+  "url": "https://en.wikipedia.org/wiki/Power_of_a_point",
+  "limba": "en"
+ },
+ "doua-tangente-dintr-un-punct-exterior": {
+  "titlu": "Tangent lines to circles",
+  "url": "https://en.wikipedia.org/wiki/Tangent_lines_to_circles",
+  "limba": "en"
+ },
+ "aria-cercului": {
+  "titlu": "Area of a circle",
+  "url": "https://en.wikipedia.org/wiki/Area_of_a_circle",
+  "limba": "en"
+ },
+ "suma-unghiurilor-poligon-convex": {
+  "titlu": "Unghi interior",
+  "url": "https://ro.wikipedia.org/wiki/Unghi_interior",
+  "limba": "ro"
+ },
+ "aria-poligonului-regulat": {
+  "titlu": "Poligon regulat",
+  "url": "https://ro.wikipedia.org/wiki/Poligon_regulat",
+  "limba": "ro"
+ },
+ "diagonala-paralelipipedului": {
+  "titlu": "Cuboid",
+  "url": "https://ro.wikipedia.org/wiki/Cuboid",
+  "limba": "ro"
+ },
+ "aria-sferei": {
+  "titlu": "Sferă",
+  "url": "https://ro.wikipedia.org/wiki/Sfer%C4%83",
+  "limba": "ro"
+ },
+ "volumul-sferei": {
+  "titlu": "Sferă",
+  "url": "https://ro.wikipedia.org/wiki/Sfer%C4%83",
+  "limba": "ro"
+ },
+ "volumul-conului": {
+  "titlu": "Con",
+  "url": "https://ro.wikipedia.org/wiki/Con",
+  "limba": "ro"
+ },
+ "volumul-cilindrului": {
+  "titlu": "Cilindru (geometrie)",
+  "url": "https://ro.wikipedia.org/wiki/Cilindru_%28geometrie%29",
+  "limba": "ro"
+ },
+ "volumul-piramidei": {
+  "titlu": "Piramidă (geometrie)",
+  "url": "https://ro.wikipedia.org/wiki/Piramid%C4%83_%28geometrie%29",
+  "limba": "ro"
+ },
+ "teorema-lui-euler-poliedre": {
+  "titlu": "Caracteristică Euler",
+  "url": "https://ro.wikipedia.org/wiki/Caracteristic%C4%83_Euler",
+  "limba": "ro"
+ },
+ "linia-mijlocie-in-triunghi": {
+  "titlu": "Midpoint theorem (triangle)",
+  "url": "https://en.wikipedia.org/wiki/Midpoint_theorem_%28triangle%29",
+  "limba": "en"
+ },
+ "linia-mijlocie-in-trapez": {
+  "titlu": "Trapez",
+  "url": "https://ro.wikipedia.org/wiki/Trapez",
+  "limba": "ro"
+ },
+ "inegalitatea-triunghiului": {
+  "titlu": "Inegalitatea triunghiului",
+  "url": "https://ro.wikipedia.org/wiki/Inegalitatea_triunghiului",
+  "limba": "ro"
+ },
+ "concurenta-medianelor": {
+  "titlu": "Mediană",
+  "url": "https://ro.wikipedia.org/wiki/Median%C4%83",
+  "limba": "ro"
+ },
+ "concurenta-inaltimilor": {
+  "titlu": "Altitude (triangle)",
+  "url": "https://en.wikipedia.org/wiki/Altitude_%28triangle%29",
+  "limba": "en"
+ },
+ "concurenta-bisectoarelor": {
+  "titlu": "Centrul cercului înscris într-un triunghi",
+  "url": "https://ro.wikipedia.org/wiki/Centrul_cercului_%C3%AEnscris_%C3%AEntr-un_triunghi",
+  "limba": "ro"
+ },
+ "teorema-lui-pappus": {
+  "titlu": "Pappus's centroid theorem",
+  "url": "https://en.wikipedia.org/wiki/Pappus%27s_centroid_theorem",
+  "limba": "en"
+ },
+ "teorema-lui-pick": {
+  "titlu": "Pick's theorem",
+  "url": "https://en.wikipedia.org/wiki/Pick%27s_theorem",
+  "limba": "en"
+ },
+ "distanta-de-la-punct-la-dreapta": {
+  "titlu": "Distanța de la un punct la o dreaptă",
+  "url": "https://ro.wikipedia.org/wiki/Distan%C8%9Ba_de_la_un_punct_la_o_dreapt%C4%83",
+  "limba": "ro"
+ },
+ "teorema-lui-varignon": {
+  "titlu": "Teorema lui Varignon",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_lui_Varignon",
+  "limba": "ro"
+ },
+ "teorema-lui-stewart": {
+  "titlu": "Teorema lui Stewart",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_lui_Stewart",
+  "limba": "ro"
+ },
+ "cercul-celor-noua-puncte": {
+  "titlu": "Cercul celor nouă puncte",
+  "url": "https://ro.wikipedia.org/wiki/Cercul_celor_nou%C4%83_puncte",
+  "limba": "ro"
+ },
+ "teorema-tangenta-secanta": {
+  "titlu": "Teorema tangentei și a secantei",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_tangentei_%C8%99i_a_secantei",
+  "limba": "ro"
+ },
+ "relatia-lui-euler-in-triunghi": {
+  "titlu": "Teorema lui Euler (geometrie)",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_lui_Euler_%28geometrie%29",
+  "limba": "ro"
+ },
+ "infinitatea-numerelor-prime": {
+  "titlu": "Euclid's theorem",
+  "url": "https://en.wikipedia.org/wiki/Euclid%27s_theorem",
+  "limba": "en"
+ },
+ "teorema-fundamentala-a-aritmeticii": {
+  "titlu": "Teorema fundamentală a aritmeticii",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_fundamental%C4%83_a_aritmeticii",
+  "limba": "ro"
+ },
+ "teorema-mica-a-lui-fermat": {
+  "titlu": "Mica teoremă a lui Fermat",
+  "url": "https://ro.wikipedia.org/wiki/Mica_teorem%C4%83_a_lui_Fermat",
+  "limba": "ro"
+ },
+ "teorema-lui-euler-phi": {
+  "titlu": "Teorema lui Euler",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_lui_Euler",
+  "limba": "ro"
+ },
+ "teorema-lui-wilson": {
+  "titlu": "Teorema lui Wilson",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_lui_Wilson",
+  "limba": "ro"
+ },
+ "algoritmul-lui-euclid": {
+  "titlu": "Algoritmul lui Euclid",
+  "url": "https://ro.wikipedia.org/wiki/Algoritmul_lui_Euclid",
+  "limba": "ro"
+ },
+ "identitatea-lui-bezout": {
+  "titlu": "Identitatea lui Bézout",
+  "url": "https://ro.wikipedia.org/wiki/Identitatea_lui_B%C3%A9zout",
+  "limba": "ro"
+ },
+ "lema-lui-euclid": {
+  "titlu": "Euclid's lemma",
+  "url": "https://en.wikipedia.org/wiki/Euclid%27s_lemma",
+  "limba": "en"
+ },
+ "teorema-chineza-a-resturilor": {
+  "titlu": "Teorema chinezească a resturilor",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_chinezeasc%C4%83_a_resturilor",
+  "limba": "ro"
+ },
+ "suma-primelor-n-numere-naturale": {
+  "titlu": "Număr triunghiular",
+  "url": "https://ro.wikipedia.org/wiki/Num%C4%83r_triunghiular",
+  "limba": "ro"
+ },
+ "suma-patratelor-primelor-n-numere": {
+  "titlu": "Număr piramidal pătratic",
+  "url": "https://ro.wikipedia.org/wiki/Num%C4%83r_piramidal_p%C4%83tratic",
+  "limba": "ro"
+ },
+ "suma-cuburilor-primelor-n-numere": {
+  "titlu": "Număr triunghiular pătratic",
+  "url": "https://ro.wikipedia.org/wiki/Num%C4%83r_triunghiular_p%C4%83tratic",
+  "limba": "ro"
+ },
+ "numerele-fibonacci": {
+  "titlu": "Număr Fibonacci",
+  "url": "https://ro.wikipedia.org/wiki/Num%C4%83r_Fibonacci",
+  "limba": "ro"
+ },
+ "postulatul-lui-bertrand": {
+  "titlu": "Postulatul lui Bertrand",
+  "url": "https://ro.wikipedia.org/wiki/Postulatul_lui_Bertrand",
+  "limba": "ro"
+ },
+ "ciurul-lui-eratostene": {
+  "titlu": "Ciurul lui Eratostene",
+  "url": "https://ro.wikipedia.org/wiki/Ciurul_lui_Eratostene",
+  "limba": "ro"
+ },
+ "functia-euler-totient": {
+  "titlu": "Indicatorul lui Euler",
+  "url": "https://ro.wikipedia.org/wiki/Indicatorul_lui_Euler",
+  "limba": "ro"
+ },
+ "numere-perfecte": {
+  "titlu": "Număr perfect",
+  "url": "https://ro.wikipedia.org/wiki/Num%C4%83r_perfect",
+  "limba": "ro"
+ },
+ "teorema-numerelor-prime": {
+  "titlu": "Teorema numerelor prime",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_numerelor_prime",
+  "limba": "ro"
+ },
+ "ecuatia-diofantica-liniara": {
+  "titlu": "Diophantine equation",
+  "url": "https://en.wikipedia.org/wiki/Diophantine_equation",
+  "limba": "en"
+ },
+ "numere-mersenne": {
+  "titlu": "Prim Mersenne",
+  "url": "https://ro.wikipedia.org/wiki/Prim_Mersenne",
+  "limba": "ro"
+ },
+ "teorema-valorii-intermediare": {
+  "titlu": "Intermediate value theorem",
+  "url": "https://en.wikipedia.org/wiki/Intermediate_value_theorem",
+  "limba": "en"
+ },
+ "teorema-lui-rolle": {
+  "titlu": "Teorema lui Rolle",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_lui_Rolle",
+  "limba": "ro"
+ },
+ "teorema-valorii-medii-lagrange": {
+  "titlu": "Teorema creșterilor finite",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_cre%C8%99terilor_finite",
+  "limba": "ro"
+ },
+ "teorema-lui-lhopital": {
+  "titlu": "Regula lui l'Hôpital",
+  "url": "https://ro.wikipedia.org/wiki/Regula_lui_l%27H%C3%B4pital",
+  "limba": "ro"
+ },
+ "formula-lui-taylor": {
+  "titlu": "Taylor's theorem",
+  "url": "https://en.wikipedia.org/wiki/Taylor%27s_theorem",
+  "limba": "en"
+ },
+ "teorema-fundamentala-a-calculului": {
+  "titlu": "Teorema fundamentală a calculului integral",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_fundamental%C4%83_a_calculului_integral",
+  "limba": "ro"
+ },
+ "regula-lantului-derivate": {
+  "titlu": "Derivarea funcțiilor compuse",
+  "url": "https://ro.wikipedia.org/wiki/Derivarea_func%C8%9Biilor_compuse",
+  "limba": "ro"
+ },
+ "integrarea-prin-parti": {
+  "titlu": "Integrare prin părți",
+  "url": "https://ro.wikipedia.org/wiki/Integrare_prin_p%C4%83r%C8%9Bi",
+  "limba": "ro"
+ },
+ "seria-geometrica": {
+  "titlu": "Geometric series",
+  "url": "https://en.wikipedia.org/wiki/Geometric_series",
+  "limba": "en"
+ },
+ "criteriul-dalembert": {
+  "titlu": "Criteriul raportului (D'Alembert)",
+  "url": "https://ro.wikipedia.org/wiki/Criteriul_raportului_%28D%27Alembert%29",
+  "limba": "ro"
+ },
+ "criteriul-leibniz": {
+  "titlu": "Criteriul seriilor alternate (Leibniz)",
+  "url": "https://ro.wikipedia.org/wiki/Criteriul_seriilor_alternate_%28Leibniz%29",
+  "limba": "ro"
+ },
+ "teorema-lui-weierstrass-functii-continue": {
+  "titlu": "Extreme value theorem",
+  "url": "https://en.wikipedia.org/wiki/Extreme_value_theorem",
+  "limba": "en"
+ },
+ "limita-lui-e": {
+  "titlu": "E (constantă matematică)",
+  "url": "https://ro.wikipedia.org/wiki/E_%28constant%C4%83_matematic%C4%83%29",
+  "limba": "ro"
+ },
+ "inegalitatea-cauchy-schwarz-integrala": {
+  "titlu": "Inegalitatea Cauchy-Schwarz",
+  "url": "https://ro.wikipedia.org/wiki/Inegalitatea_Cauchy-Schwarz",
+  "limba": "ro"
+ },
+ "formula-lui-euler-eipi": {
+  "titlu": "Euler's identity",
+  "url": "https://en.wikipedia.org/wiki/Euler%27s_identity",
+  "limba": "en"
+ },
+ "seria-armonica": {
+  "titlu": "Harmonic series (mathematics)",
+  "url": "https://en.wikipedia.org/wiki/Harmonic_series_%28mathematics%29",
+  "limba": "en"
+ },
+ "seria-lui-euler-pi-la-doi": {
+  "titlu": "Basel problem",
+  "url": "https://en.wikipedia.org/wiki/Basel_problem",
+  "limba": "en"
+ },
+ "teorema-lui-fubini": {
+  "titlu": "Fubini's theorem",
+  "url": "https://en.wikipedia.org/wiki/Fubini%27s_theorem",
+  "limba": "en"
+ },
+ "teorema-punctului-fix-banach": {
+  "titlu": "Principiul contracției",
+  "url": "https://ro.wikipedia.org/wiki/Principiul_contrac%C8%9Biei",
+  "limba": "ro"
+ },
+ "formula-de-moivre": {
+  "titlu": "Formula lui Moivre",
+  "url": "https://ro.wikipedia.org/wiki/Formula_lui_Moivre",
+  "limba": "ro"
+ },
+ "teorema-lui-lagrange-grupuri": {
+  "titlu": "Teorema lui Lagrange (teoria grupurilor)",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_lui_Lagrange_%28teoria_grupurilor%29",
+  "limba": "ro"
+ },
+ "teorema-fundamentala-a-algebrei": {
+  "titlu": "Teorema fundamentală a algebrei",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_fundamental%C4%83_a_algebrei",
+  "limba": "ro"
+ },
+ "relatiile-lui-viete": {
+  "titlu": "Formulele lui Viète",
+  "url": "https://ro.wikipedia.org/wiki/Formulele_lui_Vi%C3%A8te",
+  "limba": "ro"
+ },
+ "teorema-rouche-capelli": {
+  "titlu": "Teorema Kronecker-Capelli",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_Kronecker-Capelli",
+  "limba": "ro"
+ },
+ "regula-cramer": {
+  "titlu": "Regula lui Cramer",
+  "url": "https://ro.wikipedia.org/wiki/Regula_lui_Cramer",
+  "limba": "ro"
+ },
+ "teorema-cayley-hamilton": {
+  "titlu": "Teorema Cayley-Hamilton",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_Cayley-Hamilton",
+  "limba": "ro"
+ },
+ "teorema-abel-ruffini": {
+  "titlu": "Teorema lui Abel-Ruffini",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_lui_Abel-Ruffini",
+  "limba": "ro"
+ },
+ "inegalitatea-cauchy-schwarz-vectori": {
+  "titlu": "Inegalitatea Cauchy-Schwarz",
+  "url": "https://ro.wikipedia.org/wiki/Inegalitatea_Cauchy-Schwarz",
+  "limba": "ro"
+ },
+ "teorema-rang-nulitate": {
+  "titlu": "Rank–nullity theorem",
+  "url": "https://en.wikipedia.org/wiki/Rank%E2%80%93nullity_theorem",
+  "limba": "en"
+ },
+ "criteriul-eisenstein": {
+  "titlu": "Criteriul lui Eisenstein",
+  "url": "https://ro.wikipedia.org/wiki/Criteriul_lui_Eisenstein",
+  "limba": "ro"
+ },
+ "teorema-lui-bayes": {
+  "titlu": "Teorema lui Bayes",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_lui_Bayes",
+  "limba": "ro"
+ },
+ "teorema-centrala-limita": {
+  "titlu": "Central limit theorem",
+  "url": "https://en.wikipedia.org/wiki/Central_limit_theorem",
+  "limba": "en"
+ },
+ "legea-numerelor-mari": {
+  "titlu": "Legea numerelor mari",
+  "url": "https://ro.wikipedia.org/wiki/Legea_numerelor_mari",
+  "limba": "ro"
+ },
+ "inegalitatea-lui-chebyshev": {
+  "titlu": "Chebyshev's inequality",
+  "url": "https://en.wikipedia.org/wiki/Chebyshev%27s_inequality",
+  "limba": "en"
+ },
+ "distributia-normala": {
+  "titlu": "Distribuția Gauss",
+  "url": "https://ro.wikipedia.org/wiki/Distribu%C8%9Bia_Gauss",
+  "limba": "ro"
+ },
+ "probabilitatea-conditionata": {
+  "titlu": "Conditional probability",
+  "url": "https://en.wikipedia.org/wiki/Conditional_probability",
+  "limba": "en"
+ },
+ "distributia-binomiala": {
+  "titlu": "Distribuția binomială",
+  "url": "https://ro.wikipedia.org/wiki/Distribu%C8%9Bia_binomial%C4%83",
+  "limba": "ro"
+ },
+ "distributia-poisson": {
+  "titlu": "Poisson distribution",
+  "url": "https://en.wikipedia.org/wiki/Poisson_distribution",
+  "limba": "en"
+ },
+ "entropia-shannon": {
+  "titlu": "Entropie informațională",
+  "url": "https://ro.wikipedia.org/wiki/Entropie_informa%C8%9Bional%C4%83",
+  "limba": "ro"
+ },
+ "inegalitatea-lui-markov": {
+  "titlu": "Markov's inequality",
+  "url": "https://en.wikipedia.org/wiki/Markov%27s_inequality",
+  "limba": "en"
+ },
+ "teorema-heine-borel": {
+  "titlu": "Heine–Borel theorem",
+  "url": "https://en.wikipedia.org/wiki/Heine%E2%80%93Borel_theorem",
+  "limba": "en"
+ },
+ "teorema-punctului-fix-brouwer": {
+  "titlu": "Brouwer fixed-point theorem",
+  "url": "https://en.wikipedia.org/wiki/Brouwer_fixed-point_theorem",
+  "limba": "en"
+ },
+ "teorema-lui-jordan": {
+  "titlu": "Teorema lui Jordan",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_lui_Jordan",
+  "limba": "ro"
+ },
+ "teorema-borsuk-ulam": {
+  "titlu": "Borsuk–Ulam theorem",
+  "url": "https://en.wikipedia.org/wiki/Borsuk%E2%80%93Ulam_theorem",
+  "limba": "en"
+ },
+ "caracteristica-euler-topologie": {
+  "titlu": "Caracteristică Euler",
+  "url": "https://ro.wikipedia.org/wiki/Caracteristic%C4%83_Euler",
+  "limba": "ro"
+ },
+ "conjectura-lui-poincare-perelman": {
+  "titlu": "Conjectura lui Poincaré",
+  "url": "https://ro.wikipedia.org/wiki/Conjectura_lui_Poincar%C3%A9",
+  "limba": "ro"
+ },
+ "lema-lui-zorn": {
+  "titlu": "Lema lui Zorn",
+  "url": "https://ro.wikipedia.org/wiki/Lema_lui_Zorn",
+  "limba": "ro"
+ },
+ "teorema-tychonoff": {
+  "titlu": "Tychonoff's theorem",
+  "url": "https://en.wikipedia.org/wiki/Tychonoff%27s_theorem",
+  "limba": "en"
+ },
+ "principiul-cutiei": {
+  "titlu": "Principiul lui Dirichlet",
+  "url": "https://ro.wikipedia.org/wiki/Principiul_lui_Dirichlet",
+  "limba": "ro"
+ },
+ "binomul-lui-newton": {
+  "titlu": "Binomul lui Newton",
+  "url": "https://ro.wikipedia.org/wiki/Binomul_lui_Newton",
+  "limba": "ro"
+ },
+ "principiul-excluderii-includerii": {
+  "titlu": "Inclusion–exclusion principle",
+  "url": "https://en.wikipedia.org/wiki/Inclusion%E2%80%93exclusion_principle",
+  "limba": "en"
+ },
+ "formula-lui-cayley-arbori": {
+  "titlu": "Formula lui Cayley",
+  "url": "https://ro.wikipedia.org/wiki/Formula_lui_Cayley",
+  "limba": "ro"
+ },
+ "teorema-lui-ramsey": {
+  "titlu": "Ramsey's theorem",
+  "url": "https://en.wikipedia.org/wiki/Ramsey%27s_theorem",
+  "limba": "en"
+ },
+ "teorema-hall-cuplaje": {
+  "titlu": "Teorema căsătoriilor",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_c%C4%83s%C4%83toriilor",
+  "limba": "ro"
+ },
+ "recurente-liniare": {
+  "titlu": "Linear recurrence with constant coefficients",
+  "url": "https://en.wikipedia.org/wiki/Linear_recurrence_with_constant_coefficients",
+  "limba": "en"
+ },
+ "teorema-goedel-incompletitudine-i": {
+  "titlu": "Gödel's incompleteness theorems",
+  "url": "https://en.wikipedia.org/wiki/G%C3%B6del%27s_incompleteness_theorems",
+  "limba": "en"
+ },
+ "teorema-goedel-incompletitudine-ii": {
+  "titlu": "Gödel's incompleteness theorems",
+  "url": "https://en.wikipedia.org/wiki/G%C3%B6del%27s_incompleteness_theorems",
+  "limba": "en"
+ },
+ "teorema-lui-cantor-cardinale": {
+  "titlu": "Teorema lui Cantor",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_lui_Cantor",
+  "limba": "ro"
+ },
+ "problema-halting": {
+  "titlu": "Problema opririi",
+  "url": "https://ro.wikipedia.org/wiki/Problema_opririi",
+  "limba": "ro"
+ },
+ "axioma-alegerii": {
+  "titlu": "Axioma alegerii",
+  "url": "https://ro.wikipedia.org/wiki/Axioma_alegerii",
+  "limba": "ro"
+ },
+ "teorema-compactatii": {
+  "titlu": "Compactness theorem",
+  "url": "https://en.wikipedia.org/wiki/Compactness_theorem",
+  "limba": "en"
+ },
+ "teorema-cook-levin": {
+  "titlu": "Cook–Levin theorem",
+  "url": "https://en.wikipedia.org/wiki/Cook%E2%80%93Levin_theorem",
+  "limba": "en"
+ },
+ "teorema-lui-napoleon": {
+  "titlu": "Teorema lui Napoleon",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_lui_Napoleon",
+  "limba": "ro"
+ },
+ "teorema-lui-morley": {
+  "titlu": "Morley's trisector theorem",
+  "url": "https://en.wikipedia.org/wiki/Morley%27s_trisector_theorem",
+  "limba": "en"
+ },
+ "dreapta-lui-simson": {
+  "titlu": "Dreapta lui Simson",
+  "url": "https://ro.wikipedia.org/wiki/Dreapta_lui_Simson",
+  "limba": "ro"
+ },
+ "teorema-lui-desargues": {
+  "titlu": "Teorema lui Desargues",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_lui_Desargues",
+  "limba": "ro"
+ },
+ "teorema-lui-pascal-hexagon": {
+  "titlu": "Pascal's theorem",
+  "url": "https://en.wikipedia.org/wiki/Pascal%27s_theorem",
+  "limba": "en"
+ },
+ "formula-lui-brahmagupta": {
+  "titlu": "Brahmagupta's formula",
+  "url": "https://en.wikipedia.org/wiki/Brahmagupta%27s_formula",
+  "limba": "en"
+ },
+ "teorema-unghiului-exterior": {
+  "titlu": "Exterior angle theorem",
+  "url": "https://en.wikipedia.org/wiki/Exterior_angle_theorem",
+  "limba": "en"
+ },
+ "aria-prin-coordonate": {
+  "titlu": "Shoelace formula",
+  "url": "https://en.wikipedia.org/wiki/Shoelace_formula",
+  "limba": "en"
+ },
+ "teorema-lui-van-aubel": {
+  "titlu": "Teorema lui van Aubel",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_lui_van_Aubel",
+  "limba": "ro"
+ },
+ "teorema-lui-miquel": {
+  "titlu": "Miquel's theorem",
+  "url": "https://en.wikipedia.org/wiki/Miquel%27s_theorem",
+  "limba": "en"
+ },
+ "legea-reciprocitatii-patratice": {
+  "titlu": "Quadratic reciprocity",
+  "url": "https://en.wikipedia.org/wiki/Quadratic_reciprocity",
+  "limba": "en"
+ },
+ "teorema-lui-lucas-lehmer": {
+  "titlu": "Lucas–Lehmer primality test",
+  "url": "https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test",
+  "limba": "en"
+ },
+ "functia-mobius": {
+  "titlu": "Möbius function",
+  "url": "https://en.wikipedia.org/wiki/M%C3%B6bius_function",
+  "limba": "en"
+ },
+ "formula-inversiunii-mobius": {
+  "titlu": "Möbius inversion formula",
+  "url": "https://en.wikipedia.org/wiki/M%C3%B6bius_inversion_formula",
+  "limba": "en"
+ },
+ "numere-carmichael": {
+  "titlu": "Carmichael number",
+  "url": "https://en.wikipedia.org/wiki/Carmichael_number",
+  "limba": "en"
+ },
+ "teorema-lui-lame": {
+  "titlu": "Algoritmul lui Euclid",
+  "url": "https://ro.wikipedia.org/wiki/Algoritmul_lui_Euclid",
+  "limba": "ro"
+ },
+ "suma-divizorilor-functia-sigma": {
+  "titlu": "Divisor function",
+  "url": "https://en.wikipedia.org/wiki/Divisor_function",
+  "limba": "en"
+ },
+ "teorema-lui-sylow": {
+  "titlu": "Sylow theorems",
+  "url": "https://en.wikipedia.org/wiki/Sylow_theorems",
+  "limba": "en"
+ },
+ "teorema-izomorfismului-grupuri": {
+  "titlu": "Isomorphism theorems",
+  "url": "https://en.wikipedia.org/wiki/Isomorphism_theorems",
+  "limba": "en"
+ },
+ "inegalitatea-mediilor-am-gm": {
+  "titlu": "Inegalitatea mediilor",
+  "url": "https://ro.wikipedia.org/wiki/Inegalitatea_mediilor",
+  "limba": "ro"
+ },
+ "polinomul-caracteristic-valori-proprii": {
+  "titlu": "Characteristic polynomial",
+  "url": "https://en.wikipedia.org/wiki/Characteristic_polynomial",
+  "limba": "en"
+ },
+ "descompunerea-in-fractii-simple": {
+  "titlu": "Partial fraction decomposition",
+  "url": "https://en.wikipedia.org/wiki/Partial_fraction_decomposition",
+  "limba": "en"
+ },
+ "formula-lui-gerschgorin": {
+  "titlu": "Gershgorin circle theorem",
+  "url": "https://en.wikipedia.org/wiki/Gershgorin_circle_theorem",
+  "limba": "en"
+ },
+ "identitate-lagrange": {
+  "titlu": "Lagrange's identity",
+  "url": "https://en.wikipedia.org/wiki/Lagrange%27s_identity",
+  "limba": "en"
+ },
+ "criteriul-lui-cauchy-condensare": {
+  "titlu": "Criteriul de condensare (Cauchy)",
+  "url": "https://ro.wikipedia.org/wiki/Criteriul_de_condensare_%28Cauchy%29",
+  "limba": "ro"
+ },
+ "teorema-stolz-cesaro": {
+  "titlu": "Teorema Stolz-Cesàro",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_Stolz-Ces%C3%A0ro",
+  "limba": "ro"
+ },
+ "teorema-lui-abel-serii": {
+  "titlu": "Teorema lui Abel",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_lui_Abel",
+  "limba": "ro"
+ },
+ "criteriul-integral-convergenta": {
+  "titlu": "Criteriul integral (Maclaurin-Cauchy)",
+  "url": "https://ro.wikipedia.org/wiki/Criteriul_integral_%28Maclaurin-Cauchy%29",
+  "limba": "ro"
+ },
+ "teorema-lui-darboux": {
+  "titlu": "Teorema lui Darboux (analiză matematică)",
+  "url": "https://ro.wikipedia.org/wiki/Teorema_lui_Darboux_%28analiz%C4%83_matematic%C4%83%29",
+  "limba": "ro"
+ },
+ "formula-lui-stirling": {
+  "titlu": "Formula lui Stirling",
+  "url": "https://ro.wikipedia.org/wiki/Formula_lui_Stirling",
+  "limba": "ro"
+ },
+ "teorema-lui-dini": {
+  "titlu": "Dini's theorem",
+  "url": "https://en.wikipedia.org/wiki/Dini%27s_theorem",
+  "limba": "en"
+ },
+ "teorema-lui-de-moivre-laplace": {
+  "titlu": "De Moivre–Laplace theorem",
+  "url": "https://en.wikipedia.org/wiki/De_Moivre%E2%80%93Laplace_theorem",
+  "limba": "en"
+ },
+ "inegalitatea-lui-jensen": {
+  "titlu": "Jensen's inequality",
+  "url": "https://en.wikipedia.org/wiki/Jensen%27s_inequality",
+  "limba": "en"
+ },
+ "distributia-exponentiala": {
+  "titlu": "Exponential distribution",
+  "url": "https://en.wikipedia.org/wiki/Exponential_distribution",
+  "limba": "en"
+ },
+ "teorema-lui-borel-cantelli": {
+  "titlu": "Borel–Cantelli lemma",
+  "url": "https://en.wikipedia.org/wiki/Borel%E2%80%93Cantelli_lemma",
+  "limba": "en"
+ },
+ "covarianta-si-corelatia": {
+  "titlu": "Pearson correlation coefficient",
+  "url": "https://en.wikipedia.org/wiki/Pearson_correlation_coefficient",
+  "limba": "en"
+ },
+ "teorema-lui-urysohn": {
+  "titlu": "Urysohn's lemma",
+  "url": "https://en.wikipedia.org/wiki/Urysohn%27s_lemma",
+  "limba": "en"
+ },
+ "teorema-lui-baire": {
+  "titlu": "Baire category theorem",
+  "url": "https://en.wikipedia.org/wiki/Baire_category_theorem",
+  "limba": "en"
+ },
+ "teorema-lui-arzela-ascoli": {
+  "titlu": "Arzelà–Ascoli theorem",
+  "url": "https://en.wikipedia.org/wiki/Arzel%C3%A0%E2%80%93Ascoli_theorem",
+  "limba": "en"
+ },
+ "conexitate-prin-drumuri": {
+  "titlu": "Mulțime conexă",
+  "url": "https://ro.wikipedia.org/wiki/Mul%C8%9Bime_conex%C4%83",
+  "limba": "ro"
+ },
+ "teorema-lui-stone-weierstrass": {
+  "titlu": "Stone–Weierstrass theorem",
+  "url": "https://en.wikipedia.org/wiki/Stone%E2%80%93Weierstrass_theorem",
+  "limba": "en"
+ },
+ "compactitate-secventiala": {
+  "titlu": "Sequentially compact space",
+  "url": "https://en.wikipedia.org/wiki/Sequentially_compact_space",
+  "limba": "en"
+ },
+ "teorema-lui-tietze": {
+  "titlu": "Tietze extension theorem",
+  "url": "https://en.wikipedia.org/wiki/Tietze_extension_theorem",
+  "limba": "en"
+ },
+ "numerele-catalan": {
+  "titlu": "Număr Catalan",
+  "url": "https://ro.wikipedia.org/wiki/Num%C4%83r_Catalan",
+  "limba": "ro"
+ },
+ "numerele-stirling": {
+  "titlu": "Stirling numbers of the second kind",
+  "url": "https://en.wikipedia.org/wiki/Stirling_numbers_of_the_second_kind",
+  "limba": "en"
+ },
+ "teorema-lui-erdos-szekeres": {
+  "titlu": "Erdős–Szekeres theorem",
+  "url": "https://en.wikipedia.org/wiki/Erd%C5%91s%E2%80%93Szekeres_theorem",
+  "limba": "en"
+ },
+ "numerele-bell": {
+  "titlu": "Bell number",
+  "url": "https://en.wikipedia.org/wiki/Bell_number",
+  "limba": "en"
+ },
+ "teorema-lui-konig-cuplaje": {
+  "titlu": "Kőnig's theorem (graph theory)",
+  "url": "https://en.wikipedia.org/wiki/K%C5%91nig%27s_theorem_%28graph_theory%29",
+  "limba": "en"
+ },
+ "formula-lui-vandermonde": {
+  "titlu": "Vandermonde's identity",
+  "url": "https://en.wikipedia.org/wiki/Vandermonde%27s_identity",
+  "limba": "en"
+ },
+ "permutari-fara-puncte-fixe-derangements": {
+  "titlu": "Derangement",
+  "url": "https://en.wikipedia.org/wiki/Derangement",
+  "limba": "en"
+ },
+ "teorema-lui-lowenheim-skolem": {
+  "titlu": "Löwenheim–Skolem theorem",
+  "url": "https://en.wikipedia.org/wiki/L%C3%B6wenheim%E2%80%93Skolem_theorem",
+  "limba": "en"
+ },
+ "principiul-inductiei-matematice": {
+  "titlu": "Inducție matematică",
+  "url": "https://ro.wikipedia.org/wiki/Induc%C8%9Bie_matematic%C4%83",
+  "limba": "ro"
+ },
+ "tabele-de-adevar-completitudine": {
+  "titlu": "Propositional logic",
+  "url": "https://en.wikipedia.org/wiki/Propositional_logic",
+  "limba": "en"
+ },
+ "teorema-lui-church-turing": {
+  "titlu": "Teza Church-Turing",
+  "url": "https://ro.wikipedia.org/wiki/Teza_Church-Turing",
+  "limba": "ro"
+ },
+ "paradoxul-lui-russell": {
+  "titlu": "Paradoxul lui Russell",
+  "url": "https://ro.wikipedia.org/wiki/Paradoxul_lui_Russell",
+  "limba": "ro"
+ },
+ "teorema-lui-tarski-nedefinibilitate": {
+  "titlu": "Tarski's undefinability theorem",
+  "url": "https://en.wikipedia.org/wiki/Tarski%27s_undefinability_theorem",
+  "limba": "en"
+ }
+}

@@ -1,0 +1,754 @@
+{
+ "suma-unghiurilor-unui-triunghi": {
+  "amprenta": "bd9d7fdbc8864b38",
+  "data": "2026-11-06"
+ },
+ "teorema-lui-pitagora": {
+  "amprenta": "5890592321495dba",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-thales": {
+  "amprenta": "8d658e8c0e93c471",
+  "data": "2026-11-06"
+ },
+ "teorema-bisectoarei": {
+  "amprenta": "a513d395e794da71",
+  "data": "2026-11-06"
+ },
+ "legea-cosinusurilor": {
+  "amprenta": "79749015bfab8c0e",
+  "data": "2026-10-03"
+ },
+ "legea-sinusurilor": {
+  "amprenta": "c03a77f4589916e3",
+  "data": "2026-10-03"
+ },
+ "formula-lui-heron": {
+  "amprenta": "2aff7910c09aa576",
+  "data": "2026-10-03"
+ },
+ "teorema-medianei-in-triunghi": {
+  "amprenta": "4b0c2096371987e3",
+  "data": "2026-10-03"
+ },
+ "congruenta-triunghiurilor-lll": {
+  "amprenta": "c8b1c866bdcd58d1",
+  "data": "2026-10-03"
+ },
+ "congruenta-triunghiurilor-lul": {
+  "amprenta": "179ca3ff872ed8b1",
+  "data": "2026-10-03"
+ },
+ "congruenta-triunghiurilor-ulu": {
+  "amprenta": "7f9a24f2f3707de9",
+  "data": "2026-10-03"
+ },
+ "asemanarea-triunghiurilor-aa": {
+  "amprenta": "f607582018383ad6",
+  "data": "2026-10-03"
+ },
+ "cercul-circumscris-triunghiului": {
+  "amprenta": "215506a738db073c",
+  "data": "2026-11-06"
+ },
+ "cercul-inscris-triunghiului": {
+  "amprenta": "88ca9b72a5a9a4d7",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-ptolemeu": {
+  "amprenta": "51165a184297725d",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-menelaus": {
+  "amprenta": "1d5ad1a9070223a9",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-ceva": {
+  "amprenta": "2676c843aa01f7dc",
+  "data": "2026-11-06"
+ },
+ "dreapta-lui-euler": {
+  "amprenta": "5eb34e64ba8ed1f5",
+  "data": "2026-10-03"
+ },
+ "aria-paralelogramului": {
+  "amprenta": "b9f17463a5261a2f",
+  "data": "2026-10-03"
+ },
+ "aria-trapezului": {
+  "amprenta": "6f4bd0b495ef01b5",
+  "data": "2026-11-06"
+ },
+ "unghiul-inscris-in-semicerc": {
+  "amprenta": "7d05703f7a5935a6",
+  "data": "2026-10-03"
+ },
+ "relatia-unghi-inscris-central": {
+  "amprenta": "8bf471afea17cfc0",
+  "data": "2026-10-03"
+ },
+ "lungimea-arcului-de-cerc": {
+  "amprenta": "01ff86932d9a25ac",
+  "data": "2026-10-03"
+ },
+ "aria-sectorului-circular": {
+  "amprenta": "6cd5d4bd6cad45ca",
+  "data": "2026-11-06"
+ },
+ "puterea-unui-punct-fata-de-cerc": {
+  "amprenta": "bd86823f561e075a",
+  "data": "2026-10-03"
+ },
+ "doua-tangente-dintr-un-punct-exterior": {
+  "amprenta": "551ecbfee5372b51",
+  "data": "2026-10-03"
+ },
+ "aria-cercului": {
+  "amprenta": "d8b59c00866ce4f7",
+  "data": "2026-11-06"
+ },
+ "suma-unghiurilor-poligon-convex": {
+  "amprenta": "74fbcb74be79ac0f",
+  "data": "2026-10-03"
+ },
+ "aria-poligonului-regulat": {
+  "amprenta": "855c4c1a9f148177",
+  "data": "2026-10-03"
+ },
+ "diagonala-paralelipipedului": {
+  "amprenta": "5aafbd9ef04fbddb",
+  "data": "2026-10-03"
+ },
+ "aria-sferei": {
+  "amprenta": "b9d31db55e1b7ca1",
+  "data": "2026-11-06"
+ },
+ "volumul-sferei": {
+  "amprenta": "81c17e67225c6dd4",
+  "data": "2026-10-03"
+ },
+ "volumul-conului": {
+  "amprenta": "9b769706c39f632c",
+  "data": "2026-10-03"
+ },
+ "volumul-cilindrului": {
+  "amprenta": "0c3c2810b41163fc",
+  "data": "2026-10-03"
+ },
+ "volumul-piramidei": {
+  "amprenta": "b5291e3d801c9137",
+  "data": "2026-11-06"
+ },
+ "teorema-lui-euler-poliedre": {
+  "amprenta": "c2cf35d248a53074",
+  "data": "2026-11-06"
+ },
+ "linia-mijlocie-in-triunghi": {
+  "amprenta": "65fc25d40de91e8b",
+  "data": "2026-10-03"
+ },
+ "linia-mijlocie-in-trapez": {
+  "amprenta": "497c284f07bb6fa5",
+  "data": "2026-11-06"
+ },
+ "inegalitatea-triunghiului": {
+  "amprenta": "60ea9fa42b35dce0",
+  "data": "2026-10-03"
+ },
+ "concurenta-medianelor": {
+  "amprenta": "1e9fc73fc91019c1",
+  "data": "2026-10-03"
+ },
+ "concurenta-inaltimilor": {
+  "amprenta": "f2e3ac12a260e4fe",
+  "data": "2026-10-03"
+ },
+ "concurenta-bisectoarelor": {
+  "amprenta": "f1abfc4debf53d9d",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-pappus": {
+  "amprenta": "a0b2f39d79d0b1e6",
+  "data": "2026-11-06"
+ },
+ "teorema-lui-pick": {
+  "amprenta": "29d1e4342b66bcf5",
+  "data": "2026-11-06"
+ },
+ "distanta-de-la-punct-la-dreapta": {
+  "amprenta": "a6958e2b2e0eaec5",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-varignon": {
+  "amprenta": "83fcc0b30fc1c7a0",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-stewart": {
+  "amprenta": "91d06ae3f8812da2",
+  "data": "2026-10-03"
+ },
+ "cercul-celor-noua-puncte": {
+  "amprenta": "1f88aa5ace185f0e",
+  "data": "2026-10-03"
+ },
+ "teorema-tangenta-secanta": {
+  "amprenta": "82cc82d5a68fb461",
+  "data": "2026-11-06"
+ },
+ "relatia-lui-euler-in-triunghi": {
+  "amprenta": "3d0ad6a415bf4e66",
+  "data": "2026-10-03"
+ },
+ "infinitatea-numerelor-prime": {
+  "amprenta": "54c63088206fe4eb",
+  "data": "2026-10-03"
+ },
+ "teorema-fundamentala-a-aritmeticii": {
+  "amprenta": "e2b9426ae4eba811",
+  "data": "2026-10-03"
+ },
+ "teorema-mica-a-lui-fermat": {
+  "amprenta": "fc15d59ce0467e36",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-euler-phi": {
+  "amprenta": "fc79919a54c95895",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-wilson": {
+  "amprenta": "892cc20f11d9e54d",
+  "data": "2026-10-03"
+ },
+ "algoritmul-lui-euclid": {
+  "amprenta": "c40faf39d7425cfb",
+  "data": "2026-10-03"
+ },
+ "identitatea-lui-bezout": {
+  "amprenta": "5e0d1e65235a569b",
+  "data": "2026-11-06"
+ },
+ "lema-lui-euclid": {
+  "amprenta": "3ca7001cc6ce520d",
+  "data": "2026-10-03"
+ },
+ "teorema-chineza-a-resturilor": {
+  "amprenta": "2d4b00fbb068fac6",
+  "data": "2026-10-03"
+ },
+ "suma-primelor-n-numere-naturale": {
+  "amprenta": "3007e0953f166342",
+  "data": "2026-10-03"
+ },
+ "suma-patratelor-primelor-n-numere": {
+  "amprenta": "079cd09a733adf55",
+  "data": "2026-10-03"
+ },
+ "suma-cuburilor-primelor-n-numere": {
+  "amprenta": "87d3a610feb5bb80",
+  "data": "2026-10-03"
+ },
+ "numerele-fibonacci": {
+  "amprenta": "ed142d3ef193d641",
+  "data": "2026-11-06"
+ },
+ "postulatul-lui-bertrand": {
+  "amprenta": "5736dc39350b674a",
+  "data": "2026-11-06"
+ },
+ "ciurul-lui-eratostene": {
+  "amprenta": "7c5da767b612d62a",
+  "data": "2026-11-06"
+ },
+ "functia-euler-totient": {
+  "amprenta": "cd260033664cdcc2",
+  "data": "2026-10-03"
+ },
+ "numere-perfecte": {
+  "amprenta": "9526e2001c66f963",
+  "data": "2026-10-03"
+ },
+ "teorema-numerelor-prime": {
+  "amprenta": "6a2118148f4daf39",
+  "data": "2026-10-03"
+ },
+ "ecuatia-diofantica-liniara": {
+  "amprenta": "0fa179fb9c9ef308",
+  "data": "2026-11-06"
+ },
+ "numere-mersenne": {
+  "amprenta": "817612ec259a3185",
+  "data": "2026-10-03"
+ },
+ "teorema-valorii-intermediare": {
+  "amprenta": "6494864a011771b6",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-rolle": {
+  "amprenta": "7dc8eeb9f5f98721",
+  "data": "2026-10-03"
+ },
+ "teorema-valorii-medii-lagrange": {
+  "amprenta": "0e7c1c82bc1d9dbc",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-lhopital": {
+  "amprenta": "8be1af46ed90684b",
+  "data": "2026-10-03"
+ },
+ "formula-lui-taylor": {
+  "amprenta": "f3a01d3d0ab891ab",
+  "data": "2026-10-03"
+ },
+ "teorema-fundamentala-a-calculului": {
+  "amprenta": "1c7c84c4cb039bf9",
+  "data": "2026-10-03"
+ },
+ "regula-lantului-derivate": {
+  "amprenta": "ce11a31714351c8a",
+  "data": "2026-10-03"
+ },
+ "integrarea-prin-parti": {
+  "amprenta": "d1d19ead40adaa71",
+  "data": "2026-10-03"
+ },
+ "seria-geometrica": {
+  "amprenta": "291a383a4944b72f",
+  "data": "2026-10-03"
+ },
+ "criteriul-dalembert": {
+  "amprenta": "60157a48698f79e3",
+  "data": "2026-10-03"
+ },
+ "criteriul-leibniz": {
+  "amprenta": "7663fb6975201314",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-weierstrass-functii-continue": {
+  "amprenta": "6af1628452afe5e8",
+  "data": "2026-10-03"
+ },
+ "limita-lui-e": {
+  "amprenta": "2fc453709e2565b0",
+  "data": "2026-10-03"
+ },
+ "inegalitatea-cauchy-schwarz-integrala": {
+  "amprenta": "232f2e64c70f7d12",
+  "data": "2026-10-03"
+ },
+ "formula-lui-euler-eipi": {
+  "amprenta": "dbe0b683974df0c2",
+  "data": "2026-10-03"
+ },
+ "seria-armonica": {
+  "amprenta": "1165624cbdead3ed",
+  "data": "2026-11-06"
+ },
+ "seria-lui-euler-pi-la-doi": {
+  "amprenta": "87a44b0907f6541c",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-fubini": {
+  "amprenta": "5854af61e2a79cab",
+  "data": "2026-11-06"
+ },
+ "teorema-punctului-fix-banach": {
+  "amprenta": "0ace1146e2343cb4",
+  "data": "2026-10-03"
+ },
+ "formula-de-moivre": {
+  "amprenta": "55e3d99b88264edb",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-lagrange-grupuri": {
+  "amprenta": "4becd1e78fe9a5e2",
+  "data": "2026-10-03"
+ },
+ "teorema-fundamentala-a-algebrei": {
+  "amprenta": "47ebd64bc3f7d9e8",
+  "data": "2026-11-06"
+ },
+ "relatiile-lui-viete": {
+  "amprenta": "ebdb7805420d2c2f",
+  "data": "2026-10-03"
+ },
+ "teorema-rouche-capelli": {
+  "amprenta": "5d3e3d28bde10e8d",
+  "data": "2026-10-03"
+ },
+ "regula-cramer": {
+  "amprenta": "b6bd4ebfb1f334aa",
+  "data": "2026-10-03"
+ },
+ "teorema-cayley-hamilton": {
+  "amprenta": "1a1b4885212ca571",
+  "data": "2026-10-03"
+ },
+ "teorema-abel-ruffini": {
+  "amprenta": "43dd1ed6beb9fc35",
+  "data": "2026-10-03"
+ },
+ "inegalitatea-cauchy-schwarz-vectori": {
+  "amprenta": "df90bf1008abdbb7",
+  "data": "2026-10-03"
+ },
+ "teorema-rang-nulitate": {
+  "amprenta": "e4344336bae6d3f3",
+  "data": "2026-11-06"
+ },
+ "criteriul-eisenstein": {
+  "amprenta": "8903d997378e92d0",
+  "data": "2026-11-06"
+ },
+ "teorema-lui-bayes": {
+  "amprenta": "e547c76ae8f3ce1d",
+  "data": "2026-11-06"
+ },
+ "teorema-centrala-limita": {
+  "amprenta": "1fd14355e2b99a01",
+  "data": "2026-11-06"
+ },
+ "legea-numerelor-mari": {
+  "amprenta": "3cae50f810924220",
+  "data": "2026-10-03"
+ },
+ "inegalitatea-lui-chebyshev": {
+  "amprenta": "1b31f15de90ce12d",
+  "data": "2026-10-03"
+ },
+ "distributia-normala": {
+  "amprenta": "ca1018f535d14212",
+  "data": "2026-10-03"
+ },
+ "probabilitatea-conditionata": {
+  "amprenta": "941ee0ebb2f8a7a7",
+  "data": "2026-10-03"
+ },
+ "distributia-binomiala": {
+  "amprenta": "dd80283bb61b927d",
+  "data": "2026-10-03"
+ },
+ "distributia-poisson": {
+  "amprenta": "ddcec25096d9a0f8",
+  "data": "2026-10-03"
+ },
+ "entropia-shannon": {
+  "amprenta": "048426d514ae31d9",
+  "data": "2026-10-03"
+ },
+ "inegalitatea-lui-markov": {
+  "amprenta": "37b99820c82446b2",
+  "data": "2026-10-03"
+ },
+ "teorema-heine-borel": {
+  "amprenta": "701c2bbe2ee6ca09",
+  "data": "2026-10-03"
+ },
+ "teorema-punctului-fix-brouwer": {
+  "amprenta": "f17f01f0b763afae",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-jordan": {
+  "amprenta": "caa3736b2ec39a31",
+  "data": "2026-10-03"
+ },
+ "teorema-borsuk-ulam": {
+  "amprenta": "e9f8107f759b905f",
+  "data": "2026-11-06"
+ },
+ "caracteristica-euler-topologie": {
+  "amprenta": "7c34418711df1df4",
+  "data": "2026-10-03"
+ },
+ "conjectura-lui-poincare-perelman": {
+  "amprenta": "2066f1644307506a",
+  "data": "2026-10-03"
+ },
+ "lema-lui-zorn": {
+  "amprenta": "021fbfd7d5fa9ac0",
+  "data": "2026-10-03"
+ },
+ "teorema-tychonoff": {
+  "amprenta": "0a4e6bbd48479263",
+  "data": "2026-10-03"
+ },
+ "principiul-cutiei": {
+  "amprenta": "068b3a2ba41e9eaa",
+  "data": "2026-10-03"
+ },
+ "binomul-lui-newton": {
+  "amprenta": "9c6c1c92cd632220",
+  "data": "2026-10-03"
+ },
+ "principiul-excluderii-includerii": {
+  "amprenta": "7db0256f9a9ea64f",
+  "data": "2026-10-03"
+ },
+ "formula-lui-cayley-arbori": {
+  "amprenta": "856058c198870a5f",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-ramsey": {
+  "amprenta": "80087a57275c7e39",
+  "data": "2026-10-03"
+ },
+ "teorema-hall-cuplaje": {
+  "amprenta": "1d40e3ba692e403e",
+  "data": "2026-11-06"
+ },
+ "recurente-liniare": {
+  "amprenta": "f29376543bd6ff20",
+  "data": "2026-11-06"
+ },
+ "teorema-goedel-incompletitudine-i": {
+  "amprenta": "8ee34a5909e89a9b",
+  "data": "2026-10-03"
+ },
+ "teorema-goedel-incompletitudine-ii": {
+  "amprenta": "8a5de9a3216b1d96",
+  "data": "2026-11-06"
+ },
+ "teorema-lui-cantor-cardinale": {
+  "amprenta": "984e026caae7f1cb",
+  "data": "2026-10-03"
+ },
+ "problema-halting": {
+  "amprenta": "f7ca6e5dd59357c9",
+  "data": "2026-10-03"
+ },
+ "axioma-alegerii": {
+  "amprenta": "9c906fa7a921f2af",
+  "data": "2026-10-03"
+ },
+ "teorema-compactatii": {
+  "amprenta": "8eb82ed80f80b035",
+  "data": "2026-10-03"
+ },
+ "teorema-cook-levin": {
+  "amprenta": "2ff8207585d32fd2",
+  "data": "2026-11-06"
+ },
+ "teorema-lui-napoleon": {
+  "amprenta": "f55517ce634e32e4",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-morley": {
+  "amprenta": "b4b5be454b9d1612",
+  "data": "2026-10-03"
+ },
+ "dreapta-lui-simson": {
+  "amprenta": "fd4f3c66be4887e1",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-desargues": {
+  "amprenta": "f1b84e8e14795ad0",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-pascal-hexagon": {
+  "amprenta": "8ef25be05376aa9f",
+  "data": "2026-10-03"
+ },
+ "formula-lui-brahmagupta": {
+  "amprenta": "da2e87f120ffca81",
+  "data": "2026-10-03"
+ },
+ "teorema-unghiului-exterior": {
+  "amprenta": "4a23bd6ef59eb009",
+  "data": "2026-10-03"
+ },
+ "aria-prin-coordonate": {
+  "amprenta": "d123278a971b58b4",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-van-aubel": {
+  "amprenta": "fd4ad3af99d23437",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-miquel": {
+  "amprenta": "432d3f8016977949",
+  "data": "2026-10-03"
+ },
+ "legea-reciprocitatii-patratice": {
+  "amprenta": "58f03dd8d747249c",
+  "data": "2026-11-06"
+ },
+ "teorema-lui-lucas-lehmer": {
+  "amprenta": "e37cbbda5823beb7",
+  "data": "2026-11-06"
+ },
+ "functia-mobius": {
+  "amprenta": "937746b18b126df7",
+  "data": "2026-10-03"
+ },
+ "formula-inversiunii-mobius": {
+  "amprenta": "e799e577e4fbf375",
+  "data": "2026-10-03"
+ },
+ "numere-carmichael": {
+  "amprenta": "03d96d87265c205a",
+  "data": "2026-11-06"
+ },
+ "teorema-lui-lame": {
+  "amprenta": "9f72e58d84b5d66c",
+  "data": "2026-10-03"
+ },
+ "suma-divizorilor-functia-sigma": {
+  "amprenta": "96ccdeeb00c3fae0",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-sylow": {
+  "amprenta": "008d8f25e6df9407",
+  "data": "2026-10-03"
+ },
+ "teorema-izomorfismului-grupuri": {
+  "amprenta": "fa530f1b10d44781",
+  "data": "2026-10-03"
+ },
+ "inegalitatea-mediilor-am-gm": {
+  "amprenta": "9c66bc33eafd799b",
+  "data": "2026-10-03"
+ },
+ "polinomul-caracteristic-valori-proprii": {
+  "amprenta": "e9d9d534840cc248",
+  "data": "2026-10-03"
+ },
+ "descompunerea-in-fractii-simple": {
+  "amprenta": "20471d74da330669",
+  "data": "2026-10-03"
+ },
+ "formula-lui-gerschgorin": {
+  "amprenta": "2703204e9a1cb169",
+  "data": "2026-10-03"
+ },
+ "identitate-lagrange": {
+  "amprenta": "d64f1f98b9649301",
+  "data": "2026-10-03"
+ },
+ "criteriul-lui-cauchy-condensare": {
+  "amprenta": "de314e0cc253aee8",
+  "data": "2026-10-03"
+ },
+ "teorema-stolz-cesaro": {
+  "amprenta": "1d1f8f4fba431bd1",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-abel-serii": {
+  "amprenta": "db41c3200de70cb8",
+  "data": "2026-10-03"
+ },
+ "criteriul-integral-convergenta": {
+  "amprenta": "d8cac682dd534029",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-darboux": {
+  "amprenta": "a4b4112ebb89157b",
+  "data": "2026-10-03"
+ },
+ "formula-lui-stirling": {
+  "amprenta": "d3a1b658b6cf7a8e",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-dini": {
+  "amprenta": "22ac49b9c460c89c",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-de-moivre-laplace": {
+  "amprenta": "3babe3661cd1dde3",
+  "data": "2026-11-06"
+ },
+ "inegalitatea-lui-jensen": {
+  "amprenta": "8c2d3127109d4e56",
+  "data": "2026-10-03"
+ },
+ "distributia-exponentiala": {
+  "amprenta": "716b1543ff7107e1",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-borel-cantelli": {
+  "amprenta": "6897dd05c6c883e5",
+  "data": "2026-10-03"
+ },
+ "covarianta-si-corelatia": {
+  "amprenta": "b9f7d46141cf6b01",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-urysohn": {
+  "amprenta": "9239c6c19d1d9646",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-baire": {
+  "amprenta": "9787c52b8257912f",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-arzela-ascoli": {
+  "amprenta": "13bc1294103cfe38",
+  "data": "2026-10-03"
+ },
+ "conexitate-prin-drumuri": {
+  "amprenta": "bcda4e73e95a690d",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-stone-weierstrass": {
+  "amprenta": "9a4bdaa1443b22ba",
+  "data": "2026-10-03"
+ },
+ "compactitate-secventiala": {
+  "amprenta": "bbc8734fa5af32cc",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-tietze": {
+  "amprenta": "9b3d62d653a4aa78",
+  "data": "2026-10-03"
+ },
+ "numerele-catalan": {
+  "amprenta": "82a765b91694e07b",
+  "data": "2026-10-03"
+ },
+ "numerele-stirling": {
+  "amprenta": "afaadd7b215a4827",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-erdos-szekeres": {
+  "amprenta": "0456438dcc5501e1",
+  "data": "2026-11-06"
+ },
+ "numerele-bell": {
+  "amprenta": "59fdaf65f9554201",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-konig-cuplaje": {
+  "amprenta": "7c98627ae1ea240e",
+  "data": "2026-10-03"
+ },
+ "formula-lui-vandermonde": {
+  "amprenta": "3fbb97da5e7182dd",
+  "data": "2026-10-03"
+ },
+ "permutari-fara-puncte-fixe-derangements": {
+  "amprenta": "92998d0159ef4a73",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-lowenheim-skolem": {
+  "amprenta": "aa1374516d4965a1",
+  "data": "2026-11-06"
+ },
+ "principiul-inductiei-matematice": {
+  "amprenta": "ec3dd2834539419c",
+  "data": "2026-10-03"
+ },
+ "tabele-de-adevar-completitudine": {
+  "amprenta": "187c8d033f3699e1",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-church-turing": {
+  "amprenta": "23850ef3fe784fb9",
+  "data": "2026-10-03"
+ },
+ "paradoxul-lui-russell": {
+  "amprenta": "545d22eb8bb2698f",
+  "data": "2026-10-03"
+ },
+ "teorema-lui-tarski-nedefinibilitate": {
+  "amprenta": "0a7b111935ddb4ef",
+  "data": "2026-10-03"
+ }
+}
