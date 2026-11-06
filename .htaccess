@@ -21,11 +21,11 @@ ErrorDocument 404 /404.html
 
   # Adresele vechi, de dinainte de octombrie 2026: /teorema?id=<nume> (sau teorema.html?id=<nume>)
   # -> /teoreme/<nume>, dacă teorema există; altfel -> arhiva. „?” de la final scoate parametrul din adresa nouă.
-  RewriteCond %{QUERY_STRING} (?:^|&)id=([a-z0-9-]+)
-  RewriteCond %{DOCUMENT_ROOT}/teoreme/%1.html -f
-  RewriteCond %{QUERY_STRING} (?:^|&)id=([a-z0-9-]+)
-  RewriteRule ^teorema(?:\.html)?$ /teoreme/%1? [R=301,L]
-  RewriteRule ^teorema(?:\.html)?$ /arhiva? [R=301,L]
+  RewriteCond %{QUERY_STRING} (^|&)id=([a-z0-9-]+)
+  RewriteCond %{DOCUMENT_ROOT}/teoreme/%2.html -f
+  RewriteCond %{QUERY_STRING} (^|&)id=([a-z0-9-]+)
+  RewriteRule ^teorema(\.html)?$ /teoreme/%2? [R=301,L]
+  RewriteRule ^teorema(\.html)?$ /arhiva? [R=301,L]
 
   # Orice altă cerere *.html -> varianta fără extensie (o singură adresă canonică,
   # 404.html e exclus ca să nu afecteze ErrorDocument de mai sus)
