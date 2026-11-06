@@ -150,6 +150,171 @@ var DEMONSTRATII = {
     "<strong>Intersecții nenumărabile.</strong> Teorema e despre familii numărabile; intersecția mulțimilor ℝ \\ {x}, pentru toți x reali, este vidă.",
     "<strong>„Nicăieri densă” confundat cu „are interior vid”.</strong> O mulțime e nicăieri densă dacă închiderea ei are interior vid; ℚ are interior vid, dar nu e nicăieri densă (închiderea ei e ℝ)."
   ]
+},
+
+"suma-patratelor-primelor-n-numere": {
+  demonstratie: `
+<p>Notăm S = 1² + 2² + … + n². Pornim de la identitatea, valabilă pentru orice k:</p>
+<p class="dem-formula">(k + 1)³ − k³ = 3k² + 3k + 1.</p>
+<p><strong>Adunăm pentru k = 1, 2, …, n.</strong> În stânga termenii se reduc doi câte doi (2³ − 1³ + 3³ − 2³ + …), rămânând (n + 1)³ − 1. În dreapta obținem 3S + 3·(1 + 2 + … + n) + n:</p>
+<p class="dem-formula">(n + 1)³ − 1 = 3S + 3·n(n + 1)/2 + n.</p>
+<p><strong>Izolăm S.</strong> Cum (n + 1)³ − 1 − n = (n + 1)³ − (n + 1) = n(n + 1)(n + 2), avem:</p>
+<p class="dem-formula">3S = n(n + 1)(n + 2) − 3n(n + 1)/2 = n(n + 1)(2n + 4 − 3)/2 = n(n + 1)(2n + 1)/2,</p>
+<p>deci S = n(n + 1)(2n + 1)/6.</p>
+<p><strong>Verificare prin inducție.</strong> Pentru n = 1: 1·2·3/6 = 1. Dacă formula e adevărată pentru n, atunci n(n + 1)(2n + 1)/6 + (n + 1)² = (n + 1)(2n² + 7n + 6)/6 = (n + 1)(n + 2)(2n + 3)/6, adică exact formula pentru n + 1.</p>`,
+  greseli: [
+    "<strong>Confuzie cu pătratul sumei.</strong> 1² + 2² + … + n² nu este (1 + 2 + … + n)². Pentru n = 3: 1 + 4 + 9 = 14, dar (1 + 2 + 3)² = 36.",
+    "<strong>Împărțirea la 6 uitată.</strong> Pentru n = 10, n(n + 1)(2n + 1) = 2310, iar suma este 2310/6 = 385.",
+    "<strong>Suma nu pornește de la 1.</strong> Pentru 5² + 6² + … + 10² scazi din suma până la 10 suma până la 4: 385 − 30 = 355.",
+    "<strong>Formula cuburilor folosită greșit.</strong> [n(n + 1)/2]² este suma cuburilor, nu a pătratelor."
+  ]
+},
+
+"teorema-bisectoarei": {
+  demonstratie: `
+<p>Fie AD bisectoarea unghiului A, cu D pe BC, și α = A/2 fiecare dintre cele două unghiuri egale formate.</p>
+<p><strong>Comparăm ariile în două feluri.</strong> Triunghiurile ABD și ACD au aceeași înălțime din A pe dreapta BC, deci raportul ariilor lor este raportul bazelor:</p>
+<p class="dem-formula">Aria(ABD) / Aria(ACD) = BD / DC.</p>
+<p>Pe de altă parte, cu formula ariei cu sinus, folosind unghiurile egale de la A:</p>
+<p class="dem-formula">Aria(ABD) / Aria(ACD) = (½·AB·AD·sin α) / (½·AC·AD·sin α) = AB / AC.</p>
+<p><strong>Concluzia.</strong> Cele două rapoarte sunt egale, deci BD/DC = AB/AC.</p>
+<p><strong>Consecință utilă.</strong> Cu notațiile a = BC, b = AC, c = AB, rezultă BD = a·c/(b + c) și DC = a·b/(b + c).</p>`,
+  greseli: [
+    "<strong>Rapoarte inversate.</strong> Segmentul de lângă B corespunde laturii din B: BD/DC = AB/AC, nu AC/AB.",
+    "<strong>Bisectoarea confundată cu mediana.</strong> Bisectoarea împarte latura opusă la mijloc doar dacă AB = AC (triunghi isoscel).",
+    "<strong>Laturi care nu formează un triunghi.</strong> Verifică inegalitatea triunghiului înainte de calcul: cu AB = 6, AC = 4, BC = 10 nu există triunghi.",
+    "<strong>Bisectoarea exterioară.</strong> Bisectoarea unghiului exterior împarte latura opusă tot în raportul AB/AC, dar în exterior, pe prelungirea lui BC."
+  ]
+},
+
+"suma-cuburilor-primelor-n-numere": {
+  demonstratie: `
+<p><strong>Prin inducție.</strong> Pentru n = 1: 1³ = 1 = (1·2/2)². Presupunem că 1³ + … + n³ = [n(n + 1)/2]². Atunci:</p>
+<p class="dem-formula">[n(n + 1)/2]² + (n + 1)³ = (n + 1)²·(n²/4 + n + 1) = (n + 1)²(n + 2)²/4 = [(n + 1)(n + 2)/2]²,</p>
+<p>adică formula pentru n + 1.</p>
+<p><strong>O demonstrație „cu numere impare”, a lui Nicomachus.</strong> Scriem numerele impare în rânduri: 1 | 3 + 5 | 7 + 9 + 11 | … Rândul k are k numere, iar suma lor este k³ (de exemplu 3 + 5 = 8 = 2³, 7 + 9 + 11 = 27 = 3³). Primele n rânduri conțin, în total, primele 1 + 2 + … + n = n(n + 1)/2 numere impare, iar suma primelor m numere impare este m². Deci 1³ + … + n³ = [n(n + 1)/2]².</p>`,
+  greseli: [
+    "<strong>Pătratul uitat.</strong> Suma cuburilor este pătratul sumei 1 + 2 + … + n, nu suma însăși: pentru n = 3, 1 + 8 + 27 = 36 = 6².",
+    "<strong>Confuzie cu suma pătratelor.</strong> Formula n(n + 1)(2n + 1)/6 este pentru pătrate, nu pentru cuburi.",
+    "<strong>Ridicarea la pătrat greșită.</strong> [n(n + 1)/2]² = n²(n + 1)²/4, nu n²(n + 1)/4."
+  ]
+},
+
+"teorema-medianei-in-triunghi": {
+  demonstratie: `
+<p>Fie M mijlocul lui BC, deci BM = MC = a/2, AM = mₐ, iar θ unghiul AMB. Unghiul AMC este suplementar, deci cos(AMC) = −cos θ.</p>
+<p><strong>Legea cosinusurilor în cele două triunghiuri:</strong></p>
+<p class="dem-formula">c² = mₐ² + a²/4 − 2·mₐ·(a/2)·cos θ (în triunghiul ABM),<br>b² = mₐ² + a²/4 + 2·mₐ·(a/2)·cos θ (în triunghiul ACM).</p>
+<p><strong>Adunăm.</strong> Termenii cu cos θ se reduc:</p>
+<p class="dem-formula">b² + c² = 2mₐ² + a²/2, deci mₐ² = (2b² + 2c² − a²)/4.</p>
+<p>Relația se mai numește și teorema lui Apollonius.</p>`,
+  greseli: [
+    "<strong>Latura greșită cu minus.</strong> Cu semnul minus apare latura pe care cade mediana (a, pentru mediana din A), nu una dintre celelalte două.",
+    "<strong>Radicalul uitat.</strong> Formula dă mₐ²; lungimea medianei este √((2b² + 2c² − a²)/4).",
+    "<strong>Mediana confundată cu bisectoarea sau înălțimea.</strong> Ele coincid doar în triunghiul isoscel, pentru vârful dintre laturile egale.",
+    "<strong>Centrul de greutate.</strong> G împarte mediana în raportul 2:1 de la vârf: AG = 2mₐ/3, nu jumătate."
+  ]
+},
+
+"aria-trapezului": {
+  demonstratie: `
+<p>Fie trapezul ABCD cu bazele paralele AB = a și CD = b, iar h distanța dintre ele (înălțimea).</p>
+<p><strong>Tăiem trapezul cu diagonala AC.</strong> Se formează două triunghiuri:</p>
+<ul>
+<li>ABC, cu baza AB = a și înălțimea h (distanța de la C la dreapta AB);</li>
+<li>ACD, cu baza CD = b și aceeași înălțime h (distanța de la A la dreapta CD).</li>
+</ul>
+<p><strong>Adunăm ariile:</strong></p>
+<p class="dem-formula">S = a·h/2 + b·h/2 = (a + b)·h/2.</p>
+<p><strong>Altă privire.</strong> Două trapeze identice, unul întors, alăturate formează un paralelogram cu baza a + b și înălțimea h; trapezul este jumătate din el.</p>`,
+  greseli: [
+    "<strong>Latura oblică în loc de înălțime.</strong> h este distanța perpendiculară dintre baze, nu lungimea laturii neparalele.",
+    "<strong>Împărțirea la 2 uitată.</strong> (a + b)·h este aria paralelogramului dublu, nu a trapezului.",
+    "<strong>Baze care nu sunt paralele.</strong> Formula folosește cele două laturi paralele; în trapez, laturile oblice nu sunt baze.",
+    "<strong>Unități amestecate.</strong> Bazele și înălțimea trebuie să fie în aceeași unitate de măsură (de exemplu toate în cm)."
+  ]
+},
+
+"formula-lui-taylor": {
+  demonstratie: `
+<p>Demonstrăm formula cu restul lui Lagrange: dacă f este derivabilă de n + 1 ori, atunci există c între a și x cu</p>
+<p class="dem-formula">Rₙ = f⁽ⁿ⁺¹⁾(c)·(x − a)ⁿ⁺¹/(n + 1)!.</p>
+<p><strong>Funcția ajutătoare.</strong> Fixăm x ≠ a și definim, pentru t între a și x:</p>
+<p class="dem-formula">g(t) = f(x) − ∑<sub>k=0</sub><sup>n</sup> f⁽ᵏ⁾(t)·(x − t)ᵏ/k! − K·(x − t)ⁿ⁺¹/(n + 1)!,</p>
+<p>unde constanta K este aleasă astfel încât g(a) = 0. Evident și g(x) = 0.</p>
+<p><strong>Derivata se simplifică.</strong> La derivarea sumei, termenii se reduc doi câte doi și rămâne doar ultimul:</p>
+<p class="dem-formula">g′(t) = −f⁽ⁿ⁺¹⁾(t)·(x − t)ⁿ/n! + K·(x − t)ⁿ/n!.</p>
+<p><strong>Rolle.</strong> Cum g(a) = g(x) = 0, există c strict între a și x cu g′(c) = 0, adică K = f⁽ⁿ⁺¹⁾(c). Din g(a) = 0 rezultă exact formula lui Taylor cu restul de mai sus.</p>`,
+  greseli: [
+    "<strong>k! uitat.</strong> Coeficientul lui (x − a)ᵏ este f⁽ᵏ⁾(a)/k!, nu f⁽ᵏ⁾(a). De exemplu, pentru eˣ, termenul de gradul 3 este x³/6.",
+    "<strong>Derivatele calculate în x în loc de a.</strong> Coeficienții folosesc derivatele în punctul de dezvoltare a.",
+    "<strong>„Seria Taylor converge mereu la funcție”.</strong> Fals: f(x) = e^(−1/x²), cu f(0) = 0, are toate derivatele 0 în 0, deci seria ei e 0, deși f nu e 0.",
+    "<strong>Raza de convergență ignorată.</strong> Seria lui 1/(1 + x²) în jurul lui 0 converge doar pentru |x| &lt; 1, deși funcția e definită peste tot.",
+    "<strong>Punctul c considerat cunoscut.</strong> În restul lui Lagrange c nu se află; se folosește doar pentru a mărgini eroarea (de exemplu |sin⁽ⁿ⁺¹⁾(c)| ≤ 1)."
+  ]
+},
+
+"formula-lui-euler-eipi": {
+  demonstratie: `
+<p>Identitatea este cazul θ = π al formulei lui Euler, e^(iθ) = cos θ + i·sin θ, pe care o obținem din serii de puteri.</p>
+<p><strong>Seriile cunoscute</strong>, valabile pentru orice număr real sau complex:</p>
+<p class="dem-formula">eᶻ = 1 + z + z²/2! + z³/3! + …<br>cos θ = 1 − θ²/2! + θ⁴/4! − …<br>sin θ = θ − θ³/3! + θ⁵/5! − …</p>
+<p><strong>Punem z = iθ.</strong> Puterile lui i se repetă: i² = −1, i³ = −i, i⁴ = 1. Grupând separat termenii reali și cei cu i (lucru permis, pentru că seria converge absolut):</p>
+<p class="dem-formula">e^(iθ) = (1 − θ²/2! + θ⁴/4! − …) + i·(θ − θ³/3! + θ⁵/5! − …) = cos θ + i·sin θ.</p>
+<p><strong>Pentru θ = π:</strong> e^(iπ) = cos π + i·sin π = −1 + 0·i = −1, deci e^(iπ) + 1 = 0.</p>`,
+  greseli: [
+    "<strong>e^(iπ) tratat ca o putere reală.</strong> Un exponent imaginar nu „mărește” numărul: e^(iθ) e un punct pe cercul unitate, la unghiul θ.",
+    "<strong>Unghiul în grade.</strong> În formula lui Euler θ este în radiani: e^(i·180) nu este −1.",
+    "<strong>Logaritmul complex considerat unic.</strong> Cum e^(2πi) = 1, ecuația eᶻ = 1 are infinit de soluții (z = 2kπi); logaritmul complex are mai multe valori.",
+    "<strong>Modulul.</strong> |e^(iθ)| = 1 pentru orice θ real; doar partea reală a exponentului schimbă mărimea numărului."
+  ]
+},
+
+"limita-lui-e": {
+  demonstratie: `
+<p>Fie eₙ = (1 + 1/n)ⁿ. Arătăm că șirul e crescător și mărginit, deci convergent, și că limita lui este ∑1/k!.</p>
+<p><strong>Dezvoltarea cu binomul lui Newton:</strong></p>
+<p class="dem-formula">eₙ = ∑<sub>k=0</sub><sup>n</sup> C(n,k)/nᵏ = ∑<sub>k=0</sub><sup>n</sup> (1/k!)·(1 − 1/n)(1 − 2/n)…(1 − (k−1)/n).</p>
+<p><strong>Crescător.</strong> Când n crește, fiecare factor (1 − j/n) crește, iar suma primește termeni noi, pozitivi. Deci eₙ &lt; eₙ₊₁.</p>
+<p><strong>Mărginit.</strong> Fiecare produs de paranteze e cel mult 1, iar k! ≥ 2ᵏ⁻¹, deci eₙ ≤ ∑1/k! ≤ 1 + 1 + 1/2 + 1/4 + … = 3.</p>
+<p><strong>Limita.</strong> Un șir crescător și mărginit converge; limita lui se notează e. Din eₙ ≤ ∑1/k! rezultă e ≤ ∑1/k!. Invers, pentru un m fixat și n ≥ m, păstrând doar primii m + 1 termeni, eₙ ≥ ∑<sub>k=0</sub><sup>m</sup> (1/k!)·(1 − 1/n)…(1 − (k−1)/n); trecând la limită după n, e ≥ ∑<sub>k=0</sub><sup>m</sup> 1/k! pentru orice m. Deci e = ∑1/k!.</p>`,
+  greseli: [
+    "<strong>„1 la puterea infinit este 1”.</strong> 1^∞ este o nedeterminare: baza (1 + 1/n) e puțin peste 1, iar exponentul crește, iar rezultatul tinde la e ≈ 2,718.",
+    "<strong>Expresii inversate.</strong> (1 + n)^(1/n) tinde la 1, nu la e.",
+    "<strong>Convergență rapidă presupusă.</strong> (1 + 1/n)ⁿ se apropie încet: pentru n = 100 dă 2,7048 (eroare ≈ e/(2n)); seria ∑1/k! e mult mai rapidă.",
+    "<strong>Generalizarea uitată.</strong> (1 + x/n)ⁿ → eˣ, nu e·x."
+  ]
+},
+
+"criteriul-leibniz": {
+  demonstratie: `
+<p>Scriem seria ca a₁ − a₂ + a₃ − a₄ + … (semnul primului termen nu contează), cu aₙ &gt; 0 descrescător și aₙ → 0. Fie Sₙ suma primilor n termeni.</p>
+<p><strong>Sumele de rang par cresc.</strong> S₂ₘ = (a₁ − a₂) + (a₃ − a₄) + … + (a₂ₘ₋₁ − a₂ₘ), iar fiecare paranteză e ≥ 0 (șirul descrește). Deci S₂ₘ ≤ S₂ₘ₊₂.</p>
+<p><strong>Sunt mărginite.</strong> Grupând altfel, S₂ₘ = a₁ − (a₂ − a₃) − … − (a₂ₘ₋₂ − a₂ₘ₋₁) − a₂ₘ ≤ a₁.</p>
+<p><strong>Limita.</strong> Un șir crescător și mărginit converge: S₂ₘ → S. Apoi S₂ₘ₊₁ = S₂ₘ + a₂ₘ₊₁ → S + 0 = S. Sumele pare și impare au aceeași limită, deci seria converge la S.</p>
+<p><strong>Estimarea erorii.</strong> S se află mereu între două sume parțiale consecutive, deci |S − Sₙ| ≤ aₙ₊₁: eroarea nu depășește primul termen omis.</p>`,
+  greseli: [
+    "<strong>Monotonia neverificată.</strong> Fără ea criteriul poate da greș: cu termenii 1, 1, 1/2, 1/4, 1/3, 1/9, … (1/k urmat de 1/k²), seria alternantă diverge, deși termenii tind la 0.",
+    "<strong>Convergent înseamnă absolut convergent.</strong> ∑(−1)ⁿ/n converge, dar ∑1/n diverge: convergența e doar condiționată.",
+    "<strong>Rearanjarea termenilor.</strong> La o serie condiționat convergentă, schimbarea ordinii termenilor poate schimba suma (teorema lui Riemann).",
+    "<strong>Termeni care nu tind la 0.</strong> ∑(−1)ⁿ·n/(n + 1) diverge: termenii se apropie de ±1, nu de 0."
+  ]
+},
+
+"numere-perfecte": {
+  demonstratie: `
+<p>Folosim funcția σ (suma divizorilor), care este multiplicativă: σ(m·n) = σ(m)·σ(n) dacă m și n sunt prime între ele.</p>
+<p><strong>Euclid: forma 2<sup>p−1</sup>(2<sup>p</sup> − 1) dă numere perfecte.</strong> Fie q = 2<sup>p</sup> − 1 prim și n = 2<sup>p−1</sup>·q. Atunci σ(2<sup>p−1</sup>) = 1 + 2 + … + 2<sup>p−1</sup> = 2<sup>p</sup> − 1 și σ(q) = q + 1 = 2<sup>p</sup>, deci:</p>
+<p class="dem-formula">σ(n) = (2<sup>p</sup> − 1)·2<sup>p</sup> = 2·2<sup>p−1</sup>(2<sup>p</sup> − 1) = 2n.</p>
+<p><strong>Euler: orice număr perfect par are această formă.</strong> Scriem n = 2ᵏ·m, cu m impar și k ≥ 1. Din σ(n) = 2n:</p>
+<p class="dem-formula">(2ᵏ⁺¹ − 1)·σ(m) = 2ᵏ⁺¹·m.</p>
+<p>Cum 2ᵏ⁺¹ − 1 este impar, el divide m: m = (2ᵏ⁺¹ − 1)·M. Înlocuind, σ(m) = 2ᵏ⁺¹·M = m + M. Dar m și M sunt doi divizori diferiți ai lui m (M &lt; m), iar suma lor este deja σ(m). Deci m nu are alți divizori: M = 1 și m = 2ᵏ⁺¹ − 1 este prim.</p>`,
+  greseli: [
+    "<strong>„2<sup>p</sup> − 1 e prim pentru orice p prim”.</strong> Fals: 2¹¹ − 1 = 2047 = 23·89. Formula dă un număr perfect doar când 2<sup>p</sup> − 1 este chiar prim.",
+    "<strong>Numere perfecte impare.</strong> Nu se știe dacă există; nu s-a găsit niciunul, dar nici nu s-a demonstrat că nu există.",
+    "<strong>σ(n) cu sau fără n.</strong> σ(n) include și pe n: perfect înseamnă σ(n) = 2n, adică suma divizorilor proprii (fără n) este n.",
+    "<strong>1 nu e perfect.</strong> Suma divizorilor proprii ai lui 1 este 0, nu 1."
+  ]
 }
 
 };
