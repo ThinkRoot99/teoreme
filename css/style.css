@@ -524,11 +524,14 @@ footer a{color:#c8922a}
 @media (max-width:640px) {
   .filter-chips { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); }
   .filter-chips > * {
-    width: 100%; margin: 0; padding: 4px; overflow-wrap: break-word; word-break: break-word;
-    height: 56px; line-height: 1.2; font-size: .74rem;
+    width: 100%; margin: 0; padding: 4px 2px; overflow-wrap: normal; word-break: normal; hyphens: none;
+    height: 56px; line-height: 1.25;
     display: flex; align-items: center; justify-content: center;
   }
+  .filter-chips > .chip { font-size: .8rem; padding: 4px 2px; flex-direction: column; }
+  .chip-ico { display: block; line-height: 1.1; }
 }
+@media (max-width:360px) { .filter-chips > .chip { font-size: .74rem; } }
 .chip {
   padding: 7px 17px; border-radius: 20px;
   border: 1.5px solid #e0d5c0; background: #fff;
