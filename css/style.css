@@ -777,3 +777,8 @@ footer a{color:#c8922a}
   .ar-meta { justify-content: center; width: 100% }
   .ar-arrow { display: none }
 }
+/* ── AUTOR ── */
+.byline{font-size:.88rem;color:#7a6a52;margin-top:4px}
+.byline a{color:#8c6518;border-bottom:1.5px solid rgba(200,146,42,.4)}
+.byline a:hover{border-bottom-color:#8c6518}
+.autor-foto{display:block;width:100%;max-width:320px;height:auto;margin:0 auto 22px;border-radius:8px;border:1.5px solid #e0d5c0}

@@ -31,7 +31,8 @@ const STATIC_PAGES = [
   { loc: 'unelte/ecuatie-gradul-2', lastmod: '2026-10-04', priority: '0.6' },
   { loc: 'unelte/cifre-romane', lastmod: '2026-10-04', priority: '0.6' },
   { loc: 'unelte/viteza-distanta-timp', lastmod: '2026-10-04', priority: '0.6' },
-  { loc: 'despre', lastmod: '2026-09-30', priority: '0.5' },
+  { loc: 'despre', lastmod: '2026-11-06', priority: '0.5' },
+  { loc: 'autor', lastmod: '2026-11-06', priority: '0.5' },
   { loc: 'contact', lastmod: '2026-09-30', priority: '0.5' },
   { loc: 'confidentialitate', lastmod: '2026-09-30', priority: '0.3' },
   { loc: 'termeni', lastmod: '2026-09-30', priority: '0.3' },
@@ -132,7 +133,8 @@ let stats = { teoreme: 0, index: false, arhiva: false, sitemap: false };
     const jsonLd = JSON.stringify({
       '@context': 'https://schema.org', '@type': 'Article',
       name: m.titlu, description: desc,
-      author: { '@type': 'Person', name: m.autor },
+      author: { '@type': 'Person', name: 'Moldovan Cristian', url: 'https://teoreme.ro/autor' },
+      about: { '@type': 'Thing', name: m.titlu, description: 'Rezultat atribuit lui ' + m.autor },
       inLanguage: 'ro', educationalLevel: m.nivel_label, url: canon,
       isPartOf: { '@type': 'WebSite', name: '∑ Teoreme', url: 'https://teoreme.ro/' }
     });
@@ -161,7 +163,8 @@ let stats = { teoreme: 0, index: false, arhiva: false, sitemap: false };
         '<span class="badge-level ' + m.nivel_cls + '">' + m.nivel_label + '</span>' +
         '</div>' +
         '<h1 itemprop="name">' + m.titlu + '</h1>' +
-        '<p class="author" itemprop="author">' + m.autor + ' · nr. ' + m.numar + '</p>' +
+        '<p class="author">' + m.autor + ' · nr. ' + m.numar + '</p>' +
+        '<p class="byline">Explicații și exerciții: <a href="../autor" itemprop="author">Moldovan Cristian</a></p>' +
         '</div>' +
         '<div class="tp-tabs" role="tablist">' +
         '<button class="tab-btn active" id="tabDef" type="button" role="tab" aria-selected="true" aria-controls="panelDef" onclick="showTab(this,\'panelDef\')">📖 Definiție</button>' +
