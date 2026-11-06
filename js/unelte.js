@@ -375,3 +375,166 @@ function initSdtTool() {
   sdtDUnit.addEventListener('change', render);
   sdtVUnit.addEventListener('change', render);
 }
+
+// ---------- Teorema lui Pitagora ----------
+// Primește catetele a, b și ipotenuza c (null = necunoscută). Calculează latura lipsă sau verifică un triunghi complet.
+function solvePitagora(a, b, c) {
+  var vals = [a, b, c];
+  var filled = vals.filter(function (x) { return x !== null; }).length;
+  if (vals.some(function (x) { return x !== null && !(x > 0); })) return { type: 'error', message: 'Lungimile trebuie să fie numere pozitive.' };
+  if (filled < 2) return { type: 'incomplete' };
+  if (filled === 3) {
+    var diff = a * a + b * b - c * c;
+    var ok = Math.abs(diff) <= 1e-9 * Math.max(c * c, 1);
+    return { type: 'check', ok: ok, sum: a * a + b * b, c2: c * c };
+  }
+  if (c === null) return { type: 'c', c: Math.sqrt(a * a + b * b), a: a, b: b };
+  var known = a !== null ? a : b;
+  if (known >= c) return { type: 'error', message: 'Ipotenuza trebuie să fie mai lungă decât fiecare catetă.' };
+  return { type: a === null ? 'a' : 'b', x: Math.sqrt(c * c - known * known), known: known, c: c };
+}
+
+function initPitagoraTool() {
+  var inA = document.getElementById('ptA'), inB = document.getElementById('ptB'), inC = document.getElementById('ptC');
+  var box = document.getElementById('ptResult'), stepsEl = document.getElementById('ptSteps'), outEl = document.getElementById('ptOut');
+  function render() {
+    if (inA.value.trim() === '' && inB.value.trim() === '' && inC.value.trim() === '') { box.className = 'qf-result empty'; return; }
+    var r = solvePitagora(parseCoef(inA.value), parseCoef(inB.value), parseCoef(inC.value));
+    box.className = 'qf-result';
+    if (r.type === 'error') { stepsEl.innerHTML = ''; outEl.innerHTML = '<div class="qf-error">' + r.message + '</div>'; return; }
+    if (r.type === 'incomplete') { stepsEl.innerHTML = ''; outEl.innerHTML = '<div class="qf-error">Completează oricare două laturi.</div>'; return; }
+    if (r.type === 'check') {
+      stepsEl.innerHTML = step('a² + b² = ' + fmt(r.sum)) + step('c² = ' + fmt(r.c2));
+      outEl.innerHTML = '<div class="qf-roots">' + (r.ok ? 'a² + b² = c²: triunghiul <strong>este dreptunghic</strong>.' : 'a² + b² ≠ c²: triunghiul <strong>nu este dreptunghic</strong>.') + '</div>';
+      return;
+    }
+    if (r.type === 'c') {
+      stepsEl.innerHTML = step('c² = a² + b² = ' + fmt(r.a) + '² + ' + fmt(r.b) + '² = ' + fmt(r.a * r.a) + ' + ' + fmt(r.b * r.b) + ' = ' + fmt(r.a * r.a + r.b * r.b)) +
+        step('c = √' + fmt(r.a * r.a + r.b * r.b));
+      outEl.innerHTML = '<div class="qf-roots">c = ' + fmt(r.c) + '</div>';
+      return;
+    }
+    var nume = r.type;
+    stepsEl.innerHTML = step(nume + '² = c² − ' + (nume === 'a' ? 'b' : 'a') + '² = ' + fmt(r.c) + '² − ' + fmt(r.known) + '² = ' + fmt(r.c * r.c) + ' − ' + fmt(r.known * r.known) + ' = ' + fmt(r.c * r.c - r.known * r.known)) +
+      step(nume + ' = √' + fmt(r.c * r.c - r.known * r.known));
+    outEl.innerHTML = '<div class="qf-roots">' + nume + ' = ' + fmt(r.x) + '</div>';
+  }
+  [inA, inB, inC].forEach(function (el) { el.addEventListener('input', render); });
+}
+
+// ---------- Aria triunghiului (formula lui Heron) ----------
+function solveHeron(a, b, c) {
+  if (!(a > 0 && b > 0 && c > 0)) return { type: 'error', message: 'Laturile trebuie să fie numere pozitive.' };
+  var max = Math.max(a, b, c);
+  if (max >= a + b + c - max) return { type: 'error', message: 'Aceste lungimi nu formează un triunghi: cea mai lungă latură trebuie să fie mai mică decât suma celorlalte două.' };
+  var s = (a + b + c) / 2;
+  var p = s * (s - a) * (s - b) * (s - c);
+  var x = [a, b, c].sort(function (u, v) { return u - v; });
+  var d = x[0] * x[0] + x[1] * x[1] - x[2] * x[2];
+  var tip = Math.abs(d) <= 1e-9 * x[2] * x[2] ? 'dreptunghic' : (d > 0 ? 'ascuțitunghic' : 'obtuzunghic');
+  return { type: 'ok', s: s, produs: p, arie: Math.sqrt(p), tip: tip };
+}
+
+function initHeronTool() {
+  var inA = document.getElementById('hrA'), inB = document.getElementById('hrB'), inC = document.getElementById('hrC');
+  var box = document.getElementById('hrResult'), stepsEl = document.getElementById('hrSteps'), outEl = document.getElementById('hrOut');
+  function render() {
+    if (inA.value.trim() === '' && inB.value.trim() === '' && inC.value.trim() === '') { box.className = 'qf-result empty'; return; }
+    var a = parseCoef(inA.value), b = parseCoef(inB.value), c = parseCoef(inC.value);
+    box.className = 'qf-result';
+    if (a === null || b === null || c === null) { stepsEl.innerHTML = ''; outEl.innerHTML = '<div class="qf-error">Completează toate cele trei laturi.</div>'; return; }
+    var r = solveHeron(a, b, c);
+    if (r.type === 'error') { stepsEl.innerHTML = ''; outEl.innerHTML = '<div class="qf-error">' + r.message + '</div>'; return; }
+    stepsEl.innerHTML = step('Semiperimetrul: s = (a + b + c)/2 = (' + fmt(a) + ' + ' + fmt(b) + ' + ' + fmt(c) + ')/2 = ' + fmt(r.s)) +
+      step('s(s−a)(s−b)(s−c) = ' + fmt(r.s) + '·' + fmt(r.s - a) + '·' + fmt(r.s - b) + '·' + fmt(r.s - c) + ' = ' + fmt(r.produs)) +
+      step('S = √' + fmt(r.produs));
+    outEl.innerHTML = '<div class="qf-roots">S = ' + fmt(r.arie) + '<br><small>Triunghiul este ' + r.tip + '.</small></div>';
+  }
+  [inA, inB, inC].forEach(function (el) { el.addEventListener('input', render); });
+}
+
+// ---------- CMMDC și CMMMC (algoritmul lui Euclid) ----------
+function parseIntPos(str) {
+  str = str.trim();
+  if (!/^\d+$/.test(str)) return null;
+  var n = Number(str);
+  return n > 0 && n <= 1e12 ? n : null;
+}
+
+function solveCmmdc(a, b) {
+  var x = Math.max(a, b), y = Math.min(a, b), pasi = [];
+  while (y !== 0) {
+    var q = Math.floor(x / y), r = x - q * y;
+    pasi.push([x, q, y, r]);
+    x = y; y = r;
+  }
+  var cmmdc = x;
+  return { cmmdc: cmmdc, cmmmc: (a / cmmdc) * b, pasi: pasi };
+}
+
+function initCmmdcTool() {
+  var inA = document.getElementById('cdA'), inB = document.getElementById('cdB');
+  var box = document.getElementById('cdResult'), stepsEl = document.getElementById('cdSteps'), outEl = document.getElementById('cdOut');
+  function render() {
+    if (inA.value.trim() === '' && inB.value.trim() === '') { box.className = 'qf-result empty'; return; }
+    var a = parseIntPos(inA.value), b = parseIntPos(inB.value);
+    box.className = 'qf-result';
+    if (a === null || b === null) { stepsEl.innerHTML = ''; outEl.innerHTML = '<div class="qf-error">Scrie două numere naturale nenule (cel mult 1.000.000.000.000).</div>'; return; }
+    var r = solveCmmdc(a, b);
+    var html = step('Împărțim succesiv, până când restul devine 0 (algoritmul lui Euclid):');
+    r.pasi.forEach(function (p) { html += step(p[0] + ' = ' + p[1] + ' · ' + p[2] + ' + ' + p[3]); });
+    html += step('Ultimul rest nenul este cmmdc: ' + r.cmmdc + '.');
+    html += step('cmmmc = a · b / cmmdc = ' + a + ' · ' + b + ' / ' + r.cmmdc + ' = ' + r.cmmmc);
+    stepsEl.innerHTML = html;
+    var safe = r.cmmmc <= 9007199254740991;
+    outEl.innerHTML = '<div class="qf-roots">cmmdc(' + a + ', ' + b + ') = ' + r.cmmdc + '<br>cmmmc(' + a + ', ' + b + ')' + (safe ? ' = ' + r.cmmmc : ' ≈ ' + r.cmmmc.toExponential(6)) +
+      (r.cmmdc === 1 ? '<br><small>Numerele sunt prime între ele.</small>' : '') + '</div>';
+  }
+  [inA, inB].forEach(function (el) { el.addEventListener('input', render); });
+}
+
+// ---------- Combinări, aranjamente, permutări ----------
+// Calculează exact cât timp rezultatul încape în întregii sigur reprezentabili; altfel dă o aproximare prin logaritmi.
+function logFact(n) { var s = 0; for (var i = 2; i <= n; i++) s += Math.log(i); return s; }
+function fmtBig(logVal) {
+  var e = Math.floor(logVal / Math.LN10), m = Math.exp(logVal - e * Math.LN10);
+  if (m >= 9.9999995) { m = 1; e += 1; }
+  return '≈ ' + fmt(Math.round(m * 1e6) / 1e6) + ' × 10<sup>' + e + '</sup>';
+}
+function exactOrApprox(prodFn, logVal) {
+  if (logVal < Math.log(9007199254740991)) return String(prodFn());
+  return fmtBig(logVal);
+}
+
+function solveCombinari(n, k) {
+  if (k > n) return { type: 'error', message: 'k nu poate fi mai mare decât n.' };
+  var kk = Math.min(k, n - k);
+  var C = exactOrApprox(function () { var r = 1; for (var i = 1; i <= kk; i++) r = r * (n - kk + i) / i; return Math.round(r); },
+    logFact(n) - logFact(k) - logFact(n - k));
+  var A = exactOrApprox(function () { var r = 1; for (var i = n - k + 1; i <= n; i++) r *= i; return r; },
+    logFact(n) - logFact(n - k));
+  var P = exactOrApprox(function () { var r = 1; for (var i = 2; i <= n; i++) r *= i; return r; }, logFact(n));
+  return { type: 'ok', C: C, A: A, P: P };
+}
+
+function initCombinariTool() {
+  var inN = document.getElementById('cbN'), inK = document.getElementById('cbK');
+  var box = document.getElementById('cbResult'), stepsEl = document.getElementById('cbSteps'), outEl = document.getElementById('cbOut');
+  function render() {
+    if (inN.value.trim() === '' && inK.value.trim() === '') { box.className = 'qf-result empty'; return; }
+    var nS = inN.value.trim(), kS = inK.value.trim();
+    box.className = 'qf-result';
+    if (!/^\d+$/.test(nS) || !/^\d+$/.test(kS) || Number(nS) > 1000) {
+      stepsEl.innerHTML = ''; outEl.innerHTML = '<div class="qf-error">Scrie două numere naturale, cu n de cel mult 1000.</div>'; return;
+    }
+    var n = Number(nS), k = Number(kS);
+    var r = solveCombinari(n, k);
+    if (r.type === 'error') { stepsEl.innerHTML = ''; outEl.innerHTML = '<div class="qf-error">' + r.message + '</div>'; return; }
+    stepsEl.innerHTML = step('Combinări (ordinea nu contează): C(n,k) = n! / (k!·(n−k)!) = ' + n + '! / (' + k + '!·' + (n - k) + '!)') +
+      step('Aranjamente (ordinea contează): A(n,k) = n! / (n−k)! = ' + n + '! / ' + (n - k) + '!') +
+      step('Permutări (toate cele n elemente, în orice ordine): P(n) = n! = ' + n + '!');
+    function eg(v) { return (v.charAt(0) === '≈' ? ' ' : ' = ') + v; }
+    outEl.innerHTML = '<div class="qf-roots">C(' + n + ', ' + k + ')' + eg(r.C) + '<br>A(' + n + ', ' + k + ')' + eg(r.A) + '<br>P(' + n + ')' + eg(r.P) + '</div>';
+  }
+  [inN, inK].forEach(function (el) { el.addEventListener('input', render); });
+}

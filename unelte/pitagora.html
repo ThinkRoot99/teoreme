@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Calculator pentru teorema lui Pitagora: află ipotenuza sau o catetă din celelalte două laturi, cu pașii explicați, sau verifică dacă un triunghi e dreptunghic.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Calculator teorema lui Pitagora - ∑ Teoreme">
+<meta property="og:description" content="Calculator pentru teorema lui Pitagora: află ipotenuza sau o catetă din celelalte două laturi, cu pașii explicați, sau verifică dacă un triunghi e dreptunghic.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://teoreme.ro/unelte/pitagora">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<title>Calculator teorema lui Pitagora - ∑ Teoreme</title>
+<link rel="preload" as="font" type="font/woff2" href="../fonts/source-serif-4-400-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../fonts/source-serif-4-400-latin-ext.woff2" crossorigin>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-links">
+      <a href="../">Acasă</a>
+      <a href="../arhiva">Arhivă</a>
+      <a href="../unelte/">Unelte</a>
+      <a href="../despre">Despre</a>
+      <a href="../contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="breadcrumb-wrap">
+  <nav class="breadcrumb" aria-label="Navigare ierarhică">
+    <a href="../">Acasă</a><span class="sep" aria-hidden="true">›</span>
+    <a href="../unelte/">Unelte</a><span class="sep" aria-hidden="true">›</span>
+    <span aria-current="page">Calculator teorema lui Pitagora</span>
+  </nav>
+</div>
+
+<div class="page-hero">
+  <div class="hero-bg-syms" aria-hidden="true">
+    <div class="bg-sym">π</div><div class="bg-sym">∑</div><div class="bg-sym">√</div>
+    <div class="bg-sym">∞</div><div class="bg-sym">Δ</div>
+  </div>
+  <h1>Calculator <span>teorema lui Pitagora</span></h1>
+  <p>Completezi oricare două laturi ale triunghiului dreptunghic, a treia se calculează automat.</p>
+</div>
+
+<div class="page-wrap">
+  <div class="content-card">
+    <p>Într-un triunghi dreptunghic, pătratul ipotenuzei (latura opusă unghiului drept) este egal cu suma pătratelor catetelor:</p><div class="formula-block"><span class="formula-label">Formulă</span>a² + b² = c²</div><p>Completează <strong>două</strong> laturi și calculatorul o află pe a treia. Dacă le completezi pe toate trei, verifică dacă triunghiul este dreptunghic.</p>
+
+    <noscript>
+      <p class="qf-error">Calculatorul de mai jos are nevoie de JavaScript ca să funcționeze. Poți totuși face calculul manual, cu formula de mai sus.</p>
+    </noscript>
+
+    <div class="field-row"><div class="field-group"><label for="ptA">a (catetă)</label><input type="text" inputmode="decimal" id="ptA" placeholder="3" autocomplete="off" spellcheck="false"></div><div class="field-group"><label for="ptB">b (catetă)</label><input type="text" inputmode="decimal" id="ptB" placeholder="4" autocomplete="off" spellcheck="false"></div><div class="field-group"><label for="ptC">c (ipotenuză)</label><input type="text" inputmode="decimal" id="ptC" placeholder="" autocomplete="off" spellcheck="false"></div></div>
+
+    <div class="qf-result empty" id="ptResult">
+      <div class="qf-status" id="ptSteps"></div>
+      <div id="ptOut"></div>
+    </div>
+
+    <p class="unealta-teorema">Teoria din spatele calculatorului: <a href="../teoreme/teorema-lui-pitagora">Teorema lui Pitagora</a>, cu explicație și exerciții rezolvate.</p>
+  </div>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://github.com/ThinkRoot99/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
+  <p><a href="../confidentialitate">Confidențialitate</a> · <a href="../termeni">Termeni</a> · <a href="#" onclick="event.preventDefault();window.openCookieSettings&amp;&amp;window.openCookieSettings()">Setări cookie-uri</a></p>
+</footer>
+
+<button id="backToTop" class="back-to-top" aria-label="Înapoi sus">↑</button>
+
+<script src="../js/unelte.js"></script>
+<script>initPitagoraTool();</script>
+<script src="../js/consent.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Calculează aria unui triunghi din cele trei laturi cu formula lui Heron, cu pașii explicați; verifică și dacă laturile formează un triunghi și ce tip de triunghi este.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Calculator aria triunghiului (formula lui Heron) - ∑ Teoreme">
+<meta property="og:description" content="Calculează aria unui triunghi din cele trei laturi cu formula lui Heron, cu pașii explicați; verifică și dacă laturile formează un triunghi și ce tip de triunghi este.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://teoreme.ro/unelte/aria-triunghiului">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#1a1510">
+<title>Calculator aria triunghiului (formula lui Heron) - ∑ Teoreme</title>
+<link rel="preload" as="font" type="font/woff2" href="../fonts/source-serif-4-400-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../fonts/source-serif-4-400-latin-ext.woff2" crossorigin>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../" class="logo">∑ <span>Teoreme</span></a>
+    <div class="nav-links">
+      <a href="../">Acasă</a>
+      <a href="../arhiva">Arhivă</a>
+      <a href="../unelte/">Unelte</a>
+      <a href="../despre">Despre</a>
+      <a href="../contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="breadcrumb-wrap">
+  <nav class="breadcrumb" aria-label="Navigare ierarhică">
+    <a href="../">Acasă</a><span class="sep" aria-hidden="true">›</span>
+    <a href="../unelte/">Unelte</a><span class="sep" aria-hidden="true">›</span>
+    <span aria-current="page">Calculator aria triunghiului (formula lui Heron)</span>
+  </nav>
+</div>
+
+<div class="page-hero">
+  <div class="hero-bg-syms" aria-hidden="true">
+    <div class="bg-sym">π</div><div class="bg-sym">∑</div><div class="bg-sym">√</div>
+    <div class="bg-sym">∞</div><div class="bg-sym">Δ</div>
+  </div>
+  <h1>Aria triunghiului <span>din cele trei laturi</span></h1>
+  <p>Formula lui Heron: aria fără înălțime și fără unghiuri.</p>
+</div>
+
+<div class="page-wrap">
+  <div class="content-card">
+    <p>Dacă știi lungimile celor trei laturi, aria se calculează direct cu semiperimetrul s = (a + b + c)/2:</p><div class="formula-block"><span class="formula-label">Formulă</span>S = √(s(s−a)(s−b)(s−c))</div><p>Calculatorul verifică întâi dacă cele trei lungimi pot forma un triunghi (inegalitatea triunghiului) și îți spune dacă triunghiul este ascuțitunghic, dreptunghic sau obtuzunghic.</p>
+
+    <noscript>
+      <p class="qf-error">Calculatorul de mai jos are nevoie de JavaScript ca să funcționeze. Poți totuși face calculul manual, cu formula de mai sus.</p>
+    </noscript>
+
+    <div class="field-row"><div class="field-group"><label for="hrA">a</label><input type="text" inputmode="decimal" id="hrA" placeholder="13" autocomplete="off" spellcheck="false"></div><div class="field-group"><label for="hrB">b</label><input type="text" inputmode="decimal" id="hrB" placeholder="14" autocomplete="off" spellcheck="false"></div><div class="field-group"><label for="hrC">c</label><input type="text" inputmode="decimal" id="hrC" placeholder="15" autocomplete="off" spellcheck="false"></div></div>
+
+    <div class="qf-result empty" id="hrResult">
+      <div class="qf-status" id="hrSteps"></div>
+      <div id="hrOut"></div>
+    </div>
+
+    <p class="unealta-teorema">Teoria din spatele calculatorului: <a href="../teoreme/formula-lui-heron">Formula lui Heron</a>, cu explicație și exerciții rezolvate.</p>
+  </div>
+</div>
+
+<footer>
+  <p>∑ Teoreme · un proiect <a href="https://thinkroot.xyz/">ThinkRoot</a> · <a href="https://github.com/ThinkRoot99/teoreme">Cod sursă</a></p>
+  <p>Copyleft 🄯 2026 · cod licențiat sub <a href="https://opensource.org/license/mit">MIT</a>, text și imagini sub <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
+  <p><a href="../confidentialitate">Confidențialitate</a> · <a href="../termeni">Termeni</a> · <a href="#" onclick="event.preventDefault();window.openCookieSettings&amp;&amp;window.openCookieSettings()">Setări cookie-uri</a></p>
+</footer>
+
+<button id="backToTop" class="back-to-top" aria-label="Înapoi sus">↑</button>
+
+<script src="../js/unelte.js"></script>
+<script>initHeronTool();</script>
+<script src="../js/consent.js" defer></script>
+</body>
+</html>

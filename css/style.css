@@ -790,3 +790,7 @@ footer a{color:#c8922a}
 .surse a{color:#8c6518;border-bottom:1.5px solid rgba(200,146,42,.4)}
 .surse a:hover{border-bottom-color:#8c6518}
 .surse cite{font-style:italic}
+/* ── LEGĂTURI TEOREMĂ ↔ UNEALTĂ ── */
+.unealta-link{margin:14px 0;padding:11px 16px;background:#fdf3d0;border:1px solid rgba(200,146,42,.4);border-radius:6px;font-size:.92rem;color:#4a3f2f}
+.unealta-link a,.unealta-teorema a{color:#8c6518;font-weight:600;border-bottom:1.5px solid rgba(200,146,42,.4)}
+.unealta-teorema{margin-top:22px;font-size:.9rem;color:#4a3f2f}

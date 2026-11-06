@@ -31,6 +31,10 @@ const STATIC_PAGES = [
   { loc: 'unelte/ecuatie-gradul-2', lastmod: '2026-10-04', priority: '0.6' },
   { loc: 'unelte/cifre-romane', lastmod: '2026-10-04', priority: '0.6' },
   { loc: 'unelte/viteza-distanta-timp', lastmod: '2026-10-04', priority: '0.6' },
+  { loc: 'unelte/pitagora', lastmod: '2026-11-06', priority: '0.6' },
+  { loc: 'unelte/aria-triunghiului', lastmod: '2026-11-06', priority: '0.6' },
+  { loc: 'unelte/cmmdc-cmmmc', lastmod: '2026-11-06', priority: '0.6' },
+  { loc: 'unelte/combinari-aranjamente', lastmod: '2026-11-06', priority: '0.6' },
   { loc: 'despre', lastmod: '2026-11-06', priority: '0.5' },
   { loc: 'autor', lastmod: '2026-11-06', priority: '0.5' },
   { loc: 'contact', lastmod: '2026-09-30', priority: '0.5' },
@@ -118,6 +122,21 @@ const BIBLIOGRAFIE = {
     'Michael Sipser, <cite>Introduction to the Theory of Computation</cite>, ed. a 3-a, Cengage Learning, 2012.'
   ]
 };
+
+// Teoremele care au un calculator în /unelte/
+const UNELTE_TEOREME = {
+  'teorema-lui-pitagora': ['pitagora', 'Calculator teorema lui Pitagora'],
+  'formula-lui-heron': ['aria-triunghiului', 'Calculator aria triunghiului (Heron)'],
+  'inegalitatea-triunghiului': ['aria-triunghiului', 'Verifică dacă trei lungimi formează un triunghi'],
+  'algoritmul-lui-euclid': ['cmmdc-cmmmc', 'Calculator CMMDC și CMMMC'],
+  'teorema-lui-lame': ['cmmdc-cmmmc', 'Calculator CMMDC și CMMMC, cu pașii algoritmului'],
+  'binomul-lui-newton': ['combinari-aranjamente', 'Calculator combinări și aranjamente'],
+  'relatiile-lui-viete': ['ecuatie-gradul-2', 'Calculator ecuații de gradul al doilea']
+};
+function unealtaHtml(m) {
+  const u = UNELTE_TEOREME[m.id];
+  return u ? '<p class="unealta-link">🧮 Calculează direct: <a href="../unelte/' + u[0] + '">' + u[1] + '</a></p>' : '';
+}
 
 function surseHtml(m) {
   const s = SURSE[m.id];
@@ -250,6 +269,7 @@ let stats = { teoreme: 0, index: false, arhiva: false, sitemap: false };
         '<div class="panel active" id="panelDef" role="tabpanel" aria-labelledby="tabDef" itemprop="articleBody">' +
         (c.definitie || '') +
         '<div class="formula-block"><span class="formula-label">Formulă</span>' + c.formula_display + '</div>' +
+        unealtaHtml(m) +
         diagHtml +
         (c.nota_text ? '<p class="note-text">' + c.nota_text + '</p>' : '') +
         '<div class="intuitive-block">' +
