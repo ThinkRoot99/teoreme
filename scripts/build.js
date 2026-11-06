@@ -80,9 +80,27 @@ const SURSE = JSON.parse(fs.readFileSync(path.join(__dirname, 'surse.json'), 'ut
 const ACTUALIZAT_FILE = path.join(__dirname, 'actualizat.json');
 const ACTUALIZAT = fs.existsSync(ACTUALIZAT_FILE) ? JSON.parse(fs.readFileSync(ACTUALIZAT_FILE, 'utf8')) : {};
 const AZI = new Date().toISOString().slice(0, 10);
-function amprenta(c) {
-  return crypto.createHash('sha1').update(JSON.stringify([c.definitie, c.formula_display, c.diagrama,
-    c.intuitiv_text, c.intuitiv_nota, c.exercitii])).digest('hex').slice(0, 16);
+// Demonstrații și greșeli frecvente (doar pentru unele teoreme), din continut/demonstratii.js
+const DEMONSTRATII = (function () {
+  const f = path.join(ROOT, 'continut', 'demonstratii.js');
+  if (!fs.existsSync(f)) return {};
+  const ctx = {};
+  vm.createContext(ctx);
+  vm.runInContext(fs.readFileSync(f, 'utf8') + ';this.__D = DEMONSTRATII;', ctx);
+  return ctx.__D || {};
+})();
+
+function amprenta(c, d) {
+  const parti = [c.definitie, c.formula_display, c.diagrama, c.intuitiv_text, c.intuitiv_nota, c.exercitii];
+  if (d) parti.push(d.demonstratie, d.greseli);
+  return crypto.createHash('sha1').update(JSON.stringify(parti)).digest('hex').slice(0, 16);
+}
+
+function demonstratieHtml(d) {
+  if (!d) return '';
+  return '<section class="demonstratie"><h2>Demonstrație</h2>' + d.demonstratie + '</section>' +
+    (d.greseli && d.greseli.length ? '<section class="greseli"><h2>Greșeli frecvente</h2><ul>' +
+      d.greseli.map(function (g) { return '<li>' + g + '</li>'; }).join('') + '</ul></section>' : '');
 }
 const LUNI = ['ianuarie', 'februarie', 'martie', 'aprilie', 'mai', 'iunie', 'iulie', 'august',
   'septembrie', 'octombrie', 'noiembrie', 'decembrie'];
@@ -209,13 +227,15 @@ let stats = { teoreme: 0, index: false, arhiva: false, sitemap: false };
     const next = idx < TEOREME.length - 1 ? TEOREME[idx + 1] : null;
     const tagCls = m.domeniu_tag || 'tag-geo';
 
-    const fullTitle = m.titlu + ' - ∑ Teoreme';
+    const dem = DEMONSTRATII[m.id];
+    // Titlul din rezultatele căutării spune ce găsește cititorul pe pagină
+    const fullTitle = m.titlu + (dem ? ': enunț, demonstrație și exerciții rezolvate' : ': enunț, formulă și exerciții rezolvate');
     const desc = m.descriere || ('Teorema ' + m.titlu + ': definiție formală, diagramă, exerciții rezolvate și explicație intuitivă.');
     const canon = 'https://teoreme.ro/teoreme/' + encodeURIComponent(m.id);
 
     let actualizat = null;
     if (c) {
-      const a = amprenta(c);
+      const a = amprenta(c, dem);
       if (!ACTUALIZAT[m.id] || ACTUALIZAT[m.id].amprenta !== a) ACTUALIZAT[m.id] = { amprenta: a, data: AZI };
       actualizat = ACTUALIZAT[m.id].data;
     }
@@ -277,6 +297,7 @@ let stats = { teoreme: 0, index: false, arhiva: false, sitemap: false };
         '<div class="intuitive-story">' + c.intuitiv_text + '</div>' +
         '<div class="intuitive-note">' + c.intuitiv_nota + '</div>' +
         '</div>' +
+        demonstratieHtml(dem) +
         '</div>' +
         '<div class="panel active" id="panelEx" role="tabpanel" aria-labelledby="tabEx">' +
         '<div class="exercises-list">' + exHtml + '</div>' +
